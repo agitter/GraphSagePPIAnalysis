@@ -1,0 +1,421 @@
+ID   FSBP_HUMAN              Reviewed;         299 AA.
+AC   O95073; Q8N4S5;
+DT   19-JUL-2004, integrated into UniProtKB/Swiss-Prot.
+DT   01-MAY-1999, sequence version 1.
+DT   13-APR-2016, entry version 116.
+DE   RecName: Full=Fibrinogen silencer-binding protein;
+GN   Name=FSBP;
+OS   Homo sapiens (Human).
+OC   Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi;
+OC   Mammalia; Eutheria; Euarchontoglires; Primates; Haplorrhini;
+OC   Catarrhini; Hominidae; Homo.
+OX   NCBI_TaxID=9606;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [MRNA] (ISOFORM 1).
+RA   Hu C.-H., Cao Z., Chung D.W., Davie E.W.;
+RT   "A novel transcription repressor that down-regulates the expression of
+RT   the gamma chain of human fibrinogen.";
+RL   Submitted (JUN-1997) to the EMBL/GenBank/DDBJ databases.
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA], AND VARIANT LYS-226.
+RG   SeattleSNPs variation discovery resource;
+RL   Submitted (FEB-2002) to the EMBL/GenBank/DDBJ databases.
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA] (ISOFORM 2).
+RC   TISSUE=Uterus;
+RX   PubMed=15489334; DOI=10.1101/gr.2596504;
+RG   The MGC Project Team;
+RT   "The status, quality, and expansion of the NIH full-length cDNA
+RT   project: the Mammalian Gene Collection (MGC).";
+RL   Genome Res. 14:2121-2127(2004).
+RN   [4]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RX   PubMed=16421571; DOI=10.1038/nature04406;
+RA   Nusbaum C., Mikkelsen T.S., Zody M.C., Asakawa S., Taudien S.,
+RA   Garber M., Kodira C.D., Schueler M.G., Shimizu A., Whittaker C.A.,
+RA   Chang J.L., Cuomo C.A., Dewar K., FitzGerald M.G., Yang X.,
+RA   Allen N.R., Anderson S., Asakawa T., Blechschmidt K., Bloom T.,
+RA   Borowsky M.L., Butler J., Cook A., Corum B., DeArellano K.,
+RA   DeCaprio D., Dooley K.T., Dorris L. III, Engels R., Gloeckner G.,
+RA   Hafez N., Hagopian D.S., Hall J.L., Ishikawa S.K., Jaffe D.B.,
+RA   Kamat A., Kudoh J., Lehmann R., Lokitsang T., Macdonald P.,
+RA   Major J.E., Matthews C.D., Mauceli E., Menzel U., Mihalev A.H.,
+RA   Minoshima S., Murayama Y., Naylor J.W., Nicol R., Nguyen C.,
+RA   O'Leary S.B., O'Neill K., Parker S.C.J., Polley A., Raymond C.K.,
+RA   Reichwald K., Rodriguez J., Sasaki T., Schilhabel M., Siddiqui R.,
+RA   Smith C.L., Sneddon T.P., Talamas J.A., Tenzin P., Topham K.,
+RA   Venkataraman V., Wen G., Yamazaki S., Young S.K., Zeng Q.,
+RA   Zimmer A.R., Rosenthal A., Birren B.W., Platzer M., Shimizu N.,
+RA   Lander E.S.;
+RT   "DNA sequence and analysis of human chromosome 8.";
+RL   Nature 439:331-335(2006).
+RN   [5]
+RP   TISSUE SPECIFICITY, SUBCELLULAR LOCATION, FUNCTION, AND INTERACTION
+RP   WITH APBA1.
+RX   PubMed=20531236; DOI=10.1097/WNR.0b013e32833bfca0;
+RA   Lau K.F., Perkinton M.S., Rodriguez L., McLoughlin D.M., Miller C.C.;
+RT   "An X11alpha/FSBP complex represses transcription of the GSK3beta gene
+RT   promoter.";
+RL   NeuroReport 21:761-766(2010).
+CC   -!- FUNCTION: Transcriptional repressor that down-regulates the
+CC       expression of the fibrinogen gamma chain. Represses transcription
+CC       of GSK3B gene promoter via its interaction with APBA1.
+CC       {ECO:0000269|PubMed:20531236}.
+CC   -!- SUBUNIT: Interacts with APBA1 (via PDZ 1 and 2 domains).
+CC       {ECO:0000269|PubMed:20531236}.
+CC   -!- INTERACTION:
+CC       Self; NbExp=3; IntAct=EBI-1059030, EBI-1059030;
+CC       Q9H614:-; NbExp=3; IntAct=EBI-1059030, EBI-10249899;
+CC       Q96IX9:ANKRD36BP1; NbExp=3; IntAct=EBI-1059030, EBI-744859;
+CC       Q8N5M1:ATPAF2; NbExp=3; IntAct=EBI-1059030, EBI-1166928;
+CC       Q9UJX2:CDC23; NbExp=3; IntAct=EBI-1059030, EBI-396137;
+CC       Q9H0I2:ENKD1; NbExp=3; IntAct=EBI-1059030, EBI-744099;
+CC       Q53SE7:FLJ13057; NbExp=3; IntAct=EBI-1059030, EBI-10172181;
+CC       P16885:PLCG2; NbExp=2; IntAct=EBI-10696047, EBI-617403;
+CC       P40302:PRE5 (xeno); NbExp=3; IntAct=EBI-10696047, EBI-13955;
+CC       Q13131:PRKAA1; NbExp=3; IntAct=EBI-1059030, EBI-1181405;
+CC       Q9NP31:SH2D2A; NbExp=3; IntAct=EBI-10696047, EBI-490630;
+CC       P63165:SUMO1; NbExp=3; IntAct=EBI-1059030, EBI-80140;
+CC       P38340:TAE1 (xeno); NbExp=3; IntAct=EBI-10696047, EBI-21116;
+CC       Q8N8B7:TCEANC; NbExp=3; IntAct=EBI-1059030, EBI-954696;
+CC       P25372:TRX3 (xeno); NbExp=3; IntAct=EBI-10696047, EBI-19616;
+CC   -!- SUBCELLULAR LOCATION: Nucleus {ECO:0000269|PubMed:20531236}.
+CC   -!- ALTERNATIVE PRODUCTS:
+CC       Event=Alternative splicing; Named isoforms=2;
+CC       Name=1;
+CC         IsoId=O95073-1; Sequence=Displayed;
+CC       Name=2;
+CC         IsoId=O95073-2; Sequence=VSP_010774;
+CC         Note=No experimental confirmation available.;
+CC   -!- TISSUE SPECIFICITY: Expressed in multiple tissues including brain.
+CC       {ECO:0000269|PubMed:20531236}.
+CC   -!- MISCELLANEOUS: Intragenic, in the second intron of RAB54B gene.
+CC   -!- WEB RESOURCE: Name=SeattleSNPs;
+CC       URL="http://pga.gs.washington.edu/data/fsbp/";
+CC   -----------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see http://www.uniprot.org/terms
+CC   Distributed under the Creative Commons Attribution-NoDerivs License
+CC   -----------------------------------------------------------------------
+DR   EMBL; AF007866; AAD09313.1; -; mRNA.
+DR   EMBL; AF487652; AAL96666.1; -; Genomic_DNA.
+DR   EMBL; AC023632; -; NOT_ANNOTATED_CDS; Genomic_DNA.
+DR   EMBL; BC033710; AAH33710.2; -; mRNA.
+DR   CCDS; CCDS59106.1; -. [O95073-1]
+DR   RefSeq; NP_001192191.1; NM_001205262.2.
+DR   RefSeq; NP_001243070.1; NM_001256141.1. [O95073-1]
+DR   UniGene; Hs.30561; -.
+DR   UniGene; Hs.744229; -.
+DR   ProteinModelPortal; O95073; -.
+DR   BioGrid; 117321; 35.
+DR   IntAct; O95073; 19.
+DR   STRING; 9606.ENSP00000420405; -.
+DR   iPTMnet; O95073; -.
+DR   BioMuta; FSBP; -.
+DR   EPD; O95073; -.
+DR   PaxDb; O95073; -.
+DR   PRIDE; O95073; -.
+DR   Ensembl; ENST00000481490; ENSP00000420405; ENSG00000265817. [O95073-1]
+DR   GeneID; 100861412; -.
+DR   GeneID; 25788; -.
+DR   KEGG; hsa:100861412; -.
+DR   KEGG; hsa:25788; -.
+DR   UCSC; uc003ygm.4; human. [O95073-1]
+DR   CTD; 100861412; -.
+DR   CTD; 25788; -.
+DR   GeneCards; FSBP; -.
+DR   HGNC; HGNC:43653; FSBP.
+DR   HPA; HPA026509; -.
+DR   MIM; 616306; gene.
+DR   neXtProt; NX_O95073; -.
+DR   eggNOG; ENOG410IVMX; Eukaryota.
+DR   eggNOG; ENOG4111FZT; LUCA.
+DR   GeneTree; ENSGT00390000008778; -.
+DR   HOGENOM; HOG000112654; -.
+DR   HOVERGEN; HBG051662; -.
+DR   InParanoid; O95073; -.
+DR   KO; K10877; -.
+DR   OMA; CWDIIAD; -.
+DR   PhylomeDB; O95073; -.
+DR   TreeFam; TF331896; -.
+DR   GeneWiki; RAD54B; -.
+DR   NextBio; 46945; -.
+DR   PRO; PR:O95073; -.
+DR   Proteomes; UP000005640; Chromosome 8.
+DR   Bgee; O95073; -.
+DR   ExpressionAtlas; O95073; baseline.
+DR   Genevisible; O95073; HS.
+DR   GO; GO:0005737; C:cytoplasm; IDA:HPA.
+DR   GO; GO:0005654; C:nucleoplasm; IDA:HPA.
+DR   GO; GO:0005634; C:nucleus; IDA:UniProtKB.
+DR   GO; GO:0042802; F:identical protein binding; IPI:IntAct.
+DR   GO; GO:0006355; P:regulation of transcription, DNA-templated; IEA:UniProtKB-KW.
+DR   GO; GO:0006351; P:transcription, DNA-templated; IEA:UniProtKB-KW.
+DR   InterPro; IPR028002; Myb_DNA-bind_5.
+DR   Pfam; PF13873; Myb_DNA-bind_5; 1.
+PE   1: Evidence at protein level;
+KW   Alternative splicing; Complete proteome; Nucleus; Polymorphism;
+KW   Reference proteome; Repressor; Transcription;
+KW   Transcription regulation.
+FT   CHAIN         1    299       Fibrinogen silencer-binding protein.
+FT                                /FTId=PRO_0000087352.
+FT   VAR_SEQ       1    141       Missing (in isoform 2).
+FT                                {ECO:0000303|PubMed:15489334}.
+FT                                /FTId=VSP_010774.
+FT   VARIANT     226    226       R -> K (in dbSNP:rs3136422).
+FT                                {ECO:0000269|Ref.2}.
+FT                                /FTId=VAR_019301.
+SQ   SEQUENCE   299 AA;  34768 MW;  3CC89EC32A377B2F CRC64;
+     MVGKARSSNF TLSEKLDLLK LVKPYVKILE EHTNKHSVIV EKNRCWDIIA VNYNAIGVDR
+     PPRTAQGLRT LYKRLKEYAK QELLQQKETQ SDFKSNISEP TKKVMEMIPQ ISSFCLVRDR
+     NHIQSANLDE EAQAGTSSLQ VMLDHHPVAI TVEVKQEEDI KPPPPLVLNS QQSDTLEQRE
+     EHELVHVMER SLSPSLSSVD MRMTSSPSSI PRRDDFFRHE SGEHFRSLLG YDPQILQMLK
+     EEHQIILENQ KNFGLYVQEK RDGLKRRQQL EEELLRAKIE VEKLKAIRLR HDLPEYNSL
+//
+ID   RA54B_HUMAN             Reviewed;         910 AA.
+AC   Q9Y620; F6WBS8;
+DT   16-AUG-2004, integrated into UniProtKB/Swiss-Prot.
+DT   01-NOV-1999, sequence version 1.
+DT   16-MAR-2016, entry version 130.
+DE   RecName: Full=DNA repair and recombination protein RAD54B;
+DE            EC=3.6.4.-;
+DE   AltName: Full=RAD54 homolog B;
+GN   Name=RAD54B;
+OS   Homo sapiens (Human).
+OC   Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi;
+OC   Mammalia; Eutheria; Euarchontoglires; Primates; Haplorrhini;
+OC   Catarrhini; Hominidae; Homo.
+OX   NCBI_TaxID=9606;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [MRNA] (ISOFORM 1), TISSUE SPECIFICITY, AND
+RP   VARIANTS TYR-418 AND SER-593.
+RX   PubMed=10362364; DOI=10.1038/sj.onc.1202691;
+RA   Hiramoto T., Nakanishi T., Sumiyoshi T., Fukuda T., Matsuura S.,
+RA   Tauchi H., Komatsu K., Shibasaki Y., Inui H., Watatani M.,
+RA   Yasutomi M., Sumii K., Kajiyama G., Kamada N., Miyagawa K., Kamiya K.;
+RT   "Mutations of a novel human RAD54 homologue, RAD54B, in primary
+RT   cancer.";
+RL   Oncogene 18:3422-3426(1999).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA] (ISOFORM 2).
+RC   TISSUE=Neuroblastoma;
+RA   Li W.B., Gruber C., Jessee J., Polayes D.;
+RT   "Full-length cDNA libraries and normalization.";
+RL   Submitted (JAN-2003) to the EMBL/GenBank/DDBJ databases.
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RX   PubMed=16421571; DOI=10.1038/nature04406;
+RA   Nusbaum C., Mikkelsen T.S., Zody M.C., Asakawa S., Taudien S.,
+RA   Garber M., Kodira C.D., Schueler M.G., Shimizu A., Whittaker C.A.,
+RA   Chang J.L., Cuomo C.A., Dewar K., FitzGerald M.G., Yang X.,
+RA   Allen N.R., Anderson S., Asakawa T., Blechschmidt K., Bloom T.,
+RA   Borowsky M.L., Butler J., Cook A., Corum B., DeArellano K.,
+RA   DeCaprio D., Dooley K.T., Dorris L. III, Engels R., Gloeckner G.,
+RA   Hafez N., Hagopian D.S., Hall J.L., Ishikawa S.K., Jaffe D.B.,
+RA   Kamat A., Kudoh J., Lehmann R., Lokitsang T., Macdonald P.,
+RA   Major J.E., Matthews C.D., Mauceli E., Menzel U., Mihalev A.H.,
+RA   Minoshima S., Murayama Y., Naylor J.W., Nicol R., Nguyen C.,
+RA   O'Leary S.B., O'Neill K., Parker S.C.J., Polley A., Raymond C.K.,
+RA   Reichwald K., Rodriguez J., Sasaki T., Schilhabel M., Siddiqui R.,
+RA   Smith C.L., Sneddon T.P., Talamas J.A., Tenzin P., Topham K.,
+RA   Venkataraman V., Wen G., Yamazaki S., Young S.K., Zeng Q.,
+RA   Zimmer A.R., Rosenthal A., Birren B.W., Platzer M., Shimizu N.,
+RA   Lander E.S.;
+RT   "DNA sequence and analysis of human chromosome 8.";
+RL   Nature 439:331-335(2006).
+RN   [4]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA] (ISOFORM 1).
+RC   TISSUE=Placenta;
+RX   PubMed=15489334; DOI=10.1101/gr.2596504;
+RG   The MGC Project Team;
+RT   "The status, quality, and expansion of the NIH full-length cDNA
+RT   project: the Mammalian Gene Collection (MGC).";
+RL   Genome Res. 14:2121-2127(2004).
+RN   [5]
+RP   INTERACTION WITH RAD51.
+RX   PubMed=10851248; DOI=10.1074/jbc.M910306199;
+RA   Tanaka K., Hiramoto T., Fukuda T., Miyagawa K.;
+RT   "A novel human Rad54 homologue, Rad54B, associates with Rad51.";
+RL   J. Biol. Chem. 275:26316-26321(2000).
+RN   [6]
+RP   FUNCTION.
+RX   PubMed=11782437; DOI=10.1093/emboj/21.1.175;
+RA   Miyagawa K., Tsuruga T., Kinomura A., Usui K., Katsura M., Tashiro S.,
+RA   Mishima H., Tanaka K.;
+RT   "A role for RAD54B in homologous recombination in human cells.";
+RL   EMBO J. 21:175-180(2002).
+RN   [7]
+RP   FUNCTION, AND CHARACTERIZATION.
+RX   PubMed=11884632; DOI=10.1093/nar/30.6.1346;
+RA   Tanaka K., Kagawa W., Kinebuchi T., Kurumizaka H., Miyagawa K.;
+RT   "Human Rad54B is a double-stranded DNA-dependent ATPase and has
+RT   biochemical properties different from its structural homolog in yeast,
+RT   Tid1/Rdh54.";
+RL   Nucleic Acids Res. 30:1346-1353(2002).
+RN   [8]
+RP   VARIANTS GLU-833 AND VAL-899.
+RX   PubMed=25930971; DOI=10.1111/cge.12605;
+RA   Srour M., Hamdan F.F., Gan-Or Z., Labuda D., Nassif C., Oskoui M.,
+RA   Gana-Weisz M., Orr-Urtreger A., Rouleau G.A., Michaud J.L.;
+RT   "A homozygous mutation in SLC1A4 in siblings with severe intellectual
+RT   disability and microcephaly.";
+RL   Clin. Genet. 88:E1-E4(2015).
+CC   -!- FUNCTION: Involved in DNA repair and mitotic recombination. May
+CC       play an active role in recombination processes in concert with
+CC       other members of the RAD52 epistasis group.
+CC       {ECO:0000269|PubMed:11782437, ECO:0000269|PubMed:11884632}.
+CC   -!- SUBUNIT: Interacts with RAD51 through the NH2-terminal domain.
+CC       Immunoprecipitation experiments show that the interaction is
+CC       constitutive and not induced by ionizing radiation. The
+CC       interaction may be indirect. {ECO:0000269|PubMed:10851248}.
+CC   -!- SUBCELLULAR LOCATION: Nucleus {ECO:0000305}.
+CC   -!- ALTERNATIVE PRODUCTS:
+CC       Event=Alternative splicing; Named isoforms=2;
+CC       Name=1;
+CC         IsoId=Q9Y620-1; Sequence=Displayed;
+CC       Name=2;
+CC         IsoId=Q9Y620-2; Sequence=VSP_045956, VSP_045957;
+CC         Note=No experimental confirmation available.;
+CC   -!- TISSUE SPECIFICITY: Abundantly expressed in testis and spleen.
+CC       Relatively low levels observed in thymus, prostate, ovary and
+CC       colon. {ECO:0000269|PubMed:10362364}.
+CC   -!- SIMILARITY: Belongs to the SNF2/RAD54 helicase family.
+CC       {ECO:0000305}.
+CC   -!- SIMILARITY: Contains 1 helicase ATP-binding domain.
+CC       {ECO:0000255|PROSITE-ProRule:PRU00541}.
+CC   -!- SIMILARITY: Contains 1 helicase C-terminal domain.
+CC       {ECO:0000255|PROSITE-ProRule:PRU00542}.
+CC   -----------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see http://www.uniprot.org/terms
+CC   Distributed under the Creative Commons Attribution-NoDerivs License
+CC   -----------------------------------------------------------------------
+DR   EMBL; AF112481; AAD34331.1; -; mRNA.
+DR   EMBL; AL523600; -; NOT_ANNOTATED_CDS; mRNA.
+DR   EMBL; AC023632; -; NOT_ANNOTATED_CDS; Genomic_DNA.
+DR   EMBL; AP003534; -; NOT_ANNOTATED_CDS; Genomic_DNA.
+DR   EMBL; BC001965; AAH01965.1; -; mRNA.
+DR   CCDS; CCDS56546.1; -. [Q9Y620-2]
+DR   CCDS; CCDS6262.1; -. [Q9Y620-1]
+DR   RefSeq; NP_001192192.1; NM_001205263.1.
+DR   RefSeq; NP_036547.1; NM_012415.3. [Q9Y620-1]
+DR   UniGene; Hs.30561; -.
+DR   UniGene; Hs.744229; -.
+DR   ProteinModelPortal; Q9Y620; -.
+DR   SMR; Q9Y620; 287-815.
+DR   BioGrid; 117321; 35.
+DR   IntAct; Q9Y620; 15.
+DR   MINT; MINT-1441930; -.
+DR   STRING; 9606.ENSP00000336606; -.
+DR   iPTMnet; Q9Y620; -.
+DR   PhosphoSite; Q9Y620; -.
+DR   BioMuta; RAD54B; -.
+DR   DMDM; 51316548; -.
+DR   EPD; Q9Y620; -.
+DR   MaxQB; Q9Y620; -.
+DR   PaxDb; Q9Y620; -.
+DR   PRIDE; Q9Y620; -.
+DR   Ensembl; ENST00000297592; ENSP00000430153; ENSG00000197275. [Q9Y620-2]
+DR   Ensembl; ENST00000336148; ENSP00000336606; ENSG00000197275. [Q9Y620-1]
+DR   GeneID; 25788; -.
+DR   UCSC; uc003ygk.4; human. [Q9Y620-1]
+DR   CTD; 25788; -.
+DR   GeneCards; RAD54B; -.
+DR   HGNC; HGNC:17228; RAD54B.
+DR   HPA; HPA007087; -.
+DR   MalaCards; RAD54B; -.
+DR   MIM; 604289; gene.
+DR   neXtProt; NX_Q9Y620; -.
+DR   PharmGKB; PA134927202; -.
+DR   eggNOG; KOG0390; Eukaryota.
+DR   eggNOG; COG0553; LUCA.
+DR   GeneTree; ENSGT00550000074619; -.
+DR   HOGENOM; HOG000204521; -.
+DR   HOVERGEN; HBG058654; -.
+DR   InParanoid; Q9Y620; -.
+DR   OMA; CSSTCDK; -.
+DR   OrthoDB; EOG7DJSKN; -.
+DR   PhylomeDB; Q9Y620; -.
+DR   TreeFam; TF101223; -.
+DR   ChiTaRS; RAD54B; human.
+DR   GenomeRNAi; 25788; -.
+DR   NextBio; 46945; -.
+DR   PRO; PR:Q9Y620; -.
+DR   Proteomes; UP000005640; Chromosome 8.
+DR   Bgee; Q9Y620; -.
+DR   CleanEx; HS_RAD54B; -.
+DR   ExpressionAtlas; Q9Y620; baseline and differential.
+DR   Genevisible; Q9Y620; HS.
+DR   GO; GO:0005634; C:nucleus; IEA:UniProtKB-SubCell.
+DR   GO; GO:0005524; F:ATP binding; IEA:UniProtKB-KW.
+DR   GO; GO:0003677; F:DNA binding; IEA:UniProtKB-KW.
+DR   GO; GO:0003678; F:DNA helicase activity; TAS:ProtInc.
+DR   GO; GO:0015616; F:DNA translocase activity; IDA:MGI.
+DR   GO; GO:0003724; F:RNA helicase activity; TAS:ProtInc.
+DR   GO; GO:0032508; P:DNA duplex unwinding; TAS:GOC.
+DR   GO; GO:0000724; P:double-strand break repair via homologous recombination; IDA:MGI.
+DR   GO; GO:0006312; P:mitotic recombination; TAS:ProtInc.
+DR   GO; GO:0007131; P:reciprocal meiotic recombination; TAS:ProtInc.
+DR   Gene3D; 3.40.50.300; -; 2.
+DR   InterPro; IPR014001; Helicase_ATP-bd.
+DR   InterPro; IPR001650; Helicase_C.
+DR   InterPro; IPR027417; P-loop_NTPase.
+DR   InterPro; IPR000330; SNF2_N.
+DR   Pfam; PF00271; Helicase_C; 1.
+DR   Pfam; PF00176; SNF2_N; 1.
+DR   SMART; SM00487; DEXDc; 1.
+DR   SMART; SM00490; HELICc; 1.
+DR   SUPFAM; SSF52540; SSF52540; 2.
+DR   PROSITE; PS51192; HELICASE_ATP_BIND_1; 1.
+DR   PROSITE; PS51194; HELICASE_CTER; 1.
+PE   1: Evidence at protein level;
+KW   Alternative splicing; ATP-binding; Complete proteome; DNA damage;
+KW   DNA repair; DNA-binding; Helicase; Hydrolase; Nucleotide-binding;
+KW   Nucleus; Polymorphism; Reference proteome.
+FT   CHAIN         1    910       DNA repair and recombination protein
+FT                                RAD54B.
+FT                                /FTId=PRO_0000074340.
+FT   DOMAIN      313    480       Helicase ATP-binding.
+FT                                {ECO:0000255|PROSITE-ProRule:PRU00541}.
+FT   DOMAIN      649    810       Helicase C-terminal.
+FT                                {ECO:0000255|PROSITE-ProRule:PRU00542}.
+FT   NP_BIND     326    333       ATP. {ECO:0000255|PROSITE-
+FT                                ProRule:PRU00541}.
+FT   MOTIF       431    434       DEGH box.
+FT   VAR_SEQ     103    117       HSAPKEVAVSKEQEE -> QTWMRRHRLVPVHYR (in
+FT                                isoform 2). {ECO:0000303|Ref.2}.
+FT                                /FTId=VSP_045956.
+FT   VAR_SEQ     118    910       Missing (in isoform 2).
+FT                                {ECO:0000303|Ref.2}.
+FT                                /FTId=VSP_045957.
+FT   VARIANT      30     30       L -> V (in dbSNP:rs28910279).
+FT                                /FTId=VAR_034430.
+FT   VARIANT      97     97       D -> H (in dbSNP:rs2919661).
+FT                                /FTId=VAR_037885.
+FT   VARIANT     418    418       D -> Y (in a colon cancer sample).
+FT                                {ECO:0000269|PubMed:10362364}.
+FT                                /FTId=VAR_019563.
+FT   VARIANT     593    593       N -> S (in a non-Hodgkin lymphoma sample;
+FT                                dbSNP:rs114216685).
+FT                                {ECO:0000269|PubMed:10362364}.
+FT                                /FTId=VAR_019564.
+FT   VARIANT     833    833       G -> E. {ECO:0000269|PubMed:25930971}.
+FT                                /FTId=VAR_075089.
+FT   VARIANT     899    899       I -> V. {ECO:0000269|PubMed:25930971}.
+FT                                /FTId=VAR_075090.
+SQ   SEQUENCE   910 AA;  102967 MW;  0167288FBA95FBC5 CRC64;
+     MRRSAAPSQL QGNSFKKPKF IPPGRSNPGL NEEITKLNPD IKLFEGVAIN NTFLPSQNDL
+     RICSLNLPSE ESTREINNRD NCSGKYCFEA PTLATLDPPH TVHSAPKEVA VSKEQEEKSD
+     SLVKYFSVVW CKPSKKKHKK WEGDAVLIVK GKSFILKNLE GKDIGRGIGY KFKELEKIEE
+     GQTLMICGKE IEVMGVISPD DFSSGRCFQL GGGSTAISHS SQVARKCFSN PFKSVCKPSS
+     KENRQNDFQN CKPRHDPYTP NSLVMPRPDK NHQWVFNKNC FPLVDVVIDP YLVYHLRPHQ
+     KEGIIFLYEC VMGMRMNGRC GAILADEMGL GKTLQCISLI WTLQCQGPYG GKPVIKKTLI
+     VTPGSLVNNW KKEFQKWLGS ERIKIFTVDQ DHKVEEFIKS IFYSVLIISY EMLLRSLDQI
+     KNIKFDLLIC DEGHRLKNSA IKTTTALISL SCEKRIILTG TPIQNDLQEF FALIDFVNPG
+     ILGSLSSYRK IYEEPIILSR EPSASEEEKE LGERRAAELT CLTGLFILRR TQEIINKYLP
+     PKIENVVFCR PGALQIELYR KLLNSQVVRF CLQGLLENSP HLICIGALKK LCNHPCLLFN
+     SIKEKECSST CDKNEEKSLY KGLLSVFPAD YNPLLFTEKE SGKLQVLSKL LAVIHELRPT
+     EKVVLVSNYT QTLNILQEVC KRHGYAYTRL DGQTPISQRQ QIVDGFNSQH SSFFIFLLSS
+     KAGGVGLNLI GGSHLILYDI DWNPATDIQA MSRVWRDGQK YPVHIYRLLT TGTIEEKIYQ
+     RQISKQGLCG AVVDLTKTSE HIQFSVEELK NLFTLHESSD CVTHDLLDCE CTGEEVHTGD
+     SLEKFIVSRD CQLGPHHQKS NSLKPLSMSQ LKQWKHFSGD HLNLTDPFLE RITENVSFIF
+     QNITTQATGT
+//

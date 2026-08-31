@@ -1,0 +1,52 @@
+# Core July 2016 GOA release
+goa_human.gaf.159.gz
+goa_human.gpa.159.gz
+goa_human.gpi.159.gz
+
+# Adjacent GOA releases
+goa_human.gaf.158.gz
+goa_human.gpa.158.gz
+goa_human.gpi.158.gz
+goa_human.gaf.160.gz
+goa_human.gpa.160.gz
+goa_human.gpi.160.gz
+
+# Legacy pre-renaming releases
+gene_association.goa_human.155.gz
+gp_association.goa_human.155.gz
+gp_information.goa_human.155.gz
+gene_association.goa_human.156.gz
+gp_association.goa_human.156.gz
+gp_information.goa_human.156.gz
+gene_association.goa_human.157.gz
+gp_association.goa_human.157.gz
+gp_information.goa_human.157.gz
+
+# Ontology and identifier mappings
+*2016*go*.obo
+*gp2protein*geneid*.gz
+idmapping_selected.tab.2015_03.gz
+idmapping.dat.2015_03.gz
+
+# Entrez-native annotation snapshots
+*gene2go*2016*.gz
+*2016*gene2go*.gz
+gene2go*.gz
+
+# Bioconductor snapshots
+org.Hs.eg.db_3.1.2.tar.gz
+org.Hs.eg.db_3.2.3.tar.gz
+org.Hs.eg.db_3.3.0.tar.gz
+org.Hs.eg.db_3.4.0.tar.gz
+
+# GIANT/HumanBase and possible preprocessing artifacts
+HumanBase-blood.dat
+HumanBase-kidney.dat
+blood_sample_tsv.gz
+HumanBase-blood_top.gz
+*humanbase*download*.py
+*sleipnir*
+*ohmnet*preprocess*
+*graphsage*preprocess*
+*node2gene*
+*label*matching*

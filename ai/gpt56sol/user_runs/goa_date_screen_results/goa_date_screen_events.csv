@@ -1,0 +1,37 @@
+event_time_utc,release,event_type,status,details
+2026-08-29T12:03:49.583407Z,158,source_integrity,passed,gaf=C:\Users\agitter\Desktop\ppi\goa_date_screen_cache\goa_human.gaf.158.gz;gpi=C:\Users\agitter\Desktop\ppi\goa_date_screen_cache\goa_human.gpi.158.gz
+2026-08-29T12:03:51.339795Z,158,analysis,passed,output=C:\Users\agitter\Desktop\ppi\goa_date_screen_results\goa_release_158_screen.json; mismatches=846; order_lcs=94
+2026-08-29T12:03:51.340795Z,158,download_cleanup,deleted_after_success,C:\Users\agitter\Desktop\ppi\goa_date_screen_cache\goa_human.gaf.158.gz|C:\Users\agitter\Desktop\ppi\goa_date_screen_cache\goa_human.gpi.158.gz
+2026-08-29T12:03:56.942649Z,159,source_integrity,passed,gaf=C:\Users\agitter\Desktop\ppi\goa_date_screen_cache\goa_human.gaf.159.gz;gpi=C:\Users\agitter\Desktop\ppi\goa_date_screen_cache\goa_human.gpi.159.gz
+2026-08-29T12:03:58.608177Z,159,analysis,passed,output=C:\Users\agitter\Desktop\ppi\goa_date_screen_results\goa_release_159_screen.json; mismatches=0; order_lcs=94
+2026-08-29T12:03:58.611492Z,159,download_cleanup,deleted_after_success,C:\Users\agitter\Desktop\ppi\goa_date_screen_cache\goa_human.gaf.159.gz|C:\Users\agitter\Desktop\ppi\goa_date_screen_cache\goa_human.gpi.159.gz
+2026-08-29T12:04:20.447426Z,160,source_integrity,passed,gaf=C:\Users\agitter\Desktop\ppi\goa_date_screen_cache\goa_human.gaf.160.gz;gpi=C:\Users\agitter\Desktop\ppi\goa_date_screen_cache\goa_human.gpi.160.gz
+2026-08-29T12:04:22.076646Z,160,analysis,passed,output=C:\Users\agitter\Desktop\ppi\goa_date_screen_results\goa_release_160_screen.json; mismatches=652; order_lcs=94
+2026-08-29T12:04:22.077151Z,160,download_cleanup,deleted_after_success,C:\Users\agitter\Desktop\ppi\goa_date_screen_cache\goa_human.gaf.160.gz|C:\Users\agitter\Desktop\ppi\goa_date_screen_cache\goa_human.gpi.160.gz
+2026-08-29T12:04:28.628654Z,161,source_integrity,passed,gaf=C:\Users\agitter\Desktop\ppi\goa_date_screen_cache\goa_human.gaf.161.gz;gpi=C:\Users\agitter\Desktop\ppi\goa_date_screen_cache\goa_human.gpi.161.gz
+2026-08-29T12:04:30.227160Z,161,analysis,passed,output=C:\Users\agitter\Desktop\ppi\goa_date_screen_results\goa_release_161_screen.json; mismatches=863; order_lcs=94
+2026-08-29T12:04:30.232543Z,161,download_cleanup,deleted_after_success,C:\Users\agitter\Desktop\ppi\goa_date_screen_cache\goa_human.gaf.161.gz|C:\Users\agitter\Desktop\ppi\goa_date_screen_cache\goa_human.gpi.161.gz
+2026-08-29T12:04:42.853877Z,162,source_integrity,passed,gaf=C:\Users\agitter\Desktop\ppi\goa_date_screen_cache\goa_human.gaf.162.gz;gpi=C:\Users\agitter\Desktop\ppi\goa_date_screen_cache\goa_human.gpi.162.gz
+2026-08-29T12:04:44.871827Z,162,analysis,passed,output=C:\Users\agitter\Desktop\ppi\goa_date_screen_results\goa_release_162_screen.json; mismatches=1182; order_lcs=94
+2026-08-29T12:04:44.872826Z,162,download_cleanup,deleted_after_success,C:\Users\agitter\Desktop\ppi\goa_date_screen_cache\goa_human.gaf.162.gz|C:\Users\agitter\Desktop\ppi\goa_date_screen_cache\goa_human.gpi.162.gz
+2026-08-29T12:04:51.686356Z,163,source_integrity,passed,gaf=C:\Users\agitter\Desktop\ppi\goa_date_screen_cache\goa_human.gaf.163.gz;gpi=C:\Users\agitter\Desktop\ppi\goa_date_screen_cache\goa_human.gpi.163.gz
+2026-08-29T12:04:54.311374Z,163,analysis,passed,output=C:\Users\agitter\Desktop\ppi\goa_date_screen_results\goa_release_163_screen.json; mismatches=1526; order_lcs=94
+2026-08-29T12:04:54.313282Z,163,download_cleanup,deleted_after_success,C:\Users\agitter\Desktop\ppi\goa_date_screen_cache\goa_human.gaf.163.gz|C:\Users\agitter\Desktop\ppi\goa_date_screen_cache\goa_human.gpi.163.gz
+2026-08-29T12:05:00.318150Z,164,source_integrity,passed,gaf=C:\Users\agitter\Desktop\ppi\goa_date_screen_cache\goa_human.gaf.164.gz;gpi=C:\Users\agitter\Desktop\ppi\goa_date_screen_cache\goa_human.gpi.164.gz
+2026-08-29T12:05:04.253452Z,164,analysis,passed,output=C:\Users\agitter\Desktop\ppi\goa_date_screen_results\goa_release_164_screen.json; mismatches=5647; order_lcs=94
+2026-08-29T12:05:04.255358Z,164,download_cleanup,deleted_after_success,C:\Users\agitter\Desktop\ppi\goa_date_screen_cache\goa_human.gaf.164.gz|C:\Users\agitter\Desktop\ppi\goa_date_screen_cache\goa_human.gpi.164.gz
+2026-08-29T12:05:14.667021Z,165,source_integrity,passed,gaf=C:\Users\agitter\Desktop\ppi\goa_date_screen_cache\goa_human.gaf.165.gz;gpi=C:\Users\agitter\Desktop\ppi\goa_date_screen_cache\goa_human.gpi.165.gz
+2026-08-29T12:05:16.730654Z,165,analysis,passed,output=C:\Users\agitter\Desktop\ppi\goa_date_screen_results\goa_release_165_screen.json; mismatches=6517; order_lcs=94
+2026-08-29T12:05:16.732280Z,165,download_cleanup,deleted_after_success,C:\Users\agitter\Desktop\ppi\goa_date_screen_cache\goa_human.gaf.165.gz|C:\Users\agitter\Desktop\ppi\goa_date_screen_cache\goa_human.gpi.165.gz
+2026-08-29T12:05:29.516464Z,166,source_integrity,passed,gaf=C:\Users\agitter\Desktop\ppi\goa_date_screen_cache\goa_human.gaf.166.gz;gpi=C:\Users\agitter\Desktop\ppi\goa_date_screen_cache\goa_human.gpi.166.gz
+2026-08-29T12:05:31.693129Z,166,analysis,passed,output=C:\Users\agitter\Desktop\ppi\goa_date_screen_results\goa_release_166_screen.json; mismatches=8484; order_lcs=94
+2026-08-29T12:05:31.696125Z,166,download_cleanup,deleted_after_success,C:\Users\agitter\Desktop\ppi\goa_date_screen_cache\goa_human.gaf.166.gz|C:\Users\agitter\Desktop\ppi\goa_date_screen_cache\goa_human.gpi.166.gz
+2026-08-29T12:05:43.597843Z,167,source_integrity,passed,gaf=C:\Users\agitter\Desktop\ppi\goa_date_screen_cache\goa_human.gaf.167.gz;gpi=C:\Users\agitter\Desktop\ppi\goa_date_screen_cache\goa_human.gpi.167.gz
+2026-08-29T12:05:45.354810Z,167,analysis,passed,output=C:\Users\agitter\Desktop\ppi\goa_date_screen_results\goa_release_167_screen.json; mismatches=8777; order_lcs=93
+2026-08-29T12:05:45.355813Z,167,download_cleanup,deleted_after_success,C:\Users\agitter\Desktop\ppi\goa_date_screen_cache\goa_human.gaf.167.gz|C:\Users\agitter\Desktop\ppi\goa_date_screen_cache\goa_human.gpi.167.gz
+2026-08-29T12:05:55.783027Z,168,source_integrity,passed,gaf=C:\Users\agitter\Desktop\ppi\goa_date_screen_cache\goa_human.gaf.168.gz;gpi=C:\Users\agitter\Desktop\ppi\goa_date_screen_cache\goa_human.gpi.168.gz
+2026-08-29T12:05:57.540218Z,168,analysis,passed,output=C:\Users\agitter\Desktop\ppi\goa_date_screen_results\goa_release_168_screen.json; mismatches=9225; order_lcs=93
+2026-08-29T12:05:57.541219Z,168,download_cleanup,deleted_after_success,C:\Users\agitter\Desktop\ppi\goa_date_screen_cache\goa_human.gaf.168.gz|C:\Users\agitter\Desktop\ppi\goa_date_screen_cache\goa_human.gpi.168.gz
+2026-08-29T12:06:13.115613Z,169,source_integrity,passed,gaf=C:\Users\agitter\Desktop\ppi\goa_date_screen_cache\goa_human.gaf.169.gz;gpi=C:\Users\agitter\Desktop\ppi\goa_date_screen_cache\goa_human.gpi.169.gz
+2026-08-29T12:06:14.948209Z,169,analysis,passed,output=C:\Users\agitter\Desktop\ppi\goa_date_screen_results\goa_release_169_screen.json; mismatches=9782; order_lcs=93
+2026-08-29T12:06:14.949279Z,169,download_cleanup,deleted_after_success,C:\Users\agitter\Desktop\ppi\goa_date_screen_cache\goa_human.gaf.169.gz|C:\Users\agitter\Desktop\ppi\goa_date_screen_cache\goa_human.gpi.169.gz

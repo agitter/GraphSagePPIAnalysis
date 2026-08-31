@@ -1,0 +1,32 @@
+{
+  "biosnap_combined_equals_local_ohmnet_union": true,
+  "biosnap_combined_missing_from_local_count": 0,
+  "biosnap_combined_unique_edge_pairs": 70338,
+  "biosnap_global_unique_edge_pairs": 342353,
+  "generated_at_utc": "20260830T113352Z",
+  "graphsage_raw_link_count": 818716,
+  "local_missing_from_biosnap_combined_count": 0,
+  "local_ohmnet_edge_rows_across_tissues": 3666563,
+  "local_ohmnet_edges_absent_from_biosnap_global_count": 0,
+  "local_ohmnet_tissues": 144,
+  "local_ohmnet_union_is_subset_of_biosnap_global": true,
+  "local_ohmnet_unique_edge_pairs": 70338,
+  "malformed_preview": {
+    "global_ppi": [],
+    "ohmnet_combined": []
+  },
+  "sources": {
+    "global_ppi": {
+      "local_path": "biosnap_ppi_audit_results\\PP-Pathways_ppi.csv.gz",
+      "sha256": "a33d7236b90b6f6cfcec11d0e2c5be41867a0bb547a3c4341abf5f9091e62342",
+      "size_bytes": 1683213,
+      "url": "https://snap.stanford.edu/biodata/datasets/10000/files/PP-Pathways_ppi.csv.gz"
+    },
+    "ohmnet_combined": {
+      "local_path": "biosnap_ppi_audit_results\\PPT-Ohmnet_tissues-combined.edgelist.gz",
+      "sha256": "81c80dca8f12b1f3787d03ada404ab8e38de4c7f761a1f7b99fe22a59b282533",
+      "size_bytes": 18275889,
+      "url": "https://snap.stanford.edu/biodata/datasets/10013/files/PPT-Ohmnet_tissues-combined.edgelist.gz"
+    }
+  }
+}

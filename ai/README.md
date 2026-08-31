@@ -4,13 +4,12 @@ This subdirectory follows up on the initial investigation into the origins of th
 Its goal is to identify as many of the unlabeled attributes as the dataset as possible and confirm the previous results: tissue-specific graphs, node identifiers, node features, and node labels.
 
 ## Claude Opus 4.6
-Claude Opus (primarily 4.6, may have started with 5 though) generated results in the to-be-created `opus46` subdirectory
+Claude Opus (primarily 4.6, may have started with 5 though) generated results in the to-be-created [`opus46`](opus46) subdirectory.
 The analysis started here.
 
 ## GPT 5.6 Sol
-GPT 5.6 Sol took over the analysis from Claude, starting from Claude's results summary (TODO: link to file).
-Its results are in the [`gpt56sol`](gpt56sol) subdirectory
-
+GPT 5.6 Sol took over the analysis from Claude, starting from Claude's results [summary](opus36/investigation_summary_2026_08_23.md).
+Its results are in the [`gpt56sol`](gpt56sol) subdirectory.
 
 ## TODOs
 - Organize data and AI outputs

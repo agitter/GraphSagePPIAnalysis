@@ -1,0 +1,1230 @@
+{
+  "column_order": {
+    "accepted_mapped_rows": 59901,
+    "dictionary_table_size": 32768,
+    "direct_term_count": 9161,
+    "duplicate_orientation": "001",
+    "exact_positions": 13,
+    "exact_prefix": 5,
+    "kendall_tau": 0.7661157024793388,
+    "lcs": 94,
+    "pairwise_concordance": 0.8830578512396694,
+    "unique_dictionary_terms": 13430,
+    "valid": true
+  },
+  "gaf": {
+    "accepted_rows": 109151,
+    "evidence_counts": {
+      "EXP": 1136,
+      "IBA": 22819,
+      "IC": 1393,
+      "IDA": 71812,
+      "IEA": 82092,
+      "IEP": 948,
+      "IGI": 1016,
+      "IKR": 14,
+      "IMP": 16881,
+      "IPI": 76951,
+      "ISS": 20037,
+      "NAS": 7384,
+      "ND": 1860,
+      "TAS": 88599
+    },
+    "headers": [
+      "!gaf-version: 2.1",
+      "!",
+      "!The set of protein accessions included in this file is based on UniProt reference proteomes, which provide one protein per gene.",
+      "!They include the protein sequences annotated in Swiss-Prot or the longest TrEMBL transcript if there is no Swiss-Prot record.",
+      "!If a particular protein accession is not annotated with GO, then it will not appear in this file.",
+      "!",
+      "!Note that the annotation set in this file is filtered in order to reduce redundancy; the full, unfiltered set can be found in",
+      "!ftp://ftp.ebi.ac.uk/pub/databases/GO/goa/UNIPROT/goa_uniprot_all.gz",
+      "!",
+      "!Generated: 2016-10-31 08:59",
+      "!GO-version: http://purl.obolibrary.org/obo/go/releases/2016-10-29/go.owl",
+      "!"
+    ],
+    "qualifier_counts": {
+      "<blank>": 389272,
+      "NOT": 1382,
+      "NOT|colocalizes_with": 14,
+      "NOT|contributes_to": 15,
+      "colocalizes_with": 1123,
+      "contributes_to": 1136
+    },
+    "total_rows": 392942
+  },
+  "gpi": {
+    "headers": [
+      "!gpi-version: 1.2",
+      "!",
+      "!The set of protein accessions included in this file is based on UniProt reference proteomes, which provide one protein per gene.",
+      "!They include the protein sequences annotated in Swiss-Prot or the longest TrEMBL transcript if there is no Swiss-Prot record.",
+      "!Protein accessions are represented in this file even if there is no associated GO annotation.",
+      "!",
+      "!Columns:",
+      "!",
+      "!   name                   required? cardinality   GAF column #  Example content",
+      "!   DB                     required  1             1             UniProtKB",
+      "!   DB_Object_ID           required  1             2/17          Q4VCS5-1",
+      "!   DB_Object_Symbol       required  1             3             AMOT",
+      "!   DB_Object_Name         optional  0 or greater  10            Angiomotin",
+      "!   DB_Object_Synonym(s)   optional  0 or greater  11            AMOT|KIAA1071",
+      "!   DB_Object_Type         required  1             12            protein",
+      "!   Taxon                  required  1             13            taxon:9606",
+      "!   Parent_Object_ID       optional  0 or 1        -             UniProtKB:Q4VCS5",
+      "!   DB_Xref(s)             optional  0 or greater  -             (not populated in gp_information files supplied by UniProt-GOA)",
+      "!   Properties             optional  0 or greater  -             db_subset=Swiss-Prot",
+      "!",
+      "!Generated: 2016-10-31 09:02",
+      "!"
+    ],
+    "row_count": 21006
+  },
+  "label_comparison": {
+    "exact_columns": 1,
+    "false_negatives": 288,
+    "false_positives": 894,
+    "per_column": [
+      {
+        "best_GO_ID": "GO:0050789",
+        "false_negatives": 10,
+        "false_positives": 9,
+        "label_column": 0,
+        "mismatches": 19,
+        "observed_positive_genes": 2647,
+        "predicted_positive_genes": 2646
+      },
+      {
+        "best_GO_ID": "GO:0070062",
+        "false_negatives": 0,
+        "false_positives": 1,
+        "label_column": 1,
+        "mismatches": 1,
+        "observed_positive_genes": 943,
+        "predicted_positive_genes": 944
+      },
+      {
+        "best_GO_ID": "GO:0044710",
+        "false_negatives": 24,
+        "false_positives": 10,
+        "label_column": 2,
+        "mismatches": 34,
+        "observed_positive_genes": 820,
+        "predicted_positive_genes": 806
+      },
+      {
+        "best_GO_ID": "GO:1901363",
+        "false_negatives": 0,
+        "false_positives": 3,
+        "label_column": 3,
+        "mismatches": 3,
+        "observed_positive_genes": 935,
+        "predicted_positive_genes": 938
+      },
+      {
+        "best_GO_ID": "GO:1901360",
+        "false_negatives": 0,
+        "false_positives": 6,
+        "label_column": 4,
+        "mismatches": 6,
+        "observed_positive_genes": 542,
+        "predicted_positive_genes": 548
+      },
+      {
+        "best_GO_ID": "GO:0003676",
+        "false_negatives": 0,
+        "false_positives": 1,
+        "label_column": 5,
+        "mismatches": 1,
+        "observed_positive_genes": 749,
+        "predicted_positive_genes": 750
+      },
+      {
+        "best_GO_ID": "GO:0097159",
+        "false_negatives": 0,
+        "false_positives": 3,
+        "label_column": 6,
+        "mismatches": 3,
+        "observed_positive_genes": 961,
+        "predicted_positive_genes": 964
+      },
+      {
+        "best_GO_ID": "GO:0005737",
+        "false_negatives": 0,
+        "false_positives": 4,
+        "label_column": 7,
+        "mismatches": 4,
+        "observed_positive_genes": 1307,
+        "predicted_positive_genes": 1311
+      },
+      {
+        "best_GO_ID": "GO:1902589",
+        "false_negatives": 46,
+        "false_positives": 3,
+        "label_column": 8,
+        "mismatches": 49,
+        "observed_positive_genes": 556,
+        "predicted_positive_genes": 513
+      },
+      {
+        "best_GO_ID": "GO:0043170",
+        "false_negatives": 0,
+        "false_positives": 12,
+        "label_column": 9,
+        "mismatches": 12,
+        "observed_positive_genes": 1284,
+        "predicted_positive_genes": 1296
+      },
+      {
+        "best_GO_ID": "GO:0043412",
+        "false_negatives": 0,
+        "false_positives": 5,
+        "label_column": 10,
+        "mismatches": 5,
+        "observed_positive_genes": 757,
+        "predicted_positive_genes": 762
+      },
+      {
+        "best_GO_ID": "GO:0009966",
+        "false_negatives": 1,
+        "false_positives": 4,
+        "label_column": 11,
+        "mismatches": 5,
+        "observed_positive_genes": 890,
+        "predicted_positive_genes": 893
+      },
+      {
+        "best_GO_ID": "GO:0003674",
+        "false_negatives": 0,
+        "false_positives": 16,
+        "label_column": 12,
+        "mismatches": 16,
+        "observed_positive_genes": 2905,
+        "predicted_positive_genes": 2921
+      },
+      {
+        "best_GO_ID": "GO:0051239",
+        "false_negatives": 0,
+        "false_positives": 10,
+        "label_column": 13,
+        "mismatches": 10,
+        "observed_positive_genes": 845,
+        "predicted_positive_genes": 855
+      },
+      {
+        "best_GO_ID": "GO:0045935",
+        "false_negatives": 0,
+        "false_positives": 6,
+        "label_column": 14,
+        "mismatches": 6,
+        "observed_positive_genes": 748,
+        "predicted_positive_genes": 754
+      },
+      {
+        "best_GO_ID": "GO:0048519",
+        "false_negatives": 0,
+        "false_positives": 13,
+        "label_column": 15,
+        "mismatches": 13,
+        "observed_positive_genes": 1450,
+        "predicted_positive_genes": 1463
+      },
+      {
+        "best_GO_ID": "GO:0003723",
+        "false_negatives": 0,
+        "false_positives": 1,
+        "label_column": 16,
+        "mismatches": 1,
+        "observed_positive_genes": 395,
+        "predicted_positive_genes": 396
+      },
+      {
+        "best_GO_ID": "GO:0006810",
+        "false_negatives": 0,
+        "false_positives": 10,
+        "label_column": 17,
+        "mismatches": 10,
+        "observed_positive_genes": 610,
+        "predicted_positive_genes": 620
+      },
+      {
+        "best_GO_ID": "GO:0044421",
+        "false_negatives": 0,
+        "false_positives": 1,
+        "label_column": 18,
+        "mismatches": 1,
+        "observed_positive_genes": 1117,
+        "predicted_positive_genes": 1118
+      },
+      {
+        "best_GO_ID": "GO:0008152",
+        "false_negatives": 19,
+        "false_positives": 20,
+        "label_column": 19,
+        "mismatches": 39,
+        "observed_positive_genes": 1657,
+        "predicted_positive_genes": 1658
+      },
+      {
+        "best_GO_ID": "GO:0005654",
+        "false_negatives": 0,
+        "false_positives": 1,
+        "label_column": 20,
+        "mismatches": 1,
+        "observed_positive_genes": 692,
+        "predicted_positive_genes": 693
+      },
+      {
+        "best_GO_ID": "GO:0050794",
+        "false_negatives": 0,
+        "false_positives": 8,
+        "label_column": 21,
+        "mismatches": 8,
+        "observed_positive_genes": 2534,
+        "predicted_positive_genes": 2542
+      },
+      {
+        "best_GO_ID": "GO:1903506",
+        "false_negatives": 0,
+        "false_positives": 5,
+        "label_column": 22,
+        "mismatches": 5,
+        "observed_positive_genes": 893,
+        "predicted_positive_genes": 898
+      },
+      {
+        "best_GO_ID": "GO:0071840",
+        "false_negatives": 22,
+        "false_positives": 13,
+        "label_column": 23,
+        "mismatches": 35,
+        "observed_positive_genes": 1227,
+        "predicted_positive_genes": 1218
+      },
+      {
+        "best_GO_ID": "GO:0043228",
+        "false_negatives": 0,
+        "false_positives": 2,
+        "label_column": 24,
+        "mismatches": 2,
+        "observed_positive_genes": 597,
+        "predicted_positive_genes": 599
+      },
+      {
+        "best_GO_ID": "GO:0043227",
+        "false_negatives": 1,
+        "false_positives": 6,
+        "label_column": 25,
+        "mismatches": 7,
+        "observed_positive_genes": 2437,
+        "predicted_positive_genes": 2442
+      },
+      {
+        "best_GO_ID": "GO:0043226",
+        "false_negatives": 4,
+        "false_positives": 6,
+        "label_column": 26,
+        "mismatches": 10,
+        "observed_positive_genes": 2603,
+        "predicted_positive_genes": 2605
+      },
+      {
+        "best_GO_ID": "GO:0005634",
+        "false_negatives": 0,
+        "false_positives": 6,
+        "label_column": 27,
+        "mismatches": 6,
+        "observed_positive_genes": 1208,
+        "predicted_positive_genes": 1214
+      },
+      {
+        "best_GO_ID": "GO:0009987",
+        "false_negatives": 10,
+        "false_positives": 19,
+        "label_column": 28,
+        "mismatches": 29,
+        "observed_positive_genes": 2816,
+        "predicted_positive_genes": 2825
+      },
+      {
+        "best_GO_ID": "GO:0010557",
+        "false_negatives": 0,
+        "false_positives": 5,
+        "label_column": 29,
+        "mismatches": 5,
+        "observed_positive_genes": 721,
+        "predicted_positive_genes": 726
+      },
+      {
+        "best_GO_ID": "GO:0065007",
+        "false_negatives": 10,
+        "false_positives": 12,
+        "label_column": 30,
+        "mismatches": 22,
+        "observed_positive_genes": 2793,
+        "predicted_positive_genes": 2795
+      },
+      {
+        "best_GO_ID": "GO:1902578",
+        "false_negatives": 0,
+        "false_positives": 10,
+        "label_column": 31,
+        "mismatches": 10,
+        "observed_positive_genes": 613,
+        "predicted_positive_genes": 623
+      },
+      {
+        "best_GO_ID": "GO:0008150",
+        "false_negatives": 0,
+        "false_positives": 11,
+        "label_column": 32,
+        "mismatches": 11,
+        "observed_positive_genes": 3696,
+        "predicted_positive_genes": 3707
+      },
+      {
+        "best_GO_ID": "GO:0042221",
+        "false_negatives": 0,
+        "false_positives": 9,
+        "label_column": 33,
+        "mismatches": 9,
+        "observed_positive_genes": 657,
+        "predicted_positive_genes": 666
+      },
+      {
+        "best_GO_ID": "GO:0032268",
+        "false_negatives": 0,
+        "false_positives": 6,
+        "label_column": 34,
+        "mismatches": 6,
+        "observed_positive_genes": 819,
+        "predicted_positive_genes": 825
+      },
+      {
+        "best_GO_ID": "GO:0032991",
+        "false_negatives": 0,
+        "false_positives": 14,
+        "label_column": 35,
+        "mismatches": 14,
+        "observed_positive_genes": 1253,
+        "predicted_positive_genes": 1267
+      },
+      {
+        "best_GO_ID": "GO:0051128",
+        "false_negatives": 0,
+        "false_positives": 8,
+        "label_column": 36,
+        "mismatches": 8,
+        "observed_positive_genes": 746,
+        "predicted_positive_genes": 754
+      },
+      {
+        "best_GO_ID": "GO:0009892",
+        "false_negatives": 0,
+        "false_positives": 7,
+        "label_column": 37,
+        "mismatches": 7,
+        "observed_positive_genes": 819,
+        "predicted_positive_genes": 826
+      },
+      {
+        "best_GO_ID": "GO:0080090",
+        "false_negatives": 0,
+        "false_positives": 8,
+        "label_column": 38,
+        "mismatches": 8,
+        "observed_positive_genes": 1626,
+        "predicted_positive_genes": 1634
+      },
+      {
+        "best_GO_ID": "GO:0006464",
+        "false_negatives": 0,
+        "false_positives": 5,
+        "label_column": 39,
+        "mismatches": 5,
+        "observed_positive_genes": 742,
+        "predicted_positive_genes": 747
+      },
+      {
+        "best_GO_ID": "GO:0006807",
+        "false_negatives": 0,
+        "false_positives": 9,
+        "label_column": 40,
+        "mismatches": 9,
+        "observed_positive_genes": 599,
+        "predicted_positive_genes": 608
+      },
+      {
+        "best_GO_ID": "GO:0032502",
+        "false_negatives": 6,
+        "false_positives": 5,
+        "label_column": 41,
+        "mismatches": 11,
+        "observed_positive_genes": 900,
+        "predicted_positive_genes": 899
+      },
+      {
+        "best_GO_ID": "GO:0065009",
+        "false_negatives": 2,
+        "false_positives": 14,
+        "label_column": 42,
+        "mismatches": 16,
+        "observed_positive_genes": 794,
+        "predicted_positive_genes": 806
+      },
+      {
+        "best_GO_ID": "GO:0065008",
+        "false_negatives": 0,
+        "false_positives": 16,
+        "label_column": 43,
+        "mismatches": 16,
+        "observed_positive_genes": 880,
+        "predicted_positive_genes": 896
+      },
+      {
+        "best_GO_ID": "GO:0005886",
+        "false_negatives": 0,
+        "false_positives": 1,
+        "label_column": 44,
+        "mismatches": 1,
+        "observed_positive_genes": 550,
+        "predicted_positive_genes": 551
+      },
+      {
+        "best_GO_ID": "GO:0009889",
+        "false_negatives": 0,
+        "false_positives": 8,
+        "label_column": 45,
+        "mismatches": 8,
+        "observed_positive_genes": 1124,
+        "predicted_positive_genes": 1132
+      },
+      {
+        "best_GO_ID": "GO:0044238",
+        "false_negatives": 0,
+        "false_positives": 18,
+        "label_column": 46,
+        "mismatches": 18,
+        "observed_positive_genes": 1486,
+        "predicted_positive_genes": 1504
+      },
+      {
+        "best_GO_ID": "GO:0044237",
+        "false_negatives": 0,
+        "false_positives": 18,
+        "label_column": 47,
+        "mismatches": 18,
+        "observed_positive_genes": 1522,
+        "predicted_positive_genes": 1540
+      },
+      {
+        "best_GO_ID": "GO:0043230",
+        "false_negatives": 0,
+        "false_positives": 1,
+        "label_column": 48,
+        "mismatches": 1,
+        "observed_positive_genes": 948,
+        "predicted_positive_genes": 949
+      },
+      {
+        "best_GO_ID": "GO:0051246",
+        "false_negatives": 0,
+        "false_positives": 6,
+        "label_column": 49,
+        "mismatches": 6,
+        "observed_positive_genes": 882,
+        "predicted_positive_genes": 888
+      },
+      {
+        "best_GO_ID": "GO:0048523",
+        "false_negatives": 0,
+        "false_positives": 11,
+        "label_column": 50,
+        "mismatches": 11,
+        "observed_positive_genes": 1378,
+        "predicted_positive_genes": 1389
+      },
+      {
+        "best_GO_ID": "GO:0048583",
+        "false_negatives": 18,
+        "false_positives": 6,
+        "label_column": 51,
+        "mismatches": 24,
+        "observed_positive_genes": 1164,
+        "predicted_positive_genes": 1152
+      },
+      {
+        "best_GO_ID": "GO:0048522",
+        "false_negatives": 0,
+        "false_positives": 11,
+        "label_column": 52,
+        "mismatches": 11,
+        "observed_positive_genes": 1731,
+        "predicted_positive_genes": 1742
+      },
+      {
+        "best_GO_ID": "GO:0060255",
+        "false_negatives": 0,
+        "false_positives": 8,
+        "label_column": 53,
+        "mismatches": 8,
+        "observed_positive_genes": 1635,
+        "predicted_positive_genes": 1643
+      },
+      {
+        "best_GO_ID": "GO:0023051",
+        "false_negatives": 0,
+        "false_positives": 4,
+        "label_column": 54,
+        "mismatches": 4,
+        "observed_positive_genes": 957,
+        "predicted_positive_genes": 961
+      },
+      {
+        "best_GO_ID": "GO:2000112",
+        "false_negatives": 0,
+        "false_positives": 6,
+        "label_column": 55,
+        "mismatches": 6,
+        "observed_positive_genes": 1017,
+        "predicted_positive_genes": 1023
+      },
+      {
+        "best_GO_ID": "GO:0050793",
+        "false_negatives": 0,
+        "false_positives": 7,
+        "label_column": 56,
+        "mismatches": 7,
+        "observed_positive_genes": 698,
+        "predicted_positive_genes": 705
+      },
+      {
+        "best_GO_ID": "GO:0031399",
+        "false_negatives": 0,
+        "false_positives": 6,
+        "label_column": 57,
+        "mismatches": 6,
+        "observed_positive_genes": 624,
+        "predicted_positive_genes": 630
+      },
+      {
+        "best_GO_ID": "GO:0043933",
+        "false_negatives": 0,
+        "false_positives": 5,
+        "label_column": 58,
+        "mismatches": 5,
+        "observed_positive_genes": 604,
+        "predicted_positive_genes": 609
+      },
+      {
+        "best_GO_ID": "GO:0006355",
+        "false_negatives": 0,
+        "false_positives": 5,
+        "label_column": 59,
+        "mismatches": 5,
+        "observed_positive_genes": 892,
+        "predicted_positive_genes": 897
+      },
+      {
+        "best_GO_ID": "GO:0048518",
+        "false_negatives": 0,
+        "false_positives": 12,
+        "label_column": 60,
+        "mismatches": 12,
+        "observed_positive_genes": 1829,
+        "predicted_positive_genes": 1841
+      },
+      {
+        "best_GO_ID": "GO:0051234",
+        "false_negatives": 0,
+        "false_positives": 10,
+        "label_column": 61,
+        "mismatches": 10,
+        "observed_positive_genes": 668,
+        "predicted_positive_genes": 678
+      },
+      {
+        "best_GO_ID": "GO:0032879",
+        "false_negatives": 0,
+        "false_positives": 7,
+        "label_column": 62,
+        "mismatches": 7,
+        "observed_positive_genes": 796,
+        "predicted_positive_genes": 803
+      },
+      {
+        "best_GO_ID": "GO:0006464",
+        "false_negatives": 0,
+        "false_positives": 5,
+        "label_column": 63,
+        "mismatches": 5,
+        "observed_positive_genes": 742,
+        "predicted_positive_genes": 747
+      },
+      {
+        "best_GO_ID": "GO:0051716",
+        "false_negatives": 0,
+        "false_positives": 9,
+        "label_column": 64,
+        "mismatches": 9,
+        "observed_positive_genes": 762,
+        "predicted_positive_genes": 771
+      },
+      {
+        "best_GO_ID": "GO:0044765",
+        "false_negatives": 0,
+        "false_positives": 10,
+        "label_column": 65,
+        "mismatches": 10,
+        "observed_positive_genes": 536,
+        "predicted_positive_genes": 546
+      },
+      {
+        "best_GO_ID": "GO:0044763",
+        "false_negatives": 14,
+        "false_positives": 16,
+        "label_column": 66,
+        "mismatches": 30,
+        "observed_positive_genes": 2043,
+        "predicted_positive_genes": 2045
+      },
+      {
+        "best_GO_ID": "GO:0016020",
+        "false_negatives": 0,
+        "false_positives": 6,
+        "label_column": 67,
+        "mismatches": 6,
+        "observed_positive_genes": 1291,
+        "predicted_positive_genes": 1297
+      },
+      {
+        "best_GO_ID": "GO:0044422",
+        "false_negatives": 0,
+        "false_positives": 7,
+        "label_column": 68,
+        "mismatches": 7,
+        "observed_positive_genes": 1737,
+        "predicted_positive_genes": 1744
+      },
+      {
+        "best_GO_ID": "GO:0043234",
+        "false_negatives": 0,
+        "false_positives": 10,
+        "label_column": 69,
+        "mismatches": 10,
+        "observed_positive_genes": 1080,
+        "predicted_positive_genes": 1090
+      },
+      {
+        "best_GO_ID": "GO:0043230",
+        "false_negatives": 0,
+        "false_positives": 1,
+        "label_column": 70,
+        "mismatches": 1,
+        "observed_positive_genes": 948,
+        "predicted_positive_genes": 949
+      },
+      {
+        "best_GO_ID": "GO:0043228",
+        "false_negatives": 0,
+        "false_positives": 2,
+        "label_column": 71,
+        "mismatches": 2,
+        "observed_positive_genes": 597,
+        "predicted_positive_genes": 599
+      },
+      {
+        "best_GO_ID": "GO:0051254",
+        "false_negatives": 0,
+        "false_positives": 4,
+        "label_column": 72,
+        "mismatches": 4,
+        "observed_positive_genes": 653,
+        "predicted_positive_genes": 657
+      },
+      {
+        "best_GO_ID": "GO:0051171",
+        "false_negatives": 0,
+        "false_positives": 4,
+        "label_column": 73,
+        "mismatches": 4,
+        "observed_positive_genes": 1159,
+        "predicted_positive_genes": 1163
+      },
+      {
+        "best_GO_ID": "GO:0051173",
+        "false_negatives": 0,
+        "false_positives": 6,
+        "label_column": 74,
+        "mismatches": 6,
+        "observed_positive_genes": 773,
+        "predicted_positive_genes": 779
+      },
+      {
+        "best_GO_ID": "GO:0051179",
+        "false_negatives": 0,
+        "false_positives": 11,
+        "label_column": 75,
+        "mismatches": 11,
+        "observed_positive_genes": 808,
+        "predicted_positive_genes": 819
+      },
+      {
+        "best_GO_ID": "GO:0016043",
+        "false_negatives": 22,
+        "false_positives": 13,
+        "label_column": 76,
+        "mismatches": 35,
+        "observed_positive_genes": 1225,
+        "predicted_positive_genes": 1216
+      },
+      {
+        "best_GO_ID": "GO:0034641",
+        "false_negatives": 0,
+        "false_positives": 9,
+        "label_column": 77,
+        "mismatches": 9,
+        "observed_positive_genes": 547,
+        "predicted_positive_genes": 556
+      },
+      {
+        "best_GO_ID": "GO:0010556",
+        "false_negatives": 0,
+        "false_positives": 6,
+        "label_column": 78,
+        "mismatches": 6,
+        "observed_positive_genes": 1054,
+        "predicted_positive_genes": 1060
+      },
+      {
+        "best_GO_ID": "GO:2001141",
+        "false_negatives": 0,
+        "false_positives": 5,
+        "label_column": 79,
+        "mismatches": 5,
+        "observed_positive_genes": 900,
+        "predicted_positive_genes": 905
+      },
+      {
+        "best_GO_ID": "GO:0044267",
+        "false_negatives": 0,
+        "false_positives": 6,
+        "label_column": 80,
+        "mismatches": 6,
+        "observed_positive_genes": 758,
+        "predicted_positive_genes": 764
+      },
+      {
+        "best_GO_ID": "GO:0005488",
+        "false_negatives": 0,
+        "false_positives": 9,
+        "label_column": 81,
+        "mismatches": 9,
+        "observed_positive_genes": 2035,
+        "predicted_positive_genes": 2044
+      },
+      {
+        "best_GO_ID": "GO:0019219",
+        "false_negatives": 0,
+        "false_positives": 4,
+        "label_column": 82,
+        "mismatches": 4,
+        "observed_positive_genes": 1103,
+        "predicted_positive_genes": 1107
+      },
+      {
+        "best_GO_ID": "GO:0007165",
+        "false_negatives": 0,
+        "false_positives": 4,
+        "label_column": 83,
+        "mismatches": 4,
+        "observed_positive_genes": 785,
+        "predicted_positive_genes": 789
+      },
+      {
+        "best_GO_ID": "GO:0016740",
+        "false_negatives": 0,
+        "false_positives": 5,
+        "label_column": 84,
+        "mismatches": 5,
+        "observed_positive_genes": 582,
+        "predicted_positive_genes": 587
+      },
+      {
+        "best_GO_ID": "GO:0044699",
+        "false_negatives": 10,
+        "false_positives": 15,
+        "label_column": 85,
+        "mismatches": 25,
+        "observed_positive_genes": 2406,
+        "predicted_positive_genes": 2411
+      },
+      {
+        "best_GO_ID": "GO:0044822",
+        "false_negatives": 0,
+        "false_positives": 0,
+        "label_column": 86,
+        "mismatches": 0,
+        "observed_positive_genes": 339,
+        "predicted_positive_genes": 339
+      },
+      {
+        "best_GO_ID": "GO:0010604",
+        "false_negatives": 0,
+        "false_positives": 9,
+        "label_column": 87,
+        "mismatches": 9,
+        "observed_positive_genes": 1132,
+        "predicted_positive_genes": 1141
+      },
+      {
+        "best_GO_ID": "GO:0010468",
+        "false_negatives": 0,
+        "false_positives": 5,
+        "label_column": 88,
+        "mismatches": 5,
+        "observed_positive_genes": 1108,
+        "predicted_positive_genes": 1113
+      },
+      {
+        "best_GO_ID": "GO:0010605",
+        "false_negatives": 0,
+        "false_positives": 4,
+        "label_column": 89,
+        "mismatches": 4,
+        "observed_positive_genes": 766,
+        "predicted_positive_genes": 770
+      },
+      {
+        "best_GO_ID": "GO:0048584",
+        "false_negatives": 0,
+        "false_positives": 6,
+        "label_column": 90,
+        "mismatches": 6,
+        "observed_positive_genes": 702,
+        "predicted_positive_genes": 708
+      },
+      {
+        "best_GO_ID": "GO:0019538",
+        "false_negatives": 0,
+        "false_positives": 8,
+        "label_column": 91,
+        "mismatches": 8,
+        "observed_positive_genes": 913,
+        "predicted_positive_genes": 921
+      },
+      {
+        "best_GO_ID": "GO:0044260",
+        "false_negatives": 0,
+        "false_positives": 10,
+        "label_column": 92,
+        "mismatches": 10,
+        "observed_positive_genes": 1174,
+        "predicted_positive_genes": 1184
+      },
+      {
+        "best_GO_ID": "GO:0010628",
+        "false_negatives": 0,
+        "false_positives": 5,
+        "label_column": 93,
+        "mismatches": 5,
+        "observed_positive_genes": 725,
+        "predicted_positive_genes": 730
+      },
+      {
+        "best_GO_ID": "GO:0044767",
+        "false_negatives": 6,
+        "false_positives": 5,
+        "label_column": 94,
+        "mismatches": 11,
+        "observed_positive_genes": 864,
+        "predicted_positive_genes": 863
+      },
+      {
+        "best_GO_ID": "GO:0003824",
+        "false_negatives": 0,
+        "false_positives": 10,
+        "label_column": 95,
+        "mismatches": 10,
+        "observed_positive_genes": 1149,
+        "predicted_positive_genes": 1159
+      },
+      {
+        "best_GO_ID": "GO:0006950",
+        "false_negatives": 0,
+        "false_positives": 8,
+        "label_column": 96,
+        "mismatches": 8,
+        "observed_positive_genes": 658,
+        "predicted_positive_genes": 666
+      },
+      {
+        "best_GO_ID": "GO:0071704",
+        "false_negatives": 0,
+        "false_positives": 17,
+        "label_column": 97,
+        "mismatches": 17,
+        "observed_positive_genes": 1577,
+        "predicted_positive_genes": 1594
+      },
+      {
+        "best_GO_ID": "GO:0019222",
+        "false_negatives": 0,
+        "false_positives": 10,
+        "label_column": 98,
+        "mismatches": 10,
+        "observed_positive_genes": 1741,
+        "predicted_positive_genes": 1751
+      },
+      {
+        "best_GO_ID": "GO:0031982",
+        "false_negatives": 0,
+        "false_positives": 1,
+        "label_column": 99,
+        "mismatches": 1,
+        "observed_positive_genes": 1042,
+        "predicted_positive_genes": 1043
+      },
+      {
+        "best_GO_ID": "GO:0043231",
+        "false_negatives": 7,
+        "false_positives": 6,
+        "label_column": 100,
+        "mismatches": 13,
+        "observed_positive_genes": 1893,
+        "predicted_positive_genes": 1892
+      },
+      {
+        "best_GO_ID": "GO:0010646",
+        "false_negatives": 1,
+        "false_positives": 4,
+        "label_column": 101,
+        "mismatches": 5,
+        "observed_positive_genes": 977,
+        "predicted_positive_genes": 980
+      },
+      {
+        "best_GO_ID": "GO:0044425",
+        "false_negatives": 2,
+        "false_positives": 8,
+        "label_column": 102,
+        "mismatches": 10,
+        "observed_positive_genes": 726,
+        "predicted_positive_genes": 732
+      },
+      {
+        "best_GO_ID": "GO:0009893",
+        "false_negatives": 0,
+        "false_positives": 10,
+        "label_column": 103,
+        "mismatches": 10,
+        "observed_positive_genes": 1207,
+        "predicted_positive_genes": 1217
+      },
+      {
+        "best_GO_ID": "GO:0009891",
+        "false_negatives": 0,
+        "false_positives": 5,
+        "label_column": 104,
+        "mismatches": 5,
+        "observed_positive_genes": 774,
+        "predicted_positive_genes": 779
+      },
+      {
+        "best_GO_ID": "GO:0050896",
+        "false_negatives": 0,
+        "false_positives": 10,
+        "label_column": 105,
+        "mismatches": 10,
+        "observed_positive_genes": 1170,
+        "predicted_positive_genes": 1180
+      },
+      {
+        "best_GO_ID": "GO:0005515",
+        "false_negatives": 0,
+        "false_positives": 10,
+        "label_column": 106,
+        "mismatches": 10,
+        "observed_positive_genes": 1153,
+        "predicted_positive_genes": 1163
+      },
+      {
+        "best_GO_ID": "GO:0006996",
+        "false_negatives": 44,
+        "false_positives": 5,
+        "label_column": 107,
+        "mismatches": 49,
+        "observed_positive_genes": 695,
+        "predicted_positive_genes": 656
+      },
+      {
+        "best_GO_ID": "GO:0044446",
+        "false_negatives": 0,
+        "false_positives": 7,
+        "label_column": 108,
+        "mismatches": 7,
+        "observed_positive_genes": 1697,
+        "predicted_positive_genes": 1704
+      },
+      {
+        "best_GO_ID": "GO:0044444",
+        "false_negatives": 1,
+        "false_positives": 7,
+        "label_column": 109,
+        "mismatches": 8,
+        "observed_positive_genes": 1389,
+        "predicted_positive_genes": 1395
+      },
+      {
+        "best_GO_ID": "GO:0044428",
+        "false_negatives": 0,
+        "false_positives": 4,
+        "label_column": 110,
+        "mismatches": 4,
+        "observed_positive_genes": 1149,
+        "predicted_positive_genes": 1153
+      },
+      {
+        "best_GO_ID": "GO:0031328",
+        "false_negatives": 0,
+        "false_positives": 5,
+        "label_column": 111,
+        "mismatches": 5,
+        "observed_positive_genes": 761,
+        "predicted_positive_genes": 766
+      },
+      {
+        "best_GO_ID": "GO:0031326",
+        "false_negatives": 0,
+        "false_positives": 7,
+        "label_column": 112,
+        "mismatches": 7,
+        "observed_positive_genes": 1108,
+        "predicted_positive_genes": 1115
+      },
+      {
+        "best_GO_ID": "GO:0031325",
+        "false_negatives": 0,
+        "false_positives": 9,
+        "label_column": 113,
+        "mismatches": 9,
+        "observed_positive_genes": 1155,
+        "predicted_positive_genes": 1164
+      },
+      {
+        "best_GO_ID": "GO:0031324",
+        "false_negatives": 0,
+        "false_positives": 6,
+        "label_column": 114,
+        "mismatches": 6,
+        "observed_positive_genes": 777,
+        "predicted_positive_genes": 783
+      },
+      {
+        "best_GO_ID": "GO:0031323",
+        "false_negatives": 0,
+        "false_positives": 10,
+        "label_column": 115,
+        "mismatches": 10,
+        "observed_positive_genes": 1663,
+        "predicted_positive_genes": 1673
+      },
+      {
+        "best_GO_ID": "GO:0005575",
+        "false_negatives": 0,
+        "false_positives": 3,
+        "label_column": 116,
+        "mismatches": 3,
+        "observed_positive_genes": 3612,
+        "predicted_positive_genes": 3615
+      },
+      {
+        "best_GO_ID": "GO:0044424",
+        "false_negatives": 1,
+        "false_positives": 3,
+        "label_column": 117,
+        "mismatches": 4,
+        "observed_positive_genes": 2929,
+        "predicted_positive_genes": 2931
+      },
+      {
+        "best_GO_ID": "GO:0044464",
+        "false_negatives": 0,
+        "false_positives": 6,
+        "label_column": 118,
+        "mismatches": 6,
+        "observed_positive_genes": 3252,
+        "predicted_positive_genes": 3258
+      },
+      {
+        "best_GO_ID": "GO:0043229",
+        "false_negatives": 7,
+        "false_positives": 6,
+        "label_column": 119,
+        "mismatches": 13,
+        "observed_positive_genes": 2101,
+        "predicted_positive_genes": 2100
+      },
+      {
+        "best_GO_ID": "GO:0051252",
+        "false_negatives": 0,
+        "false_positives": 5,
+        "label_column": 120,
+        "mismatches": 5,
+        "observed_positive_genes": 959,
+        "predicted_positive_genes": 964
+      }
+    ],
+    "total_mismatches": 1182
+  },
+  "listed_release_date": "2016-10-31",
+  "mapping": {
+    "fallback_examples": [],
+    "gpi_accessions": 21006,
+    "graph_geneids_with_any_annotation": 4059,
+    "mapped_accessions_in_accepted_rows": 4045,
+    "mapped_geneids": 12443,
+    "unique_symbol_fallback_edges": 0
+  },
+  "release": 162,
+  "source_files": {
+    "gaf": {
+      "path": "C:\\Users\\agitter\\Desktop\\ppi\\goa_date_screen_cache\\goa_human.gaf.162.gz",
+      "sha256": "0dd0bcb1b0e12ce1d1cd09002118c1520d9d0e050827542bd8e92c3f8aa261b8",
+      "size_bytes": 4941785,
+      "url_or_local": "https://ftp.ebi.ac.uk/pub/databases/GO/goa/old/HUMAN/goa_human.gaf.162.gz"
+    },
+    "gpi": {
+      "path": "C:\\Users\\agitter\\Desktop\\ppi\\goa_date_screen_cache\\goa_human.gpi.162.gz",
+      "sha256": "e6f6696cea728bad15bbe810d4dc3f568399243fcd4d490322f79f535ab20908",
+      "size_bytes": 693186,
+      "url_or_local": "https://ftp.ebi.ac.uk/pub/databases/GO/goa/old/HUMAN/goa_human.gpi.162.gz"
+    }
+  },
+  "term_selection": {
+    "candidate_overlap_ge1000": 120,
+    "candidate_overlap_top121": 119,
+    "extra_ge1000": [
+      "GO:0006725",
+      "GO:0043167",
+      "GO:0048869",
+      "GO:0051049"
+    ],
+    "extra_top121": [
+      "GO:0043167",
+      "GO:0048869"
+    ],
+    "missing_ge1000": [
+      "GO:1902589"
+    ],
+    "missing_top121": [
+      "GO:0031399",
+      "GO:1902589"
+    ],
+    "rank121_count": 1021,
+    "rank122_count": 1014,
+    "terms_at_least_1000": 124,
+    "terms_with_any_mapped_gene": 16511
+  }
+}

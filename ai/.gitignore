@@ -1,0 +1,47 @@
+# ----------------------------------------------------------------------
+# External/source data
+# Re-downloadable or separately archived biological datasets.
+# Provenance, URLs, hashes, and manifests should remain tracked elsewhere.
+# Manuscripts and supplementary files
+# ----------------------------------------------------------------------
+/data/
+/papers/
+
+# ----------------------------------------------------------------------
+# Redundant GPT-5.6 Sol snapshot package
+# The extracted gpt56sol/ tree is the canonical repository copy.
+# ----------------------------------------------------------------------
+/gpt56sol/gpt56sol_complete_artifact_snapshot_*.zip
+
+# ----------------------------------------------------------------------
+# Python transient files
+# ----------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# ----------------------------------------------------------------------
+# Local Python environments
+# ----------------------------------------------------------------------
+.venv/
+venv/
+env/
+
+# ----------------------------------------------------------------------
+# OS/editor detritus
+# ----------------------------------------------------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
+*~
+*.swp
+*.swo
+
+# ----------------------------------------------------------------------
+# Temporary/download fragments
+# ----------------------------------------------------------------------
+*.part
+*.tmp
+*.temp
