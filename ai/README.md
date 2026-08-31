@@ -10,9 +10,10 @@ The analysis started here.
 ## GPT 5.6 Sol
 GPT 5.6 Sol took over the analysis from Claude, starting from Claude's results [summary](opus46/investigation_summary_2026_08_23.md).
 Its results are in the [`gpt56sol`](gpt56sol) subdirectory.
+The primary overviews are a [summary of results and evidence](gpt56sol/CURRENT_FINDINGS_AND_EVIDENCE_SUMMARY_20260831T205314Z.md) and a [log of the exploration](gpt56sol/INVESTIGATION_HISTORY_AND_EXPLORATION_LOG_20260831T205314Z.md).
 
 ## TODOs
-- Create a summary of claims in the manuscripts that are incorrect and the evidence
+- Create a summary of claims in the manuscripts that are incorrect and the evidence (partially complete)
 - Create a workflow diagram of where all data came from originally and how it was processed to create the GraphSAGE and DGL files
 - Create a GitHub Actions workflow that starts with external data, transforms it into the GraphSAGE and DGL versions, and runs tests verifying the match
 - Prepare a report describing the data workflow, evidence supporting each conclusion (including what remains speculative or unidentifiable with a claims.csv)
