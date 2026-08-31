@@ -1,0 +1,30 @@
+# A snapshot of URLs explored during the analysis
+# Not actively used or needed
+https://cs.stanford.edu/people/jure/pubs/ogb-neurips20.pdf
+https://github.com/pyg-team/pytorch_geometric/blob/master/torch_geometric/datasets/ppi.py
+https://arxiv.org/pdf/2502.14546
+https://arxiv.org/pdf/2102.06514
+https://github.com/williamleif/GraphSAGE/issues/188
+https://arxiv.org/pdf/1811.05868
+https://arxiv.org/pdf/2003.02454
+https://snap.stanford.edu/ohmnet/
+https://github.com/dmlc/dgl/commits/master/python/dgl/data/ppi.py
+https://github.com/sufeidechabei/PPI-Pretrained
+https://web.archive.org/web/20260000000000*/https://data.dgl.ai/dataset/ppi.zip
+https://web.archive.org/web/20260000000000*/https://s3.us-east-2.amazonaws.com/dgl.ai/dataset/ppi.zip
+https://www.gsea-msigdb.org/gsea/downloads_archive.jsp
+https://arxiv.org/pdf/1706.02216
+https://ftp.ebi.ac.uk/pub/databases/GO/goa/old/HUMAN/
+https://www.ncbi.nlm.nih.gov/gene/?term=64858
+https://release.geneontology.org/2016-06-01/annotations/gp2protein/index.html
+https://ftp.ncbi.nlm.nih.gov/gene/DATA/
+https://academic.oup.com/bioinformatics/article/33/14/i190/3953967?login=false
+https://www.nature.com/articles/ng.3259#accession-codes
+https://giant.princeton.edu/
+https://hb.flatironinstitute.org/download
+https://humanbase.readthedocs.io/en/latest/functional-networks.html
+https://humanbase.readthedocs.io/en/latest/reproducibility.html
+https://web.archive.org/web/20260000000000*/https://giant.princeton.edu/
+https://web.archive.org/web/20141113155517/https://giant.princeton.edu/
+https://github.com/dhimmel/gene-ontology/commits/db22fec534a0a00b93173089a790d0ec1c752c67/download/gene2go.gz
+
