@@ -1,0 +1,45 @@
+COLUMN 0 vs GO:0050789 (regulation of biological process)
+Denominator: 4,278 mapped GraphSAGE genes
+
+GraphSAGE label=1: 2649 genes
+GOA annotated:     2640 genes
+Agreement:         4245/4278 = 99.23%
+
+FALSE POSITIVES (12): GOA says GO:0050789, GraphSAGE says label=0
+Entrez ID
+  43
+  624
+  1215
+  3248
+  3848
+  9702
+  10928
+  27201
+  54576
+  54658
+  55801
+  79849
+
+FALSE NEGATIVES (21): GraphSAGE says label=1, our GOA reconstruction says no
+Entrez ID  | In GOA? | Evidence codes in GOA | Explanation
+  801        | NO    |                      | Gene not found in GOA via UniProt/symbol mapping
+  805        | NO    |                      | Gene not found in GOA via UniProt/symbol mapping
+  1139       | NO    |                      | Gene not found in GOA via UniProt/symbol mapping
+  3039       | NO    |                      | Gene not found in GOA via UniProt/symbol mapping
+  3303       | NO    |                      | Gene not found in GOA via UniProt/symbol mapping
+  4831       | NO    |                      | Gene not found in GOA via UniProt/symbol mapping
+  8294       | NO    |                      | Gene not found in GOA via UniProt/symbol mapping
+  8359       | NO    |                      | Gene not found in GOA via UniProt/symbol mapping
+  8360       | NO    |                      | Gene not found in GOA via UniProt/symbol mapping
+  8361       | NO    |                      | Gene not found in GOA via UniProt/symbol mapping
+  8362       | NO    |                      | Gene not found in GOA via UniProt/symbol mapping
+  8363       | NO    |                      | Gene not found in GOA via UniProt/symbol mapping
+  8364       | NO    |                      | Gene not found in GOA via UniProt/symbol mapping
+  8365       | NO    |                      | Gene not found in GOA via UniProt/symbol mapping
+  8366       | NO    |                      | Gene not found in GOA via UniProt/symbol mapping
+  8367       | NO    |                      | Gene not found in GOA via UniProt/symbol mapping
+  8368       | NO    |                      | Gene not found in GOA via UniProt/symbol mapping
+  30061      | yes   | IEA,IMP,ISS,TAS      | In GOA with non-excluded evidence but lacks GO:0050789
+  121504     | NO    |                      | Gene not found in GOA via UniProt/symbol mapping
+  121599     | yes   | IBA,IEA              | In GOA but only has excluded evidence (IBA,IEA)
+  554313     | NO    |                      | Gene not found in GOA via UniProt/symbol mapping

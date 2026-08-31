@@ -6,12 +6,19 @@
 # ----------------------------------------------------------------------
 /data/
 /papers/
+/opus46/data/
 
 # ----------------------------------------------------------------------
 # Redundant GPT-5.6 Sol snapshot package
 # The extracted gpt56sol/ tree is the canonical repository copy.
 # ----------------------------------------------------------------------
 /gpt56sol/gpt56sol_complete_artifact_snapshot_*.zip
+
+# ----------------------------------------------------------------------
+# Redundant Opus 4.6 snapshot package
+# The extracted opus46/ tree is the canonical repository copy.
+# ----------------------------------------------------------------------
+/opus46/claude_artifacts_archive.tar.gz
 
 # ----------------------------------------------------------------------
 # Python transient files
