@@ -1,0 +1,56 @@
+stage terms
+stage exact
+stage rows
+rows loaded 392440
+stage static
+static done 36
+gaf models done 204
+models built 256
+{
+  "best": {
+    "ancestor_order": "sorted_asc",
+    "duplicate_flips": "001",
+    "exact_positions": 13,
+    "exact_prefix": 5,
+    "filter": "exact_historical_mapped",
+    "inner_kind": "",
+    "input_terms": 141790,
+    "kendall_p": 1.2260029649722576e-35,
+    "kendall_tau": 0.7661157024793387,
+    "key_mode": "GO_ID",
+    "lcs": 94,
+    "mask_bits": NaN,
+    "model": "first_direct_then_ancestors",
+    "outer_count": "",
+    "outer_kind": "",
+    "pair_count": "",
+    "pair_kind": "",
+    "pairwise_concordance": 0.8830578512396694,
+    "row_order": "date_accession_GO",
+    "set_policy": "",
+    "table_size": NaN,
+    "unique_dictionary_terms": 13302
+  },
+  "duplicate_orientation_counts_all": {
+    "000": 51,
+    "001": 88,
+    "010": 15,
+    "011": 85,
+    "100": 10,
+    "101": 5,
+    "110": 1,
+    "111": 1
+  },
+  "duplicate_orientation_counts_top100": {
+    "001": 59,
+    "010": 4,
+    "011": 29,
+    "100": 5,
+    "101": 2,
+    "110": 1
+  },
+  "models_lcs_100_or_more": 0,
+  "models_lcs_120_or_more": 0,
+  "models_scored": 256,
+  "perfect_order_models": 0
+}

@@ -1,0 +1,13 @@
+GeneID,GPI159_accessions,GPI159_symbols,GPI159_names,mapping_methods,predicted_positive_label_count,independently_resolved_by_topology_and_input_features,topology_feature_equivalence_class_count,label_vector_candidate_row_count,all_candidate_rows_unique_by_fixed_label_vector
+3248,P15428,HPGD,15-hydroxyprostaglandin dehydrogenase [NAD(+)],P15428:full_component_unique_symbol_bijection,37,0,1,1,1
+3988,P38571,LIPA,Lysosomal acid lipase/cholesteryl ester hydrolase,P38571:full_component_unique_symbol_bijection,10,0,4,4,1
+8564,O15229,KMO,Kynurenine 3-monooxygenase,O15229:full_component_unique_symbol_bijection,32,0,4,4,1
+27201,Q96P69,GPR78,G-protein coupled receptor 78,Q96P69:full_component_unique_symbol_bijection,6,0,1,1,1
+30061,Q9NP59,SLC40A1,Solute carrier family 40 member 1,Q9NP59:full_component_unique_symbol_bijection,17,0,4,4,1
+51166,Q8N5Z0,AADAT,"Kynurenine/alpha-aminoadipate aminotransferase, mitochondrial",Q8N5Z0:full_component_unique_symbol_bijection,14,0,4,4,1
+51312,Q9NYZ2,SLC25A37,Mitoferrin-1,Q9NYZ2:full_component_unique_symbol_bijection,0,0,2,2,1
+55471,Q7L592,NDUFAF7,"NADH dehydrogenase [ubiquinone] complex I, assembly factor 7",Q7L592:historical_gp2protein_all_edges,14,0,16,16,1
+55801,Q9NPH9,IL26,Interleukin-26,Q9NPH9:full_component_unique_symbol_bijection,51,0,1,1,1
+56994,Q8WUD6,CHPT1,Cholinephosphotransferase 1,Q8WUD6:full_component_unique_symbol_bijection,14,0,4,4,1
+79017,O75223,GGCT,Gamma-glutamylcyclotransferase,O75223:full_component_unique_symbol_bijection,21,0,16,16,1
+121599,Q8N5J4,SPIC,Transcription factor Spi-C,Q8N5J4:full_component_unique_symbol_bijection,0,0,1,2,0

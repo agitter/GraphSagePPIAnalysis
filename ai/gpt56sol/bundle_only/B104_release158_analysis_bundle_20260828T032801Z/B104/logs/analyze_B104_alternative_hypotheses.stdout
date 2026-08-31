@@ -1,0 +1,74 @@
+{
+  "mapping_policy_sensitivity": [
+    {
+      "exact_columns": 89,
+      "at_least_99pct": 114,
+      "at_least_95pct": 121,
+      "total_mismatches": 901,
+      "false_positives": 901,
+      "false_negatives": 0,
+      "mapping_policy": "component_aware_hybrid",
+      "mapped_accessions": 4260,
+      "covered_GraphSAGE_GeneIDs": 4267
+    },
+    {
+      "exact_columns": 19,
+      "at_least_99pct": 114,
+      "at_least_95pct": 121,
+      "total_mismatches": 1085,
+      "false_positives": 904,
+      "false_negatives": 181,
+      "mapping_policy": "historical_all_edges_no_symbol_fallback",
+      "mapped_accessions": 4252,
+      "covered_GraphSAGE_GeneIDs": 4259
+    },
+    {
+      "exact_columns": 1,
+      "at_least_99pct": 112,
+      "at_least_95pct": 121,
+      "total_mismatches": 1940,
+      "false_positives": 878,
+      "false_negatives": 1062,
+      "mapping_policy": "historical_accession_degree_1_only",
+      "mapped_accessions": 4247,
+      "covered_GraphSAGE_GeneIDs": 4240
+    },
+    {
+      "exact_columns": 1,
+      "at_least_99pct": 112,
+      "at_least_95pct": 121,
+      "total_mismatches": 2091,
+      "false_positives": 865,
+      "false_negatives": 1226,
+      "mapping_policy": "historical_global_bijective_only",
+      "mapped_accessions": 4234,
+      "covered_GraphSAGE_GeneIDs": 4234
+    }
+  ],
+  "all_zero_gene_posthoc_mask": {
+    "all_zero_GraphSAGE_genes": 213,
+    "residual_false_positive_pairs_on_all_zero_genes": 10,
+    "all_zero_genes_in_residuals": 5,
+    "residual_false_positive_pairs_remaining_after_invalid_posthoc_mask": 891,
+    "interpretation": "Masking genes using their observed all-zero label rows is target leakage and removes only a small fraction of residuals."
+  },
+  "NOT_annotation_check": {
+    "GAF159_NOT_rows": 1353,
+    "NOT_rows_with_component_aware_GeneID_mapping": 515,
+    "unique_mapped_direct_GeneID_GO_NOT_pairs": 502,
+    "residual_false_positive_pairs_with_direct_NOT_to_selected_term": 0,
+    "residual_false_positive_pairs_with_NOT_reaching_selected_term_by_is_a": 12,
+    "interpretation": "Direct NOT annotations explain no residual false positives. Propagating NOT upward through is_a would remove only a few pairs and is not a generally valid inference."
+  },
+  "residual_structure": {
+    "residual_false_positive_pairs": 901,
+    "unique_residual_genes": 352,
+    "pairs_with_direct_selected_term_witness": 23,
+    "pairs_ancestor_only": 878,
+    "namespace_counts": {
+      "cellular_component": 514,
+      "molecular_function": 387
+    },
+    "labels_with_residuals": 32
+  }
+}

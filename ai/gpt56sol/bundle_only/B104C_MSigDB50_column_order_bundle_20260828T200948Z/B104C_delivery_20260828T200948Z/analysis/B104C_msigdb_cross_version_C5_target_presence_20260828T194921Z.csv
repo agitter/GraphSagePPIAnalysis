@@ -1,0 +1,5 @@
+version,xml_build_date,total_gene_sets,C5_gene_sets,target_GO_IDs_present_in_C5,target_GO_IDs_absent_from_C5
+5.0,"Apr 27, 2015",10348,1454,57,64
+5.1,"Jan 27, 2016",13311,1454,57,64
+5.2,"Sep 22, 2016",18890,6166,6,115
+6.0,"Feb 22, 2017",18643,5917,6,115

@@ -1,0 +1,96 @@
+{
+  "interpretation_constraints": [
+    "The official reviewed UniProt records themselves linked O95073 to both GeneID 100861412 and GeneID 25788 in all three releases.",
+    "Therefore the O95073-to-25788 edge is not a parser artifact and should not be described as disproven by date-matched UniProt.",
+    "The exact GraphSAGE label reconstruction instead shows that the label-generating mapping behaved as if FSBP annotations were not assigned to RAD54B/GeneID 25788.",
+    "This behavior could arise from symbol-aware component resolution or from an Entrez-native annotation source; the exact source remains unresolved."
+  ],
+  "records": [
+    {
+      "all_accessions": "O95073|Q8N4S5",
+      "entry_version": 116,
+      "entry_version_date": "13-APR-2016",
+      "gene_name": "FSBP",
+      "geneids": "100861412|25788",
+      "hgnc": "HGNC;HGNC:43653",
+      "id_line": "FSBP_HUMAN              Reviewed;         299 AA.",
+      "miscellaneous": "Intragenic, in the second intron of RAB54B gene.",
+      "primary_accession": "O95073",
+      "record_path": "/mnt/data/ppi_repro_corrected/batches/B104E_work/uniprot/2016_04/O95073_Q9Y620_2016_04.dat",
+      "release": "2016_04"
+    },
+    {
+      "all_accessions": "Q9Y620|F6WBS8",
+      "entry_version": 130,
+      "entry_version_date": "16-MAR-2016",
+      "gene_name": "RAD54B",
+      "geneids": "25788",
+      "hgnc": "HGNC;HGNC:17228",
+      "id_line": "RA54B_HUMAN             Reviewed;         910 AA.",
+      "miscellaneous": "",
+      "primary_accession": "Q9Y620",
+      "record_path": "/mnt/data/ppi_repro_corrected/batches/B104E_work/uniprot/2016_04/O95073_Q9Y620_2016_04.dat",
+      "release": "2016_04"
+    },
+    {
+      "all_accessions": "O95073|Q8N4S5",
+      "entry_version": 117,
+      "entry_version_date": "11-MAY-2016",
+      "gene_name": "FSBP",
+      "geneids": "100861412|25788",
+      "hgnc": "HGNC;HGNC:43653",
+      "id_line": "FSBP_HUMAN              Reviewed;         299 AA.",
+      "miscellaneous": "Intragenic, in the second intron of RAB54B gene.",
+      "primary_accession": "O95073",
+      "record_path": "/mnt/data/ppi_repro_corrected/batches/B104E_work/uniprot/2016_05/O95073_Q9Y620_2016_05.dat",
+      "release": "2016_05"
+    },
+    {
+      "all_accessions": "Q9Y620|F6WBS8",
+      "entry_version": 131,
+      "entry_version_date": "11-MAY-2016",
+      "gene_name": "RAD54B",
+      "geneids": "25788",
+      "hgnc": "HGNC;HGNC:17228",
+      "id_line": "RA54B_HUMAN             Reviewed;         910 AA.",
+      "miscellaneous": "",
+      "primary_accession": "Q9Y620",
+      "record_path": "/mnt/data/ppi_repro_corrected/batches/B104E_work/uniprot/2016_05/O95073_Q9Y620_2016_05.dat",
+      "release": "2016_05"
+    },
+    {
+      "all_accessions": "O95073|Q8N4S5",
+      "entry_version": 118,
+      "entry_version_date": "08-JUN-2016",
+      "gene_name": "FSBP",
+      "geneids": "100861412|25788",
+      "hgnc": "HGNC;HGNC:43653",
+      "id_line": "FSBP_HUMAN              Reviewed;         299 AA.",
+      "miscellaneous": "Intragenic, in the second intron of RAB54B gene.",
+      "primary_accession": "O95073",
+      "record_path": "/mnt/data/ppi_repro_corrected/batches/B104E_work/uniprot/2016_06/O95073_Q9Y620_2016_06.dat",
+      "release": "2016_06"
+    },
+    {
+      "all_accessions": "Q9Y620|F6WBS8",
+      "entry_version": 132,
+      "entry_version_date": "08-JUN-2016",
+      "gene_name": "RAD54B",
+      "geneids": "25788",
+      "hgnc": "HGNC;HGNC:17228",
+      "id_line": "RA54B_HUMAN             Reviewed;         910 AA.",
+      "miscellaneous": "",
+      "primary_accession": "Q9Y620",
+      "record_path": "/mnt/data/ppi_repro_corrected/batches/B104E_work/uniprot/2016_06/O95073_Q9Y620_2016_06.dat",
+      "release": "2016_06"
+    }
+  ],
+  "stable_gene_names": {
+    "O95073": true,
+    "Q9Y620": true
+  },
+  "stable_geneid_crossreferences": {
+    "O95073": true,
+    "Q9Y620": true
+  }
+}

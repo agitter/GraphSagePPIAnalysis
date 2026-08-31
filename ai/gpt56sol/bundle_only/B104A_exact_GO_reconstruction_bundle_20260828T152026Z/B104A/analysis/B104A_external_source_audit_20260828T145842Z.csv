@@ -1,0 +1,6 @@
+identifier_type,identifier,name_or_symbol,source_date_context,source_url,source_role,supported_statement
+GeneID,25788,RAD54B,"current, checked 2026-08-28",https://www.ncbi.nlm.nih.gov/gene/25788,independent current identity check,NCBI identifies GeneID 25788 as RAD54B.
+GeneID,100861412,FSBP,"current, checked 2026-08-28",https://www.ncbi.nlm.nih.gov/gene/100861412,independent current identity check,NCBI identifies GeneID 100861412 as FSBP and links its reviewed product to O95073.
+UniProtKB,O95073,FSBP,"current, checked 2026-08-28",https://www.uniprot.org/uniprotkb/O95073,independent current protein identity check,UniProt identifies O95073 as FSBP and displays KEGG hsa:100861412.
+UniProtKB,Q9Y620,RAD54B,"current, checked 2026-08-28",https://www.uniprot.org/uniprotkb/Q9Y620/entry,independent current protein identity check,UniProt identifies Q9Y620 as RAD54B.
+GAF relation semantics,GAF 2.1 column 4,qualifier,format documentation,https://geneontology.org/docs/go-annotation-file-gaf-format-2.1/,format interpretation,"GAF 2.1 qualifier values include NOT, contributes_to, and colocalizes_with; they modify annotation interpretation."

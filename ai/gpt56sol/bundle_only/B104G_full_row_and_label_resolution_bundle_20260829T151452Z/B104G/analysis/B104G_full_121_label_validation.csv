@@ -1,0 +1,122 @@
+label_column,GO_ID,GO_name,namespace,observed_positive_rows,expected_positive_rows,mismatched_rows,exact_all_56944_rows,identity_basis,identity_confidence,all_exact_GO_ID_candidates
+0,GO:0050789,regulation of biological process,biological_process,37158,37158,0,1,unique exact membership vector,exact from membership,GO:0050789
+1,GO:0070062,extracellular exosome,cellular_component,13730,13730,0,1,unique exact membership vector,exact from membership,GO:0070062
+2,GO:0044710,single-organism metabolic process,biological_process,11801,11801,0,1,unique exact membership vector,exact from membership,GO:0044710
+3,GO:1901363,heterocyclic compound binding,molecular_function,13901,13901,0,1,unique exact membership vector,exact from membership,GO:1901363
+4,GO:1901360,organic cyclic compound metabolic process,biological_process,7371,7371,0,1,unique exact membership vector,exact from membership,GO:1901360
+5,GO:0003676,nucleic acid binding,molecular_function,11039,11039,0,1,unique exact membership vector,exact from membership,GO:0003676
+6,GO:0097159,organic cyclic compound binding,molecular_function,14099,14099,0,1,unique exact membership vector,exact from membership,GO:0097159
+7,GO:0005737,cytoplasm,cellular_component,20204,20204,0,1,unique exact membership vector,exact from membership,GO:0005737
+8,GO:1902589,single-organism organelle organization,biological_process,8804,8804,0,1,unique exact membership vector,exact from membership,GO:1902589
+9,GO:0043170,macromolecule metabolic process,biological_process,19742,19742,0,1,unique exact membership vector,exact from membership,GO:0043170
+10,GO:0043412,macromolecule modification,biological_process,12388,12388,0,1,unique exact membership vector,exact from membership,GO:0043412
+11,GO:0009966,regulation of signal transduction,biological_process,13538,13538,0,1,unique exact membership vector,exact from membership,GO:0009966
+12,GO:0003674,molecular_function,molecular_function,40316,40316,0,1,unique exact membership vector,exact from membership,GO:0003674
+13,GO:0051239,regulation of multicellular organismal process,biological_process,10716,10716,0,1,unique exact membership vector,exact from membership,GO:0051239
+14,GO:0045935,positive regulation of nucleobase-containing compound metabolic process,biological_process,10547,10547,0,1,unique exact membership vector,exact from membership,GO:0045935
+15,GO:0048519,negative regulation of biological process,biological_process,21046,21046,0,1,unique exact membership vector,exact from membership,GO:0048519
+16,GO:0003723,RNA binding,molecular_function,5906,5906,0,1,unique exact membership vector,exact from membership,GO:0003723
+17,GO:0006810,transport,biological_process,8000,8000,0,1,unique exact membership vector,exact from membership,GO:0006810
+18,GO:0044421,extracellular region part,cellular_component,15321,15321,0,1,unique exact membership vector,exact from membership,GO:0044421
+19,GO:0008152,metabolic process,biological_process,24239,24239,0,1,unique exact membership vector,exact from membership,GO:0008152
+20,GO:0005654,nucleoplasm,cellular_component,10895,10895,0,1,unique exact membership vector,exact from membership,GO:0005654
+21,GO:0050794,regulation of cellular process,biological_process,35769,35769,0,1,unique exact membership vector,exact from membership,GO:0050794
+22,GO:1903506,regulation of nucleic acid-templated transcription,biological_process,13135,13135,0,1,unique exact membership vector,exact from membership,GO:1903506
+23,GO:0071840,cellular component organization or biogenesis,biological_process,18500,18500,0,1,unique exact membership vector,exact from membership,GO:0071840
+24,GO:0043228,non-membrane-bounded organelle,cellular_component,9270,9270,0,1,legacy CPython2 dictionary-order disambiguation,strongly supported; pending original code/source list,GO:0043228|GO:0043232
+25,GO:0043227,membrane-bounded organelle,cellular_component,36035,36035,0,1,unique exact membership vector,exact from membership,GO:0043227
+26,GO:0043226,organelle,cellular_component,38053,38053,0,1,unique exact membership vector,exact from membership,GO:0043226
+27,GO:0005634,nucleus,cellular_component,19056,19056,0,1,unique exact membership vector,exact from membership,GO:0005634
+28,GO:0009987,cellular process,biological_process,39697,39697,0,1,unique exact membership vector,exact from membership,GO:0009987
+29,GO:0010557,positive regulation of macromolecule biosynthetic process,biological_process,10106,10106,0,1,unique exact membership vector,exact from membership,GO:0010557
+30,GO:0065007,biological regulation,biological_process,38810,38810,0,1,unique exact membership vector,exact from membership,GO:0065007
+31,GO:1902578,single-organism localization,biological_process,8207,8207,0,1,unique exact membership vector,exact from membership,GO:1902578
+32,GO:0008150,biological_process,biological_process,50578,50578,0,1,unique exact membership vector,exact from membership,GO:0008150
+33,GO:0042221,response to chemical,biological_process,9275,9275,0,1,unique exact membership vector,exact from membership,GO:0042221
+34,GO:0032268,regulation of cellular protein metabolic process,biological_process,12319,12319,0,1,unique exact membership vector,exact from membership,GO:0032268
+35,GO:0032991,macromolecular complex,cellular_component,18637,18637,0,1,unique exact membership vector,exact from membership,GO:0032991
+36,GO:0051128,regulation of cellular component organization,biological_process,11221,11221,0,1,unique exact membership vector,exact from membership,GO:0051128
+37,GO:0009892,negative regulation of metabolic process,biological_process,11954,11954,0,1,unique exact membership vector,exact from membership,GO:0009892
+38,GO:0080090,regulation of primary metabolic process,biological_process,23461,23461,0,1,unique exact membership vector,exact from membership,GO:0080090
+39,GO:0006464,cellular protein modification process,biological_process,12244,12244,0,1,legacy CPython2 dictionary-order disambiguation,strongly supported; pending original code/source list,GO:0006464|GO:0036211
+40,GO:0006807,nitrogen compound metabolic process,biological_process,8235,8235,0,1,unique exact membership vector,exact from membership,GO:0006807
+41,GO:0032502,developmental process,biological_process,11803,11803,0,1,unique exact membership vector,exact from membership,GO:0032502
+42,GO:0065009,regulation of molecular function,biological_process,11712,11712,0,1,unique exact membership vector,exact from membership,GO:0065009
+43,GO:0065008,regulation of biological quality,biological_process,11532,11532,0,1,unique exact membership vector,exact from membership,GO:0065008
+44,GO:0005886,plasma membrane,cellular_component,7627,7627,0,1,unique exact membership vector,exact from membership,GO:0005886
+45,GO:0009889,regulation of biosynthetic process,biological_process,15968,15968,0,1,unique exact membership vector,exact from membership,GO:0009889
+46,GO:0044238,primary metabolic process,biological_process,22082,22082,0,1,unique exact membership vector,exact from membership,GO:0044238
+47,GO:0044237,cellular metabolic process,biological_process,22517,22517,0,1,unique exact membership vector,exact from membership,GO:0044237
+48,GO:1903561,extracellular vesicle,cellular_component,13758,13758,0,1,legacy CPython2 dictionary-order disambiguation,strongly supported; pending original code/source list,GO:0043230|GO:1903561
+49,GO:0051246,regulation of protein metabolic process,biological_process,13211,13211,0,1,unique exact membership vector,exact from membership,GO:0051246
+50,GO:0048523,negative regulation of cellular process,biological_process,20229,20229,0,1,unique exact membership vector,exact from membership,GO:0048523
+51,GO:0048583,regulation of response to stimulus,biological_process,16782,16782,0,1,unique exact membership vector,exact from membership,GO:0048583
+52,GO:0048522,positive regulation of cellular process,biological_process,24731,24731,0,1,unique exact membership vector,exact from membership,GO:0048522
+53,GO:0060255,regulation of macromolecule metabolic process,biological_process,23715,23715,0,1,unique exact membership vector,exact from membership,GO:0060255
+54,GO:0023051,regulation of signaling,biological_process,14335,14335,0,1,unique exact membership vector,exact from membership,GO:0023051
+55,GO:2000112,regulation of cellular macromolecule biosynthetic process,biological_process,14850,14850,0,1,unique exact membership vector,exact from membership,GO:2000112
+56,GO:0050793,regulation of developmental process,biological_process,9352,9352,0,1,unique exact membership vector,exact from membership,GO:0050793
+57,GO:0031399,regulation of protein modification process,biological_process,9505,9505,0,1,unique exact membership vector,exact from membership,GO:0031399
+58,GO:0043933,macromolecular complex subunit organization,biological_process,9638,9638,0,1,unique exact membership vector,exact from membership,GO:0043933
+59,GO:0006355,"regulation of transcription, DNA-templated",biological_process,13116,13116,0,1,unique exact membership vector,exact from membership,GO:0006355
+60,GO:0048518,positive regulation of biological process,biological_process,25852,25852,0,1,unique exact membership vector,exact from membership,GO:0048518
+61,GO:0051234,establishment of localization,biological_process,8898,8898,0,1,unique exact membership vector,exact from membership,GO:0051234
+62,GO:0032879,regulation of localization,biological_process,10926,10926,0,1,unique exact membership vector,exact from membership,GO:0032879
+63,GO:0036211,protein modification process,biological_process,12244,12244,0,1,legacy CPython2 dictionary-order disambiguation,strongly supported; pending original code/source list,GO:0006464|GO:0036211
+64,GO:0051716,cellular response to stimulus,biological_process,11560,11560,0,1,unique exact membership vector,exact from membership,GO:0051716
+65,GO:0044765,single-organism transport,biological_process,7077,7077,0,1,unique exact membership vector,exact from membership,GO:0044765
+66,GO:0044763,single-organism cellular process,biological_process,28272,28272,0,1,unique exact membership vector,exact from membership,GO:0044763
+67,GO:0016020,membrane,cellular_component,18775,18775,0,1,unique exact membership vector,exact from membership,GO:0016020
+68,GO:0044422,organelle part,cellular_component,27051,27051,0,1,unique exact membership vector,exact from membership,GO:0044422
+69,GO:0043234,protein complex,cellular_component,16131,16131,0,1,unique exact membership vector,exact from membership,GO:0043234
+70,GO:0043230,extracellular organelle,cellular_component,13758,13758,0,1,legacy CPython2 dictionary-order disambiguation,strongly supported; pending original code/source list,GO:0043230|GO:1903561
+71,GO:0043232,intracellular non-membrane-bounded organelle,cellular_component,9270,9270,0,1,legacy CPython2 dictionary-order disambiguation,strongly supported; pending original code/source list,GO:0043228|GO:0043232
+72,GO:0051254,positive regulation of RNA metabolic process,biological_process,9335,9335,0,1,unique exact membership vector,exact from membership,GO:0051254
+73,GO:0051171,regulation of nitrogen compound metabolic process,biological_process,16631,16631,0,1,unique exact membership vector,exact from membership,GO:0051171
+74,GO:0051173,positive regulation of nitrogen compound metabolic process,biological_process,10896,10896,0,1,unique exact membership vector,exact from membership,GO:0051173
+75,GO:0051179,localization,biological_process,10925,10925,0,1,unique exact membership vector,exact from membership,GO:0051179
+76,GO:0016043,cellular component organization,biological_process,18458,18458,0,1,unique exact membership vector,exact from membership,GO:0016043
+77,GO:0034641,cellular nitrogen compound metabolic process,biological_process,7599,7599,0,1,unique exact membership vector,exact from membership,GO:0034641
+78,GO:0010556,regulation of macromolecule biosynthetic process,biological_process,15267,15267,0,1,unique exact membership vector,exact from membership,GO:0010556
+79,GO:2001141,regulation of RNA biosynthetic process,biological_process,13224,13224,0,1,unique exact membership vector,exact from membership,GO:2001141
+80,GO:0044267,cellular protein metabolic process,biological_process,12511,12511,0,1,unique exact membership vector,exact from membership,GO:0044267
+81,GO:0005488,binding,molecular_function,28757,28757,0,1,unique exact membership vector,exact from membership,GO:0005488
+82,GO:0019219,regulation of nucleobase-containing compound metabolic process,biological_process,15871,15871,0,1,unique exact membership vector,exact from membership,GO:0019219
+83,GO:0007165,signal transduction,biological_process,11028,11028,0,1,unique exact membership vector,exact from membership,GO:0007165
+84,GO:0016740,transferase activity,molecular_function,9211,9211,0,1,unique exact membership vector,exact from membership,GO:0016740
+85,GO:0044699,single-organism process,biological_process,32931,32931,0,1,unique exact membership vector,exact from membership,GO:0044699
+86,GO:0044822,poly(A) RNA binding,molecular_function,5249,5249,0,1,unique exact membership vector,exact from membership,GO:0044822
+87,GO:0010604,positive regulation of macromolecule metabolic process,biological_process,16214,16214,0,1,unique exact membership vector,exact from membership,GO:0010604
+88,GO:0010468,regulation of gene expression,biological_process,15855,15855,0,1,unique exact membership vector,exact from membership,GO:0010468
+89,GO:0010605,negative regulation of macromolecule metabolic process,biological_process,11376,11376,0,1,unique exact membership vector,exact from membership,GO:0010605
+90,GO:0048584,positive regulation of response to stimulus,biological_process,9926,9926,0,1,unique exact membership vector,exact from membership,GO:0048584
+91,GO:0019538,protein metabolic process,biological_process,14799,14799,0,1,unique exact membership vector,exact from membership,GO:0019538
+92,GO:0044260,cellular macromolecule metabolic process,biological_process,18314,18314,0,1,unique exact membership vector,exact from membership,GO:0044260
+93,GO:0010628,positive regulation of gene expression,biological_process,10138,10138,0,1,unique exact membership vector,exact from membership,GO:0010628
+94,GO:0044767,single-organism developmental process,biological_process,11325,11325,0,1,unique exact membership vector,exact from membership,GO:0044767
+95,GO:0003824,catalytic activity,molecular_function,17345,17345,0,1,unique exact membership vector,exact from membership,GO:0003824
+96,GO:0006950,response to stress,biological_process,9950,9950,0,1,unique exact membership vector,exact from membership,GO:0006950
+97,GO:0071704,organic substance metabolic process,biological_process,23243,23243,0,1,unique exact membership vector,exact from membership,GO:0071704
+98,GO:0019222,regulation of metabolic process,biological_process,24930,24930,0,1,unique exact membership vector,exact from membership,GO:0019222
+99,GO:0031982,vesicle,cellular_component,15128,15128,0,1,unique exact membership vector,exact from membership,GO:0031982
+100,GO:0043231,intracellular membrane-bounded organelle,cellular_component,28853,28853,0,1,unique exact membership vector,exact from membership,GO:0043231
+101,GO:0010646,regulation of cell communication,biological_process,14639,14639,0,1,unique exact membership vector,exact from membership,GO:0010646
+102,GO:0044425,membrane part,cellular_component,9457,9457,0,1,unique exact membership vector,exact from membership,GO:0044425
+103,GO:0009893,positive regulation of metabolic process,biological_process,17114,17114,0,1,unique exact membership vector,exact from membership,GO:0009893
+104,GO:0009891,positive regulation of biosynthetic process,biological_process,10674,10674,0,1,unique exact membership vector,exact from membership,GO:0009891
+105,GO:0050896,response to stimulus,biological_process,16857,16857,0,1,unique exact membership vector,exact from membership,GO:0050896
+106,GO:0005515,protein binding,molecular_function,16752,16752,0,1,unique exact membership vector,exact from membership,GO:0005515
+107,GO:0006996,organelle organization,biological_process,10909,10909,0,1,unique exact membership vector,exact from membership,GO:0006996
+108,GO:0044446,intracellular organelle part,cellular_component,26734,26734,0,1,unique exact membership vector,exact from membership,GO:0044446
+109,GO:0044444,cytoplasmic part,cellular_component,20728,20728,0,1,unique exact membership vector,exact from membership,GO:0044444
+110,GO:0044428,nuclear part,cellular_component,18080,18080,0,1,unique exact membership vector,exact from membership,GO:0044428
+111,GO:0031328,positive regulation of cellular biosynthetic process,biological_process,10528,10528,0,1,unique exact membership vector,exact from membership,GO:0031328
+112,GO:0031326,regulation of cellular biosynthetic process,biological_process,15769,15769,0,1,unique exact membership vector,exact from membership,GO:0031326
+113,GO:0031325,positive regulation of cellular metabolic process,biological_process,16487,16487,0,1,unique exact membership vector,exact from membership,GO:0031325
+114,GO:0031324,negative regulation of cellular metabolic process,biological_process,11439,11439,0,1,unique exact membership vector,exact from membership,GO:0031324
+115,GO:0031323,regulation of cellular metabolic process,biological_process,23903,23903,0,1,unique exact membership vector,exact from membership,GO:0031323
+116,GO:0005575,cellular_component,cellular_component,50392,50392,0,1,unique exact membership vector,exact from membership,GO:0005575
+117,GO:0044424,intracellular part,cellular_component,43369,43369,0,1,unique exact membership vector,exact from membership,GO:0044424
+118,GO:0044464,cell part,cellular_component,46351,46351,0,1,unique exact membership vector,exact from membership,GO:0044464
+119,GO:0043229,intracellular organelle,cellular_component,31661,31661,0,1,unique exact membership vector,exact from membership,GO:0043229
+120,GO:0051252,regulation of RNA metabolic process,biological_process,14037,14037,0,1,unique exact membership vector,exact from membership,GO:0051252

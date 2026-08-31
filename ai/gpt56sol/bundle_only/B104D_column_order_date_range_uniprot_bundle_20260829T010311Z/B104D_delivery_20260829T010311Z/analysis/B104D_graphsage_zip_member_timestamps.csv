@@ -1,0 +1,7 @@
+archive_member,zip_DOS_local_timestamp_no_timezone,extended_timestamp_UTC,uncompressed_size,compressed_size,CRC32_hex
+ppi/,2017-05-30T10:07:48,2017-05-30T17:07:48Z,0,0,00000000
+ppi/ppi-class_map.json,2017-05-10T12:25:24,2017-05-10T19:25:23Z,21285946,1554603,8016e16b
+ppi/ppi-feats.npy,2017-05-10T12:26:10,2017-05-10T19:26:10Z,22777680,142355,a1eafa9a
+ppi/ppi-G.json,2017-05-29T09:12:54,2017-05-29T16:12:53Z,31684076,3267364,41c670ab
+ppi/ppi-id_map.json,2017-05-10T12:35:26,2017-05-10T19:35:25Z,888884,257473,235471be
+ppi/ppi-walks.txt,2017-05-08T20:20:50,2017-05-09T03:20:50Z,100459319,21806489,51d866c5

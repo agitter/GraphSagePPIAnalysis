@@ -1,0 +1,63 @@
+{
+  "archive": {
+    "filename": "uniprot_sprot-only2016_06.tar.gz",
+    "local_path_before_deletion": "2016_06\\uniprot_sprot-only2016_06.tar.gz",
+    "md5": "e3a5ac5a166efc95e9ad06465d5bd2c4",
+    "sha256": "ad6c96bc6d433ed99ef8722d7bf003003ada43c3ab57c005d0343910a515d484",
+    "size_bytes": 1504963399
+  },
+  "archive_deletion_policy": "delete only after size, MD5, SHA-256, complete record scan, and retained-output hashing succeed",
+  "archive_kept_by_request": false,
+  "audit_completed_at_utc": "2026-08-28T21:51:21Z",
+  "audit_started_at_utc": "2026-08-28T21:48:27Z",
+  "extraction": {
+    "archive_member": "uniprot_sprot.dat.gz",
+    "archive_member_declared_size": 538869591,
+    "matching_records": 2,
+    "swissprot_records_scanned": 551385,
+    "target_accessions_absent": [],
+    "target_accessions_found": [
+      "O95073",
+      "Q9Y620"
+    ],
+    "target_accessions_requested": [
+      "O95073",
+      "Q9Y620"
+    ]
+  },
+  "official_metalink_local_path": "2016_06\\RELEASE_2016_06.metalink",
+  "official_metalink_parsed": {
+    "md5": "e3a5ac5a166efc95e9ad06465d5bd2c4",
+    "resource_urls": [
+      "ftp://ftp.ebi.ac.uk/pub/databases/uniprot/previous_releases/release-2016_06/knowledgebase/uniprot_sprot-only2016_06.tar.gz",
+      "ftp://ftp.uniprot.org/pub/databases/uniprot/previous_releases/release-2016_06/knowledgebase/uniprot_sprot-only2016_06.tar.gz"
+    ],
+    "size": 1504963399,
+    "version": "2016_06"
+  },
+  "official_metalink_url": "https://ftp.uniprot.org/pub/databases/uniprot/previous_releases/release-2016_06/knowledgebase/RELEASE.metalink",
+  "release": "2016_06",
+  "release_date": "2016-06-08",
+  "retained_outputs": {
+    "metalink": {
+      "path": "2016_06\\RELEASE_2016_06.metalink",
+      "sha256": "a9aba5c34b83401dfbea58b8bd68bfe75df149ed431266ff04e673e6d1a576d0",
+      "size_bytes": 2801
+    },
+    "record_dat": {
+      "path": "2016_06\\O95073_Q9Y620_2016_06.dat",
+      "sha256": "c9ef724cb42304f4b9271fb41d6ac92e6ec590a39605dc38527b8f85fc65385f",
+      "size_bytes": 19479
+    },
+    "summary_tsv": {
+      "path": "2016_06\\O95073_Q9Y620_2016_06.tsv",
+      "sha256": "422aeb8a5a146a458c0f7fc9e0f93ea1a1a75822d7249b84bc52cd19f955c91f",
+      "size_bytes": 739
+    }
+  },
+  "script": {
+    "path": "C:\\Users\\agitter\\Desktop\\ppi\\download_extract_uniprot_2016_mapping_audit.py",
+    "sha256": "f4c26105da8660492f36156f693680c1a242fcba96a9b6e4f41e9618a27d6022"
+  },
+  "source_archive_url": "https://ftp.uniprot.org/pub/databases/uniprot/previous_releases/release-2016_06/knowledgebase/uniprot_sprot-only2016_06.tar.gz"
+}

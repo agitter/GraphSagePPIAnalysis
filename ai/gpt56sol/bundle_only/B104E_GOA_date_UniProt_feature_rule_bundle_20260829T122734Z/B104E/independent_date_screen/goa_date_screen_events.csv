@@ -1,0 +1,2 @@
+event_time_utc,release,event_type,status,details
+2026-08-29T12:20:52.832122Z,160,analysis,failed,RuntimeError('Download failed after 3 attempts: https://ftp.ebi.ac.uk/pub/databases/GO/goa/old/HUMAN/goa_human.gaf.160.gz: <urlopen error [Errno -3] Temporary failure in name resolution>')

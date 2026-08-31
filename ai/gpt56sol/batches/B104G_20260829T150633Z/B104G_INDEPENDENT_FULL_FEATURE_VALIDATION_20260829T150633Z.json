@@ -1,0 +1,12 @@
+{
+  "all_checks_pass": true,
+  "cells": 2847200,
+  "columns": 50,
+  "exact_columns": 50,
+  "expected_matrix_sha256": "274ecfee66596b7e9dfb19b71a7fb39a2611a3c140bc199c25062c6ca75bfca1",
+  "first_mismatches": [],
+  "independent_implementation": true,
+  "mismatched_cells": 0,
+  "observed_matrix_sha256": "274ecfee66596b7e9dfb19b71a7fb39a2611a3c140bc199c25062c6ca75bfca1",
+  "rows": 56944
+}

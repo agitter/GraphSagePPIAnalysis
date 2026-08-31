@@ -1,0 +1,71 @@
+{
+  "all_checks_pass": true,
+  "batch_id": "B104H",
+  "bundle_path": "/mnt/data/B104H_node_mapping_provenance_bundle_20260830T110259Z.zip",
+  "bundle_sha256": "975ad05d50558c8c0041e964805c7fc12aacf437178c354e45d45b75dfec3d94",
+  "bundle_size_bytes": 7654555,
+  "checks": [
+    {
+      "check": "graphsage_ppi_node_to_entrez_20260830T110259Z.tsv.gz row_count",
+      "detail": "56944",
+      "pass": true
+    },
+    {
+      "check": "graphsage_ppi_node_to_entrez_evidence_20260830T110259Z.tsv.gz row_count",
+      "detail": "56944",
+      "pass": true
+    },
+    {
+      "check": "topology_exact_rows",
+      "detail": "56944",
+      "pass": true
+    },
+    {
+      "check": "feature_exact_rows",
+      "detail": "56944",
+      "pass": true
+    },
+    {
+      "check": "label_exact_rows",
+      "detail": "56944",
+      "pass": true
+    },
+    {
+      "check": "mapping validation all checks",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "bundle zip integrity",
+      "detail": "17 members",
+      "pass": true
+    },
+    {
+      "check": "bundle hash record",
+      "detail": "975ad05d50558c8c0041e964805c7fc12aacf437178c354e45d45b75dfec3d94",
+      "pass": true
+    },
+    {
+      "check": "ledger row graphsage_ppi_node_to_entrez_20260830T110259Z.tsv.gz",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "ledger row graphsage_ppi_node_to_entrez_evidence_20260830T110259Z.tsv.gz",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "ledger row build_B104H_node_mapping_artifacts.py",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "ledger row download_and_verify_biosnap_ppi_sources.py",
+      "detail": "",
+      "pass": true
+    }
+  ],
+  "checks_passed": 12,
+  "generated_at_utc": "2026-08-30T11:02:59Z"
+}

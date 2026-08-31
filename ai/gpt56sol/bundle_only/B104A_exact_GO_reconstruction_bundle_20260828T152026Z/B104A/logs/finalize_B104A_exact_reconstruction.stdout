@@ -1,0 +1,31 @@
+{
+  "final_release159": {
+    "exact_columns": 121,
+    "at_least_99pct": 121,
+    "at_least_95pct": 121,
+    "false_positives": 0,
+    "false_negatives": 0,
+    "total_mismatches": 0
+  },
+  "release158": {
+    "exact_columns": 8,
+    "at_least_99pct": 119,
+    "at_least_95pct": 121,
+    "false_positives": 21,
+    "false_negatives": 825,
+    "total_mismatches": 846
+  },
+  "matrix_validation": {
+    "binary_cells_compared": 516428,
+    "cell_mismatch_count": 0,
+    "matrix_hashes_identical": true
+  },
+  "exact_term_identification": {
+    "columns_exact_for_selected_term": 121,
+    "columns_with_any_exact_term": 121,
+    "columns_with_multiple_exact_term_ties": 6,
+    "maximum_exact_term_tie_count": 2,
+    "unique_selected_GO_IDs": 118,
+    "unique_label_vectors": 118
+  }
+}

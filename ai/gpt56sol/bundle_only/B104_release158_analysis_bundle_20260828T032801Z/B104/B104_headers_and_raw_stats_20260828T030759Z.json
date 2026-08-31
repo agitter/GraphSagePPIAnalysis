@@ -1,0 +1,100 @@
+{
+  "gaf": {
+    "header_lines": [
+      "!gaf-version: 2.1",
+      "!",
+      "!The set of protein accessions included in this file is based on UniProt reference proteomes, which provide one protein per gene.",
+      "!They include the protein sequences annotated in Swiss-Prot or the longest TrEMBL transcript if there is no Swiss-Prot record.",
+      "!If a particular protein accession is not annotated with GO, then it will not appear in this file.",
+      "!",
+      "!Note that the annotation set in this file is filtered in order to reduce redundancy; the full, unfiltered set can be found in",
+      "!ftp://ftp.ebi.ac.uk/pub/databases/GO/goa/UNIPROT/goa_uniprot_all.gz",
+      "!",
+      "!Generated: 2016-06-07 10:29",
+      "!GO-version: http://purl.obolibrary.org/obo/go/releases/2016-05-07/go.owl",
+      "!"
+    ],
+    "header_sha256": "cf782aed20a174ea924b21fd48c7357a8e61e68ba39463df4605840ab68e492b",
+    "data_rows": 388218,
+    "column_width_counts": {
+      "17": 388218
+    },
+    "expected_width": 17,
+    "all_rows_expected_width": true,
+    "uncompressed_data_sha256": "f50a207ee261f920f687823e54726467cf46baa69a00f3c995b54785f3e205d4"
+  },
+  "gpad": {
+    "header_lines": [
+      "!gpa-version: 1.1",
+      "!",
+      "!The set of protein accessions included in this file is based on UniProt reference proteomes, which provide one protein per gene.",
+      "!They include the protein sequences annotated in Swiss-Prot or the longest TrEMBL transcript if there is no Swiss-Prot record.",
+      "!If a particular protein accession is not annotated with GO, then it will not appear in this file.",
+      "!",
+      "!Note that the annotation set in this file is filtered in order to reduce redundancy; the full, unfiltered set can be found in",
+      "!ftp://ftp.ebi.ac.uk/pub/databases/GO/goa/UNIPROT/goa_uniprot_all.gpa.gz",
+      "!",
+      "!Columns:",
+      "!",
+      "!   name                         required? cardinality             GAF column #",
+      "!   DB                           yes       1                         1",
+      "!   DB_Object_ID                 yes       1                         2 / 17",
+      "!   Qualifier                    no        0 or greater              4",
+      "!   GO ID                        yes       1                         5",
+      "!   DB:Reference                 yes       1 or greater              6",
+      "!   ECO evidence code            yes       1                         7 + 6 (GO evidence code + reference)",
+      "!   With/From                    no        0 or greater              8",
+      "!   Interacting taxon ID         no        0 or 1                   13",
+      "!   Date                         yes       1                        14",
+      "!   Assigned_by                  yes       1                        15",
+      "!   Annotation Extension         no        0 or greater             16",
+      "!   Annotation Properties        no        0 or 1                   n/a",
+      "!",
+      "!Generated: 2016-06-07 10:26",
+      "!GO-version: http://purl.obolibrary.org/obo/go/releases/2016-05-07/go.owl",
+      "!"
+    ],
+    "header_sha256": "d01e57cde3c23570e7d36680bb0deebf2f6b48dcdd058af58241dfaef7479e55",
+    "data_rows": 389235,
+    "column_width_counts": {
+      "12": 389235
+    },
+    "expected_width": 12,
+    "all_rows_expected_width": true,
+    "uncompressed_data_sha256": "5cdd4432be453867964b4534e6a90da51639d9f41efd760cd03b08a0c5f46a9d"
+  },
+  "gpi": {
+    "header_lines": [
+      "!gpi-version: 1.2",
+      "!",
+      "!The set of protein accessions included in this file is based on UniProt reference proteomes, which provide one protein per gene.",
+      "!They include the protein sequences annotated in Swiss-Prot or the longest TrEMBL transcript if there is no Swiss-Prot record.",
+      "!Protein accessions are represented in this file even if there is no associated GO annotation.",
+      "!",
+      "!Columns:",
+      "!",
+      "!   name                   required? cardinality   GAF column #  Example content",
+      "!   DB                     required  1             1             UniProtKB",
+      "!   DB_Object_ID           required \t1             2/17          Q4VCS5-1",
+      "!   DB_Object_Symbol       required  1             3             AMOT",
+      "!   DB_Object_Name         optional  0 or greater  10            Angiomotin",
+      "!   DB_Object_Synonym(s)   optional  0 or greater  11            AMOT|KIAA1071",
+      "!   DB_Object_Type         required  1             12            protein",
+      "!   Taxon                  required  1             13            taxon:9606",
+      "!   Parent_Object_ID       optional  0 or 1        -             UniProtKB:Q4VCS5",
+      "!   DB_Xref(s)             optional  0 or greater  -             (not populated in gp_information files supplied by UniProt-GOA)",
+      "!   Properties             optional  0 or greater  -             db_subset=Swiss-Prot",
+      "!",
+      "!Generated: 2016-06-06 09:25",
+      "!"
+    ],
+    "header_sha256": "9b6e17859ba4d4f3fdda06eae094bcfac75c8c8f30b89180f98b782aa638f5fc",
+    "data_rows": 21005,
+    "column_width_counts": {
+      "10": 21005
+    },
+    "expected_width": 10,
+    "all_rows_expected_width": true,
+    "uncompressed_data_sha256": "fd4fd468047a4e06041d098942ef538e65c337a66ad8f52623f55be04fccb04e"
+  }
+}

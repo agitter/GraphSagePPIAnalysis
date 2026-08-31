@@ -1,0 +1,11 @@
+accessions,GeneIDs,primary_symbol_candidates,unique_symbol_bijection,resolution
+A0A0B4J2E2|Q16663,6359,Q16663:6359,0,retain_all_historical_edges
+A8MWV9|P15382,3753,P15382:3753,0,retain_all_historical_edges
+B7ZAQ6|P0CG08,653519,B7ZAQ6:653519,0,retain_all_historical_edges
+E7EV46|Q03468|Q8N328,2074,Q03468:2074,0,retain_all_historical_edges
+O95073|Q9Y620,25788,Q9Y620:25788,0,retain_all_historical_edges
+P0DMV8|P0DMV9,3303|3304,P0DMV8:3303|P0DMV9:3304,1,P0DMV8->3303|P0DMV9->3304
+P31994|P31995,2213,P31994:2213,0,retain_all_historical_edges
+P62158,801|805|808,P62158:801,0,retain_all_historical_edges
+P62805,8294|8359|8360|8361|8363|8364|8365|8366|8367|8370|121504|554313,P62805:8359,0,retain_all_historical_edges
+P69905,3039|3040,P69905:3039,0,retain_all_historical_edges

@@ -1,0 +1,5 @@
+GeneID,graphsage_rows,tissues,row_count,mapped_from_GPI_accession,observed_positive_feature_count,observed_positive_label_count,predicted_positive_label_count
+7957,5931|12784|16108|19152|25626|28913|34003|36726|39658|42798|45890|49139|52398|55336,amygdala|basal_ganglion|blood|blood_plasma|brain|colon|forebrain|gastrointestinal_tract|heart|kidney|large_intestine|liver|lung|midbrain,14,1,0,17,17
+10159,157|1690|3180|5459|7726|9570|10368|12276|14807|15439|18678|21040|22917|24907|28342|31100|33465|36151|39006|42178|45229|48444|51743|54877,adipose_tissue|adrenal_cortex|adrenal_gland|amygdala|aorta|artery|astrocyte|basal_ganglion|basophil|blood|blood_plasma|blood_platelet|bone|brain|colon|eye|forebrain|gastrointestinal_tract|heart|kidney|large_intestine|liver|lung|midbrain,24,0,1,0,0
+25788,29882|37700|43833,colon|gastrointestinal_tract|large_intestine,3,1,0,19,19
+29901,3411|5691|12524|15807|23105|25276|28642|33725|36453|39343|42498|45576|48805|52087|55105,adrenal_gland|amygdala|basal_ganglion|blood|bone|brain|colon|forebrain|gastrointestinal_tract|heart|kidney|large_intestine|liver|lung|midbrain,15,1,1,0,0

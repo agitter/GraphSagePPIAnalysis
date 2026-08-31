@@ -1,0 +1,12 @@
+{
+  "implementation": "independent pandas/NumPy matrix and packed-byte signature validation",
+  "graph_candidate_gene_count": 4301,
+  "resolved_rows": 56411,
+  "resolved_row_mismatches": 0,
+  "residual_classes": 183,
+  "residual_classes_exact_multiset": 183,
+  "residual_rows": 533,
+  "residual_rows_unique_by_vector": 438,
+  "residual_rows_ambiguous_by_vector": 95,
+  "all_rows_exact_up_to_within_class_permutation": true
+}

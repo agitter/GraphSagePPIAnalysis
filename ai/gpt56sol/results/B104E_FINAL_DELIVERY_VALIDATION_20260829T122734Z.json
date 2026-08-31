@@ -1,0 +1,142 @@
+{
+  "all_checks_passed": true,
+  "batch_id": "B104E",
+  "bundle": {
+    "path": "/mnt/data/B104E_GOA_date_UniProt_feature_rule_bundle_20260829T122734Z.zip",
+    "sha256": "85a3c7f089e7468b1bfc98c10071c9b91de108bab44a2f0d0c495e450af8f6b2",
+    "size_bytes": 3576578
+  },
+  "checks": [
+    {
+      "check": "goa_12_releases",
+      "details": "[158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169]",
+      "passed": true
+    },
+    {
+      "check": "goa_159_exact",
+      "details": "{'release': '159', 'listed_release_date': '2016-07-04', 'gaf_generated_header': '2016-07-04 09:24', 'gaf_GO_version_header': 'http://purl.obolibrary.org/obo/go/releases/2016-06-29/go.owl', 'gpi_generated_header': '2016-07-04 09:27', 'gaf_url': 'https://ftp.ebi.ac.uk/pub/databases/GO/goa/old/HUMAN/goa_human.gaf.159.gz', 'gaf_size_bytes': '4890788', 'gaf_sha256': 'b098509f9ce70fbe7e93e7fabb3c8a767b8201fe25662ff6a57959d6cee43838', 'gpi_url': 'https://ftp.ebi.ac.uk/pub/databases/GO/goa/old/HUMAN/goa_human.gpi.159.gz', 'gpi_size_bytes': '602689', 'gpi_sha256': 'f783a8c71c464b3b98673eb4dc0ae836ad61bd6c72415ae62828d20d0e735612', 'gaf_total_rows': '392440', 'gaf_accepted_rows': '107568', 'mapped_geneids': '12401', 'symbol_fallback_edges': '0', 'exact_label_columns': '121', 'false_positives': '0', 'false_negatives': '0', 'total_mismatches': '0', 'terms_at_least_1000': '121', 'candidate_overlap_ge1000': '121', 'candidate_overlap_top121': '121', 'rank121_count': '1007', 'rank122_count': '997', 'order_lcs': '94', 'order_kendall_tau': '0.7661157024793388', 'order_exact_positions': '13', 'order_exact_prefix': '5', 'duplicate_orientation': '001', 'dictionary_unique_terms': '13302', 'dictionary_table_size': '32768'}",
+      "passed": true
+    },
+    {
+      "check": "goa_159_unique_exact",
+      "details": "",
+      "passed": true
+    },
+    {
+      "check": "goa_duplicate_orientation_stable",
+      "details": "{'001'}",
+      "passed": true
+    },
+    {
+      "check": "feature_main_exact",
+      "details": "{\"all_zero_feature_columns_all_rows\": [10], \"exact_feature_columns\": 50, \"feature_matrix_dtype\": \"float64\", \"feature_matrix_shape\": [56944, 50], \"first_unselected_qualifying_set\": {\"collection\": \"C3\", \"description\": \"http://www.broadinstitute.org/gsea/msigdb/cards/V$CREL_01\", \"raw_entrez_field_count\": 256, \"set_name\": \"V$CREL_01\", \"source_member\": \"msigdb_v5.2_files_to_download_locally/msigdb_v5.2_GMTs/c3.all.v5.2.entrez.gmt\", \"source_row_index_0based\": 27, \"source_row_index_1based\": 28, \"unique_entrez_count\": 256}, \"input_sha256\": {\"graphsage_ppi_zip\": \"53aeb76e54fd41b645e7edb48b62929240b89839495396b048086fd212503fbd\", \"msigdb_v5_2_zip\": \"a618c1c60b11570036034e6357e73e80ee43065ec7a57c1dbd238f205405fbdb\", \"row_map\": \"4aaada1751c958db2653e19e05ca5a8e2bdd2da86c1a4441bad26e0468ae7207\"}, \"qualifying_set_count_by_collection\": {\"C1\": 30, \"C3\": 487}, \"repeated_gene_feature_conflicts\": [], \"resolved_feature_cells_compared\": 2820550, \"resolved_rows\": 56411, \"resolved_unique_entrez_genes\": 4268, \"selected_feature_csv\": \"/mnt/data/ppi_repro_corrected/batches/B104E_20260829T121535Z/analysis/B104E_exact_MSigDB52_feature_generation_rule_20260829T121535Z.csv\", \"selected_set_count_by_collection\": {\"C1\": 30, \"C3\": 20, \"C7\": 0}, \"selection_rule\": {\"collection_order\": [\"C1\", \"C3\", \"C7\"], \"global_feature_cap\": 50, \"minimum_unique_entrez_count_in_full_msigdb_set\": 200, \"preserve_gmt_source_order\": true, \"stop_when_global_cap_reached\": true}, \"total_resolved_feature_mismatches\": 0}",
+      "passed": true
+    },
+    {
+      "check": "feature_independent_exact",
+      "details": "{\"cells_checked\": 2820550, \"expected_positive_counts\": [417, 432, 717, 1627, 336, 564, 322, 731, 826, 562, 0, 1602, 106, 701, 323, 741, 593, 712, 1142, 535, 426, 1173, 852, 866, 548, 799, 755, 301, 246, 424, 1771, 1164, 1405, 1387, 1209, 8998, 1432, 1335, 1278, 1087, 933, 1310, 1411, 1324, 1185, 1160, 1349, 1076, 1247, 1233], \"implementation\": \"independent nested Python loops\", \"mismatch_examples\": [], \"mismatches\": 0, \"observed_positive_counts\": [417, 432, 717, 1627, 336, 564, 322, 731, 826, 562, 0, 1602, 106, 701, 323, 741, 593, 712, 1142, 535, 426, 1173, 852, 866, 548, 799, 755, 301, 246, 424, 1771, 1164, 1405, 1387, 1209, 8998, 1432, 1335, 1278, 1087, 933, 1310, 1411, 1324, 1185, 1160, 1349, 1076, 1247, 1233], \"resolved_rows\": 56411, \"selected_c1\": 30, \"selected_c3\": 20, \"selected_c7\": 0, \"selected_collections\": [\"C1\", \"C1\", \"C1\", \"C1\", \"C1\", \"C1\", \"C1\", \"C1\", \"C1\", \"C1\", \"C1\", \"C1\", \"C1\", \"C1\", \"C1\", \"C1\", \"C1\", \"C1\", \"C1\", \"C1\", \"C1\", \"C1\", \"C1\", \"C1\", \"C1\", \"C1\", \"C1\", \"C1\", \"C1\", \"C1\", \"C3\", \"C3\", \"C3\", \"C3\", \"C3\", \"C3\", \"C3\", \"C3\", \"C3\", \"C3\", \"C3\", \"C3\", \"C3\", \"C3\", \"C3\", \"C3\", \"C3\", \"C3\", \"C3\", \"C3\"], \"selected_names\": [\"chr8q24\", \"chr14q11\", \"chr12q24\", \"chr19p13\", \"chr11q12\", \"chr22q13\", \"chr22q11\", \"chr1q21\", \"chr6p21\", \"chr5q31\", \"chryq11\", \"chr19q13\", \"chr8p23\", \"chr17p13\", \"chr14q32\", \"chr3p21\", \"chr21q22\", \"chr9q34\", \"chr11q13\", \"chr17q25\", \"chrxp11\", \"chr1p36\", \"chr17q21\", \"chr11p15\", \"chr20q13\", \"chr12q13\", \"chr16p13\", \"chr7q11\", \"chr16p11\", \"chr12p13\", \"AAAYRNCTG_UNKNOWN\", \"V$MYOD_01\", \"V$E47_01\", \"V$CMYB_01\", \"V$AP4_01\", \"AACTTT_UNKNOWN\", \"V$ELK1_01\", \"V$SP1_01\", \"V$ATF_01\", \"V$ELK1_02\", \"V$RSRFC4_01\", \"V$CETS1P54_01\", \"V$P300_01\", \"V$NFE2_01\", \"V$CREB_01\", \"V$CREBP1CJUN_01\", \"V$SOX5_01\", \"V$E4BP4_01\", \"V$E2F_02\", \"V$NFKAPPAB65_01\"]}",
+      "passed": true
+    },
+    {
+      "check": "four_msigdb_versions",
+      "details": "['5.0', '5.1', '5.2', '6.0']",
+      "passed": true
+    },
+    {
+      "check": "all_versions_exact",
+      "details": "[{'version': '5.0', 'input_path': '/mnt/data/ppi_repro_corrected/batches/B104E_work/ref/B104C_msigdb_v5.0_normalized_entrez_gene_sets.tsv.gz', 'input_type': 'retained normalized derivative', 'input_sha256': '6775fb96be44080c768bd5789a0dbb0c802a1a0faa45927aa2a07d70af9f7c1f', 'selected_C1': '30', 'selected_C3': '20', 'selected_C7': '0', 'qualifying_C1': '30', 'qualifying_C3': '487', 'qualifying_C7': '1806', 'exact_columns': '50', 'total_mismatches': '0', 'membership_sequence_sha256': '41c5d821e1b706ec4c8dceb47ab25c5dbad689998483e34e9e41d08094448101', 'first_name': 'chr8q24', 'last_name': 'V$NFKAPPAB65_01'}, {'version': '5.1', 'input_path': '/mnt/data/msigdb_v5.1_files_to_download_locally.zip', 'input_type': 'prior user-supplied raw archive', 'input_sha256': '5a8b3f10ea92f8e71eaaa0705ab9d3a5229d838864eec9699544b75884bc9e29', 'selected_C1': '30', 'selected_C3': '20', 'selected_C7': '0', 'qualifying_C1': '30', 'qualifying_C3': '487', 'qualifying_C7': '3708', 'exact_columns': '50', 'total_mismatches': '0', 'membership_sequence_sha256': '41c5d821e1b706ec4c8dceb47ab25c5dbad689998483e34e9e41d08094448101', 'first_name': 'chr8q24', 'last_name': 'V$NFKAPPAB65_01'}, {'version': '5.2', 'input_path': '/mnt/data/msigdb_v5.2_files_to_download_locally.zip', 'input_type': 'prior user-supplied raw archive', 'input_sha256': 'a618c1c60b11570036034e6357e73e80ee43065ec7a57c1dbd238f205405fbdb', 'selected_C1': '30', 'selected_C3': '20', 'selected_C7': '0', 'qualifying_C1': '30', 'qualifying_C3': '487', 'qualifying_C7': '3708', 'exact_columns': '50', 'total_mismatches': '0', 'membership_sequence_sha256': '41c5d821e1b706ec4c8dceb47ab25c5dbad689998483e34e9e41d08094448101', 'first_name': 'chr8q24', 'last_name': 'V$NFKAPPAB65_01'}, {'version': '6.0', 'input_path': '/mnt/data/msigdb_v6.0_files_to_download_locally.zip', 'input_type': 'prior user-supplied raw archive', 'input_sha256': '39fa82c4cedc9183c532afb1c1431683536b5945e50fb8be4f5bcce3ac136edf', 'selected_C1': '30', 'selected_C3': '20', 'selected_C7': '0', 'qualifying_C1': '30', 'qualifying_C3': '487', 'qualifying_C7': '3708', 'exact_columns': '50', 'total_mismatches': '0', 'membership_sequence_sha256': '41c5d821e1b706ec4c8dceb47ab25c5dbad689998483e34e9e41d08094448101', 'first_name': 'chr8q24', 'last_name': 'NFKAPPAB65_01'}]",
+      "passed": true
+    },
+    {
+      "check": "six_uniprot_records",
+      "details": "6",
+      "passed": true
+    },
+    {
+      "check": "O95073_dual_geneids",
+      "details": "[{'id_line': 'FSBP_HUMAN              Reviewed;         299 AA.', 'primary_accession': 'O95073', 'all_accessions': 'O95073|Q8N4S5', 'entry_version_date': '13-APR-2016', 'entry_version': '116', 'gene_name': 'FSBP', 'geneids': '100861412|25788', 'hgnc': 'HGNC;HGNC:43653', 'miscellaneous': 'Intragenic, in the second intron of RAB54B gene.', 'release': '2016_04', 'record_path': '/mnt/data/ppi_repro_corrected/batches/B104E_work/uniprot/2016_04/O95073_Q9Y620_2016_04.dat'}, {'id_line': 'FSBP_HUMAN              Reviewed;         299 AA.', 'primary_accession': 'O95073', 'all_accessions': 'O95073|Q8N4S5', 'entry_version_date': '11-MAY-2016', 'entry_version': '117', 'gene_name': 'FSBP', 'geneids': '100861412|25788', 'hgnc': 'HGNC;HGNC:43653', 'miscellaneous': 'Intragenic, in the second intron of RAB54B gene.', 'release': '2016_05', 'record_path': '/mnt/data/ppi_repro_corrected/batches/B104E_work/uniprot/2016_05/O95073_Q9Y620_2016_05.dat'}, {'id_line': 'FSBP_HUMAN              Reviewed;         299 AA.', 'primary_accession': 'O95073', 'all_accessions': 'O95073|Q8N4S5', 'entry_version_date': '08-JUN-2016', 'entry_version': '118', 'gene_name': 'FSBP', 'geneids': '100861412|25788', 'hgnc': 'HGNC;HGNC:43653', 'miscellaneous': 'Intragenic, in the second intron of RAB54B gene.', 'release': '2016_06', 'record_path': '/mnt/data/ppi_repro_corrected/batches/B104E_work/uniprot/2016_06/O95073_Q9Y620_2016_06.dat'}]",
+      "passed": true
+    },
+    {
+      "check": "Q9Y620_25788",
+      "details": "[{'id_line': 'RA54B_HUMAN             Reviewed;         910 AA.', 'primary_accession': 'Q9Y620', 'all_accessions': 'Q9Y620|F6WBS8', 'entry_version_date': '16-MAR-2016', 'entry_version': '130', 'gene_name': 'RAD54B', 'geneids': '25788', 'hgnc': 'HGNC;HGNC:17228', 'miscellaneous': '', 'release': '2016_04', 'record_path': '/mnt/data/ppi_repro_corrected/batches/B104E_work/uniprot/2016_04/O95073_Q9Y620_2016_04.dat'}, {'id_line': 'RA54B_HUMAN             Reviewed;         910 AA.', 'primary_accession': 'Q9Y620', 'all_accessions': 'Q9Y620|F6WBS8', 'entry_version_date': '11-MAY-2016', 'entry_version': '131', 'gene_name': 'RAD54B', 'geneids': '25788', 'hgnc': 'HGNC;HGNC:17228', 'miscellaneous': '', 'release': '2016_05', 'record_path': '/mnt/data/ppi_repro_corrected/batches/B104E_work/uniprot/2016_05/O95073_Q9Y620_2016_05.dat'}, {'id_line': 'RA54B_HUMAN             Reviewed;         910 AA.', 'primary_accession': 'Q9Y620', 'all_accessions': 'Q9Y620|F6WBS8', 'entry_version_date': '08-JUN-2016', 'entry_version': '132', 'gene_name': 'RAD54B', 'geneids': '25788', 'hgnc': 'HGNC;HGNC:17228', 'miscellaneous': '', 'release': '2016_06', 'record_path': '/mnt/data/ppi_repro_corrected/batches/B104E_work/uniprot/2016_06/O95073_Q9Y620_2016_06.dat'}]",
+      "passed": true
+    },
+    {
+      "check": "uploaded_package_validation",
+      "details": "",
+      "passed": true
+    },
+    {
+      "check": "file_exists:actual_input_file_manifest_through_B104E_20260829T122734Z.csv",
+      "details": "/mnt/data/ppi_repro_corrected/results/actual_input_file_manifest_through_B104E_20260829T122734Z.csv",
+      "passed": true
+    },
+    {
+      "check": "file_exists:actual_input_file_manifest_through_B104E_20260829T122734Z.md",
+      "details": "/mnt/data/ppi_repro_corrected/results/actual_input_file_manifest_through_B104E_20260829T122734Z.md",
+      "passed": true
+    },
+    {
+      "check": "file_exists:source_ledger_through_B104E_FINAL_20260829T122734Z.csv",
+      "details": "/mnt/data/ppi_repro_corrected/results/source_ledger_through_B104E_FINAL_20260829T122734Z.csv",
+      "passed": true
+    },
+    {
+      "check": "file_exists:source_ledger_through_B104E_FINAL_20260829T122734Z.md",
+      "details": "/mnt/data/ppi_repro_corrected/results/source_ledger_through_B104E_FINAL_20260829T122734Z.md",
+      "passed": true
+    },
+    {
+      "check": "file_exists:provenance_events_through_B104E_FINAL_20260829T122734Z.csv",
+      "details": "/mnt/data/ppi_repro_corrected/results/provenance_events_through_B104E_FINAL_20260829T122734Z.csv",
+      "passed": true
+    },
+    {
+      "check": "file_exists:B104E_DELETION_CLEARANCE_20260829T122734Z.md",
+      "details": "/mnt/data/ppi_repro_corrected/batches/B104E_20260829T121535Z/B104E_DELETION_CLEARANCE_20260829T122734Z.md",
+      "passed": true
+    },
+    {
+      "check": "file_exists:B104E_OUTPUT_CHECKSUMS_PREBUNDLE_20260829T122734Z.csv",
+      "details": "/mnt/data/ppi_repro_corrected/batches/B104E_20260829T121535Z/B104E_OUTPUT_CHECKSUMS_PREBUNDLE_20260829T122734Z.csv",
+      "passed": true
+    },
+    {
+      "check": "file_exists:B104E_provenance_workbook_FINAL_20260829T122734Z.xlsx",
+      "details": "/mnt/data/ppi_repro_corrected/results/B104E_provenance_workbook_FINAL_20260829T122734Z.xlsx",
+      "passed": true
+    },
+    {
+      "check": "file_exists:B104E_GOA_date_UniProt_feature_rule_bundle_20260829T122734Z.zip",
+      "details": "/mnt/data/B104E_GOA_date_UniProt_feature_rule_bundle_20260829T122734Z.zip",
+      "passed": true
+    },
+    {
+      "check": "file_exists:B104E_bundle_sha256_20260829T122734Z.txt",
+      "details": "/mnt/data/ppi_repro_corrected/results/B104E_bundle_sha256_20260829T122734Z.txt",
+      "passed": true
+    },
+    {
+      "check": "bundle_sha256",
+      "details": "85a3c7f089e7468b1bfc98c10071c9b91de108bab44a2f0d0c495e450af8f6b2",
+      "passed": true
+    },
+    {
+      "check": "bundle_integrity",
+      "details": "None",
+      "passed": true
+    },
+    {
+      "check": "input_zip_sha_uniprot",
+      "details": "4ac8cb1a900215ded9dc35a4fc44a4abaaff3e5e774cf62769592f1ab153a7b0",
+      "passed": true
+    },
+    {
+      "check": "input_zip_sha_goa",
+      "details": "502c8ffdb7b809c1665e82d31db52b72e7e855e7e9fcc06a8a2f46a64bc30de9",
+      "passed": true
+    }
+  ],
+  "created_at_utc": "2026-08-29T12:27:34Z"
+}

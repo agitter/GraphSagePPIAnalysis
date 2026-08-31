@@ -1,0 +1,15 @@
+{
+  "gaf_rows": 392440,
+  "gaf_unique_projected_assertions": 392440,
+  "gpad_rows": 393458,
+  "gpad_unique_GAF_projected_assertions": 392440,
+  "projected_assertions_in_GAF_not_GPAD": 0,
+  "projected_assertions_in_GPAD_not_GAF": 0,
+  "projected_assertion_sets_identical": true,
+  "gpad_projection_groups_with_multiple_ECO_rows": 1018,
+  "gpad_extra_rows_beyond_GAF_projection": 1018,
+  "duplicate_group_ECO_combinations": {
+    "ECO:0000364|ECO:0000366": 1018
+  },
+  "interpretation": "GPAD preserves ECO granularity. GAF collapses 1,018 pairs of ECO:0000364 and ECO:0000366 to the same IEA assertion; no unique projected assertion is missing from either representation."
+}

@@ -1,0 +1,4 @@
+artifact_name,direct_or_canonical_source_url,source_page_url,obtained_from,acquired_at_utc,provenance_notes
+goa_human.gaf.159.gz,https://ftp.ebi.ac.uk/pub/databases/GO/goa/old/HUMAN/goa_human.gaf.159.gz,https://ftp.ebi.ac.uk/pub/databases/GO/goa/old/HUMAN/,official EBI GOA archive,,
+goa_human.gpa.159.gz,https://ftp.ebi.ac.uk/pub/databases/GO/goa/old/HUMAN/goa_human.gpa.159.gz,https://ftp.ebi.ac.uk/pub/databases/GO/goa/old/HUMAN/,official EBI GOA archive,,
+goa_human.gpi.159.gz,https://ftp.ebi.ac.uk/pub/databases/GO/goa/old/HUMAN/goa_human.gpi.159.gz,https://ftp.ebi.ac.uk/pub/databases/GO/goa/old/HUMAN/,official EBI GOA archive,,

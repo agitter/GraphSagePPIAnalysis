@@ -1,0 +1,15 @@
+{
+  "gaf_rows": 388218,
+  "gaf_unique_projected_assertions": 388218,
+  "gpad_rows": 389235,
+  "gpad_unique_GAF_projected_assertions": 388218,
+  "projected_assertions_in_GAF_not_GPAD": 0,
+  "projected_assertions_in_GPAD_not_GAF": 0,
+  "projected_assertion_sets_identical": true,
+  "gpad_projection_groups_with_multiple_ECO_rows": 1017,
+  "gpad_extra_rows_beyond_GAF_projection": 1017,
+  "duplicate_group_ECO_combinations": {
+    "ECO:0000364|ECO:0000366": 1017
+  },
+  "interpretation": "GPAD preserves two ECO subtypes that collapse to the same IEA assertion in GAF; unique projected assertions are identical."
+}

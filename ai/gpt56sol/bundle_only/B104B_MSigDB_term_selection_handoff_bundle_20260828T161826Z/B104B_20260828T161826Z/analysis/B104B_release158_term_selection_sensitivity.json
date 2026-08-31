@@ -1,0 +1,21 @@
+{
+  "accepted_rows": 104961,
+  "rank121": [
+    "GO:0031399",
+    995
+  ],
+  "rank122": [
+    "GO:0051049",
+    987
+  ],
+  "threshold1000_extra": [],
+  "threshold1000_missing": [
+    "GO:0031399"
+  ],
+  "threshold1000_overlap_target": 120,
+  "threshold1000_size": 120,
+  "top121_extra": [],
+  "top121_missing": [],
+  "top121_overlap_target": 121,
+  "top121_size": 121
+}

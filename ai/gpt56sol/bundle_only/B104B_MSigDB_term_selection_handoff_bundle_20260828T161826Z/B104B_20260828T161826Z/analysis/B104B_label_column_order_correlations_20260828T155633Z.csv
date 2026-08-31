@@ -1,0 +1,6 @@
+ordering_variable,spearman_with_label_column
+GO_ID_numeric,-0.13569029784569778
+unique_gene_count,0.11393238980398306
+node_instance_count,0.10816001300782974
+min_depth,0.09728988948597689
+descendant_count,-0.0177179989614007

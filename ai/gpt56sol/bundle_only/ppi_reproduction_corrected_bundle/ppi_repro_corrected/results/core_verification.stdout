@@ -1,0 +1,33 @@
+stage: load GraphSAGE
+stage: load OhmNet
+stage: partition
+partition done ['adipose_tissue', 'adrenal_cortex', 'adrenal_gland', 'amygdala', 'aorta', 'astrocyte', 'artery', 'basal_ganglion', 'basophil', 'blood', 'blood_plasma', 'blood_platelet', 'bone', 'brain', 'colon', 'eye', 'forebrain', 'large_intestine', 'liver', 'gastrointestinal_tract', 'heart', 'kidney', 'lung', 'midbrain']
+stage: WL
+WL done 55878 335
+stage: feature identification
+feature identification done {'topology_unique_rows': 55878, 'topology_unique_genes': 4232, 'feature_disambiguated_additional_rows': 533, 'mapped_rows_after_features': 56411, 'mapped_unique_genes_after_features': 4268, 'residual_rows_after_features': 533, 'residual_classes_after_features': 183}
+stage: edge verification
+stage: DGL
+stage: labels/leakage
+{
+  "status": "PASS",
+  "runtime_seconds": 68.6560435295105,
+  "tissues": 24,
+  "topology_unique_rows": 55878,
+  "mapped_rows_after_features": 56411,
+  "mapped_unique_genes_after_features": 4268,
+  "dgl_all_checks_pass": true,
+  "leakage": {
+    "mapping_basis": "topology plus independently identified MSigDB v5.2 features; labels were not used to resolve identities",
+    "test_rows_total": 5524,
+    "test_rows_with_resolved_gene": 5465,
+    "test_rows_seen_in_training": 5430,
+    "test_rows_seen_fraction_of_all_test_rows": 0.9829833454018827,
+    "seen_test_rows_with_identical_label_vector": 5430,
+    "identical_fraction_among_seen_test_rows": 1.0,
+    "lookup_micro_f1_all_test_rows_unresolved_or_unseen_predicted_zero": 0.9940678477347222,
+    "true_positive_labels": 197736,
+    "false_positive_labels": 0,
+    "false_negative_labels": 2360
+  }
+}

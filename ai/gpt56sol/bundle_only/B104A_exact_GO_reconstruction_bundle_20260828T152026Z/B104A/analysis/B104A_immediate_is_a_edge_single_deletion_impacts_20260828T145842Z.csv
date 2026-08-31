@@ -1,0 +1,16 @@
+selected_GO_ID,selected_GO_name,child_GO_ID,child_GO_name,false_positives_removed_if_only_this_edge_deleted,true_positives_lost_if_only_this_edge_deleted,net_change_in_total_mismatches
+GO:0005575,cellular_component,GO:0043226,organelle,0,0,0
+GO:0005575,cellular_component,GO:0044422,organelle part,0,0,0
+GO:0005575,cellular_component,GO:0044464,cell part,0,129,129
+GO:0043226,organelle,GO:0043227,membrane-bounded organelle,0,10,10
+GO:0043226,organelle,GO:0043229,intracellular organelle,0,0,0
+GO:0043227,membrane-bounded organelle,GO:0043231,intracellular membrane-bounded organelle,1,1395,1394
+GO:0043229,intracellular organelle,GO:0043231,intracellular membrane-bounded organelle,1,1503,1502
+GO:0043231,intracellular membrane-bounded organelle,GO:0005634,nucleus,1,990,989
+GO:0044422,organelle part,GO:0044446,intracellular organelle part,1,1307,1306
+GO:0044424,intracellular part,GO:0005737,cytoplasm,0,192,192
+GO:0044424,intracellular part,GO:0043229,intracellular organelle,0,185,185
+GO:0044424,intracellular part,GO:0044446,intracellular organelle part,0,128,128
+GO:0044428,nuclear part,GO:0005654,nucleoplasm,1,414,413
+GO:0044446,intracellular organelle part,GO:0044428,nuclear part,1,760,759
+GO:0044464,cell part,GO:0044424,intracellular part,1,2048,2047

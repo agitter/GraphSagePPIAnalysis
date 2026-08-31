@@ -1,0 +1,2 @@
+incomplete_superseded_directory
+Stopped after mapping outputs and before the label grid/report; not accepted.

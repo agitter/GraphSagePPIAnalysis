@@ -1,0 +1,54 @@
+[
+  {
+    "raw_path": "/mnt/data/GO_annotations-9606-direct-allev.tsv",
+    "raw_size": 4247863,
+    "raw_sha256": "2bda650477f7a8571f9926480ae7099871c00c46707b14a89b9b8e25f6f8d329",
+    "retained_gzip_path": "/mnt/data/ppi_repro_corrected/batches/B104G_20260829T150633Z/retained_inputs/GO_annotations-9606-direct-allev.tsv.gz",
+    "retained_gzip_size": 1653192,
+    "retained_gzip_sha256": "1e8a2e9d82b34d1cf2511661c1b2413f3fd0c3e502fd694d9e50aad29e3ebb66",
+    "decompressed_size": 4247863,
+    "decompressed_sha256": "2bda650477f7a8571f9926480ae7099871c00c46707b14a89b9b8e25f6f8d329",
+    "byte_exact_roundtrip": true,
+    "line_count": 16441,
+    "source_url": "https://raw.githubusercontent.com/dhimmel/gene-ontology/962a5e12f8590400c2891cde93fd6a783b26e02e/annotations/taxid_9606/GO_annotations-9606-direct-allev.tsv"
+  },
+  {
+    "raw_path": "/mnt/data/GO_annotations-9606-direct-expev.tsv",
+    "raw_size": 1846292,
+    "raw_sha256": "08d85330226b9d127e4ac004b7fb597f1eb2766798d42d5928424ecf556ac18f",
+    "retained_gzip_path": "/mnt/data/ppi_repro_corrected/batches/B104G_20260829T150633Z/retained_inputs/GO_annotations-9606-direct-expev.tsv.gz",
+    "retained_gzip_size": 662036,
+    "retained_gzip_sha256": "1b3525d3e300a83624f5d98dd22457ba3690e74b8564080f060e4ab9d7e4e8fb",
+    "decompressed_size": 1846292,
+    "decompressed_sha256": "08d85330226b9d127e4ac004b7fb597f1eb2766798d42d5928424ecf556ac18f",
+    "byte_exact_roundtrip": true,
+    "line_count": 10175,
+    "source_url": "https://raw.githubusercontent.com/dhimmel/gene-ontology/962a5e12f8590400c2891cde93fd6a783b26e02e/annotations/taxid_9606/GO_annotations-9606-direct-expev.tsv"
+  },
+  {
+    "raw_path": "/mnt/data/GO_annotations-9606-inferred-allev.tsv",
+    "raw_size": 22907854,
+    "raw_sha256": "c97255b18672a1af321910739a434778cd7730b13a9bb6023dae08666930b2e2",
+    "retained_gzip_path": "/mnt/data/ppi_repro_corrected/batches/B104G_20260829T150633Z/retained_inputs/GO_annotations-9606-inferred-allev.tsv.gz",
+    "retained_gzip_size": 9379037,
+    "retained_gzip_sha256": "8fec17121978720d73ff306c5fa8080d9de1eca35cdacc2eebb06c1bf5decc8f",
+    "decompressed_size": 22907854,
+    "decompressed_sha256": "c97255b18672a1af321910739a434778cd7730b13a9bb6023dae08666930b2e2",
+    "byte_exact_roundtrip": true,
+    "line_count": 20672,
+    "source_url": "https://raw.githubusercontent.com/dhimmel/gene-ontology/962a5e12f8590400c2891cde93fd6a783b26e02e/annotations/taxid_9606/GO_annotations-9606-inferred-allev.tsv"
+  },
+  {
+    "raw_path": "/mnt/data/GO_annotations-9606-inferred-expev.tsv",
+    "raw_size": 9132101,
+    "raw_sha256": "e56acc1184324df3e7bb0abafd2678b97eb38925fe57840d75ae7188c8c50ed1",
+    "retained_gzip_path": "/mnt/data/ppi_repro_corrected/batches/B104G_20260829T150633Z/retained_inputs/GO_annotations-9606-inferred-expev.tsv.gz",
+    "retained_gzip_size": 3501432,
+    "retained_gzip_sha256": "83f9a3a514042a867b5881175125e27b8246eb66bdc40afca171efdb05d5f6cd",
+    "decompressed_size": 9132101,
+    "decompressed_sha256": "e56acc1184324df3e7bb0abafd2678b97eb38925fe57840d75ae7188c8c50ed1",
+    "byte_exact_roundtrip": true,
+    "line_count": 14798,
+    "source_url": "https://raw.githubusercontent.com/dhimmel/gene-ontology/962a5e12f8590400c2891cde93fd6a783b26e02e/annotations/taxid_9606/GO_annotations-9606-inferred-expev.tsv"
+  }
+]

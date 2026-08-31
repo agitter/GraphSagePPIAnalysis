@@ -1,0 +1,4 @@
+split,row_count,graph_id_exact,labels_exact,feature_dtype_in_archive,feature_shape,feature_max_abs_difference_float64_standard_scaler,feature_allclose_at_1e_12,edge_set_exact,expected_directed_edge_count_including_one_loop_per_node,dgl_directed_edge_count,missing_edge_count,extra_edge_count,original_graphsage_undirected_edge_count_including_loops,original_graphsage_loop_count
+train,44906,True,True,float64,"[44906, 50]",1.1368683772161603e-13,True,True,1271274,1271274,0,0,633198,20014
+valid,6514,True,True,float64,"[6514, 50]",1.1368683772161603e-13,True,True,205434,205434,0,0,102187,2727
+test,5524,True,True,float64,"[5524, 50]",1.1368683772161603e-13,True,True,167500,167500,0,0,83331,2343

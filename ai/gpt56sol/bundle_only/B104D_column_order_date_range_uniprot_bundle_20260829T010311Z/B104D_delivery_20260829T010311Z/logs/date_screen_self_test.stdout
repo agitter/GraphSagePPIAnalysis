@@ -1,0 +1,29 @@
+{
+  "created_at_utc": "2026-08-29T01:07:37.264206Z",
+  "fixed_assumptions": {
+    "column_order_model": "64-bit unrandomized CPython-2 dict; mapped accepted rows sorted by date/accession/GO; first direct term then sorted is_a ancestors",
+    "evidence": [
+      "EXP",
+      "IDA",
+      "IEP",
+      "IGI",
+      "IMP",
+      "ISS"
+    ],
+    "mapping": "May-2016 historical gp2protein, ambiguity preserved, O95073\u219225788 removed; unique GPI primary-symbol fallback for unresolved graph genes",
+    "ontology": "2016-06-01 archived GO is_a graph",
+    "propagation": "is_a only",
+    "relations": [
+      "enables",
+      "involved_in",
+      "part_of"
+    ]
+  },
+  "reference_pack": "/mnt/data/ppi_repro_corrected/batches/B104D_20260829T010311Z/B104D_GOA_date_screen_reference_pack_20260829T010311Z.zip",
+  "reference_pack_sha256": "22791f83190a4ae5b804c22d8bffec9e125fb975c981ea80fa69cfa183d591c4",
+  "releases": [
+    158,
+    159
+  ],
+  "summary_csv": "/mnt/data/ppi_repro_corrected/work_B104D/date_screen_test/results/goa_release_date_screen_summary_20260829T010737Z.csv"
+}

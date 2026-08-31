@@ -1,0 +1,746 @@
+{
+  "batch_id": "B101",
+  "generated_at_utc": "2026-08-27T15:27:36.842353+00:00",
+  "runtime_seconds": 30.971824169158936,
+  "inputs": [
+    {
+      "batch_id": "B101",
+      "file_role": "gaf",
+      "artifact_name": "goa_human.gaf.159.gz",
+      "local_path": "/mnt/data/goa_human.gaf.159.gz",
+      "size_bytes": 4890788,
+      "sha256": "b098509f9ce70fbe7e93e7fabb3c8a767b8201fe25662ff6a57959d6cee43838",
+      "expected_size_bytes_from_B000": "4890788",
+      "expected_sha256_from_B000": "b098509f9ce70fbe7e93e7fabb3c8a767b8201fe25662ff6a57959d6cee43838",
+      "size_matches_B000": true,
+      "sha256_matches_B000": true,
+      "gzip_integrity_exit_code": 0,
+      "gzip_integrity_ok": true,
+      "gzip_integrity_stderr": "",
+      "direct_or_canonical_source_url": "https://ftp.ebi.ac.uk/pub/databases/GO/goa/old/HUMAN/goa_human.gaf.159.gz",
+      "source_page_url": "https://ftp.ebi.ac.uk/pub/databases/GO/goa/old/HUMAN/",
+      "remote_byte_verification_status": "not_performed; exact official URL recorded; upload hash independently matches B000 user-local hash",
+      "received_at_utc": "2026-08-27T15:27:36.842353+00:00"
+    },
+    {
+      "batch_id": "B101",
+      "file_role": "gpad",
+      "artifact_name": "goa_human.gpa.159.gz",
+      "local_path": "/mnt/data/goa_human.gpa.159.gz",
+      "size_bytes": 3665510,
+      "sha256": "dbe9073e726e804f51b0fe80ecd2897798f22a558e75aeb1c8bfc229357b574a",
+      "expected_size_bytes_from_B000": "3665510",
+      "expected_sha256_from_B000": "dbe9073e726e804f51b0fe80ecd2897798f22a558e75aeb1c8bfc229357b574a",
+      "size_matches_B000": true,
+      "sha256_matches_B000": true,
+      "gzip_integrity_exit_code": 0,
+      "gzip_integrity_ok": true,
+      "gzip_integrity_stderr": "",
+      "direct_or_canonical_source_url": "https://ftp.ebi.ac.uk/pub/databases/GO/goa/old/HUMAN/goa_human.gpa.159.gz",
+      "source_page_url": "https://ftp.ebi.ac.uk/pub/databases/GO/goa/old/HUMAN/",
+      "remote_byte_verification_status": "not_performed; exact official URL recorded; upload hash independently matches B000 user-local hash",
+      "received_at_utc": "2026-08-27T15:27:36.842353+00:00"
+    },
+    {
+      "batch_id": "B101",
+      "file_role": "gpi",
+      "artifact_name": "goa_human.gpi.159.gz",
+      "local_path": "/mnt/data/goa_human.gpi.159.gz",
+      "size_bytes": 602689,
+      "sha256": "f783a8c71c464b3b98673eb4dc0ae836ad61bd6c72415ae62828d20d0e735612",
+      "expected_size_bytes_from_B000": "602689",
+      "expected_sha256_from_B000": "f783a8c71c464b3b98673eb4dc0ae836ad61bd6c72415ae62828d20d0e735612",
+      "size_matches_B000": true,
+      "sha256_matches_B000": true,
+      "gzip_integrity_exit_code": 0,
+      "gzip_integrity_ok": true,
+      "gzip_integrity_stderr": "",
+      "direct_or_canonical_source_url": "https://ftp.ebi.ac.uk/pub/databases/GO/goa/old/HUMAN/goa_human.gpi.159.gz",
+      "source_page_url": "https://ftp.ebi.ac.uk/pub/databases/GO/goa/old/HUMAN/",
+      "remote_byte_verification_status": "not_performed; exact official URL recorded; upload hash independently matches B000 user-local hash",
+      "received_at_utc": "2026-08-27T15:27:36.842353+00:00"
+    }
+  ],
+  "raw_file_stats": {
+    "gaf": {
+      "header_lines": [
+        "!gaf-version: 2.1",
+        "!",
+        "!The set of protein accessions included in this file is based on UniProt reference proteomes, which provide one protein per gene.",
+        "!They include the protein sequences annotated in Swiss-Prot or the longest TrEMBL transcript if there is no Swiss-Prot record.",
+        "!If a particular protein accession is not annotated with GO, then it will not appear in this file.",
+        "!",
+        "!Note that the annotation set in this file is filtered in order to reduce redundancy; the full, unfiltered set can be found in",
+        "!ftp://ftp.ebi.ac.uk/pub/databases/GO/goa/UNIPROT/goa_uniprot_all.gz",
+        "!",
+        "!Generated: 2016-07-04 09:24",
+        "!GO-version: http://purl.obolibrary.org/obo/go/releases/2016-06-29/go.owl",
+        "!"
+      ],
+      "header_sha256": "457b0793560f48c7d37f0757726c791c54c7c5c65430c5218cc9fe84ec25cecd",
+      "data_rows": 392440,
+      "column_width_counts": {
+        "17": 392440
+      },
+      "expected_width": 17,
+      "all_rows_expected_width": true,
+      "uncompressed_data_sha256": "2304b4ebef9d02c38ae2ba06a56556a577158547bc0aaa6a2fc68d53bdf40193"
+    },
+    "gpad": {
+      "header_lines": [
+        "!gpa-version: 1.1",
+        "!",
+        "!The set of protein accessions included in this file is based on UniProt reference proteomes, which provide one protein per gene.",
+        "!They include the protein sequences annotated in Swiss-Prot or the longest TrEMBL transcript if there is no Swiss-Prot record.",
+        "!If a particular protein accession is not annotated with GO, then it will not appear in this file.",
+        "!",
+        "!Note that the annotation set in this file is filtered in order to reduce redundancy; the full, unfiltered set can be found in",
+        "!ftp://ftp.ebi.ac.uk/pub/databases/GO/goa/UNIPROT/goa_uniprot_all.gpa.gz",
+        "!",
+        "!Columns:",
+        "!",
+        "!   name                         required? cardinality             GAF column #",
+        "!   DB                           yes       1                         1",
+        "!   DB_Object_ID                 yes       1                         2 / 17",
+        "!   Qualifier                    no        0 or greater              4",
+        "!   GO ID                        yes       1                         5",
+        "!   DB:Reference                 yes       1 or greater              6",
+        "!   ECO evidence code            yes       1                         7 + 6 (GO evidence code + reference)",
+        "!   With/From                    no        0 or greater              8",
+        "!   Interacting taxon ID         no        0 or 1                   13",
+        "!   Date                         yes       1                        14",
+        "!   Assigned_by                  yes       1                        15",
+        "!   Annotation Extension         no        0 or greater             16",
+        "!   Annotation Properties        no        0 or 1                   n/a",
+        "!",
+        "!Generated: 2016-07-04 09:22",
+        "!GO-version: http://purl.obolibrary.org/obo/go/releases/2016-06-29/go.owl",
+        "!"
+      ],
+      "header_sha256": "32df3eff7b0770ed9f7fa77dd7f21dab218e5105d85e25ef9e1d113b5e50f937",
+      "data_rows": 393458,
+      "column_width_counts": {
+        "12": 393458
+      },
+      "expected_width": 12,
+      "all_rows_expected_width": true,
+      "uncompressed_data_sha256": "8d92276ba2948e3aaa19a94bd60380ab842443232ef41daf99c33f82b020be74"
+    },
+    "gpi": {
+      "header_lines": [
+        "!gpi-version: 1.2",
+        "!",
+        "!The set of protein accessions included in this file is based on UniProt reference proteomes, which provide one protein per gene.",
+        "!They include the protein sequences annotated in Swiss-Prot or the longest TrEMBL transcript if there is no Swiss-Prot record.",
+        "!Protein accessions are represented in this file even if there is no associated GO annotation.",
+        "!",
+        "!Columns:",
+        "!",
+        "!   name                   required? cardinality   GAF column #  Example content",
+        "!   DB                     required  1             1             UniProtKB",
+        "!   DB_Object_ID           required  1             2/17          Q4VCS5-1",
+        "!   DB_Object_Symbol       required  1             3             AMOT",
+        "!   DB_Object_Name         optional  0 or greater  10            Angiomotin",
+        "!   DB_Object_Synonym(s)   optional  0 or greater  11            AMOT|KIAA1071",
+        "!   DB_Object_Type         required  1             12            protein",
+        "!   Taxon                  required  1             13            taxon:9606",
+        "!   Parent_Object_ID       optional  0 or 1        -             UniProtKB:Q4VCS5",
+        "!   DB_Xref(s)             optional  0 or greater  -             (not populated in gp_information files supplied by UniProt-GOA)",
+        "!   Properties             optional  0 or greater  -             db_subset=Swiss-Prot",
+        "!",
+        "!Generated: 2016-07-04 09:27",
+        "!"
+      ],
+      "header_sha256": "8ed52145d156ac6be81b01606d1aa9ffcb62e794bd589e64482432732cf036a7",
+      "data_rows": 21002,
+      "column_width_counts": {
+        "10": 21002
+      },
+      "expected_width": 10,
+      "all_rows_expected_width": true,
+      "uncompressed_data_sha256": "3a79fa1636813c38eb56c3ed8acdc9406924a0648705583acb8bbb6e720b9c4c"
+    }
+  },
+  "gaf": {
+    "rows": 392440,
+    "unique_objects": 19194,
+    "unique_GO_IDs": 16556,
+    "aspect_counts": {
+      "F": 129323,
+      "C": 128829,
+      "P": 134288
+    },
+    "evidence_counts": {
+      "IEA": 84378,
+      "ISS": 19585,
+      "IDA": 70739,
+      "TAS": 92193,
+      "ND": 1858,
+      "IMP": 16636,
+      "IPI": 74653,
+      "IBA": 20383,
+      "IEP": 946,
+      "EXP": 1136,
+      "NAS": 7430,
+      "IC": 1369,
+      "IGI": 1120,
+      "IKR": 14
+    },
+    "BP_evidence_counts": {
+      "IEA": 46510,
+      "ISS": 12462,
+      "IDA": 20671,
+      "ND": 639,
+      "IMP": 14838,
+      "IBA": 9155,
+      "TAS": 23449,
+      "IEP": 946,
+      "NAS": 3604,
+      "IPI": 90,
+      "IGI": 1035,
+      "IC": 886,
+      "IKR": 3
+    },
+    "qualifier_counts": {
+      "": 388931,
+      "NOT": 1327,
+      "NOT|contributes_to": 15,
+      "contributes_to": 1069,
+      "colocalizes_with": 1087,
+      "NOT|colocalizes_with": 11
+    },
+    "generated_header": "!Generated: 2016-07-04 09:24",
+    "GO_version_header": "!GO-version: http://purl.obolibrary.org/obo/go/releases/2016-06-29/go.owl"
+  },
+  "gpad": {
+    "rows": 393458,
+    "unique_objects": 19194,
+    "unique_GO_IDs": 16556,
+    "relation_counts": {
+      "enables": 127811,
+      "involved_in": 134623,
+      "part_of": 127515,
+      "NOT|enables": 428,
+      "NOT|involved_in": 640,
+      "NOT|contributes_to": 15,
+      "NOT|part_of": 259,
+      "contributes_to": 1069,
+      "colocalizes_with": 1087,
+      "NOT|colocalizes_with": 11
+    },
+    "ECO_counts": {
+      "ECO:0000323": 172,
+      "ECO:0000256": 9910,
+      "ECO:0000501": 837,
+      "ECO:0000322": 28126,
+      "ECO:0000366": 2335,
+      "ECO:0000250": 19585,
+      "ECO:0000314": 70739,
+      "ECO:0000265": 40015,
+      "ECO:0000304": 92193,
+      "ECO:0000307": 1858,
+      "ECO:0000315": 16636,
+      "ECO:0000353": 74653,
+      "ECO:0000318": 20383,
+      "ECO:0000364": 4001,
+      "ECO:0000270": 946,
+      "ECO:0000269": 1136,
+      "ECO:0000303": 7430,
+      "ECO:0000305": 1369,
+      "ECO:0000316": 1120,
+      "ECO:0000320": 14
+    },
+    "GO_evidence_counts": {
+      "IEA": 85396,
+      "ISS": 19585,
+      "IDA": 70739,
+      "TAS": 92193,
+      "ND": 1858,
+      "IMP": 16636,
+      "IPI": 74653,
+      "IBA": 20383,
+      "IEP": 946,
+      "EXP": 1136,
+      "NAS": 7430,
+      "IC": 1369,
+      "IGI": 1120,
+      "IKR": 14
+    }
+  },
+  "gpi": {
+    "gpi_rows_and_unique_objects": 21002,
+    "gaf_annotated_unique_objects": 19194,
+    "gpad_annotated_unique_objects": 19194,
+    "gaf_objects_missing_from_GPI": 0,
+    "gpad_objects_missing_from_GPI": 0,
+    "gpi_objects_without_GAF_annotation": 1808,
+    "gpi_property_counts": {
+      "db_subset=TrEMBL": 988,
+      "db_subset=Swiss-Prot": 20014
+    },
+    "gpi_nonempty_column_counts": {
+      "DB": 21002,
+      "DB_Object_ID": 21002,
+      "DB_Object_Symbol": 20249,
+      "DB_Object_Name": 21002,
+      "DB_Object_Synonyms": 21002,
+      "DB_Object_Type": 21002,
+      "Taxon": 21002,
+      "Properties": 21002
+    },
+    "gpi_DB_Xrefs_nonempty": 0,
+    "gpi_Parent_Object_ID_nonempty": 0,
+    "metadata_mismatch_counts": {
+      "symbol": 394
+    },
+    "symbol_mismatch_pattern": "394 annotated objects have blank GPI symbol; GAF substitutes the UniProt accession as the symbol",
+    "symbol_mismatch_examples": [
+      {
+        "DB": "UniProtKB",
+        "DB_Object_ID": "M0R082",
+        "GPI_Symbol": "",
+        "GAF_Symbols": "M0R082"
+      },
+      {
+        "DB": "UniProtKB",
+        "DB_Object_ID": "A0A096LNY1",
+        "GPI_Symbol": "",
+        "GAF_Symbols": "A0A096LNY1"
+      },
+      {
+        "DB": "UniProtKB",
+        "DB_Object_ID": "A0A0U1RQV5",
+        "GPI_Symbol": "",
+        "GAF_Symbols": "A0A0U1RQV5"
+      },
+      {
+        "DB": "UniProtKB",
+        "DB_Object_ID": "P01593",
+        "GPI_Symbol": "",
+        "GAF_Symbols": "P01593"
+      },
+      {
+        "DB": "UniProtKB",
+        "DB_Object_ID": "H3BM21",
+        "GPI_Symbol": "",
+        "GAF_Symbols": "H3BM21"
+      },
+      {
+        "DB": "UniProtKB",
+        "DB_Object_ID": "P06889",
+        "GPI_Symbol": "",
+        "GAF_Symbols": "P06889"
+      },
+      {
+        "DB": "UniProtKB",
+        "DB_Object_ID": "K7EQS6",
+        "GPI_Symbol": "",
+        "GAF_Symbols": "K7EQS6"
+      },
+      {
+        "DB": "UniProtKB",
+        "DB_Object_ID": "P06315",
+        "GPI_Symbol": "",
+        "GAF_Symbols": "P06315"
+      },
+      {
+        "DB": "UniProtKB",
+        "DB_Object_ID": "Q9UF83",
+        "GPI_Symbol": "",
+        "GAF_Symbols": "Q9UF83"
+      },
+      {
+        "DB": "UniProtKB",
+        "DB_Object_ID": "E7EUB6",
+        "GPI_Symbol": "",
+        "GAF_Symbols": "E7EUB6"
+      },
+      {
+        "DB": "UniProtKB",
+        "DB_Object_ID": "I3L1I5",
+        "GPI_Symbol": "",
+        "GAF_Symbols": "I3L1I5"
+      },
+      {
+        "DB": "UniProtKB",
+        "DB_Object_ID": "F2Z2F3",
+        "GPI_Symbol": "",
+        "GAF_Symbols": "F2Z2F3"
+      },
+      {
+        "DB": "UniProtKB",
+        "DB_Object_ID": "P01768",
+        "GPI_Symbol": "",
+        "GAF_Symbols": "P01768"
+      },
+      {
+        "DB": "UniProtKB",
+        "DB_Object_ID": "C9JAW5",
+        "GPI_Symbol": "",
+        "GAF_Symbols": "C9JAW5"
+      },
+      {
+        "DB": "UniProtKB",
+        "DB_Object_ID": "P80362",
+        "GPI_Symbol": "",
+        "GAF_Symbols": "P80362"
+      },
+      {
+        "DB": "UniProtKB",
+        "DB_Object_ID": "A0A096LP31",
+        "GPI_Symbol": "",
+        "GAF_Symbols": "A0A096LP31"
+      },
+      {
+        "DB": "UniProtKB",
+        "DB_Object_ID": "P01773",
+        "GPI_Symbol": "",
+        "GAF_Symbols": "P01773"
+      },
+      {
+        "DB": "UniProtKB",
+        "DB_Object_ID": "J3KR12",
+        "GPI_Symbol": "",
+        "GAF_Symbols": "J3KR12"
+      },
+      {
+        "DB": "UniProtKB",
+        "DB_Object_ID": "B4DLN1",
+        "GPI_Symbol": "",
+        "GAF_Symbols": "B4DLN1"
+      },
+      {
+        "DB": "UniProtKB",
+        "DB_Object_ID": "U3KPZ7",
+        "GPI_Symbol": "",
+        "GAF_Symbols": "U3KPZ7"
+      },
+      {
+        "DB": "UniProtKB",
+        "DB_Object_ID": "P06310",
+        "GPI_Symbol": "",
+        "GAF_Symbols": "P06310"
+      },
+      {
+        "DB": "UniProtKB",
+        "DB_Object_ID": "E5RI56",
+        "GPI_Symbol": "",
+        "GAF_Symbols": "E5RI56"
+      },
+      {
+        "DB": "UniProtKB",
+        "DB_Object_ID": "P80419",
+        "GPI_Symbol": "",
+        "GAF_Symbols": "P80419"
+      },
+      {
+        "DB": "UniProtKB",
+        "DB_Object_ID": "P06331",
+        "GPI_Symbol": "",
+        "GAF_Symbols": "P06331"
+      },
+      {
+        "DB": "UniProtKB",
+        "DB_Object_ID": "E7ENX8",
+        "GPI_Symbol": "",
+        "GAF_Symbols": "E7ENX8"
+      }
+    ],
+    "conclusion_about_Entrez_mapping": "The GPI file does not supply Entrez Gene cross-references: DB_Xrefs is empty for every one of the 21,002 rows, consistent with its own header. An external identifier map is required."
+  },
+  "gaf_gpad_reconciliation": {
+    "gaf_rows": 392440,
+    "gaf_unique_projected_assertions": 392440,
+    "gpad_rows": 393458,
+    "gpad_unique_GAF_projected_assertions": 392440,
+    "projected_assertions_in_GAF_not_GPAD": 0,
+    "projected_assertions_in_GPAD_not_GAF": 0,
+    "projected_assertion_sets_identical": true,
+    "gpad_projection_groups_with_multiple_ECO_rows": 1018,
+    "gpad_extra_rows_beyond_GAF_projection": 1018,
+    "duplicate_group_ECO_combinations": {
+      "ECO:0000364|ECO:0000366": 1018
+    },
+    "interpretation": "GPAD preserves ECO granularity. GAF collapses 1,018 pairs of ECO:0000364 and ECO:0000366 to the same IEA assertion; no unique projected assertion is missing from either representation."
+  },
+  "provisional_identifier_mapping": {
+    "mapping_source": "MSigDB v5.2 XML MEMBERS_SYMBOLIZED aligned with MEMBERS_EZID; this is a provisional external mapping, not a field supplied by GOA GPI",
+    "msigdb_archive_sha256": "a618c1c60b11570036034e6357e73e80ee43065ec7a57c1dbd238f205405fbdb",
+    "comparison_gene_universe_derivative": "/mnt/data/work/ppi_repro_corrected/results/collapsed_gene_labels_topology_features.csv",
+    "comparison_gene_universe_derivative_sha256": "4fd88002b2600c0b7c5dcb076390f5b74a39edcb34184f1b0768d9926dcb1907",
+    "comparison_genes": 4268,
+    "msigdb_parse": {
+      "xml_member": "msigdb_v5.2_files_to_download_locally/msigdb_v5.2.xml",
+      "gene_sets_parsed": 18890,
+      "aligned_symbol_entrez_member_pairs": 2515237,
+      "gene_sets_with_misaligned_MEMBERS_SYMBOLIZED_and_MEMBERS_EZID": 0,
+      "unique_symbols": 32444,
+      "ambiguous_symbols": 8,
+      "unique_symbol_entrez_pairs": 32452,
+      "c5_bp_records": 4653
+    },
+    "strategies": {
+      "primary_symbol_unique": {
+        "mapped_GPI_objects": 4183,
+        "objects_with_multiple_GraphSAGE_gene_candidates": 0,
+        "GraphSAGE_genes_covered": 4183,
+        "GraphSAGE_genes_missing": 85,
+        "missing_GraphSAGE_Entrez_IDs": [
+          41,
+          576,
+          805,
+          808,
+          3040,
+          4297,
+          5540,
+          5818,
+          5819,
+          8085,
+          8294,
+          8360,
+          8361,
+          8363,
+          8364,
+          8365,
+          8366,
+          8367,
+          8370,
+          8531,
+          8611,
+          8613,
+          8725,
+          9311,
+          9315,
+          9757,
+          9767,
+          9907,
+          10159,
+          10189,
+          10399,
+          10472,
+          10542,
+          11251,
+          23338,
+          23392,
+          25945,
+          25960,
+          26258,
+          26523,
+          27018,
+          27161,
+          28989,
+          29965,
+          30001,
+          51111,
+          51118,
+          51493,
+          54471,
+          55352,
+          55706,
+          55904,
+          56652,
+          57007,
+          58493,
+          58508,
+          60673,
+          64397,
+          64859,
+          79035,
+          79133,
+          79631,
+          79736,
+          79831,
+          79960,
+          80856,
+          83695,
+          84305,
+          84803,
+          84934,
+          92906,
+          93100,
+          112770,
+          112869,
+          121504,
+          127281,
+          137964,
+          151648,
+          163702,
+          192669,
+          192670,
+          282618,
+          387893,
+          541468,
+          554313
+        ]
+      },
+      "primary_then_synonym_unique": {
+        "mapped_GPI_objects": 4328,
+        "objects_with_multiple_GraphSAGE_gene_candidates": 0,
+        "GraphSAGE_genes_covered": 4251,
+        "GraphSAGE_genes_missing": 17,
+        "missing_GraphSAGE_Entrez_IDs": [
+          805,
+          808,
+          3040,
+          8085,
+          8294,
+          8360,
+          8361,
+          8363,
+          8364,
+          8365,
+          8366,
+          8367,
+          8370,
+          9757,
+          10159,
+          121504,
+          554313
+        ]
+      },
+      "fallback_synonym_union": {
+        "mapped_GPI_objects": 4330,
+        "objects_with_multiple_GraphSAGE_gene_candidates": 2,
+        "GraphSAGE_genes_covered": 4253,
+        "GraphSAGE_genes_missing": 15,
+        "missing_GraphSAGE_Entrez_IDs": [
+          805,
+          808,
+          3040,
+          8294,
+          8360,
+          8361,
+          8363,
+          8364,
+          8365,
+          8366,
+          8367,
+          8370,
+          10159,
+          121504,
+          554313
+        ]
+      },
+      "all_names_union": {
+        "mapped_GPI_objects": 4330,
+        "objects_with_multiple_GraphSAGE_gene_candidates": 57,
+        "GraphSAGE_genes_covered": 4267,
+        "GraphSAGE_genes_missing": 1,
+        "missing_GraphSAGE_Entrez_IDs": [
+          10159
+        ]
+      }
+    },
+    "warning": "Synonyms can collide with symbols of other genes. The all_names_union strategy is intentionally permissive and should not be treated as a definitive identifier map."
+  },
+  "direct_label_screen": {
+    "best_direct_configuration": {
+      "source_name": "GOA human GAF v159 direct BP annotations",
+      "mapping_strategy": "fallback_synonym_union",
+      "evidence_filter": "all_except_IEA_ND_NAS",
+      "term_scope": "all_bp",
+      "comparison_scope": "all_4268_resolved_genes",
+      "candidate_GO_terms": 7126,
+      "comparison_genes": 4268,
+      "label_columns": 121,
+      "exact_matches": 0,
+      "agreement_at_least_99_percent": 0,
+      "agreement_at_least_95_percent": 0,
+      "median_best_agreement": 0.816776007497657,
+      "mean_best_agreement": 0.7587853485868311,
+      "minimum_mismatch_genes": 281,
+      "mean_mismatch_genes": 1029.504132231405
+    },
+    "conclusion": "No direct-annotation configuration reaches 95% agreement for any of the 121 columns. The selected best-overall full-universe configuration has a nearest column differing by 281 genes; the smallest mismatch observed anywhere in the full direct grid is 274 genes. This rules out raw direct GOA rows as the final label matrix but does not rule out GOA followed by ontology propagation or other preprocessing.",
+    "msigdb_C5BP_comparator": {
+      "source_name": "MSigDB v5.2 C5 BP Entrez gene sets",
+      "mapping_strategy": "native_Entrez",
+      "evidence_filter": "MSigDB_supplied",
+      "term_scope": "C5_BP",
+      "comparison_scope": "all_4268_resolved_genes",
+      "candidate_GO_terms": 4653,
+      "comparison_genes": 4268,
+      "label_columns": 121,
+      "exact_matches": 0,
+      "agreement_at_least_99_percent": 0,
+      "agreement_at_least_95_percent": 0,
+      "median_best_agreement": 0.8465323336457358,
+      "mean_best_agreement": 0.7913397414547624,
+      "minimum_mismatch_genes": 265,
+      "mean_mismatch_genes": 890.5619834710744
+    },
+    "ontology_propagation_tested_in_B101": false,
+    "reason_not_tested": "No ontology file was uploaded in B101. The GAF header names GO release 2016-06-29; the user's local 2016-06-01 ontology should be analyzed in a subsequent batch and an exact 2016-06-29/2016-07-01 ontology should be sought.",
+    "global_closest_direct_label_match": {
+      "agreement": 0.9358013120899719,
+      "best_candidate_positive_genes": 395,
+      "best_go_id": "GO:0045944",
+      "best_term_name": "",
+      "comparison_scope": "all_4268_resolved_genes",
+      "evidence_filter": "experimental_plus_IBA_ISS_IC",
+      "f1": 0.7385496183206107,
+      "false_negatives": 266,
+      "false_positives": 8,
+      "jaccard": 0.5854765506807866,
+      "label_column": 72,
+      "mapping_strategy": "fallback_synonym_union",
+      "mismatch_genes": 274,
+      "observed_positive_genes": 653,
+      "source_name": "GOA human GAF v159 direct BP annotations",
+      "term_scope": "all_bp",
+      "tie_count": 1,
+      "tied_go_ids": "GO:0045944",
+      "true_positives": 387
+    }
+  },
+  "retained_derivatives": [
+    {
+      "file_kind": "gaf",
+      "derivative_path": "/mnt/data/ppi_repro_corrected/batches/B101/B101_goa_human_gaf159_normalized_20260827T152736Z.tsv.gz",
+      "derivative_sha256": "132066afa3d3ea550752d3d2eb98fcbc238570c23bf239f0ea77e720e34cc274",
+      "rows_re_read": 392440,
+      "expected_rows": 392440,
+      "row_count_matches": true,
+      "reconstructed_raw_data_sha256": "2304b4ebef9d02c38ae2ba06a56556a577158547bc0aaa6a2fc68d53bdf40193",
+      "expected_raw_data_sha256": "2304b4ebef9d02c38ae2ba06a56556a577158547bc0aaa6a2fc68d53bdf40193",
+      "raw_data_hash_matches": true
+    },
+    {
+      "file_kind": "gpad",
+      "derivative_path": "/mnt/data/ppi_repro_corrected/batches/B101/B101_goa_human_gpad159_normalized_20260827T152736Z.tsv.gz",
+      "derivative_sha256": "7e3ec99110ef936ea9e9b7deaacdf7a86d7a7057cb41d5348f80e5ff56ac2793",
+      "rows_re_read": 393458,
+      "expected_rows": 393458,
+      "row_count_matches": true,
+      "reconstructed_raw_data_sha256": "8d92276ba2948e3aaa19a94bd60380ab842443232ef41daf99c33f82b020be74",
+      "expected_raw_data_sha256": "8d92276ba2948e3aaa19a94bd60380ab842443232ef41daf99c33f82b020be74",
+      "raw_data_hash_matches": true
+    },
+    {
+      "file_kind": "gpi",
+      "derivative_path": "/mnt/data/ppi_repro_corrected/batches/B101/B101_goa_human_gpi159_normalized_20260827T152736Z.tsv.gz",
+      "derivative_sha256": "4a69bf547b951d060c1b38a4fc208b116ff0917ce74b941675d244b3315c34b1",
+      "rows_re_read": 21002,
+      "expected_rows": 21002,
+      "row_count_matches": true,
+      "reconstructed_raw_data_sha256": "3a79fa1636813c38eb56c3ed8acdc9406924a0648705583acb8bbb6e720b9c4c",
+      "expected_raw_data_sha256": "3a79fa1636813c38eb56c3ed8acdc9406924a0648705583acb8bbb6e720b9c4c",
+      "raw_data_hash_matches": true
+    }
+  ],
+  "execution_validation": {
+    "vectorized_grid_implementation": "packed uint64 bitsets with numpy.bitwise_count",
+    "independent_bruteforce_spot_check": {
+      "configuration": "fallback_synonym_union + all_except_IEA_ND_NAS + all_bp + all_4268_resolved_genes",
+      "label_columns_checked": 121,
+      "candidate_terms_with_at_least_one_mapped_gene": 7126,
+      "mismatched_best_term_or_distance_results": 0,
+      "status": "pass"
+    },
+    "superseded_attempt_directories": [
+      "/mnt/data/ppi_repro_corrected/batches/B101/failed_attempt_20260827T152148Z_timeout",
+      "/mnt/data/ppi_repro_corrected/batches/B101/failed_attempt_20260827T152423Z_timeout",
+      "/mnt/data/ppi_repro_corrected/batches/B101/failed_attempt_20260827T152614Z_tool_timeout"
+    ]
+  }
+}

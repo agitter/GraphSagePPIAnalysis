@@ -1,0 +1,57 @@
+event_time_utc,batch_id,event_type,artifact_name,status,details
+2026-08-27T15:01:24.000328+00:00,B000,inventory_received,local_upload_inventory_20260827T145903Z.csv,verified_readable,19 rows; raw candidate files remain on user machine and are not uploaded.
+2026-08-27T15:01:24.000328+00:00,B000,user_local_file_declared,2016-06-01-go.obo,not_uploaded,size=34762536; mtime_utc=2026-08-15T19:16:39.146564+00:00
+2026-08-27T15:01:24.000328+00:00,B000,user_local_file_declared,2016-06-01-gp2protein.geneid.gz,not_uploaded,size=38540366; mtime_utc=2026-08-15T19:45:00.492038+00:00
+2026-08-27T15:01:24.000328+00:00,B000,user_local_file_declared,2016-12-23-gene2go.gz,not_uploaded,size=19731322; mtime_utc=2026-08-16T02:58:26.135689+00:00
+2026-08-27T15:01:24.000328+00:00,B000,user_local_file_declared,2016-12-23-gene2go_human.tsv.gz,not_uploaded,size=3280383; mtime_utc=2026-08-16T02:58:52.118008+00:00
+2026-08-27T15:01:24.000328+00:00,B000,user_local_file_declared,gene_association.goa_human.155.gz,not_uploaded,size=6546187; mtime_utc=2026-08-15T20:06:10.476954+00:00
+2026-08-27T15:01:24.000328+00:00,B000,user_local_file_declared,gene_association.goa_human.156.gz,not_uploaded,size=6466998; mtime_utc=2026-08-16T02:24:33.487036+00:00
+2026-08-27T15:01:24.000328+00:00,B000,user_local_file_declared,gene_association.goa_human.157.gz,not_uploaded,size=6434409; mtime_utc=2026-08-16T02:24:45.233447+00:00
+2026-08-27T15:01:24.000328+00:00,B000,user_local_file_declared,goa_human.gaf.158.gz,not_uploaded,size=4854158; mtime_utc=2026-08-16T02:25:09.552743+00:00
+2026-08-27T15:01:24.000328+00:00,B000,user_local_file_declared,goa_human.gaf.159.gz,not_uploaded,size=4890788; mtime_utc=2026-08-15T16:24:36.504724+00:00
+2026-08-27T15:01:24.000328+00:00,B000,user_local_file_declared,goa_human.gaf.160.gz,not_uploaded,size=4574158; mtime_utc=2026-08-15T16:24:52.830339+00:00
+2026-08-27T15:01:24.000328+00:00,B000,user_local_file_declared,goa_human.gpa.158.gz,not_uploaded,size=3636575; mtime_utc=2026-08-27T14:31:18.560148+00:00
+2026-08-27T15:01:24.000328+00:00,B000,user_local_file_declared,goa_human.gpa.159.gz,not_uploaded,size=3665510; mtime_utc=2026-08-27T14:30:56.366237+00:00
+2026-08-27T15:01:24.000328+00:00,B000,user_local_file_declared,goa_human.gpa.160.gz,not_uploaded,size=3370602; mtime_utc=2026-08-27T14:31:02.725841+00:00
+2026-08-27T15:01:24.000328+00:00,B000,user_local_file_declared,goa_human.gpi.158.gz,not_uploaded,size=602496; mtime_utc=2026-08-27T14:31:57.407953+00:00
+2026-08-27T15:01:24.000328+00:00,B000,user_local_file_declared,goa_human.gpi.159.gz,not_uploaded,size=602689; mtime_utc=2026-08-15T19:04:12.130827+00:00
+2026-08-27T15:01:24.000328+00:00,B000,user_local_file_declared,goa_human.gpi.160.gz,not_uploaded,size=693073; mtime_utc=2026-08-15T19:04:20.550586+00:00
+2026-08-27T15:01:24.000328+00:00,B000,user_local_file_declared,gp_association.goa_human.157.gz,not_uploaded,size=4183687; mtime_utc=2026-08-27T14:32:41.488519+00:00
+2026-08-27T15:01:24.000328+00:00,B000,user_local_file_declared,HumanBase-blood.dat,not_uploaded,size=8401428; mtime_utc=2026-08-16T21:43:58.782107+00:00
+2026-08-27T15:01:24.000328+00:00,B000,user_local_file_declared,HumanBase-blood_top.gz,not_uploaded,size=182612266; mtime_utc=2026-08-16T21:47:17.561749+00:00
+2026-08-27T15:28:07.851696+00:00,B101,batch_input_received,goa_human.gaf.159.gz,present,size=4890788; local_path=/mnt/data/goa_human.gaf.159.gz
+2026-08-27T15:28:07.851723+00:00,B101,hash_verified_against_B000,goa_human.gaf.159.gz,pass,sha256=b098509f9ce70fbe7e93e7fabb3c8a767b8201fe25662ff6a57959d6cee43838; expected=b098509f9ce70fbe7e93e7fabb3c8a767b8201fe25662ff6a57959d6cee43838
+2026-08-27T15:28:07.851727+00:00,B101,gzip_integrity_verified,goa_human.gaf.159.gz,pass,gzip -t exit code 0
+2026-08-27T15:28:07.851730+00:00,B101,normalized_derivative_created,goa_human.gaf.159.gz,pass,all raw data fields and rows preserved; see derivative reconciliation
+2026-08-27T15:28:07.851732+00:00,B101,analysis_completed,goa_human.gaf.159.gz,pass,GAF/GPAD/GPI reconciliation and direct label grid completed
+2026-08-27T15:28:07.851735+00:00,B101,deletion_clearance_issued,goa_human.gaf.159.gz,safe_to_delete_conversation_copy,"Local master copy should be retained; normalized derivatives, hashes, headers, and reconciliation outputs retained."
+2026-08-27T15:28:07.851740+00:00,B101,batch_input_received,goa_human.gpa.159.gz,present,size=3665510; local_path=/mnt/data/goa_human.gpa.159.gz
+2026-08-27T15:28:07.851743+00:00,B101,hash_verified_against_B000,goa_human.gpa.159.gz,pass,sha256=dbe9073e726e804f51b0fe80ecd2897798f22a558e75aeb1c8bfc229357b574a; expected=dbe9073e726e804f51b0fe80ecd2897798f22a558e75aeb1c8bfc229357b574a
+2026-08-27T15:28:07.851745+00:00,B101,gzip_integrity_verified,goa_human.gpa.159.gz,pass,gzip -t exit code 0
+2026-08-27T15:28:07.851747+00:00,B101,normalized_derivative_created,goa_human.gpa.159.gz,pass,all raw data fields and rows preserved; see derivative reconciliation
+2026-08-27T15:28:07.851750+00:00,B101,analysis_completed,goa_human.gpa.159.gz,pass,GAF/GPAD/GPI reconciliation and direct label grid completed
+2026-08-27T15:28:07.851752+00:00,B101,deletion_clearance_issued,goa_human.gpa.159.gz,safe_to_delete_conversation_copy,"Local master copy should be retained; normalized derivatives, hashes, headers, and reconciliation outputs retained."
+2026-08-27T15:28:07.851755+00:00,B101,batch_input_received,goa_human.gpi.159.gz,present,size=602689; local_path=/mnt/data/goa_human.gpi.159.gz
+2026-08-27T15:28:07.851758+00:00,B101,hash_verified_against_B000,goa_human.gpi.159.gz,pass,sha256=f783a8c71c464b3b98673eb4dc0ae836ad61bd6c72415ae62828d20d0e735612; expected=f783a8c71c464b3b98673eb4dc0ae836ad61bd6c72415ae62828d20d0e735612
+2026-08-27T15:28:07.851760+00:00,B101,gzip_integrity_verified,goa_human.gpi.159.gz,pass,gzip -t exit code 0
+2026-08-27T15:28:07.851762+00:00,B101,normalized_derivative_created,goa_human.gpi.159.gz,pass,all raw data fields and rows preserved; see derivative reconciliation
+2026-08-27T15:28:07.851764+00:00,B101,analysis_completed,goa_human.gpi.159.gz,pass,GAF/GPAD/GPI reconciliation and direct label grid completed
+2026-08-27T15:28:07.851767+00:00,B101,deletion_clearance_issued,goa_human.gpi.159.gz,safe_to_delete_conversation_copy,"Local master copy should be retained; normalized derivatives, hashes, headers, and reconciliation outputs retained."
+2026-08-27T15:33:19.298657+00:00,B101,analysis_attempt_superseded,analyze_B101_goa159.py,timeout,attempt_stamp=20260827T152148Z; unoptimized direct-label grid exceeded execution timeout; partial outputs preserved and superseded
+2026-08-27T15:33:19.298657+00:00,B101,analysis_attempt_superseded,analyze_B101_goa159.py,timeout,attempt_stamp=20260827T152423Z; first optimized direct-label grid exceeded execution timeout; partial outputs preserved and superseded
+2026-08-27T15:33:19.298657+00:00,B101,analysis_attempt_superseded,analyze_B101_goa159.py,timeout,attempt_stamp=20260827T152614Z; foreground execution tool terminated run before completion; partial outputs preserved and superseded
+2026-08-27T15:33:19.298657+00:00,B101,independent_bruteforce_validation,B101_direct_label_match_grid_20260827T152736Z.csv.gz,pass,121/121 best term IDs and mismatch distances agreed for fallback_synonym_union/all_except_IEA_ND_NAS/all_bp/full-universe configuration
+2026-08-27T16:21:32.620248+00:00,B101,user_deletion_confirmed,goa_human.gaf.159.gz|goa_human.gpa.159.gz|goa_human.gpi.159.gz,deletion_confirmed_by_user,User reported 'Deleted B101'. Raw conversation attachments are treated as unavailable; retained B101 derivatives remain authoritative for subsequent work.
+2026-08-27T16:21:32.620248+00:00,B102,batch_received,2016-06-01-annotations-README|2016-06-01-gp2protein.geneid.gz|2016-06-01-gp2protein.human.gz|local_upload_inventory_full_20260827T160408Z.csv,received,Four uploaded inputs received for B102.
+2026-08-27T16:21:32.620248+00:00,B102,integrity_verified,B102 inputs,pass,Sizes and SHA-256 values match full user-local inventory; gzip tests pass.
+2026-08-27T16:22:36.415383+00:00,B102,analysis_completed,B102 analysis,pass,"Historical identifier mapping, coverage analysis, direct-label grid, and independent validation completed."
+2026-08-27T16:22:36.415383+00:00,B102,deletion_clearance_issued,B102 raw conversation attachments,safe_to_delete,Retained derivatives and provenance records passed reconciliation checks.
+2026-08-27T16:31:01.375910+00:00,B000B,full_inventory_ingested,local_upload_inventory_full_20260827T160408Z.csv,authoritative_user_local_inventory_for_batch_planning,"65 user-local files, 2,680,734,828 total bytes, all rows include SHA-256; inventory received-copy SHA-256 4210821f03fc5fc6f51e978cf2b82968f0500bc53c025cc5bf3cebb7c13015e4."
+2026-08-27T16:31:01.375910+00:00,B102,report_correction_issued,B102_REPORT_CORRECTED_20260827T163101Z.md,supersedes_wording_in_initial_B102_report,Corrected the statement that all four uploads matched rows inside the full inventory: only the three data files can match inventory rows; the inventory CSV cannot self-list and was independently hashed on receipt.
+2026-08-27T16:31:01.375910+00:00,B102,delivery_bundle_created,B102_gp2protein_analysis_bundle_20260827T163101Z.zip,pending_bundle_hash_population,"Curated accepted outputs, complete diagnostics, updated manifests, and scripts; raw uploaded files excluded."
+2026-08-27T16:31:02.002033+00:00,B102,delivery_bundle_hashed,B102_gp2protein_analysis_bundle_20260827T163101Z.zip,complete,SHA-256 5c4dfc64fef0a4893463ba097d12ac75fd41f9a65f18244cb5d840232585dc7d; raw uploaded files excluded.
+2026-08-27T16:31:58.836892+00:00,B102,bundle_hash_record_superseded,B102_gp2protein_analysis_bundle_20260827T163101Z.zip,supersedes_all_prior_bundle_hash_events,Earlier hashes were generated before the delivery index/provenance snapshot was finalized and are retained only as superseded history.
+2026-08-27T16:31:58.836892+00:00,B102,delivery_bundle_hashed_final,B102_gp2protein_analysis_bundle_20260827T163101Z.zip,complete_final,SHA-256 190e4dacedf62fad80b0f28ff066dd689fd24536038630c0a77812c7fbbf9dcb; size 3248854 bytes; raw uploaded files excluded; no further bundle modifications performed.
+2026-08-27T16:33:25.098909+00:00,B102,integrity_event_clarified,B102 inputs,clarification,The three GO data uploads matched inventory rows and gzip tests passed where applicable. The inventory CSV cannot self-list; its received-copy SHA-256 was computed separately.
+2026-08-27T16:33:25.218838+00:00,B102,bundle_hash_records_superseded_final,B102_gp2protein_analysis_bundle_20260827T163101Z.zip,supersedes_all_prior_bundle_hash_records,All earlier bundle hashes predated final URL/manifests/report corrections; retained as history only.
+2026-08-27T16:33:25.218838+00:00,B102,delivery_bundle_hashed_final_frozen,B102_gp2protein_analysis_bundle_20260827T163101Z.zip,complete_final_frozen,SHA-256 2d39c91bed5b59507610094463e68a534dc0eb660b03b17c49023bd7a2b61e71; size 3249977 bytes; bundle frozen after this event; raw uploads excluded.

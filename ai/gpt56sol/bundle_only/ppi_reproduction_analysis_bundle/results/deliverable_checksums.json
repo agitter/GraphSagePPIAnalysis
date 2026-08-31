@@ -1,0 +1,12 @@
+[
+  {
+    "path": "/mnt/data/ppi_repro/results/MASTER_REPRODUCTION_REPORT.md",
+    "size": 1895,
+    "sha256": "6614c1dec2668dab6abe382105c932cb4671ff1cabb8e7ab8b42061e1d9c4626"
+  },
+  {
+    "path": "/mnt/data/ppi_reproduction_analysis_bundle.zip",
+    "size": 299448,
+    "sha256": "4b2142622805eaefa1e7069aef3116a6e83ea84fd3421a5ac9e5481d991ab4b3"
+  }
+]

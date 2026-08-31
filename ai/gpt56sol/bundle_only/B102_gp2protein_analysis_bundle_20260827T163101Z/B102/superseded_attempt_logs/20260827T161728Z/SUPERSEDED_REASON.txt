@@ -1,0 +1,1 @@
+Timed out during the exhaustive direct-label grid because the initial vectorized implementation materialized very large candidate-by-label-by-word arrays repeatedly. Superseded by a Python-integer bit-count implementation that precomputes two distance matrices per mapping/evidence configuration.

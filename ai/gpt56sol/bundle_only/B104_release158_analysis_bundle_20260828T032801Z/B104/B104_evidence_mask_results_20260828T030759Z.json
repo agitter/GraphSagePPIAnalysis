@@ -1,0 +1,730 @@
+{
+  "all": [
+    {
+      "evidence_codes": "EXP,IDA,IEP,IGI,IMP,ISS",
+      "total_mismatches": 901,
+      "false_positives": 901,
+      "false_negatives": 0,
+      "exact": 89,
+      "at_least_99pct": 114,
+      "at_least_95pct": 121
+    },
+    {
+      "evidence_codes": "IDA,IEP,IGI,IMP,ISS",
+      "total_mismatches": 984,
+      "false_positives": 901,
+      "false_negatives": 83,
+      "exact": 89,
+      "at_least_99pct": 114,
+      "at_least_95pct": 121
+    },
+    {
+      "evidence_codes": "EXP,IDA,IEP,IGI,IMP,ISS,ND",
+      "total_mismatches": 991,
+      "false_positives": 991,
+      "false_negatives": 0,
+      "exact": 88,
+      "at_least_99pct": 114,
+      "at_least_95pct": 121
+    },
+    {
+      "evidence_codes": "IDA,IEP,IGI,IMP,ISS,ND",
+      "total_mismatches": 1073,
+      "false_positives": 991,
+      "false_negatives": 82,
+      "exact": 88,
+      "at_least_99pct": 114,
+      "at_least_95pct": 121
+    },
+    {
+      "evidence_codes": "EXP,IDA,IGI,IMP,ISS",
+      "total_mismatches": 1705,
+      "false_positives": 901,
+      "false_negatives": 804,
+      "exact": 24,
+      "at_least_99pct": 108,
+      "at_least_95pct": 121
+    },
+    {
+      "evidence_codes": "EXP,IDA,IEP,IMP,ISS",
+      "total_mismatches": 1768,
+      "false_positives": 898,
+      "false_negatives": 870,
+      "exact": 4,
+      "at_least_99pct": 114,
+      "at_least_95pct": 121
+    },
+    {
+      "evidence_codes": "IDA,IGI,IMP,ISS",
+      "total_mismatches": 1788,
+      "false_positives": 901,
+      "false_negatives": 887,
+      "exact": 24,
+      "at_least_99pct": 108,
+      "at_least_95pct": 121
+    },
+    {
+      "evidence_codes": "EXP,IDA,IGI,IMP,ISS,ND",
+      "total_mismatches": 1795,
+      "false_positives": 991,
+      "false_negatives": 804,
+      "exact": 24,
+      "at_least_99pct": 107,
+      "at_least_95pct": 121
+    },
+    {
+      "evidence_codes": "IDA,IEP,IMP,ISS",
+      "total_mismatches": 1851,
+      "false_positives": 898,
+      "false_negatives": 953,
+      "exact": 4,
+      "at_least_99pct": 114,
+      "at_least_95pct": 121
+    },
+    {
+      "evidence_codes": "EXP,IDA,IEP,IMP,ISS,ND",
+      "total_mismatches": 1858,
+      "false_positives": 988,
+      "false_negatives": 870,
+      "exact": 4,
+      "at_least_99pct": 114,
+      "at_least_95pct": 121
+    },
+    {
+      "evidence_codes": "IDA,IGI,IMP,ISS,ND",
+      "total_mismatches": 1877,
+      "false_positives": 991,
+      "false_negatives": 886,
+      "exact": 24,
+      "at_least_99pct": 107,
+      "at_least_95pct": 121
+    },
+    {
+      "evidence_codes": "IDA,IEP,IMP,ISS,ND",
+      "total_mismatches": 1940,
+      "false_positives": 988,
+      "false_negatives": 952,
+      "exact": 4,
+      "at_least_99pct": 114,
+      "at_least_95pct": 121
+    },
+    {
+      "evidence_codes": "EXP,IC,IDA,IEP,IGI,IMP,ISS",
+      "total_mismatches": 2011,
+      "false_positives": 2011,
+      "false_negatives": 0,
+      "exact": 5,
+      "at_least_99pct": 112,
+      "at_least_95pct": 121
+    },
+    {
+      "evidence_codes": "IC,IDA,IEP,IGI,IMP,ISS",
+      "total_mismatches": 2094,
+      "false_positives": 2011,
+      "false_negatives": 83,
+      "exact": 5,
+      "at_least_99pct": 112,
+      "at_least_95pct": 121
+    },
+    {
+      "evidence_codes": "EXP,IC,IDA,IEP,IGI,IMP,ISS,ND",
+      "total_mismatches": 2101,
+      "false_positives": 2101,
+      "false_negatives": 0,
+      "exact": 5,
+      "at_least_99pct": 111,
+      "at_least_95pct": 121
+    },
+    {
+      "evidence_codes": "IC,IDA,IEP,IGI,IMP,ISS,ND",
+      "total_mismatches": 2183,
+      "false_positives": 2101,
+      "false_negatives": 82,
+      "exact": 5,
+      "at_least_99pct": 111,
+      "at_least_95pct": 121
+    },
+    {
+      "evidence_codes": "EXP,IDA,IMP,ISS",
+      "total_mismatches": 2574,
+      "false_positives": 898,
+      "false_negatives": 1676,
+      "exact": 4,
+      "at_least_99pct": 105,
+      "at_least_95pct": 121
+    },
+    {
+      "evidence_codes": "IDA,IMP,ISS",
+      "total_mismatches": 2657,
+      "false_positives": 898,
+      "false_negatives": 1759,
+      "exact": 4,
+      "at_least_99pct": 105,
+      "at_least_95pct": 121
+    },
+    {
+      "evidence_codes": "EXP,IDA,IMP,ISS,ND",
+      "total_mismatches": 2664,
+      "false_positives": 988,
+      "false_negatives": 1676,
+      "exact": 4,
+      "at_least_99pct": 105,
+      "at_least_95pct": 121
+    },
+    {
+      "evidence_codes": "IDA,IMP,ISS,ND",
+      "total_mismatches": 2746,
+      "false_positives": 988,
+      "false_negatives": 1758,
+      "exact": 4,
+      "at_least_99pct": 105,
+      "at_least_95pct": 121
+    }
+  ],
+  "BP": [
+    {
+      "evidence_codes": "IDA,IEP,IGI,IMP,ISS",
+      "total_mismatches": 0,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "exact": 85,
+      "at_least_99pct": 85,
+      "at_least_95pct": 85
+    },
+    {
+      "evidence_codes": "EXP,IDA,IEP,IGI,IMP,ISS",
+      "total_mismatches": 0,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "exact": 85,
+      "at_least_99pct": 85,
+      "at_least_95pct": 85
+    },
+    {
+      "evidence_codes": "IDA,IEP,IGI,IMP,ISS,ND",
+      "total_mismatches": 16,
+      "false_positives": 16,
+      "false_negatives": 0,
+      "exact": 84,
+      "at_least_99pct": 85,
+      "at_least_95pct": 85
+    },
+    {
+      "evidence_codes": "EXP,IDA,IEP,IGI,IMP,ISS,ND",
+      "total_mismatches": 16,
+      "false_positives": 16,
+      "false_negatives": 0,
+      "exact": 84,
+      "at_least_99pct": 85,
+      "at_least_95pct": 85
+    },
+    {
+      "evidence_codes": "IDA,IEP,IGI,IMP,IPI,ISS",
+      "total_mismatches": 141,
+      "false_positives": 141,
+      "false_negatives": 0,
+      "exact": 44,
+      "at_least_99pct": 85,
+      "at_least_95pct": 85
+    },
+    {
+      "evidence_codes": "EXP,IDA,IEP,IGI,IMP,IPI,ISS",
+      "total_mismatches": 141,
+      "false_positives": 141,
+      "false_negatives": 0,
+      "exact": 44,
+      "at_least_99pct": 85,
+      "at_least_95pct": 85
+    },
+    {
+      "evidence_codes": "IDA,IEP,IGI,IMP,IPI,ISS,ND",
+      "total_mismatches": 157,
+      "false_positives": 157,
+      "false_negatives": 0,
+      "exact": 44,
+      "at_least_99pct": 85,
+      "at_least_95pct": 85
+    },
+    {
+      "evidence_codes": "EXP,IDA,IEP,IGI,IMP,IPI,ISS,ND",
+      "total_mismatches": 157,
+      "false_positives": 157,
+      "false_negatives": 0,
+      "exact": 44,
+      "at_least_99pct": 85,
+      "at_least_95pct": 85
+    },
+    {
+      "evidence_codes": "IDA,IGI,IMP,ISS",
+      "total_mismatches": 804,
+      "false_positives": 0,
+      "false_negatives": 804,
+      "exact": 20,
+      "at_least_99pct": 79,
+      "at_least_95pct": 85
+    },
+    {
+      "evidence_codes": "EXP,IDA,IGI,IMP,ISS",
+      "total_mismatches": 804,
+      "false_positives": 0,
+      "false_negatives": 804,
+      "exact": 20,
+      "at_least_99pct": 79,
+      "at_least_95pct": 85
+    },
+    {
+      "evidence_codes": "IDA,IGI,IMP,ISS,ND",
+      "total_mismatches": 820,
+      "false_positives": 16,
+      "false_negatives": 804,
+      "exact": 20,
+      "at_least_99pct": 78,
+      "at_least_95pct": 85
+    },
+    {
+      "evidence_codes": "EXP,IDA,IGI,IMP,ISS,ND",
+      "total_mismatches": 820,
+      "false_positives": 16,
+      "false_negatives": 804,
+      "exact": 20,
+      "at_least_99pct": 78,
+      "at_least_95pct": 85
+    },
+    {
+      "evidence_codes": "IC,IDA,IEP,IGI,IMP,ISS",
+      "total_mismatches": 845,
+      "false_positives": 845,
+      "false_negatives": 0,
+      "exact": 1,
+      "at_least_99pct": 85,
+      "at_least_95pct": 85
+    },
+    {
+      "evidence_codes": "EXP,IC,IDA,IEP,IGI,IMP,ISS",
+      "total_mismatches": 845,
+      "false_positives": 845,
+      "false_negatives": 0,
+      "exact": 1,
+      "at_least_99pct": 85,
+      "at_least_95pct": 85
+    },
+    {
+      "evidence_codes": "IC,IDA,IEP,IGI,IMP,ISS,ND",
+      "total_mismatches": 861,
+      "false_positives": 861,
+      "false_negatives": 0,
+      "exact": 1,
+      "at_least_99pct": 85,
+      "at_least_95pct": 85
+    },
+    {
+      "evidence_codes": "EXP,IC,IDA,IEP,IGI,IMP,ISS,ND",
+      "total_mismatches": 861,
+      "false_positives": 861,
+      "false_negatives": 0,
+      "exact": 1,
+      "at_least_99pct": 85,
+      "at_least_95pct": 85
+    },
+    {
+      "evidence_codes": "IDA,IEP,IMP,ISS",
+      "total_mismatches": 864,
+      "false_positives": 0,
+      "false_negatives": 864,
+      "exact": 0,
+      "at_least_99pct": 85,
+      "at_least_95pct": 85
+    },
+    {
+      "evidence_codes": "EXP,IDA,IEP,IMP,ISS",
+      "total_mismatches": 864,
+      "false_positives": 0,
+      "false_negatives": 864,
+      "exact": 0,
+      "at_least_99pct": 85,
+      "at_least_95pct": 85
+    },
+    {
+      "evidence_codes": "IDA,IEP,IMP,ISS,ND",
+      "total_mismatches": 880,
+      "false_positives": 16,
+      "false_negatives": 864,
+      "exact": 0,
+      "at_least_99pct": 85,
+      "at_least_95pct": 85
+    },
+    {
+      "evidence_codes": "EXP,IDA,IEP,IMP,ISS,ND",
+      "total_mismatches": 880,
+      "false_positives": 16,
+      "false_negatives": 864,
+      "exact": 0,
+      "at_least_99pct": 85,
+      "at_least_95pct": 85
+    }
+  ],
+  "CC": [
+    {
+      "evidence_codes": "IDA,IMP,ISS",
+      "total_mismatches": 513,
+      "false_positives": 511,
+      "false_negatives": 2,
+      "exact": 3,
+      "at_least_99pct": 22,
+      "at_least_95pct": 26
+    },
+    {
+      "evidence_codes": "EXP,IDA,IMP,ISS",
+      "total_mismatches": 513,
+      "false_positives": 511,
+      "false_negatives": 2,
+      "exact": 3,
+      "at_least_99pct": 22,
+      "at_least_95pct": 26
+    },
+    {
+      "evidence_codes": "IDA,IEP,IMP,ISS",
+      "total_mismatches": 513,
+      "false_positives": 511,
+      "false_negatives": 2,
+      "exact": 3,
+      "at_least_99pct": 22,
+      "at_least_95pct": 26
+    },
+    {
+      "evidence_codes": "EXP,IDA,IEP,IMP,ISS",
+      "total_mismatches": 513,
+      "false_positives": 511,
+      "false_negatives": 2,
+      "exact": 3,
+      "at_least_99pct": 22,
+      "at_least_95pct": 26
+    },
+    {
+      "evidence_codes": "IDA,IGI,IMP,ISS",
+      "total_mismatches": 514,
+      "false_positives": 514,
+      "false_negatives": 0,
+      "exact": 3,
+      "at_least_99pct": 22,
+      "at_least_95pct": 26
+    },
+    {
+      "evidence_codes": "EXP,IDA,IGI,IMP,ISS",
+      "total_mismatches": 514,
+      "false_positives": 514,
+      "false_negatives": 0,
+      "exact": 3,
+      "at_least_99pct": 22,
+      "at_least_95pct": 26
+    },
+    {
+      "evidence_codes": "IDA,IEP,IGI,IMP,ISS",
+      "total_mismatches": 514,
+      "false_positives": 514,
+      "false_negatives": 0,
+      "exact": 3,
+      "at_least_99pct": 22,
+      "at_least_95pct": 26
+    },
+    {
+      "evidence_codes": "EXP,IDA,IEP,IGI,IMP,ISS",
+      "total_mismatches": 514,
+      "false_positives": 514,
+      "false_negatives": 0,
+      "exact": 3,
+      "at_least_99pct": 22,
+      "at_least_95pct": 26
+    },
+    {
+      "evidence_codes": "IDA,IMP,ISS,ND",
+      "total_mismatches": 536,
+      "false_positives": 534,
+      "false_negatives": 2,
+      "exact": 3,
+      "at_least_99pct": 22,
+      "at_least_95pct": 26
+    },
+    {
+      "evidence_codes": "EXP,IDA,IMP,ISS,ND",
+      "total_mismatches": 536,
+      "false_positives": 534,
+      "false_negatives": 2,
+      "exact": 3,
+      "at_least_99pct": 22,
+      "at_least_95pct": 26
+    },
+    {
+      "evidence_codes": "IDA,IEP,IMP,ISS,ND",
+      "total_mismatches": 536,
+      "false_positives": 534,
+      "false_negatives": 2,
+      "exact": 3,
+      "at_least_99pct": 22,
+      "at_least_95pct": 26
+    },
+    {
+      "evidence_codes": "EXP,IDA,IEP,IMP,ISS,ND",
+      "total_mismatches": 536,
+      "false_positives": 534,
+      "false_negatives": 2,
+      "exact": 3,
+      "at_least_99pct": 22,
+      "at_least_95pct": 26
+    },
+    {
+      "evidence_codes": "IDA,IGI,IMP,ISS,ND",
+      "total_mismatches": 537,
+      "false_positives": 537,
+      "false_negatives": 0,
+      "exact": 3,
+      "at_least_99pct": 22,
+      "at_least_95pct": 26
+    },
+    {
+      "evidence_codes": "EXP,IDA,IGI,IMP,ISS,ND",
+      "total_mismatches": 537,
+      "false_positives": 537,
+      "false_negatives": 0,
+      "exact": 3,
+      "at_least_99pct": 22,
+      "at_least_95pct": 26
+    },
+    {
+      "evidence_codes": "IDA,IEP,IGI,IMP,ISS,ND",
+      "total_mismatches": 537,
+      "false_positives": 537,
+      "false_negatives": 0,
+      "exact": 3,
+      "at_least_99pct": 22,
+      "at_least_95pct": 26
+    },
+    {
+      "evidence_codes": "EXP,IDA,IEP,IGI,IMP,ISS,ND",
+      "total_mismatches": 537,
+      "false_positives": 537,
+      "false_negatives": 0,
+      "exact": 3,
+      "at_least_99pct": 22,
+      "at_least_95pct": 26
+    },
+    {
+      "evidence_codes": "IDA,IMP,IPI,ISS",
+      "total_mismatches": 571,
+      "false_positives": 569,
+      "false_negatives": 2,
+      "exact": 3,
+      "at_least_99pct": 22,
+      "at_least_95pct": 26
+    },
+    {
+      "evidence_codes": "EXP,IDA,IMP,IPI,ISS",
+      "total_mismatches": 571,
+      "false_positives": 569,
+      "false_negatives": 2,
+      "exact": 3,
+      "at_least_99pct": 22,
+      "at_least_95pct": 26
+    },
+    {
+      "evidence_codes": "IDA,IEP,IMP,IPI,ISS",
+      "total_mismatches": 571,
+      "false_positives": 569,
+      "false_negatives": 2,
+      "exact": 3,
+      "at_least_99pct": 22,
+      "at_least_95pct": 26
+    },
+    {
+      "evidence_codes": "EXP,IDA,IEP,IMP,IPI,ISS",
+      "total_mismatches": 571,
+      "false_positives": 569,
+      "false_negatives": 2,
+      "exact": 3,
+      "at_least_99pct": 22,
+      "at_least_95pct": 26
+    }
+  ],
+  "MF": [
+    {
+      "evidence_codes": "EXP,IDA,IGI,IMP,ISS",
+      "total_mismatches": 387,
+      "false_positives": 387,
+      "false_negatives": 0,
+      "exact": 1,
+      "at_least_99pct": 7,
+      "at_least_95pct": 10
+    },
+    {
+      "evidence_codes": "EXP,IDA,IEP,IGI,IMP,ISS",
+      "total_mismatches": 387,
+      "false_positives": 387,
+      "false_negatives": 0,
+      "exact": 1,
+      "at_least_99pct": 7,
+      "at_least_95pct": 10
+    },
+    {
+      "evidence_codes": "EXP,IDA,IMP,ISS",
+      "total_mismatches": 391,
+      "false_positives": 387,
+      "false_negatives": 4,
+      "exact": 1,
+      "at_least_99pct": 7,
+      "at_least_95pct": 10
+    },
+    {
+      "evidence_codes": "EXP,IDA,IEP,IMP,ISS",
+      "total_mismatches": 391,
+      "false_positives": 387,
+      "false_negatives": 4,
+      "exact": 1,
+      "at_least_99pct": 7,
+      "at_least_95pct": 10
+    },
+    {
+      "evidence_codes": "EXP,IC,IDA,IGI,IMP,ISS",
+      "total_mismatches": 437,
+      "false_positives": 437,
+      "false_negatives": 0,
+      "exact": 1,
+      "at_least_99pct": 6,
+      "at_least_95pct": 10
+    },
+    {
+      "evidence_codes": "EXP,IC,IDA,IEP,IGI,IMP,ISS",
+      "total_mismatches": 437,
+      "false_positives": 437,
+      "false_negatives": 0,
+      "exact": 1,
+      "at_least_99pct": 6,
+      "at_least_95pct": 10
+    },
+    {
+      "evidence_codes": "EXP,IDA,IGI,IMP,ISS,ND",
+      "total_mismatches": 438,
+      "false_positives": 438,
+      "false_negatives": 0,
+      "exact": 1,
+      "at_least_99pct": 7,
+      "at_least_95pct": 10
+    },
+    {
+      "evidence_codes": "EXP,IDA,IEP,IGI,IMP,ISS,ND",
+      "total_mismatches": 438,
+      "false_positives": 438,
+      "false_negatives": 0,
+      "exact": 1,
+      "at_least_99pct": 7,
+      "at_least_95pct": 10
+    },
+    {
+      "evidence_codes": "EXP,IC,IDA,IMP,ISS",
+      "total_mismatches": 441,
+      "false_positives": 437,
+      "false_negatives": 4,
+      "exact": 1,
+      "at_least_99pct": 6,
+      "at_least_95pct": 10
+    },
+    {
+      "evidence_codes": "EXP,IC,IDA,IEP,IMP,ISS",
+      "total_mismatches": 441,
+      "false_positives": 437,
+      "false_negatives": 4,
+      "exact": 1,
+      "at_least_99pct": 6,
+      "at_least_95pct": 10
+    },
+    {
+      "evidence_codes": "EXP,IDA,IMP,ISS,ND",
+      "total_mismatches": 442,
+      "false_positives": 438,
+      "false_negatives": 4,
+      "exact": 1,
+      "at_least_99pct": 7,
+      "at_least_95pct": 10
+    },
+    {
+      "evidence_codes": "EXP,IDA,IEP,IMP,ISS,ND",
+      "total_mismatches": 442,
+      "false_positives": 438,
+      "false_negatives": 4,
+      "exact": 1,
+      "at_least_99pct": 7,
+      "at_least_95pct": 10
+    },
+    {
+      "evidence_codes": "IDA,IGI,IMP,ISS",
+      "total_mismatches": 470,
+      "false_positives": 387,
+      "false_negatives": 83,
+      "exact": 1,
+      "at_least_99pct": 7,
+      "at_least_95pct": 10
+    },
+    {
+      "evidence_codes": "IDA,IEP,IGI,IMP,ISS",
+      "total_mismatches": 470,
+      "false_positives": 387,
+      "false_negatives": 83,
+      "exact": 1,
+      "at_least_99pct": 7,
+      "at_least_95pct": 10
+    },
+    {
+      "evidence_codes": "IDA,IMP,ISS",
+      "total_mismatches": 474,
+      "false_positives": 387,
+      "false_negatives": 87,
+      "exact": 1,
+      "at_least_99pct": 7,
+      "at_least_95pct": 10
+    },
+    {
+      "evidence_codes": "IDA,IEP,IMP,ISS",
+      "total_mismatches": 474,
+      "false_positives": 387,
+      "false_negatives": 87,
+      "exact": 1,
+      "at_least_99pct": 7,
+      "at_least_95pct": 10
+    },
+    {
+      "evidence_codes": "EXP,IC,IDA,IGI,IMP,ISS,ND",
+      "total_mismatches": 488,
+      "false_positives": 488,
+      "false_negatives": 0,
+      "exact": 1,
+      "at_least_99pct": 6,
+      "at_least_95pct": 10
+    },
+    {
+      "evidence_codes": "EXP,IC,IDA,IEP,IGI,IMP,ISS,ND",
+      "total_mismatches": 488,
+      "false_positives": 488,
+      "false_negatives": 0,
+      "exact": 1,
+      "at_least_99pct": 6,
+      "at_least_95pct": 10
+    },
+    {
+      "evidence_codes": "EXP,IC,IDA,IMP,ISS,ND",
+      "total_mismatches": 492,
+      "false_positives": 488,
+      "false_negatives": 4,
+      "exact": 1,
+      "at_least_99pct": 6,
+      "at_least_95pct": 10
+    },
+    {
+      "evidence_codes": "EXP,IC,IDA,IEP,IMP,ISS,ND",
+      "total_mismatches": 492,
+      "false_positives": 488,
+      "false_negatives": 4,
+      "exact": 1,
+      "at_least_99pct": 6,
+      "at_least_95pct": 10
+    }
+  ]
+}

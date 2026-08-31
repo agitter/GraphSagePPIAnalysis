@@ -1,0 +1,2 @@
+failed_exit_1
+Initial integrity logic incorrectly expected the inventory CSV to list and verify its own hash. Corrected because a file cannot contain a stable hash of itself.

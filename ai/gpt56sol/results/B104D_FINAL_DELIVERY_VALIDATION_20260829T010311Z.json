@@ -1,0 +1,23 @@
+{
+  "actual_input_manifest_sha256": "ab5400d78bb3c5b2c65466c2e61f505b421a5116fccf33477b1105df05ea424b",
+  "actual_manifest_exists": true,
+  "all_boolean_checks_pass": true,
+  "bundle_member_count": 49,
+  "bundle_sha256": "c49be54efdc12d41cd33b60d917687def26d75bad69c7396d4e04d4f461c8e40",
+  "date_screen_script_compiles": true,
+  "deletion_clearance_exists": true,
+  "delivery_bundle_raw_inputs_excluded": true,
+  "delivery_bundle_zip_integrity": true,
+  "diagnostics_exists": true,
+  "final_provenance_events_exists": true,
+  "final_provenance_events_sha256": "dd08ab68afa50f35ac954393d62b099b7892265522b9010b61a8c52fa795c874",
+  "final_source_ledger_exists": true,
+  "final_source_ledger_sha256": "071d91af798a3d82f7d0339dcb91ae814c03d67665d15bdbe299a5ea8bd9341c",
+  "input_receipt_exists": true,
+  "reference_pack_zip_integrity": true,
+  "report_exists": true,
+  "retained_uniprot_ledger_exists": true,
+  "retained_uniprot_ledger_sha256": "b2935c37f5aae16675bdd412d00257d84435406548313e61a7b2ca5eeee74378",
+  "uniprot_packager_compiles": true,
+  "uploaded_uniprot_zip_sha256": "494845b09874e26ef95c724f2a904f3d8cfeadb9c93c662975dc0028fcd0c61a"
+}

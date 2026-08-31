@@ -1,0 +1,122 @@
+simulated_rank,GO_ID,GO_name,observed_column_under_best_assignment,simulated_slot
+0,GO:0050789,regulation of biological process,0,157
+1,GO:0070062,extracellular exosome,1,421
+2,GO:0044710,single-organism metabolic process,2,546
+3,GO:1901363,heterocyclic compound binding,3,1053
+4,GO:1901360,organic cyclic compound metabolic process,4,1054
+5,GO:0003674,molecular_function,12,1172
+6,GO:0003676,nucleic acid binding,5,1174
+7,GO:0097159,organic cyclic compound binding,6,1257
+8,GO:0005737,cytoplasm,7,1312
+9,GO:1902589,single-organism organelle organization,8,1522
+10,GO:0043170,macromolecule metabolic process,9,1903
+11,GO:0043412,macromolecule modification,10,2258
+12,GO:0051239,regulation of multicellular organismal process,13,2774
+13,GO:0045935,positive regulation of nucleobase-containing compound metabolic process,14,3012
+14,GO:0048519,negative regulation of biological process,15,3129
+15,GO:0010468,regulation of gene expression,88,3446
+16,GO:0005654,nucleoplasm,20,4272
+17,GO:0071840,cellular component organization or biogenesis,23,5150
+18,GO:0043228,non-membrane-bounded organelle,24,5267
+19,GO:0043227,membrane-bounded organelle,25,5276
+20,GO:0043226,organelle,26,5277
+21,GO:0005634,nucleus,27,5418
+22,GO:0009987,cellular process,28,5451
+23,GO:0010557,positive regulation of macromolecule biosynthetic process,29,5549
+24,GO:0003723,RNA binding,16,6005
+25,GO:0042221,response to chemical,33,7129
+26,GO:0032268,regulation of cellular protein metabolic process,34,7251
+27,GO:0032991,macromolecular complex,35,8025
+28,GO:0051128,regulation of cellular component organization,36,8463
+29,GO:0009892,negative regulation of metabolic process,37,8985
+30,GO:0019222,regulation of metabolic process,98,9222
+31,GO:0080090,regulation of primary metabolic process,38,9733
+32,GO:0006464,cellular protein modification process,39,10702
+33,GO:0006807,nitrogen compound metabolic process,40,10899
+34,GO:0009966,regulation of signal transduction,11,11304
+35,GO:0032502,developmental process,41,11584
+36,GO:0065007,biological regulation,30,11956
+37,GO:0065009,regulation of molecular function,42,11962
+38,GO:0065008,regulation of biological quality,43,11963
+39,GO:0008150,biological_process,32,11988
+40,GO:0008152,metabolic process,19,11990
+41,GO:0005886,plasma membrane,44,12247
+42,GO:0009889,regulation of biosynthetic process,45,13004
+43,GO:0044238,primary metabolic process,46,13281
+44,GO:0044237,cellular metabolic process,47,13294
+45,GO:1903561,extracellular vesicle,48,14299
+46,GO:0051246,regulation of protein metabolic process,49,15148
+47,GO:0048584,positive regulation of response to stimulus,90,15371
+48,GO:0023051,regulation of signaling,54,16151
+49,GO:0051234,establishment of localization,61,16675
+50,GO:2000112,regulation of cellular macromolecule biosynthetic process,55,16812
+51,GO:0050793,regulation of developmental process,56,17096
+52,GO:0050794,regulation of cellular process,21,17103
+53,GO:1902578,single-organism localization,31,17205
+54,GO:0031399,regulation of protein modification process,57,17207
+55,GO:0043933,macromolecular complex subunit organization,58,17288
+56,GO:0006355,"regulation of transcription, DNA-templated",59,17649
+57,GO:1903506,regulation of nucleic acid-templated transcription,22,17742
+58,GO:0048518,positive regulation of biological process,60,18769
+59,GO:0048523,negative regulation of cellular process,50,18942
+60,GO:0048522,positive regulation of cellular process,52,18943
+61,GO:0032879,regulation of localization,62,19803
+62,GO:0036211,protein modification process,63,20179
+63,GO:0051716,cellular response to stimulus,64,20514
+64,GO:0044767,single-organism developmental process,94,20944
+65,GO:0044765,single-organism transport,65,20946
+66,GO:0016020,membrane,67,21035
+67,GO:0043234,protein complex,69,21088
+68,GO:0043230,extracellular organelle,70,21092
+69,GO:0043231,intracellular membrane-bounded organelle,100,21093
+70,GO:0043232,intracellular non-membrane-bounded organelle,71,21094
+71,GO:0051171,regulation of nitrogen compound metabolic process,73,21973
+72,GO:0051173,positive regulation of nitrogen compound metabolic process,74,21975
+73,GO:0051179,localization,75,21981
+74,GO:0016043,cellular component organization,76,22190
+75,GO:0034641,cellular nitrogen compound metabolic process,77,22290
+76,GO:0010556,regulation of macromolecule biosynthetic process,78,22771
+77,GO:2001141,regulation of RNA biosynthetic process,79,24075
+78,GO:0005488,binding,81,24725
+79,GO:0019219,regulation of nucleobase-containing compound metabolic process,82,25032
+80,GO:0007165,signal transduction,83,25109
+81,GO:0016740,transferase activity,84,25138
+82,GO:0044699,single-organism process,85,25269
+83,GO:0044822,poly(A) RNA binding,86,25418
+84,GO:0010605,negative regulation of macromolecule metabolic process,89,26148
+85,GO:0010604,positive regulation of macromolecule metabolic process,87,26149
+86,GO:0048583,regulation of response to stimulus,51,26697
+87,GO:0019538,protein metabolic process,91,26728
+88,GO:0010628,positive regulation of gene expression,93,27283
+89,GO:0044763,single-organism cellular process,66,27385
+90,GO:0006810,transport,17,27851
+91,GO:0003824,catalytic activity,95,27857
+92,GO:0006950,response to stress,96,27885
+93,GO:0071704,organic substance metabolic process,97,28081
+94,GO:0031982,vesicle,99,28197
+95,GO:0010646,regulation of cell communication,101,28443
+96,GO:0044428,nuclear part,110,28788
+97,GO:0044424,intracellular part,117,28792
+98,GO:0044425,membrane part,102,28793
+99,GO:0044421,extracellular region part,18,28797
+100,GO:0044422,organelle part,68,28798
+101,GO:0009893,positive regulation of metabolic process,103,28805
+102,GO:0009891,positive regulation of biosynthetic process,104,28807
+103,GO:0050896,response to stimulus,105,29418
+104,GO:0005515,protein binding,106,29558
+105,GO:0006996,organelle organization,107,29664
+106,GO:0044446,intracellular organelle part,108,29936
+107,GO:0044444,cytoplasmic part,109,29938
+108,GO:0060255,regulation of macromolecule metabolic process,53,30129
+109,GO:0031328,positive regulation of cellular biosynthetic process,111,30599
+110,GO:0031326,regulation of cellular biosynthetic process,112,30601
+111,GO:0031325,positive regulation of cellular metabolic process,113,30602
+112,GO:0031324,negative regulation of cellular metabolic process,114,30603
+113,GO:0031323,regulation of cellular metabolic process,115,30604
+114,GO:0005575,cellular_component,116,30704
+115,GO:0044464,cell part,118,31084
+116,GO:0044267,cellular protein metabolic process,80,31393
+117,GO:0044260,cellular macromolecule metabolic process,92,31398
+118,GO:0043229,intracellular organelle,119,31597
+119,GO:0051252,regulation of RNA metabolic process,120,32107
+120,GO:0051254,positive regulation of RNA metabolic process,72,32109

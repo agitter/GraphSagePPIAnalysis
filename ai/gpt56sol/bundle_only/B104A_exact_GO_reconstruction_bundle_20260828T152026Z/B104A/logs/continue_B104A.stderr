@@ -1,0 +1,18 @@
+Traceback (most recent call last):
+  File "/mnt/data/ppi_repro_corrected/batches/B104A_20260828T145842Z/scripts/continue_B104A.py", line 268, in <module>
+    rm['degree']=degree;rm['feature_nonzero_count']=(feats!=0).sum(axis=1);rm['tissue']=rt;rm['split']=rs;rm['graph_index']=rg;rm=rm.dropna(subset=['entrez_gene_id']).copy();rm.entrez_gene_id=rm.entrez_gene_id.astype(int)
+    ~~^^^^^^^^^^
+  File "/opt/pyvenv/lib/python3.13/site-packages/pandas/core/frame.py", line 4311, in __setitem__
+    self._set_item(key, value)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/opt/pyvenv/lib/python3.13/site-packages/pandas/core/frame.py", line 4524, in _set_item
+    value, refs = self._sanitize_column(value)
+                  ~~~~~~~~~~~~~~~~~~~~~^^^^^^^
+  File "/opt/pyvenv/lib/python3.13/site-packages/pandas/core/frame.py", line 5266, in _sanitize_column
+    com.require_length_match(value, self.index)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/opt/pyvenv/lib/python3.13/site-packages/pandas/core/common.py", line 573, in require_length_match
+    raise ValueError(
+    ...<4 lines>...
+    )
+ValueError: Length of values (56944) does not match length of index (56411)

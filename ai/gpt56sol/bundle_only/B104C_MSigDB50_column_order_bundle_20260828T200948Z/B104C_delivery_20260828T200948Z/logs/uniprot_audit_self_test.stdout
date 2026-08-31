@@ -1,0 +1,20 @@
+{
+  "self_test": "passed",
+  "scan": {
+    "archive_member": "synthetic/uniprot_sprot.dat",
+    "archive_member_declared_size": 5089305,
+    "swissprot_records_scanned": 100004,
+    "matching_records": 2,
+    "target_accessions_requested": [
+      "O95073",
+      "Q9Y620"
+    ],
+    "target_accessions_found": [
+      "O95073",
+      "Q9Y620"
+    ],
+    "target_accessions_absent": []
+  },
+  "output_dat_sha256": "a9e1c256d0c059f594ceda7ead5b7ac2621ea4ce614787a263cbdc76433d06db",
+  "output_tsv_sha256": "cb3407485e085f282173f6c946c329380f67f7fd9dbe330e886387af8cd7e945"
+}

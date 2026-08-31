@@ -1,0 +1,5149 @@
+[
+  {
+    "graph_index": 1,
+    "tissue": "adipose_tissue",
+    "color": 77,
+    "rows": [
+      39,
+      732,
+      1469
+    ],
+    "candidate_genes": [
+      754,
+      6376,
+      9263
+    ]
+  },
+  {
+    "graph_index": 1,
+    "tissue": "adipose_tissue",
+    "color": 49,
+    "rows": [
+      108,
+      541
+    ],
+    "candidate_genes": [
+      1611,
+      27035
+    ]
+  },
+  {
+    "graph_index": 1,
+    "tissue": "adipose_tissue",
+    "color": 174,
+    "rows": [
+      195,
+      596,
+      824
+    ],
+    "candidate_genes": [
+      1545,
+      3294,
+      7363
+    ]
+  },
+  {
+    "graph_index": 1,
+    "tissue": "adipose_tissue",
+    "color": 39,
+    "rows": [
+      219,
+      1498
+    ],
+    "candidate_genes": [
+      55326,
+      55500
+    ]
+  },
+  {
+    "graph_index": 1,
+    "tissue": "adipose_tissue",
+    "color": 59,
+    "rows": [
+      253,
+      255,
+      1468
+    ],
+    "candidate_genes": [
+      6683,
+      57679,
+      63924
+    ]
+  },
+  {
+    "graph_index": 1,
+    "tissue": "adipose_tissue",
+    "color": 0,
+    "rows": [
+      282,
+      486,
+      892,
+      1030,
+      1060,
+      1204,
+      1250,
+      1405
+    ],
+    "candidate_genes": [
+      8694,
+      9048,
+      9619,
+      10316,
+      51378,
+      56898,
+      64399,
+      163702
+    ]
+  },
+  {
+    "graph_index": 1,
+    "tissue": "adipose_tissue",
+    "color": 64,
+    "rows": [
+      422,
+      473
+    ],
+    "candidate_genes": [
+      2537,
+      8609
+    ]
+  },
+  {
+    "graph_index": 1,
+    "tissue": "adipose_tissue",
+    "color": 37,
+    "rows": [
+      514,
+      1544
+    ],
+    "candidate_genes": [
+      59338,
+      252983
+    ]
+  },
+  {
+    "graph_index": 1,
+    "tissue": "adipose_tissue",
+    "color": 30,
+    "rows": [
+      647,
+      678
+    ],
+    "candidate_genes": [
+      9819,
+      150465
+    ]
+  },
+  {
+    "graph_index": 1,
+    "tissue": "adipose_tissue",
+    "color": 12,
+    "rows": [
+      932,
+      1345
+    ],
+    "candidate_genes": [
+      3975,
+      6049
+    ]
+  },
+  {
+    "graph_index": 1,
+    "tissue": "adipose_tissue",
+    "color": 51,
+    "rows": [
+      985,
+      1523
+    ],
+    "candidate_genes": [
+      4240,
+      23568
+    ]
+  },
+  {
+    "graph_index": 1,
+    "tissue": "adipose_tissue",
+    "color": 52,
+    "rows": [
+      1202,
+      1440
+    ],
+    "candidate_genes": [
+      23189,
+      59277
+    ]
+  },
+  {
+    "graph_index": 2,
+    "tissue": "adrenal_cortex",
+    "color": 50,
+    "rows": [
+      1557,
+      1913,
+      1921,
+      2197,
+      2435
+    ],
+    "candidate_genes": [
+      8609,
+      10201,
+      10899,
+      22821,
+      79661
+    ]
+  },
+  {
+    "graph_index": 2,
+    "tissue": "adrenal_cortex",
+    "color": 45,
+    "rows": [
+      1646,
+      2244
+    ],
+    "candidate_genes": [
+      4781,
+      55627
+    ]
+  },
+  {
+    "graph_index": 2,
+    "tissue": "adrenal_cortex",
+    "color": 0,
+    "rows": [
+      1800,
+      1854,
+      2259,
+      2342,
+      2472,
+      2501,
+      2542,
+      2620,
+      2871
+    ],
+    "candidate_genes": [
+      1522,
+      3141,
+      3762,
+      9048,
+      9619,
+      10316,
+      23705,
+      51378,
+      56246
+    ]
+  },
+  {
+    "graph_index": 2,
+    "tissue": "adrenal_cortex",
+    "color": 34,
+    "rows": [
+      1949,
+      2759
+    ],
+    "candidate_genes": [
+      51715,
+      93210
+    ]
+  },
+  {
+    "graph_index": 2,
+    "tissue": "adrenal_cortex",
+    "color": 25,
+    "rows": [
+      2120,
+      2154
+    ],
+    "candidate_genes": [
+      9819,
+      150465
+    ]
+  },
+  {
+    "graph_index": 2,
+    "tissue": "adrenal_cortex",
+    "color": 35,
+    "rows": [
+      2144,
+      2566
+    ],
+    "candidate_genes": [
+      51738,
+      55500
+    ]
+  },
+  {
+    "graph_index": 2,
+    "tissue": "adrenal_cortex",
+    "color": 206,
+    "rows": [
+      2664,
+      2695
+    ],
+    "candidate_genes": [
+      3638,
+      22937
+    ]
+  },
+  {
+    "graph_index": 2,
+    "tissue": "adrenal_cortex",
+    "color": 843,
+    "rows": [
+      2839,
+      2841,
+      2843,
+      2844,
+      2845,
+      2846
+    ],
+    "candidate_genes": [
+      8360,
+      8362,
+      8364,
+      8366,
+      8367,
+      8368
+    ]
+  },
+  {
+    "graph_index": 3,
+    "tissue": "adrenal_gland",
+    "color": 70,
+    "rows": [
+      2949,
+      3227,
+      3528,
+      3622,
+      3829,
+      4143
+    ],
+    "candidate_genes": [
+      2537,
+      8609,
+      10201,
+      10242,
+      55471,
+      79017
+    ]
+  },
+  {
+    "graph_index": 3,
+    "tissue": "adrenal_gland",
+    "color": 0,
+    "rows": [
+      2954,
+      2956,
+      3154,
+      3848,
+      4136,
+      4226,
+      4433,
+      4500,
+      4746,
+      5095
+    ],
+    "candidate_genes": [
+      341,
+      3762,
+      6528,
+      8694,
+      9048,
+      9619,
+      10316,
+      51378,
+      112744,
+      222663
+    ]
+  },
+  {
+    "graph_index": 3,
+    "tissue": "adrenal_gland",
+    "color": 87,
+    "rows": [
+      2962,
+      3354
+    ],
+    "candidate_genes": [
+      51289,
+      57107
+    ]
+  },
+  {
+    "graph_index": 3,
+    "tissue": "adrenal_gland",
+    "color": 86,
+    "rows": [
+      3008,
+      5103
+    ],
+    "candidate_genes": [
+      6376,
+      9263
+    ]
+  },
+  {
+    "graph_index": 3,
+    "tissue": "adrenal_gland",
+    "color": 22,
+    "rows": [
+      3024,
+      3051
+    ],
+    "candidate_genes": [
+      3340,
+      84059
+    ]
+  },
+  {
+    "graph_index": 3,
+    "tissue": "adrenal_gland",
+    "color": 43,
+    "rows": [
+      3269,
+      3674,
+      5147
+    ],
+    "candidate_genes": [
+      1136,
+      55326,
+      55500
+    ]
+  },
+  {
+    "graph_index": 3,
+    "tissue": "adrenal_gland",
+    "color": 64,
+    "rows": [
+      3915,
+      4284
+    ],
+    "candidate_genes": [
+      51170,
+      80267
+    ]
+  },
+  {
+    "graph_index": 3,
+    "tissue": "adrenal_gland",
+    "color": 27,
+    "rows": [
+      3930,
+      4182
+    ],
+    "candidate_genes": [
+      9819,
+      150465
+    ]
+  },
+  {
+    "graph_index": 3,
+    "tissue": "adrenal_gland",
+    "color": 38,
+    "rows": [
+      4558,
+      4812,
+      4899
+    ],
+    "candidate_genes": [
+      22845,
+      51715,
+      93210
+    ]
+  },
+  {
+    "graph_index": 3,
+    "tissue": "adrenal_gland",
+    "color": 1496,
+    "rows": [
+      5044,
+      5049
+    ],
+    "candidate_genes": [
+      8360,
+      8367
+    ]
+  },
+  {
+    "graph_index": 3,
+    "tissue": "adrenal_gland",
+    "color": 1456,
+    "rows": [
+      5046,
+      5048,
+      5050,
+      5051
+    ],
+    "candidate_genes": [
+      8362,
+      8364,
+      8366,
+      8368
+    ]
+  },
+  {
+    "graph_index": 4,
+    "tissue": "amygdala",
+    "color": 41,
+    "rows": [
+      5217,
+      5860
+    ],
+    "candidate_genes": [
+      11343,
+      27284
+    ]
+  },
+  {
+    "graph_index": 4,
+    "tissue": "amygdala",
+    "color": 71,
+    "rows": [
+      5220,
+      5342,
+      5509,
+      5813,
+      5925,
+      6448
+    ],
+    "candidate_genes": [
+      2537,
+      8609,
+      10201,
+      10242,
+      55471,
+      79017
+    ]
+  },
+  {
+    "graph_index": 4,
+    "tissue": "amygdala",
+    "color": 0,
+    "rows": [
+      5226,
+      5434,
+      6420,
+      6537,
+      6689,
+      6740,
+      6767,
+      7065,
+      7317,
+      7430
+    ],
+    "candidate_genes": [
+      3762,
+      7903,
+      8694,
+      9048,
+      9619,
+      10316,
+      22953,
+      23305,
+      51378,
+      163702
+    ]
+  },
+  {
+    "graph_index": 4,
+    "tissue": "amygdala",
+    "color": 87,
+    "rows": [
+      5233,
+      5716,
+      5829,
+      6594
+    ],
+    "candidate_genes": [
+      1395,
+      8605,
+      51289,
+      57107
+    ]
+  },
+  {
+    "graph_index": 4,
+    "tissue": "amygdala",
+    "color": 86,
+    "rows": [
+      5280,
+      7439
+    ],
+    "candidate_genes": [
+      6376,
+      9263
+    ]
+  },
+  {
+    "graph_index": 4,
+    "tissue": "amygdala",
+    "color": 39,
+    "rows": [
+      5706,
+      6185
+    ],
+    "candidate_genes": [
+      9990,
+      57493
+    ]
+  },
+  {
+    "graph_index": 4,
+    "tissue": "amygdala",
+    "color": 156,
+    "rows": [
+      5711,
+      7327,
+      7495
+    ],
+    "candidate_genes": [
+      50485,
+      84268,
+      246243
+    ]
+  },
+  {
+    "graph_index": 4,
+    "tissue": "amygdala",
+    "color": 32,
+    "rows": [
+      5737,
+      6511
+    ],
+    "candidate_genes": [
+      2591,
+      150290
+    ]
+  },
+  {
+    "graph_index": 4,
+    "tissue": "amygdala",
+    "color": 43,
+    "rows": [
+      5976,
+      6886,
+      7490
+    ],
+    "candidate_genes": [
+      1136,
+      51738,
+      55500
+    ]
+  },
+  {
+    "graph_index": 4,
+    "tissue": "amygdala",
+    "color": 28,
+    "rows": [
+      5997,
+      6079
+    ],
+    "candidate_genes": [
+      9379,
+      23129
+    ]
+  },
+  {
+    "graph_index": 4,
+    "tissue": "amygdala",
+    "color": 36,
+    "rows": [
+      6011,
+      7135,
+      7223
+    ],
+    "candidate_genes": [
+      8611,
+      22845,
+      51715
+    ]
+  },
+  {
+    "graph_index": 4,
+    "tissue": "amygdala",
+    "color": 27,
+    "rows": [
+      6223,
+      6487
+    ],
+    "candidate_genes": [
+      9819,
+      150465
+    ]
+  },
+  {
+    "graph_index": 4,
+    "tissue": "amygdala",
+    "color": 54,
+    "rows": [
+      6533,
+      7400
+    ],
+    "candidate_genes": [
+      9907,
+      114798
+    ]
+  },
+  {
+    "graph_index": 4,
+    "tissue": "amygdala",
+    "color": 70,
+    "rows": [
+      6852,
+      7287
+    ],
+    "candidate_genes": [
+      64067,
+      84883
+    ]
+  },
+  {
+    "graph_index": 4,
+    "tissue": "amygdala",
+    "color": 1504,
+    "rows": [
+      7369,
+      7374
+    ],
+    "candidate_genes": [
+      8360,
+      8367
+    ]
+  },
+  {
+    "graph_index": 4,
+    "tissue": "amygdala",
+    "color": 1470,
+    "rows": [
+      7371,
+      7373,
+      7376
+    ],
+    "candidate_genes": [
+      8362,
+      8364,
+      8368
+    ]
+  },
+  {
+    "graph_index": 5,
+    "tissue": "aorta",
+    "color": 62,
+    "rows": [
+      7602,
+      9072
+    ],
+    "candidate_genes": [
+      6376,
+      9263
+    ]
+  },
+  {
+    "graph_index": 5,
+    "tissue": "aorta",
+    "color": 45,
+    "rows": [
+      7651,
+      8279
+    ],
+    "candidate_genes": [
+      8763,
+      10782
+    ]
+  },
+  {
+    "graph_index": 5,
+    "tissue": "aorta",
+    "color": 0,
+    "rows": [
+      7708,
+      8466,
+      8611,
+      8688,
+      8791,
+      8899,
+      8942,
+      8998,
+      9066
+    ],
+    "candidate_genes": [
+      3627,
+      3762,
+      8694,
+      9048,
+      10316,
+      10747,
+      51378,
+      130557,
+      163702
+    ]
+  },
+  {
+    "graph_index": 5,
+    "tissue": "aorta",
+    "color": 44,
+    "rows": [
+      7825,
+      7827
+    ],
+    "candidate_genes": [
+      6683,
+      57679
+    ]
+  },
+  {
+    "graph_index": 5,
+    "tissue": "aorta",
+    "color": 36,
+    "rows": [
+      7872,
+      8035
+    ],
+    "candidate_genes": [
+      1979,
+      55650
+    ]
+  },
+  {
+    "graph_index": 5,
+    "tissue": "aorta",
+    "color": 47,
+    "rows": [
+      7987,
+      7995,
+      8053
+    ],
+    "candidate_genes": [
+      2537,
+      8609,
+      10201
+    ]
+  },
+  {
+    "graph_index": 5,
+    "tissue": "aorta",
+    "color": 32,
+    "rows": [
+      8117,
+      8657
+    ],
+    "candidate_genes": [
+      1611,
+      27035
+    ]
+  },
+  {
+    "graph_index": 5,
+    "tissue": "aorta",
+    "color": 29,
+    "rows": [
+      8703,
+      9104
+    ],
+    "candidate_genes": [
+      51738,
+      55500
+    ]
+  },
+  {
+    "graph_index": 5,
+    "tissue": "aorta",
+    "color": 34,
+    "rows": [
+      8790,
+      8847
+    ],
+    "candidate_genes": [
+      4664,
+      59277
+    ]
+  },
+  {
+    "graph_index": 6,
+    "tissue": "astrocyte",
+    "color": 0,
+    "rows": [
+      9179,
+      9201,
+      9336,
+      9406,
+      9530,
+      9729,
+      9843,
+      9980
+    ],
+    "candidate_genes": [
+      3592,
+      5819,
+      9048,
+      10316,
+      22937,
+      51378,
+      55109,
+      163702
+    ]
+  },
+  {
+    "graph_index": 6,
+    "tissue": "astrocyte",
+    "color": 38,
+    "rows": [
+      9211,
+      9754,
+      10162
+    ],
+    "candidate_genes": [
+      8609,
+      22821,
+      79661
+    ]
+  },
+  {
+    "graph_index": 6,
+    "tissue": "astrocyte",
+    "color": 33,
+    "rows": [
+      9593,
+      9950
+    ],
+    "candidate_genes": [
+      1611,
+      27035
+    ]
+  },
+  {
+    "graph_index": 6,
+    "tissue": "astrocyte",
+    "color": 24,
+    "rows": [
+      9768,
+      10168
+    ],
+    "candidate_genes": [
+      59338,
+      252983
+    ]
+  },
+  {
+    "graph_index": 6,
+    "tissue": "astrocyte",
+    "color": 56,
+    "rows": [
+      10056,
+      10081
+    ],
+    "candidate_genes": [
+      754,
+      9263
+    ]
+  },
+  {
+    "graph_index": 6,
+    "tissue": "astrocyte",
+    "color": 114,
+    "rows": [
+      10130,
+      10132
+    ],
+    "candidate_genes": [
+      41,
+      8671
+    ]
+  },
+  {
+    "graph_index": 7,
+    "tissue": "artery",
+    "color": 78,
+    "rows": [
+      10223,
+      11919
+    ],
+    "candidate_genes": [
+      6376,
+      9263
+    ]
+  },
+  {
+    "graph_index": 7,
+    "tissue": "artery",
+    "color": 0,
+    "rows": [
+      10347,
+      11143,
+      11217,
+      11244,
+      11389,
+      11479,
+      11592,
+      11640,
+      11649,
+      11718,
+      11828,
+      11910
+    ],
+    "candidate_genes": [
+      3762,
+      8694,
+      9048,
+      9619,
+      10316,
+      10747,
+      51378,
+      64399,
+      90952,
+      130557,
+      163702,
+      222663
+    ]
+  },
+  {
+    "graph_index": 7,
+    "tissue": "artery",
+    "color": 60,
+    "rows": [
+      10479,
+      10481
+    ],
+    "candidate_genes": [
+      6683,
+      57679
+    ]
+  },
+  {
+    "graph_index": 7,
+    "tissue": "artery",
+    "color": 63,
+    "rows": [
+      10657,
+      10665,
+      10730
+    ],
+    "candidate_genes": [
+      2537,
+      8609,
+      10201
+    ]
+  },
+  {
+    "graph_index": 7,
+    "tissue": "artery",
+    "color": 45,
+    "rows": [
+      10812,
+      11439
+    ],
+    "candidate_genes": [
+      1611,
+      27035
+    ]
+  },
+  {
+    "graph_index": 7,
+    "tissue": "artery",
+    "color": 24,
+    "rows": [
+      10935,
+      10977
+    ],
+    "candidate_genes": [
+      9819,
+      150465
+    ]
+  },
+  {
+    "graph_index": 7,
+    "tissue": "artery",
+    "color": 38,
+    "rows": [
+      11495,
+      11957
+    ],
+    "candidate_genes": [
+      51738,
+      55500
+    ]
+  },
+  {
+    "graph_index": 8,
+    "tissue": "basal_ganglion",
+    "color": 74,
+    "rows": [
+      12023,
+      12149,
+      12328,
+      12660,
+      12778,
+      13335
+    ],
+    "candidate_genes": [
+      2537,
+      8609,
+      10201,
+      10242,
+      55471,
+      79017
+    ]
+  },
+  {
+    "graph_index": 8,
+    "tissue": "basal_ganglion",
+    "color": 0,
+    "rows": [
+      12029,
+      12250,
+      12631,
+      13305,
+      13428,
+      13590,
+      13645,
+      13674,
+      14250,
+      14373,
+      14382,
+      14466
+    ],
+    "candidate_genes": [
+      2254,
+      3762,
+      6490,
+      7903,
+      8694,
+      9048,
+      10316,
+      22953,
+      23305,
+      51378,
+      84679,
+      163702
+    ]
+  },
+  {
+    "graph_index": 8,
+    "tissue": "basal_ganglion",
+    "color": 93,
+    "rows": [
+      12036,
+      12553,
+      12677,
+      13001,
+      13487
+    ],
+    "candidate_genes": [
+      1395,
+      8605,
+      25825,
+      51289,
+      57107
+    ]
+  },
+  {
+    "graph_index": 8,
+    "tissue": "basal_ganglion",
+    "color": 92,
+    "rows": [
+      12084,
+      14384
+    ],
+    "candidate_genes": [
+      6376,
+      9263
+    ]
+  },
+  {
+    "graph_index": 8,
+    "tissue": "basal_ganglion",
+    "color": 46,
+    "rows": [
+      12376,
+      14437
+    ],
+    "candidate_genes": [
+      55326,
+      55500
+    ]
+  },
+  {
+    "graph_index": 8,
+    "tissue": "basal_ganglion",
+    "color": 179,
+    "rows": [
+      12547,
+      14260,
+      14444
+    ],
+    "candidate_genes": [
+      50485,
+      84268,
+      246243
+    ]
+  },
+  {
+    "graph_index": 8,
+    "tissue": "basal_ganglion",
+    "color": 34,
+    "rows": [
+      12576,
+      13401
+    ],
+    "candidate_genes": [
+      2591,
+      150290
+    ]
+  },
+  {
+    "graph_index": 8,
+    "tissue": "basal_ganglion",
+    "color": 180,
+    "rows": [
+      12636,
+      13986
+    ],
+    "candidate_genes": [
+      10776,
+      63941
+    ]
+  },
+  {
+    "graph_index": 8,
+    "tissue": "basal_ganglion",
+    "color": 4,
+    "rows": [
+      12832,
+      12835
+    ],
+    "candidate_genes": [
+      1135,
+      1138
+    ]
+  },
+  {
+    "graph_index": 8,
+    "tissue": "basal_ganglion",
+    "color": 38,
+    "rows": [
+      12870,
+      14058,
+      14152
+    ],
+    "candidate_genes": [
+      8611,
+      22845,
+      51715
+    ]
+  },
+  {
+    "graph_index": 8,
+    "tissue": "basal_ganglion",
+    "color": 29,
+    "rows": [
+      13097,
+      13377
+    ],
+    "candidate_genes": [
+      9819,
+      150465
+    ]
+  },
+  {
+    "graph_index": 8,
+    "tissue": "basal_ganglion",
+    "color": 73,
+    "rows": [
+      14219,
+      14381
+    ],
+    "candidate_genes": [
+      64067,
+      84883
+    ]
+  },
+  {
+    "graph_index": 8,
+    "tissue": "basal_ganglion",
+    "color": 1591,
+    "rows": [
+      14311,
+      14316
+    ],
+    "candidate_genes": [
+      8360,
+      8367
+    ]
+  },
+  {
+    "graph_index": 8,
+    "tissue": "basal_ganglion",
+    "color": 1554,
+    "rows": [
+      14313,
+      14315,
+      14318
+    ],
+    "candidate_genes": [
+      8362,
+      8364,
+      8368
+    ]
+  },
+  {
+    "graph_index": 9,
+    "tissue": "basophil",
+    "color": 34,
+    "rows": [
+      14541,
+      14678
+    ],
+    "candidate_genes": [
+      29,
+      55904
+    ]
+  },
+  {
+    "graph_index": 9,
+    "tissue": "basophil",
+    "color": 0,
+    "rows": [
+      14575,
+      14588,
+      14641,
+      14694,
+      14695,
+      14702,
+      14932,
+      14971,
+      14989,
+      15041,
+      15096
+    ],
+    "candidate_genes": [
+      1232,
+      1510,
+      9353,
+      10316,
+      10766,
+      23705,
+      51378,
+      51379,
+      55109,
+      63826,
+      112744
+    ]
+  },
+  {
+    "graph_index": 9,
+    "tissue": "basophil",
+    "color": 46,
+    "rows": [
+      14593,
+      14595
+    ],
+    "candidate_genes": [
+      649,
+      6376
+    ]
+  },
+  {
+    "graph_index": 9,
+    "tissue": "basophil",
+    "color": 186,
+    "rows": [
+      14599,
+      14762,
+      14763,
+      14805
+    ],
+    "candidate_genes": [
+      10621,
+      10622,
+      11128,
+      55703
+    ]
+  },
+  {
+    "graph_index": 9,
+    "tissue": "basophil",
+    "color": 33,
+    "rows": [
+      14655,
+      14822
+    ],
+    "candidate_genes": [
+      8763,
+      10782
+    ]
+  },
+  {
+    "graph_index": 9,
+    "tissue": "basophil",
+    "color": 26,
+    "rows": [
+      14717,
+      14783
+    ],
+    "candidate_genes": [
+      27035,
+      51752
+    ]
+  },
+  {
+    "graph_index": 9,
+    "tissue": "basophil",
+    "color": 12,
+    "rows": [
+      14726,
+      14792
+    ],
+    "candidate_genes": [
+      889,
+      11120
+    ]
+  },
+  {
+    "graph_index": 9,
+    "tissue": "basophil",
+    "color": 25,
+    "rows": [
+      14857,
+      14895,
+      15085
+    ],
+    "candidate_genes": [
+      388,
+      4240,
+      23568
+    ]
+  },
+  {
+    "graph_index": 10,
+    "tissue": "blood",
+    "color": 97,
+    "rows": [
+      15126,
+      15389,
+      15507,
+      15954,
+      16101,
+      17818
+    ],
+    "candidate_genes": [
+      2537,
+      8609,
+      10201,
+      55471,
+      55801,
+      79017
+    ]
+  },
+  {
+    "graph_index": 10,
+    "tissue": "blood",
+    "color": 229,
+    "rows": [
+      15133,
+      17666
+    ],
+    "candidate_genes": [
+      341,
+      8694
+    ]
+  },
+  {
+    "graph_index": 10,
+    "tissue": "blood",
+    "color": 44,
+    "rows": [
+      15254,
+      15301
+    ],
+    "candidate_genes": [
+      623,
+      2864
+    ]
+  },
+  {
+    "graph_index": 10,
+    "tissue": "blood",
+    "color": 65,
+    "rows": [
+      15402,
+      15525,
+      16231,
+      17447,
+      17956
+    ],
+    "candidate_genes": [
+      8611,
+      10800,
+      51715,
+      93210,
+      123606
+    ]
+  },
+  {
+    "graph_index": 10,
+    "tissue": "blood",
+    "color": 0,
+    "rows": [
+      15403,
+      15548,
+      15549,
+      15908,
+      16371,
+      16837,
+      16850,
+      17760,
+      18280,
+      18412
+    ],
+    "candidate_genes": [
+      8547,
+      9048,
+      10316,
+      10930,
+      22914,
+      54977,
+      112744,
+      115362,
+      122042,
+      222663
+    ]
+  },
+  {
+    "graph_index": 10,
+    "tissue": "blood",
+    "color": 36,
+    "rows": [
+      15491,
+      16409
+    ],
+    "candidate_genes": [
+      8858,
+      9002
+    ]
+  },
+  {
+    "graph_index": 10,
+    "tissue": "blood",
+    "color": 71,
+    "rows": [
+      15577,
+      18334
+    ],
+    "candidate_genes": [
+      55326,
+      55500
+    ]
+  },
+  {
+    "graph_index": 10,
+    "tissue": "blood",
+    "color": 230,
+    "rows": [
+      15662,
+      17976
+    ],
+    "candidate_genes": [
+      3627,
+      6356
+    ]
+  },
+  {
+    "graph_index": 10,
+    "tissue": "blood",
+    "color": 99,
+    "rows": [
+      15735,
+      17641
+    ],
+    "candidate_genes": [
+      2829,
+      6375
+    ]
+  },
+  {
+    "graph_index": 10,
+    "tissue": "blood",
+    "color": 57,
+    "rows": [
+      15842,
+      16945
+    ],
+    "candidate_genes": [
+      2591,
+      150290
+    ]
+  },
+  {
+    "graph_index": 10,
+    "tissue": "blood",
+    "color": 85,
+    "rows": [
+      16063,
+      17548
+    ],
+    "candidate_genes": [
+      55650,
+      58495
+    ]
+  },
+  {
+    "graph_index": 10,
+    "tissue": "blood",
+    "color": 6,
+    "rows": [
+      16184,
+      16188
+    ],
+    "candidate_genes": [
+      1135,
+      1138
+    ]
+  },
+  {
+    "graph_index": 10,
+    "tissue": "blood",
+    "color": 215,
+    "rows": [
+      16529,
+      17064
+    ],
+    "candidate_genes": [
+      51170,
+      80267
+    ]
+  },
+  {
+    "graph_index": 10,
+    "tissue": "blood",
+    "color": 246,
+    "rows": [
+      16688,
+      18229
+    ],
+    "candidate_genes": [
+      359,
+      8671
+    ]
+  },
+  {
+    "graph_index": 10,
+    "tissue": "blood",
+    "color": 37,
+    "rows": [
+      16811,
+      17826
+    ],
+    "candidate_genes": [
+      3589,
+      133396
+    ]
+  },
+  {
+    "graph_index": 10,
+    "tissue": "blood",
+    "color": 2132,
+    "rows": [
+      18177,
+      18182
+    ],
+    "candidate_genes": [
+      8362,
+      8368
+    ]
+  },
+  {
+    "graph_index": 11,
+    "tissue": "blood_plasma",
+    "color": 77,
+    "rows": [
+      18449,
+      18727,
+      19047,
+      19147,
+      20402
+    ],
+    "candidate_genes": [
+      2537,
+      8609,
+      10201,
+      55471,
+      79017
+    ]
+  },
+  {
+    "graph_index": 11,
+    "tissue": "blood_plasma",
+    "color": 171,
+    "rows": [
+      18455,
+      20281
+    ],
+    "candidate_genes": [
+      341,
+      8694
+    ]
+  },
+  {
+    "graph_index": 11,
+    "tissue": "blood_plasma",
+    "color": 93,
+    "rows": [
+      18504,
+      20731
+    ],
+    "candidate_genes": [
+      6376,
+      9263
+    ]
+  },
+  {
+    "graph_index": 11,
+    "tissue": "blood_plasma",
+    "color": 60,
+    "rows": [
+      18607,
+      19259
+    ],
+    "candidate_genes": [
+      1611,
+      27035
+    ]
+  },
+  {
+    "graph_index": 11,
+    "tissue": "blood_plasma",
+    "color": 0,
+    "rows": [
+      18652,
+      18872,
+      19339,
+      20007,
+      20348,
+      20601
+    ],
+    "candidate_genes": [
+      8547,
+      9048,
+      9619,
+      10316,
+      54977,
+      163702
+    ]
+  },
+  {
+    "graph_index": 11,
+    "tissue": "blood_plasma",
+    "color": 30,
+    "rows": [
+      18719,
+      19366
+    ],
+    "candidate_genes": [
+      8858,
+      9002
+    ]
+  },
+  {
+    "graph_index": 11,
+    "tissue": "blood_plasma",
+    "color": 49,
+    "rows": [
+      18773,
+      20780
+    ],
+    "candidate_genes": [
+      55326,
+      55500
+    ]
+  },
+  {
+    "graph_index": 11,
+    "tissue": "blood_plasma",
+    "color": 41,
+    "rows": [
+      18966,
+      19773
+    ],
+    "candidate_genes": [
+      2591,
+      150290
+    ]
+  },
+  {
+    "graph_index": 11,
+    "tissue": "blood_plasma",
+    "color": 47,
+    "rows": [
+      19242,
+      20500
+    ],
+    "candidate_genes": [
+      8611,
+      51715
+    ]
+  },
+  {
+    "graph_index": 11,
+    "tissue": "blood_plasma",
+    "color": 34,
+    "rows": [
+      19476,
+      19752
+    ],
+    "candidate_genes": [
+      9819,
+      150465
+    ]
+  },
+  {
+    "graph_index": 11,
+    "tissue": "blood_plasma",
+    "color": 53,
+    "rows": [
+      20155,
+      20789
+    ],
+    "candidate_genes": [
+      3606,
+      100137049
+    ]
+  },
+  {
+    "graph_index": 11,
+    "tissue": "blood_plasma",
+    "color": 1569,
+    "rows": [
+      20664,
+      20667,
+      20669
+    ],
+    "candidate_genes": [
+      8360,
+      8365,
+      8367
+    ]
+  },
+  {
+    "graph_index": 11,
+    "tissue": "blood_plasma",
+    "color": 1531,
+    "rows": [
+      20666,
+      20668,
+      20670,
+      20671
+    ],
+    "candidate_genes": [
+      8362,
+      8364,
+      8366,
+      8368
+    ]
+  },
+  {
+    "graph_index": 12,
+    "tissue": "blood_platelet",
+    "color": 35,
+    "rows": [
+      20852,
+      21370
+    ],
+    "candidate_genes": [
+      11343,
+      27284
+    ]
+  },
+  {
+    "graph_index": 12,
+    "tissue": "blood_platelet",
+    "color": 60,
+    "rows": [
+      20855,
+      21417
+    ],
+    "candidate_genes": [
+      2537,
+      8609
+    ]
+  },
+  {
+    "graph_index": 12,
+    "tissue": "blood_platelet",
+    "color": 5,
+    "rows": [
+      20870,
+      21086
+    ],
+    "candidate_genes": [
+      1545,
+      84869
+    ]
+  },
+  {
+    "graph_index": 12,
+    "tissue": "blood_platelet",
+    "color": 81,
+    "rows": [
+      20898,
+      22638
+    ],
+    "candidate_genes": [
+      6376,
+      9263
+    ]
+  },
+  {
+    "graph_index": 12,
+    "tissue": "blood_platelet",
+    "color": 46,
+    "rows": [
+      20983,
+      21502
+    ],
+    "candidate_genes": [
+      1611,
+      27035
+    ]
+  },
+  {
+    "graph_index": 12,
+    "tissue": "blood_platelet",
+    "color": 0,
+    "rows": [
+      21019,
+      21197,
+      22093,
+      22301,
+      22344,
+      22544
+    ],
+    "candidate_genes": [
+      8694,
+      9048,
+      9619,
+      10316,
+      54977,
+      163702
+    ]
+  },
+  {
+    "graph_index": 12,
+    "tissue": "blood_platelet",
+    "color": 1223,
+    "rows": [
+      22589,
+      22592,
+      22594
+    ],
+    "candidate_genes": [
+      8360,
+      8365,
+      8367
+    ]
+  },
+  {
+    "graph_index": 12,
+    "tissue": "blood_platelet",
+    "color": 1191,
+    "rows": [
+      22591,
+      22593,
+      22595,
+      22596
+    ],
+    "candidate_genes": [
+      8362,
+      8364,
+      8366,
+      8368
+    ]
+  },
+  {
+    "graph_index": 13,
+    "tissue": "bone",
+    "color": 56,
+    "rows": [
+      22737,
+      23194
+    ],
+    "candidate_genes": [
+      8609,
+      10201
+    ]
+  },
+  {
+    "graph_index": 13,
+    "tissue": "bone",
+    "color": 0,
+    "rows": [
+      22900,
+      23214,
+      23694,
+      23766,
+      23939,
+      24455
+    ],
+    "candidate_genes": [
+      1232,
+      4015,
+      9048,
+      10316,
+      51378,
+      222663
+    ]
+  },
+  {
+    "graph_index": 13,
+    "tissue": "bone",
+    "color": 54,
+    "rows": [
+      23519,
+      24098,
+      24338,
+      24429
+    ],
+    "candidate_genes": [
+      53834,
+      55998,
+      143570,
+      150465
+    ]
+  },
+  {
+    "graph_index": 13,
+    "tissue": "bone",
+    "color": 28,
+    "rows": [
+      23532,
+      24315
+    ],
+    "candidate_genes": [
+      9145,
+      51715
+    ]
+  },
+  {
+    "graph_index": 13,
+    "tissue": "bone",
+    "color": 12,
+    "rows": [
+      23668,
+      23693
+    ],
+    "candidate_genes": [
+      2542,
+      10791
+    ]
+  },
+  {
+    "graph_index": 14,
+    "tissue": "brain",
+    "color": 109,
+    "rows": [
+      24571,
+      24886,
+      24979,
+      25327,
+      25437,
+      25777,
+      25955,
+      26088
+    ],
+    "candidate_genes": [
+      8609,
+      10201,
+      10242,
+      27201,
+      30061,
+      55471,
+      79017,
+      121599
+    ]
+  },
+  {
+    "graph_index": 14,
+    "tissue": "brain",
+    "color": 0,
+    "rows": [
+      24577,
+      24580,
+      24822,
+      24870,
+      25220,
+      25399,
+      26106,
+      26483,
+      26883,
+      26919,
+      27136,
+      27345,
+      27676,
+      27996,
+      28023
+    ],
+    "candidate_genes": [
+      341,
+      941,
+      1618,
+      3592,
+      6490,
+      8694,
+      9048,
+      10316,
+      10747,
+      22953,
+      51378,
+      54977,
+      114771,
+      122042,
+      163702
+    ]
+  },
+  {
+    "graph_index": 14,
+    "tissue": "brain",
+    "color": 128,
+    "rows": [
+      24587,
+      25471,
+      25956
+    ],
+    "candidate_genes": [
+      8605,
+      25825,
+      51289
+    ]
+  },
+  {
+    "graph_index": 14,
+    "tissue": "brain",
+    "color": 46,
+    "rows": [
+      24708,
+      24760
+    ],
+    "candidate_genes": [
+      623,
+      2864
+    ]
+  },
+  {
+    "graph_index": 14,
+    "tissue": "brain",
+    "color": 72,
+    "rows": [
+      24868,
+      24998,
+      25579,
+      27019,
+      27535
+    ],
+    "candidate_genes": [
+      10800,
+      51715,
+      56301,
+      93210,
+      123606
+    ]
+  },
+  {
+    "graph_index": 14,
+    "tissue": "brain",
+    "color": 13,
+    "rows": [
+      24933,
+      24934
+    ],
+    "candidate_genes": [
+      2692,
+      2693
+    ]
+  },
+  {
+    "graph_index": 14,
+    "tissue": "brain",
+    "color": 59,
+    "rows": [
+      25326,
+      26495
+    ],
+    "candidate_genes": [
+      2591,
+      150290
+    ]
+  },
+  {
+    "graph_index": 14,
+    "tissue": "brain",
+    "color": 103,
+    "rows": [
+      25397,
+      25780
+    ],
+    "candidate_genes": [
+      55568,
+      137964
+    ]
+  },
+  {
+    "graph_index": 14,
+    "tissue": "brain",
+    "color": 609,
+    "rows": [
+      25539,
+      27377
+    ],
+    "candidate_genes": [
+      50515,
+      166012
+    ]
+  },
+  {
+    "graph_index": 14,
+    "tissue": "brain",
+    "color": 108,
+    "rows": [
+      25567,
+      26686,
+      26811,
+      27758,
+      27816,
+      27826,
+      27852
+    ],
+    "candidate_genes": [
+      3988,
+      51312,
+      55654,
+      56674,
+      56994,
+      84336,
+      84803
+    ]
+  },
+  {
+    "graph_index": 14,
+    "tissue": "brain",
+    "color": 92,
+    "rows": [
+      25606,
+      26646
+    ],
+    "candidate_genes": [
+      2020,
+      2702
+    ]
+  },
+  {
+    "graph_index": 14,
+    "tissue": "brain",
+    "color": 85,
+    "rows": [
+      25693,
+      26695
+    ],
+    "candidate_genes": [
+      9381,
+      57084
+    ]
+  },
+  {
+    "graph_index": 14,
+    "tissue": "brain",
+    "color": 10,
+    "rows": [
+      25705,
+      25710
+    ],
+    "candidate_genes": [
+      1135,
+      1138
+    ]
+  },
+  {
+    "graph_index": 14,
+    "tissue": "brain",
+    "color": 22,
+    "rows": [
+      25861,
+      25866
+    ],
+    "candidate_genes": [
+      4886,
+      4889
+    ]
+  },
+  {
+    "graph_index": 14,
+    "tissue": "brain",
+    "color": 287,
+    "rows": [
+      26237,
+      27823
+    ],
+    "candidate_genes": [
+      359,
+      8671
+    ]
+  },
+  {
+    "graph_index": 14,
+    "tissue": "brain",
+    "color": 131,
+    "rows": [
+      26316,
+      27773
+    ],
+    "candidate_genes": [
+      8564,
+      51166
+    ]
+  },
+  {
+    "graph_index": 14,
+    "tissue": "brain",
+    "color": 50,
+    "rows": [
+      26373,
+      27927
+    ],
+    "candidate_genes": [
+      9480,
+      22865
+    ]
+  },
+  {
+    "graph_index": 14,
+    "tissue": "brain",
+    "color": 110,
+    "rows": [
+      26401,
+      26863
+    ],
+    "candidate_genes": [
+      80274,
+      222663
+    ]
+  },
+  {
+    "graph_index": 14,
+    "tissue": "brain",
+    "color": 71,
+    "rows": [
+      26426,
+      27275
+    ],
+    "candidate_genes": [
+      29881,
+      84870
+    ]
+  },
+  {
+    "graph_index": 14,
+    "tissue": "brain",
+    "color": 175,
+    "rows": [
+      27084,
+      27702
+    ],
+    "candidate_genes": [
+      5889,
+      7060
+    ]
+  },
+  {
+    "graph_index": 14,
+    "tissue": "brain",
+    "color": 2278,
+    "rows": [
+      27764,
+      27769
+    ],
+    "candidate_genes": [
+      8362,
+      8368
+    ]
+  },
+  {
+    "graph_index": 15,
+    "tissue": "colon",
+    "color": 89,
+    "rows": [
+      28065,
+      28395,
+      28777,
+      28905,
+      30351,
+      30764
+    ],
+    "candidate_genes": [
+      2537,
+      8609,
+      10201,
+      54097,
+      55471,
+      79017
+    ]
+  },
+  {
+    "graph_index": 15,
+    "tissue": "colon",
+    "color": 0,
+    "rows": [
+      28072,
+      28264,
+      28281,
+      28311,
+      28581,
+      29644,
+      29919,
+      30003,
+      30304,
+      30568,
+      30700,
+      30835,
+      30844
+    ],
+    "candidate_genes": [
+      1673,
+      3762,
+      6375,
+      8694,
+      9048,
+      10316,
+      10930,
+      51378,
+      54977,
+      80274,
+      114771,
+      163702,
+      200958
+    ]
+  },
+  {
+    "graph_index": 15,
+    "tissue": "colon",
+    "color": 56,
+    "rows": [
+      28113,
+      28448,
+      30771
+    ],
+    "candidate_genes": [
+      1136,
+      55326,
+      55500
+    ]
+  },
+  {
+    "graph_index": 15,
+    "tissue": "colon",
+    "color": 80,
+    "rows": [
+      28174,
+      30708
+    ],
+    "candidate_genes": [
+      64321,
+      83439
+    ]
+  },
+  {
+    "graph_index": 15,
+    "tissue": "colon",
+    "color": 86,
+    "rows": [
+      28209,
+      28225
+    ],
+    "candidate_genes": [
+      6578,
+      8763
+    ]
+  },
+  {
+    "graph_index": 15,
+    "tissue": "colon",
+    "color": 54,
+    "rows": [
+      28309,
+      29013,
+      30058,
+      30368,
+      30466
+    ],
+    "candidate_genes": [
+      8611,
+      10800,
+      22845,
+      51715,
+      93210
+    ]
+  },
+  {
+    "graph_index": 15,
+    "tissue": "colon",
+    "color": 47,
+    "rows": [
+      28679,
+      29614
+    ],
+    "candidate_genes": [
+      2591,
+      150290
+    ]
+  },
+  {
+    "graph_index": 15,
+    "tissue": "colon",
+    "color": 85,
+    "rows": [
+      28738,
+      29034
+    ],
+    "candidate_genes": [
+      55568,
+      137964
+    ]
+  },
+  {
+    "graph_index": 15,
+    "tissue": "colon",
+    "color": 71,
+    "rows": [
+      28871,
+      30135
+    ],
+    "candidate_genes": [
+      55650,
+      58495
+    ]
+  },
+  {
+    "graph_index": 15,
+    "tissue": "colon",
+    "color": 83,
+    "rows": [
+      29042,
+      29517
+    ],
+    "candidate_genes": [
+      3110,
+      114805
+    ]
+  },
+  {
+    "graph_index": 15,
+    "tissue": "colon",
+    "color": 72,
+    "rows": [
+      29104,
+      29828
+    ],
+    "candidate_genes": [
+      2702,
+      53905
+    ]
+  },
+  {
+    "graph_index": 15,
+    "tissue": "colon",
+    "color": 102,
+    "rows": [
+      29170,
+      29715
+    ],
+    "candidate_genes": [
+      25825,
+      57107
+    ]
+  },
+  {
+    "graph_index": 15,
+    "tissue": "colon",
+    "color": 79,
+    "rows": [
+      29262,
+      29719
+    ],
+    "candidate_genes": [
+      51170,
+      80267
+    ]
+  },
+  {
+    "graph_index": 15,
+    "tissue": "colon",
+    "color": 46,
+    "rows": [
+      29627,
+      30542
+    ],
+    "candidate_genes": [
+      360,
+      80833
+    ]
+  },
+  {
+    "graph_index": 15,
+    "tissue": "colon",
+    "color": 194,
+    "rows": [
+      30579,
+      30779
+    ],
+    "candidate_genes": [
+      84268,
+      246243
+    ]
+  },
+  {
+    "graph_index": 15,
+    "tissue": "colon",
+    "color": 1787,
+    "rows": [
+      30634,
+      30639
+    ],
+    "candidate_genes": [
+      8362,
+      8368
+    ]
+  },
+  {
+    "graph_index": 16,
+    "tissue": "eye",
+    "color": 77,
+    "rows": [
+      30868,
+      31146,
+      31447,
+      31549,
+      31678,
+      32753,
+      33091
+    ],
+    "candidate_genes": [
+      2537,
+      2780,
+      4321,
+      8609,
+      10201,
+      55471,
+      79017
+    ]
+  },
+  {
+    "graph_index": 16,
+    "tissue": "eye",
+    "color": 26,
+    "rows": [
+      30892,
+      31520
+    ],
+    "candidate_genes": [
+      3772,
+      6751
+    ]
+  },
+  {
+    "graph_index": 16,
+    "tissue": "eye",
+    "color": 92,
+    "rows": [
+      30922,
+      33076
+    ],
+    "candidate_genes": [
+      6376,
+      9263
+    ]
+  },
+  {
+    "graph_index": 16,
+    "tissue": "eye",
+    "color": 0,
+    "rows": [
+      31075,
+      32168,
+      32387,
+      32715,
+      32807,
+      32957,
+      33153
+    ],
+    "candidate_genes": [
+      1437,
+      6490,
+      9048,
+      10316,
+      51378,
+      64399,
+      163702
+    ]
+  },
+  {
+    "graph_index": 16,
+    "tissue": "eye",
+    "color": 49,
+    "rows": [
+      31188,
+      33127
+    ],
+    "candidate_genes": [
+      55326,
+      55500
+    ]
+  },
+  {
+    "graph_index": 16,
+    "tissue": "eye",
+    "color": 64,
+    "rows": [
+      31523,
+      33172
+    ],
+    "candidate_genes": [
+      55650,
+      58495
+    ]
+  },
+  {
+    "graph_index": 16,
+    "tissue": "eye",
+    "color": 10,
+    "rows": [
+      31657,
+      32349
+    ],
+    "candidate_genes": [
+      23418,
+      92359
+    ]
+  },
+  {
+    "graph_index": 16,
+    "tissue": "eye",
+    "color": 69,
+    "rows": [
+      31850,
+      32231
+    ],
+    "candidate_genes": [
+      51170,
+      80267
+    ]
+  },
+  {
+    "graph_index": 16,
+    "tissue": "eye",
+    "color": 28,
+    "rows": [
+      31861,
+      32123
+    ],
+    "candidate_genes": [
+      9819,
+      150465
+    ]
+  },
+  {
+    "graph_index": 16,
+    "tissue": "eye",
+    "color": 25,
+    "rows": [
+      32042,
+      32819
+    ],
+    "candidate_genes": [
+      2542,
+      79053
+    ]
+  },
+  {
+    "graph_index": 16,
+    "tissue": "eye",
+    "color": 124,
+    "rows": [
+      32542,
+      32977
+    ],
+    "candidate_genes": [
+      5889,
+      7060
+    ]
+  },
+  {
+    "graph_index": 16,
+    "tissue": "eye",
+    "color": 44,
+    "rows": [
+      32769,
+      32856
+    ],
+    "candidate_genes": [
+      22845,
+      51715
+    ]
+  },
+  {
+    "graph_index": 17,
+    "tissue": "forebrain",
+    "color": 79,
+    "rows": [
+      33204,
+      33332,
+      33519,
+      33871,
+      34597
+    ],
+    "candidate_genes": [
+      8609,
+      10201,
+      10242,
+      55471,
+      79017
+    ]
+  },
+  {
+    "graph_index": 17,
+    "tissue": "forebrain",
+    "color": 0,
+    "rows": [
+      33209,
+      33211,
+      33436,
+      33840,
+      34058,
+      34347,
+      34808,
+      34869,
+      34933,
+      34964,
+      35573,
+      35708,
+      35719,
+      35809
+    ],
+    "candidate_genes": [
+      341,
+      777,
+      2254,
+      3762,
+      6490,
+      8694,
+      9048,
+      10316,
+      10747,
+      22953,
+      23305,
+      51378,
+      84679,
+      163702
+    ]
+  },
+  {
+    "graph_index": 17,
+    "tissue": "forebrain",
+    "color": 99,
+    "rows": [
+      33218,
+      33888,
+      34237
+    ],
+    "candidate_genes": [
+      8605,
+      25825,
+      51289
+    ]
+  },
+  {
+    "graph_index": 17,
+    "tissue": "forebrain",
+    "color": 80,
+    "rows": [
+      33227,
+      33961,
+      34908,
+      35366,
+      35637,
+      35682,
+      35690
+    ],
+    "candidate_genes": [
+      3988,
+      55654,
+      56674,
+      56994,
+      84336,
+      84803,
+      84869
+    ]
+  },
+  {
+    "graph_index": 17,
+    "tissue": "forebrain",
+    "color": 98,
+    "rows": [
+      33267,
+      35721
+    ],
+    "candidate_genes": [
+      6376,
+      9263
+    ]
+  },
+  {
+    "graph_index": 17,
+    "tissue": "forebrain",
+    "color": 25,
+    "rows": [
+      33309,
+      33347
+    ],
+    "candidate_genes": [
+      623,
+      2864
+    ]
+  },
+  {
+    "graph_index": 17,
+    "tissue": "forebrain",
+    "color": 2,
+    "rows": [
+      33483,
+      35391
+    ],
+    "candidate_genes": [
+      181,
+      2693
+    ]
+  },
+  {
+    "graph_index": 17,
+    "tissue": "forebrain",
+    "color": 182,
+    "rows": [
+      33748,
+      35785
+    ],
+    "candidate_genes": [
+      50485,
+      84268
+    ]
+  },
+  {
+    "graph_index": 17,
+    "tissue": "forebrain",
+    "color": 40,
+    "rows": [
+      33781,
+      34669
+    ],
+    "candidate_genes": [
+      2591,
+      150290
+    ]
+  },
+  {
+    "graph_index": 17,
+    "tissue": "forebrain",
+    "color": 329,
+    "rows": [
+      33939,
+      35350
+    ],
+    "candidate_genes": [
+      50515,
+      166012
+    ]
+  },
+  {
+    "graph_index": 17,
+    "tissue": "forebrain",
+    "color": 3,
+    "rows": [
+      34057,
+      34061
+    ],
+    "candidate_genes": [
+      1135,
+      1138
+    ]
+  },
+  {
+    "graph_index": 17,
+    "tissue": "forebrain",
+    "color": 47,
+    "rows": [
+      34096,
+      35469
+    ],
+    "candidate_genes": [
+      8611,
+      51715
+    ]
+  },
+  {
+    "graph_index": 17,
+    "tissue": "forebrain",
+    "color": 42,
+    "rows": [
+      35498,
+      35776
+    ],
+    "candidate_genes": [
+      10553,
+      641371
+    ]
+  },
+  {
+    "graph_index": 17,
+    "tissue": "forebrain",
+    "color": 78,
+    "rows": [
+      35539,
+      35718
+    ],
+    "candidate_genes": [
+      64067,
+      84883
+    ]
+  },
+  {
+    "graph_index": 17,
+    "tissue": "forebrain",
+    "color": 1670,
+    "rows": [
+      35640,
+      35645
+    ],
+    "candidate_genes": [
+      8360,
+      8367
+    ]
+  },
+  {
+    "graph_index": 17,
+    "tissue": "forebrain",
+    "color": 1629,
+    "rows": [
+      35642,
+      35644,
+      35647
+    ],
+    "candidate_genes": [
+      8362,
+      8364,
+      8368
+    ]
+  },
+  {
+    "graph_index": 18,
+    "tissue": "large_intestine",
+    "color": 89,
+    "rows": [
+      35869,
+      36204,
+      36491,
+      36589,
+      36718,
+      38589
+    ],
+    "candidate_genes": [
+      2537,
+      8609,
+      10201,
+      54097,
+      55471,
+      79017
+    ]
+  },
+  {
+    "graph_index": 18,
+    "tissue": "large_intestine",
+    "color": 0,
+    "rows": [
+      35875,
+      35877,
+      36070,
+      36087,
+      36118,
+      36392,
+      37458,
+      37737,
+      37821,
+      38126,
+      38391,
+      38524,
+      38661,
+      38670
+    ],
+    "candidate_genes": [
+      341,
+      1673,
+      3762,
+      6375,
+      8694,
+      9048,
+      10316,
+      10930,
+      51378,
+      54977,
+      80274,
+      114771,
+      163702,
+      200958
+    ]
+  },
+  {
+    "graph_index": 18,
+    "tissue": "large_intestine",
+    "color": 56,
+    "rows": [
+      35918,
+      36257,
+      38596
+    ],
+    "candidate_genes": [
+      1136,
+      55326,
+      55500
+    ]
+  },
+  {
+    "graph_index": 18,
+    "tissue": "large_intestine",
+    "color": 80,
+    "rows": [
+      35980,
+      37628,
+      38532
+    ],
+    "candidate_genes": [
+      1015,
+      64321,
+      83439
+    ]
+  },
+  {
+    "graph_index": 18,
+    "tissue": "large_intestine",
+    "color": 86,
+    "rows": [
+      36015,
+      36031
+    ],
+    "candidate_genes": [
+      6578,
+      8763
+    ]
+  },
+  {
+    "graph_index": 18,
+    "tissue": "large_intestine",
+    "color": 54,
+    "rows": [
+      36116,
+      36826,
+      37876,
+      38190,
+      38289
+    ],
+    "candidate_genes": [
+      8611,
+      10800,
+      22845,
+      51715,
+      93210
+    ]
+  },
+  {
+    "graph_index": 18,
+    "tissue": "large_intestine",
+    "color": 47,
+    "rows": [
+      36490,
+      37428
+    ],
+    "candidate_genes": [
+      2591,
+      150290
+    ]
+  },
+  {
+    "graph_index": 18,
+    "tissue": "large_intestine",
+    "color": 85,
+    "rows": [
+      36550,
+      36847
+    ],
+    "candidate_genes": [
+      55568,
+      137964
+    ]
+  },
+  {
+    "graph_index": 18,
+    "tissue": "large_intestine",
+    "color": 452,
+    "rows": [
+      36663,
+      38173
+    ],
+    "candidate_genes": [
+      50515,
+      166012
+    ]
+  },
+  {
+    "graph_index": 18,
+    "tissue": "large_intestine",
+    "color": 71,
+    "rows": [
+      36683,
+      37956
+    ],
+    "candidate_genes": [
+      55650,
+      58495
+    ]
+  },
+  {
+    "graph_index": 18,
+    "tissue": "large_intestine",
+    "color": 83,
+    "rows": [
+      36855,
+      37331
+    ],
+    "candidate_genes": [
+      3110,
+      114805
+    ]
+  },
+  {
+    "graph_index": 18,
+    "tissue": "large_intestine",
+    "color": 72,
+    "rows": [
+      36917,
+      37644
+    ],
+    "candidate_genes": [
+      2702,
+      53905
+    ]
+  },
+  {
+    "graph_index": 18,
+    "tissue": "large_intestine",
+    "color": 101,
+    "rows": [
+      36984,
+      37530
+    ],
+    "candidate_genes": [
+      25825,
+      57107
+    ]
+  },
+  {
+    "graph_index": 18,
+    "tissue": "large_intestine",
+    "color": 79,
+    "rows": [
+      37076,
+      37534
+    ],
+    "candidate_genes": [
+      51170,
+      80267
+    ]
+  },
+  {
+    "graph_index": 18,
+    "tissue": "large_intestine",
+    "color": 46,
+    "rows": [
+      37441,
+      38365
+    ],
+    "candidate_genes": [
+      360,
+      80833
+    ]
+  },
+  {
+    "graph_index": 18,
+    "tissue": "large_intestine",
+    "color": 548,
+    "rows": [
+      38290,
+      38566
+    ],
+    "candidate_genes": [
+      9469,
+      56548
+    ]
+  },
+  {
+    "graph_index": 18,
+    "tissue": "large_intestine",
+    "color": 193,
+    "rows": [
+      38402,
+      38604
+    ],
+    "candidate_genes": [
+      84268,
+      246243
+    ]
+  },
+  {
+    "graph_index": 18,
+    "tissue": "large_intestine",
+    "color": 1804,
+    "rows": [
+      38457,
+      38462
+    ],
+    "candidate_genes": [
+      8362,
+      8368
+    ]
+  },
+  {
+    "graph_index": 19,
+    "tissue": "liver",
+    "color": 97,
+    "rows": [
+      38698,
+      39068,
+      39284,
+      39382,
+      39496,
+      39651,
+      41348,
+      41530
+    ],
+    "candidate_genes": [
+      2537,
+      8609,
+      10201,
+      10242,
+      10344,
+      30061,
+      55471,
+      79017
+    ]
+  },
+  {
+    "graph_index": 19,
+    "tissue": "liver",
+    "color": 233,
+    "rows": [
+      38705,
+      41132
+    ],
+    "candidate_genes": [
+      341,
+      8694
+    ]
+  },
+  {
+    "graph_index": 19,
+    "tissue": "liver",
+    "color": 33,
+    "rows": [
+      38823,
+      38870
+    ],
+    "candidate_genes": [
+      623,
+      2864
+    ]
+  },
+  {
+    "graph_index": 19,
+    "tissue": "liver",
+    "color": 95,
+    "rows": [
+      38864,
+      38880
+    ],
+    "candidate_genes": [
+      6578,
+      8763
+    ]
+  },
+  {
+    "graph_index": 19,
+    "tissue": "liver",
+    "color": 50,
+    "rows": [
+      38902,
+      41792
+    ],
+    "candidate_genes": [
+      10965,
+      54363
+    ]
+  },
+  {
+    "graph_index": 19,
+    "tissue": "liver",
+    "color": 60,
+    "rows": [
+      38970,
+      39616,
+      39777,
+      40941,
+      41402
+    ],
+    "candidate_genes": [
+      8611,
+      10800,
+      51715,
+      56301,
+      93210
+    ]
+  },
+  {
+    "graph_index": 19,
+    "tissue": "liver",
+    "color": 0,
+    "rows": [
+      38972,
+      39109,
+      39450,
+      39581,
+      39670,
+      39914,
+      40491,
+      40789,
+      40811,
+      41216,
+      41531,
+      41689,
+      41840
+    ],
+    "candidate_genes": [
+      3762,
+      8547,
+      9048,
+      10316,
+      10930,
+      22953,
+      50512,
+      51378,
+      54977,
+      56898,
+      80274,
+      112744,
+      163702
+    ]
+  },
+  {
+    "graph_index": 19,
+    "tissue": "liver",
+    "color": 774,
+    "rows": [
+      39090,
+      39091
+    ],
+    "candidate_genes": [
+      1544,
+      1545
+    ]
+  },
+  {
+    "graph_index": 19,
+    "tissue": "liver",
+    "color": 64,
+    "rows": [
+      39133,
+      41768
+    ],
+    "candidate_genes": [
+      55326,
+      55500
+    ]
+  },
+  {
+    "graph_index": 19,
+    "tissue": "liver",
+    "color": 52,
+    "rows": [
+      39381,
+      40458
+    ],
+    "candidate_genes": [
+      2591,
+      150290
+    ]
+  },
+  {
+    "graph_index": 19,
+    "tissue": "liver",
+    "color": 96,
+    "rows": [
+      39448,
+      39799,
+      41605
+    ],
+    "candidate_genes": [
+      55568,
+      137964,
+      143570
+    ]
+  },
+  {
+    "graph_index": 19,
+    "tissue": "liver",
+    "color": 110,
+    "rows": [
+      39519,
+      39953,
+      40564
+    ],
+    "candidate_genes": [
+      8605,
+      25825,
+      57107
+    ]
+  },
+  {
+    "graph_index": 19,
+    "tissue": "liver",
+    "color": 399,
+    "rows": [
+      39580,
+      41264
+    ],
+    "candidate_genes": [
+      50515,
+      166012
+    ]
+  },
+  {
+    "graph_index": 19,
+    "tissue": "liver",
+    "color": 84,
+    "rows": [
+      39603,
+      40661
+    ],
+    "candidate_genes": [
+      8435,
+      55650
+    ]
+  },
+  {
+    "graph_index": 19,
+    "tissue": "liver",
+    "color": 41,
+    "rows": [
+      39759,
+      39872
+    ],
+    "candidate_genes": [
+      9379,
+      23129
+    ]
+  },
+  {
+    "graph_index": 19,
+    "tissue": "liver",
+    "color": 1,
+    "rows": [
+      39882,
+      41010,
+      41012,
+      41787
+    ],
+    "candidate_genes": [
+      953,
+      954,
+      8771,
+      9966
+    ]
+  },
+  {
+    "graph_index": 19,
+    "tissue": "liver",
+    "color": 530,
+    "rows": [
+      39919,
+      40351
+    ],
+    "candidate_genes": [
+      7363,
+      54490
+    ]
+  },
+  {
+    "graph_index": 19,
+    "tissue": "liver",
+    "color": 247,
+    "rows": [
+      40203,
+      41669
+    ],
+    "candidate_genes": [
+      359,
+      8671
+    ]
+  },
+  {
+    "graph_index": 19,
+    "tissue": "liver",
+    "color": 57,
+    "rows": [
+      40242,
+      40393
+    ],
+    "candidate_genes": [
+      29881,
+      84870
+    ]
+  },
+  {
+    "graph_index": 19,
+    "tissue": "liver",
+    "color": 112,
+    "rows": [
+      40278,
+      41622
+    ],
+    "candidate_genes": [
+      8564,
+      51166
+    ]
+  },
+  {
+    "graph_index": 19,
+    "tissue": "liver",
+    "color": 37,
+    "rows": [
+      40332,
+      41753
+    ],
+    "candidate_genes": [
+      9480,
+      22865
+    ]
+  },
+  {
+    "graph_index": 19,
+    "tissue": "liver",
+    "color": 2018,
+    "rows": [
+      41614,
+      41619
+    ],
+    "candidate_genes": [
+      8362,
+      8368
+    ]
+  },
+  {
+    "graph_index": 20,
+    "tissue": "gastrointestinal_tract",
+    "color": 95,
+    "rows": [
+      41879,
+      42028,
+      42156,
+      42236,
+      42541,
+      42647,
+      42789,
+      44589,
+      44801
+    ],
+    "candidate_genes": [
+      2537,
+      8609,
+      10201,
+      10242,
+      10344,
+      30061,
+      54097,
+      55471,
+      79017
+    ]
+  },
+  {
+    "graph_index": 20,
+    "tissue": "gastrointestinal_tract",
+    "color": 230,
+    "rows": [
+      41886,
+      44206
+    ],
+    "candidate_genes": [
+      341,
+      8694
+    ]
+  },
+  {
+    "graph_index": 20,
+    "tissue": "gastrointestinal_tract",
+    "color": 109,
+    "rows": [
+      41895,
+      43078,
+      43654
+    ],
+    "candidate_genes": [
+      25825,
+      51289,
+      57107
+    ]
+  },
+  {
+    "graph_index": 20,
+    "tissue": "gastrointestinal_tract",
+    "color": 61,
+    "rows": [
+      41934,
+      42294,
+      44808
+    ],
+    "candidate_genes": [
+      1136,
+      55326,
+      55500
+    ]
+  },
+  {
+    "graph_index": 20,
+    "tissue": "gastrointestinal_tract",
+    "color": 36,
+    "rows": [
+      41999,
+      42045
+    ],
+    "candidate_genes": [
+      623,
+      2864
+    ]
+  },
+  {
+    "graph_index": 20,
+    "tissue": "gastrointestinal_tract",
+    "color": 87,
+    "rows": [
+      42000,
+      43759,
+      44740
+    ],
+    "candidate_genes": [
+      1015,
+      64321,
+      83439
+    ]
+  },
+  {
+    "graph_index": 20,
+    "tissue": "gastrointestinal_tract",
+    "color": 92,
+    "rows": [
+      42038,
+      42054
+    ],
+    "candidate_genes": [
+      6578,
+      8763
+    ]
+  },
+  {
+    "graph_index": 20,
+    "tissue": "gastrointestinal_tract",
+    "color": 0,
+    "rows": [
+      42094,
+      42111,
+      42142,
+      42436,
+      42610,
+      42813,
+      43098,
+      43580,
+      43873,
+      43945,
+      43964,
+      44292,
+      44590,
+      44732,
+      44876,
+      44885
+    ],
+    "candidate_genes": [
+      1673,
+      3762,
+      6375,
+      6528,
+      9048,
+      10316,
+      10930,
+      51378,
+      54977,
+      56898,
+      80274,
+      84679,
+      112744,
+      114771,
+      163702,
+      200958
+    ]
+  },
+  {
+    "graph_index": 20,
+    "tissue": "gastrointestinal_tract",
+    "color": 59,
+    "rows": [
+      42140,
+      42253,
+      42904,
+      44022,
+      44363,
+      44472
+    ],
+    "candidate_genes": [
+      8611,
+      10800,
+      22845,
+      51715,
+      93210,
+      123606
+    ]
+  },
+  {
+    "graph_index": 20,
+    "tissue": "gastrointestinal_tract",
+    "color": 52,
+    "rows": [
+      42540,
+      43547
+    ],
+    "candidate_genes": [
+      2591,
+      150290
+    ]
+  },
+  {
+    "graph_index": 20,
+    "tissue": "gastrointestinal_tract",
+    "color": 91,
+    "rows": [
+      42604,
+      42926
+    ],
+    "candidate_genes": [
+      55568,
+      137964
+    ]
+  },
+  {
+    "graph_index": 20,
+    "tissue": "gastrointestinal_tract",
+    "color": 503,
+    "rows": [
+      42725,
+      44345
+    ],
+    "candidate_genes": [
+      50515,
+      166012
+    ]
+  },
+  {
+    "graph_index": 20,
+    "tissue": "gastrointestinal_tract",
+    "color": 77,
+    "rows": [
+      42750,
+      43747,
+      44108
+    ],
+    "candidate_genes": [
+      8435,
+      55650,
+      58495
+    ]
+  },
+  {
+    "graph_index": 20,
+    "tissue": "gastrointestinal_tract",
+    "color": 78,
+    "rows": [
+      42777,
+      43775
+    ],
+    "candidate_genes": [
+      2702,
+      53905
+    ]
+  },
+  {
+    "graph_index": 20,
+    "tissue": "gastrointestinal_tract",
+    "color": 89,
+    "rows": [
+      42934,
+      43443
+    ],
+    "candidate_genes": [
+      3110,
+      114805
+    ]
+  },
+  {
+    "graph_index": 20,
+    "tissue": "gastrointestinal_tract",
+    "color": 610,
+    "rows": [
+      43043,
+      43450
+    ],
+    "candidate_genes": [
+      7363,
+      54490
+    ]
+  },
+  {
+    "graph_index": 20,
+    "tissue": "gastrointestinal_tract",
+    "color": 86,
+    "rows": [
+      43176,
+      43659
+    ],
+    "candidate_genes": [
+      51170,
+      80267
+    ]
+  },
+  {
+    "graph_index": 20,
+    "tissue": "gastrointestinal_tract",
+    "color": 57,
+    "rows": [
+      43355,
+      43485
+    ],
+    "candidate_genes": [
+      29881,
+      84870
+    ]
+  },
+  {
+    "graph_index": 20,
+    "tissue": "gastrointestinal_tract",
+    "color": 43,
+    "rows": [
+      43524,
+      43930
+    ],
+    "candidate_genes": [
+      9819,
+      150465
+    ]
+  },
+  {
+    "graph_index": 20,
+    "tissue": "gastrointestinal_tract",
+    "color": 51,
+    "rows": [
+      43561,
+      44560
+    ],
+    "candidate_genes": [
+      360,
+      80833
+    ]
+  },
+  {
+    "graph_index": 20,
+    "tissue": "gastrointestinal_tract",
+    "color": 607,
+    "rows": [
+      44473,
+      44775
+    ],
+    "candidate_genes": [
+      9469,
+      56548
+    ]
+  },
+  {
+    "graph_index": 20,
+    "tissue": "gastrointestinal_tract",
+    "color": 1978,
+    "rows": [
+      44660,
+      44665
+    ],
+    "candidate_genes": [
+      8362,
+      8368
+    ]
+  },
+  {
+    "graph_index": 21,
+    "tissue": "heart",
+    "color": 101,
+    "rows": [
+      44916,
+      45070,
+      45292,
+      45731,
+      45882,
+      46781,
+      47510
+    ],
+    "candidate_genes": [
+      2537,
+      8609,
+      9127,
+      10201,
+      10242,
+      55471,
+      79017
+    ]
+  },
+  {
+    "graph_index": 21,
+    "tissue": "heart",
+    "color": 112,
+    "rows": [
+      44922,
+      44925
+    ],
+    "candidate_genes": [
+      341,
+      8694
+    ]
+  },
+  {
+    "graph_index": 21,
+    "tissue": "heart",
+    "color": 123,
+    "rows": [
+      44996,
+      47952
+    ],
+    "candidate_genes": [
+      6376,
+      9263
+    ]
+  },
+  {
+    "graph_index": 21,
+    "tissue": "heart",
+    "color": 39,
+    "rows": [
+      45040,
+      45088
+    ],
+    "candidate_genes": [
+      623,
+      2864
+    ]
+  },
+  {
+    "graph_index": 21,
+    "tissue": "heart",
+    "color": 99,
+    "rows": [
+      45081,
+      45100
+    ],
+    "candidate_genes": [
+      6578,
+      8763
+    ]
+  },
+  {
+    "graph_index": 21,
+    "tissue": "heart",
+    "color": 56,
+    "rows": [
+      45191,
+      45851,
+      46012,
+      47180,
+      47649
+    ],
+    "candidate_genes": [
+      8611,
+      10800,
+      51715,
+      56301,
+      93210
+    ]
+  },
+  {
+    "graph_index": 21,
+    "tissue": "heart",
+    "color": 0,
+    "rows": [
+      45193,
+      45685,
+      46212,
+      46727,
+      46764,
+      47050,
+      47456,
+      47775,
+      48084
+    ],
+    "candidate_genes": [
+      6528,
+      9048,
+      10316,
+      10930,
+      22953,
+      51378,
+      54977,
+      90952,
+      163702
+    ]
+  },
+  {
+    "graph_index": 21,
+    "tissue": "heart",
+    "color": 64,
+    "rows": [
+      45354,
+      48017
+    ],
+    "candidate_genes": [
+      55326,
+      55500
+    ]
+  },
+  {
+    "graph_index": 21,
+    "tissue": "heart",
+    "color": 53,
+    "rows": [
+      45618,
+      46706
+    ],
+    "candidate_genes": [
+      2591,
+      150290
+    ]
+  },
+  {
+    "graph_index": 21,
+    "tissue": "heart",
+    "color": 97,
+    "rows": [
+      45683,
+      46036
+    ],
+    "candidate_genes": [
+      55568,
+      137964
+    ]
+  },
+  {
+    "graph_index": 21,
+    "tissue": "heart",
+    "color": 124,
+    "rows": [
+      45753,
+      46190,
+      46801
+    ],
+    "candidate_genes": [
+      8605,
+      25825,
+      57107
+    ]
+  },
+  {
+    "graph_index": 21,
+    "tissue": "heart",
+    "color": 74,
+    "rows": [
+      45815,
+      47579
+    ],
+    "candidate_genes": [
+      11082,
+      23315
+    ]
+  },
+  {
+    "graph_index": 21,
+    "tissue": "heart",
+    "color": 85,
+    "rows": [
+      45839,
+      47273
+    ],
+    "candidate_genes": [
+      55650,
+      58495
+    ]
+  },
+  {
+    "graph_index": 21,
+    "tissue": "heart",
+    "color": 253,
+    "rows": [
+      46441,
+      47914
+    ],
+    "candidate_genes": [
+      359,
+      8671
+    ]
+  },
+  {
+    "graph_index": 21,
+    "tissue": "heart",
+    "color": 1,
+    "rows": [
+      46513,
+      47248,
+      47251,
+      47867
+    ],
+    "candidate_genes": [
+      953,
+      954,
+      8564,
+      51166
+    ]
+  },
+  {
+    "graph_index": 21,
+    "tissue": "heart",
+    "color": 102,
+    "rows": [
+      46597,
+      47030
+    ],
+    "candidate_genes": [
+      80274,
+      222663
+    ]
+  },
+  {
+    "graph_index": 21,
+    "tissue": "heart",
+    "color": 57,
+    "rows": [
+      46626,
+      47417
+    ],
+    "candidate_genes": [
+      29881,
+      84870
+    ]
+  },
+  {
+    "graph_index": 21,
+    "tissue": "heart",
+    "color": 93,
+    "rows": [
+      46630,
+      48018
+    ],
+    "candidate_genes": [
+      171392,
+      197358
+    ]
+  },
+  {
+    "graph_index": 21,
+    "tissue": "heart",
+    "color": 46,
+    "rows": [
+      46667,
+      47089
+    ],
+    "candidate_genes": [
+      9819,
+      150465
+    ]
+  },
+  {
+    "graph_index": 21,
+    "tissue": "heart",
+    "color": 52,
+    "rows": [
+      46832,
+      47541
+    ],
+    "candidate_genes": [
+      2905,
+      57502
+    ]
+  },
+  {
+    "graph_index": 21,
+    "tissue": "heart",
+    "color": 228,
+    "rows": [
+      47542,
+      48025
+    ],
+    "candidate_genes": [
+      84268,
+      246243
+    ]
+  },
+  {
+    "graph_index": 21,
+    "tissue": "heart",
+    "color": 2105,
+    "rows": [
+      47857,
+      47862
+    ],
+    "candidate_genes": [
+      8362,
+      8368
+    ]
+  },
+  {
+    "graph_index": 22,
+    "tissue": "kidney",
+    "color": 96,
+    "rows": [
+      48126,
+      48514,
+      48848,
+      48968,
+      49177,
+      49447,
+      50883,
+      51066,
+      51303
+    ],
+    "candidate_genes": [
+      3248,
+      8609,
+      10201,
+      10242,
+      10344,
+      30061,
+      54097,
+      55471,
+      79017
+    ]
+  },
+  {
+    "graph_index": 22,
+    "tissue": "kidney",
+    "color": 0,
+    "rows": [
+      48132,
+      48135,
+      48409,
+      48734,
+      48746,
+      49217,
+      49469,
+      50325,
+      50741,
+      51068,
+      51384,
+      51395
+    ],
+    "candidate_genes": [
+      341,
+      6375,
+      6528,
+      8694,
+      9048,
+      10316,
+      10747,
+      10930,
+      22953,
+      54977,
+      122042,
+      163702
+    ]
+  },
+  {
+    "graph_index": 22,
+    "tissue": "kidney",
+    "color": 28,
+    "rows": [
+      48257,
+      48306
+    ],
+    "candidate_genes": [
+      623,
+      2864
+    ]
+  },
+  {
+    "graph_index": 22,
+    "tissue": "kidney",
+    "color": 89,
+    "rows": [
+      48259,
+      51240
+    ],
+    "candidate_genes": [
+      64321,
+      83439
+    ]
+  },
+  {
+    "graph_index": 22,
+    "tissue": "kidney",
+    "color": 46,
+    "rows": [
+      48339,
+      51339
+    ],
+    "candidate_genes": [
+      10965,
+      54363
+    ]
+  },
+  {
+    "graph_index": 22,
+    "tissue": "kidney",
+    "color": 59,
+    "rows": [
+      48407,
+      49096,
+      49265,
+      50458,
+      50936
+    ],
+    "candidate_genes": [
+      8611,
+      10800,
+      51715,
+      56301,
+      93210
+    ]
+  },
+  {
+    "graph_index": 22,
+    "tissue": "kidney",
+    "color": 49,
+    "rows": [
+      48847,
+      49958
+    ],
+    "candidate_genes": [
+      2591,
+      150290
+    ]
+  },
+  {
+    "graph_index": 22,
+    "tissue": "kidney",
+    "color": 92,
+    "rows": [
+      48921,
+      49288
+    ],
+    "candidate_genes": [
+      55568,
+      137964
+    ]
+  },
+  {
+    "graph_index": 22,
+    "tissue": "kidney",
+    "color": 114,
+    "rows": [
+      48990,
+      49448
+    ],
+    "candidate_genes": [
+      8605,
+      25825
+    ]
+  },
+  {
+    "graph_index": 22,
+    "tissue": "kidney",
+    "color": 97,
+    "rows": [
+      49084,
+      49896,
+      50139,
+      50256,
+      50816,
+      51202
+    ],
+    "candidate_genes": [
+      3988,
+      51312,
+      55654,
+      56674,
+      56994,
+      84336
+    ]
+  },
+  {
+    "graph_index": 22,
+    "tissue": "kidney",
+    "color": 43,
+    "rows": [
+      49246,
+      49365
+    ],
+    "candidate_genes": [
+      9379,
+      23129
+    ]
+  },
+  {
+    "graph_index": 22,
+    "tissue": "kidney",
+    "color": 82,
+    "rows": [
+      49372,
+      50196
+    ],
+    "candidate_genes": [
+      2702,
+      53905
+    ]
+  },
+  {
+    "graph_index": 22,
+    "tissue": "kidney",
+    "color": 1,
+    "rows": [
+      49375,
+      49780,
+      50529,
+      50531,
+      51153,
+      51334
+    ],
+    "candidate_genes": [
+      953,
+      954,
+      8564,
+      8771,
+      9966,
+      51166
+    ]
+  },
+  {
+    "graph_index": 22,
+    "tissue": "kidney",
+    "color": 238,
+    "rows": [
+      49705,
+      51199
+    ],
+    "candidate_genes": [
+      359,
+      8671
+    ]
+  },
+  {
+    "graph_index": 22,
+    "tissue": "kidney",
+    "color": 98,
+    "rows": [
+      49865,
+      50306
+    ],
+    "candidate_genes": [
+      80274,
+      222663
+    ]
+  },
+  {
+    "graph_index": 22,
+    "tissue": "kidney",
+    "color": 57,
+    "rows": [
+      49891,
+      50701
+    ],
+    "candidate_genes": [
+      29881,
+      84870
+    ]
+  },
+  {
+    "graph_index": 22,
+    "tissue": "kidney",
+    "color": 47,
+    "rows": [
+      50974,
+      51309
+    ],
+    "candidate_genes": [
+      10553,
+      641371
+    ]
+  },
+  {
+    "graph_index": 22,
+    "tissue": "kidney",
+    "color": 2150,
+    "rows": [
+      51145,
+      51150
+    ],
+    "candidate_genes": [
+      8362,
+      8368
+    ]
+  },
+  {
+    "graph_index": 23,
+    "tissue": "lung",
+    "color": 90,
+    "rows": [
+      51430,
+      51809,
+      52239,
+      54022
+    ],
+    "candidate_genes": [
+      8609,
+      10201,
+      55471,
+      79017
+    ]
+  },
+  {
+    "graph_index": 23,
+    "tissue": "lung",
+    "color": 237,
+    "rows": [
+      51437,
+      53879
+    ],
+    "candidate_genes": [
+      341,
+      8694
+    ]
+  },
+  {
+    "graph_index": 23,
+    "tissue": "lung",
+    "color": 57,
+    "rows": [
+      51494,
+      54529
+    ],
+    "candidate_genes": [
+      1136,
+      55500
+    ]
+  },
+  {
+    "graph_index": 23,
+    "tissue": "lung",
+    "color": 29,
+    "rows": [
+      51560,
+      51607
+    ],
+    "candidate_genes": [
+      623,
+      2864
+    ]
+  },
+  {
+    "graph_index": 23,
+    "tissue": "lung",
+    "color": 80,
+    "rows": [
+      51561,
+      54460
+    ],
+    "candidate_genes": [
+      64321,
+      83439
+    ]
+  },
+  {
+    "graph_index": 23,
+    "tissue": "lung",
+    "color": 0,
+    "rows": [
+      51675,
+      51705,
+      51849,
+      52021,
+      52193,
+      52232,
+      52467,
+      52649,
+      52712,
+      53226,
+      53335,
+      53530,
+      53624,
+      53971,
+      54167,
+      54602
+    ],
+    "candidate_genes": [
+      1673,
+      2028,
+      6375,
+      6528,
+      8547,
+      9048,
+      10316,
+      10747,
+      10930,
+      23305,
+      51378,
+      54977,
+      80274,
+      112744,
+      163702,
+      200958
+    ]
+  },
+  {
+    "graph_index": 23,
+    "tissue": "lung",
+    "color": 52,
+    "rows": [
+      51703,
+      51828,
+      52514,
+      53681,
+      54164
+    ],
+    "candidate_genes": [
+      8611,
+      10800,
+      51715,
+      93210,
+      123606
+    ]
+  },
+  {
+    "graph_index": 23,
+    "tissue": "lung",
+    "color": 47,
+    "rows": [
+      52127,
+      53191
+    ],
+    "candidate_genes": [
+      2591,
+      150290
+    ]
+  },
+  {
+    "graph_index": 23,
+    "tissue": "lung",
+    "color": 86,
+    "rows": [
+      52191,
+      52537
+    ],
+    "candidate_genes": [
+      55568,
+      137964
+    ]
+  },
+  {
+    "graph_index": 23,
+    "tissue": "lung",
+    "color": 103,
+    "rows": [
+      52260,
+      52690
+    ],
+    "candidate_genes": [
+      8605,
+      25825
+    ]
+  },
+  {
+    "graph_index": 23,
+    "tissue": "lung",
+    "color": 91,
+    "rows": [
+      52346,
+      53436,
+      53478,
+      54037,
+      54363,
+      54419,
+      54429
+    ],
+    "candidate_genes": [
+      3988,
+      8323,
+      55654,
+      56674,
+      56994,
+      84336,
+      84803
+    ]
+  },
+  {
+    "graph_index": 23,
+    "tissue": "lung",
+    "color": 76,
+    "rows": [
+      52615,
+      53424
+    ],
+    "candidate_genes": [
+      2702,
+      53905
+    ]
+  },
+  {
+    "graph_index": 23,
+    "tissue": "lung",
+    "color": 1,
+    "rows": [
+      52618,
+      53755,
+      53758,
+      54552
+    ],
+    "candidate_genes": [
+      953,
+      954,
+      8771,
+      9966
+    ]
+  },
+  {
+    "graph_index": 23,
+    "tissue": "lung",
+    "color": 518,
+    "rows": [
+      52655,
+      53081
+    ],
+    "candidate_genes": [
+      7363,
+      54490
+    ]
+  },
+  {
+    "graph_index": 23,
+    "tissue": "lung",
+    "color": 250,
+    "rows": [
+      52940,
+      54427
+    ],
+    "candidate_genes": [
+      359,
+      8671
+    ]
+  },
+  {
+    "graph_index": 23,
+    "tissue": "lung",
+    "color": 51,
+    "rows": [
+      53120,
+      53930
+    ],
+    "candidate_genes": [
+      29881,
+      84870
+    ]
+  },
+  {
+    "graph_index": 23,
+    "tissue": "lung",
+    "color": 61,
+    "rows": [
+      53637,
+      54266
+    ],
+    "candidate_genes": [
+      85413,
+      285671
+    ]
+  },
+  {
+    "graph_index": 23,
+    "tissue": "lung",
+    "color": 2037,
+    "rows": [
+      54368,
+      54373
+    ],
+    "candidate_genes": [
+      8362,
+      8368
+    ]
+  },
+  {
+    "graph_index": 24,
+    "tissue": "midbrain",
+    "color": 41,
+    "rows": [
+      54637,
+      55268
+    ],
+    "candidate_genes": [
+      11343,
+      27284
+    ]
+  },
+  {
+    "graph_index": 24,
+    "tissue": "midbrain",
+    "color": 70,
+    "rows": [
+      54640,
+      54758,
+      54925,
+      55222,
+      55330,
+      55850
+    ],
+    "candidate_genes": [
+      2537,
+      8609,
+      10201,
+      10242,
+      55471,
+      79017
+    ]
+  },
+  {
+    "graph_index": 24,
+    "tissue": "midbrain",
+    "color": 86,
+    "rows": [
+      54653,
+      55131,
+      55238,
+      55920,
+      55990
+    ],
+    "candidate_genes": [
+      1395,
+      8605,
+      25825,
+      51289,
+      57107
+    ]
+  },
+  {
+    "graph_index": 24,
+    "tissue": "midbrain",
+    "color": 85,
+    "rows": [
+      54699,
+      56821
+    ],
+    "candidate_genes": [
+      6376,
+      9263
+    ]
+  },
+  {
+    "graph_index": 24,
+    "tissue": "midbrain",
+    "color": 0,
+    "rows": [
+      54852,
+      55820,
+      55936,
+      56084,
+      56135,
+      56451,
+      56700,
+      56811,
+      56819,
+      56896
+    ],
+    "candidate_genes": [
+      2254,
+      3762,
+      6490,
+      7903,
+      9048,
+      9619,
+      10316,
+      23305,
+      51378,
+      163702
+    ]
+  },
+  {
+    "graph_index": 24,
+    "tissue": "midbrain",
+    "color": 39,
+    "rows": [
+      55120,
+      56302
+    ],
+    "candidate_genes": [
+      9990,
+      57493
+    ]
+  },
+  {
+    "graph_index": 24,
+    "tissue": "midbrain",
+    "color": 161,
+    "rows": [
+      55126,
+      56710,
+      56876
+    ],
+    "candidate_genes": [
+      50485,
+      84268,
+      246243
+    ]
+  },
+  {
+    "graph_index": 24,
+    "tissue": "midbrain",
+    "color": 33,
+    "rows": [
+      55149,
+      55973
+    ],
+    "candidate_genes": [
+      2591,
+      150290
+    ]
+  },
+  {
+    "graph_index": 24,
+    "tissue": "midbrain",
+    "color": 2,
+    "rows": [
+      55380,
+      55383
+    ],
+    "candidate_genes": [
+      1135,
+      1138
+    ]
+  },
+  {
+    "graph_index": 24,
+    "tissue": "midbrain",
+    "color": 27,
+    "rows": [
+      55403,
+      55486
+    ],
+    "candidate_genes": [
+      9379,
+      23129
+    ]
+  },
+  {
+    "graph_index": 24,
+    "tissue": "midbrain",
+    "color": 35,
+    "rows": [
+      55417,
+      56520,
+      56608
+    ],
+    "candidate_genes": [
+      8611,
+      22845,
+      51715
+    ]
+  },
+  {
+    "graph_index": 24,
+    "tissue": "midbrain",
+    "color": 26,
+    "rows": [
+      55624,
+      55889
+    ],
+    "candidate_genes": [
+      9819,
+      150465
+    ]
+  },
+  {
+    "graph_index": 24,
+    "tissue": "midbrain",
+    "color": 55,
+    "rows": [
+      55932,
+      56784
+    ],
+    "candidate_genes": [
+      9907,
+      114798
+    ]
+  },
+  {
+    "graph_index": 24,
+    "tissue": "midbrain",
+    "color": 69,
+    "rows": [
+      56245,
+      56671
+    ],
+    "candidate_genes": [
+      64067,
+      84883
+    ]
+  },
+  {
+    "graph_index": 24,
+    "tissue": "midbrain",
+    "color": 43,
+    "rows": [
+      56277,
+      56869
+    ],
+    "candidate_genes": [
+      51738,
+      55500
+    ]
+  },
+  {
+    "graph_index": 24,
+    "tissue": "midbrain",
+    "color": 1467,
+    "rows": [
+      56755,
+      56760
+    ],
+    "candidate_genes": [
+      8360,
+      8367
+    ]
+  },
+  {
+    "graph_index": 24,
+    "tissue": "midbrain",
+    "color": 1430,
+    "rows": [
+      56757,
+      56759,
+      56762
+    ],
+    "candidate_genes": [
+      8362,
+      8364,
+      8368
+    ]
+  }
+]

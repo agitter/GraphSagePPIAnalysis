@@ -1,0 +1,42 @@
+{
+  "total_OhmNet_networks": 144,
+  "GraphSAGE_selected_tissues": 24,
+  "networks_at_least_15000_edges": 105,
+  "networks_at_least_35000_edges": 36,
+  "all_selected_meet_15000_edges": false,
+  "validation_test_all_meet_35000_edges": false,
+  "selected_set_equals_top24_by_edge_count": false,
+  "selected_tissues_not_in_top24_by_edge_count": [
+    "adipose_tissue",
+    "adrenal_cortex",
+    "adrenal_gland",
+    "amygdala",
+    "aorta",
+    "artery",
+    "astrocyte",
+    "basal_ganglion",
+    "basophil",
+    "blood_plasma",
+    "blood_platelet",
+    "bone",
+    "eye",
+    "midbrain"
+  ],
+  "top24_tissues_not_selected": [
+    "bone_marrow",
+    "central_nervous_system",
+    "fetus",
+    "intestine",
+    "leukocyte",
+    "nervous_system",
+    "ovary",
+    "pancreas",
+    "placenta",
+    "prostate_gland",
+    "skeletal_muscle",
+    "small_intestine",
+    "spleen",
+    "testis"
+  ],
+  "selection_and_split_procedure_recovered": false
+}

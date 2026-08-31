@@ -1,0 +1,14 @@
+Release 160 failed: Download failed after 3 attempts: https://ftp.ebi.ac.uk/pub/databases/GO/goa/old/HUMAN/goa_human.gaf.160.gz: <urlopen error [Errno -3] Temporary failure in name resolution>
+Traceback (most recent call last):
+  File "/mnt/data/ppi_repro_corrected/batches/B104D_20260829T010311Z/scripts/screen_goa_release_date_range.py", line 690, in <module>
+    main()
+    ~~~~^^
+  File "/mnt/data/ppi_repro_corrected/batches/B104D_20260829T010311Z/scripts/screen_goa_release_date_range.py", line 633, in main
+    gaf, gaf_url, gaf_downloaded = resolve_release_file(release, "gaf", cache, args.local_release_dir, args.offline)
+                                   ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/data/ppi_repro_corrected/batches/B104D_20260829T010311Z/scripts/screen_goa_release_date_range.py", line 111, in resolve_release_file
+    download(url, dest)
+    ~~~~~~~~^^^^^^^^^^^
+  File "/mnt/data/ppi_repro_corrected/batches/B104D_20260829T010311Z/scripts/screen_goa_release_date_range.py", line 81, in download
+    raise RuntimeError(f"Download failed after {retries} attempts: {url}: {last}")
+RuntimeError: Download failed after 3 attempts: https://ftp.ebi.ac.uk/pub/databases/GO/goa/old/HUMAN/goa_human.gaf.160.gz: <urlopen error [Errno -3] Temporary failure in name resolution>

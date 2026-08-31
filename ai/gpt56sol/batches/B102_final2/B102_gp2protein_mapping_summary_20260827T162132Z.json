@@ -1,0 +1,1176 @@
+{
+  "header_lines": [
+    "! GeneID to UniProtKB mapping",
+    "! Contact: UniProt-GOA Production <goa-prod@ebi.ac.uk>",
+    "!",
+    "! Generated: 2016-05-09"
+  ],
+  "header_sha256": "bd2c8ba8b65590f0d431aa98b9f5d75a84eadbdc284c9adb9891ae1e651c771e",
+  "generated_header": "! Generated: 2016-05-09",
+  "raw_data_rows": 7296170,
+  "column_width_counts": {
+    "2": 7296170
+  },
+  "malformed_rows": 0,
+  "uncompressed_data_sha256": "aeb96bc41ee4d09ae84d754ecdd6bbb6a0bc61467fa2d40c18d7918051c57b42",
+  "human_accession_subset_rows": 23046,
+  "retained_relevant_rows_union_human_GPI159_or_GraphSAGE": 25983,
+  "retained_relevant_raw_line_sha256": "68b7ebce207fddc47dfae43fd18d6b0ac7b9735e7b0e46d497d32b1c617f5d1d",
+  "unique_human_GeneID_UniProt_pairs": 23046,
+  "duplicate_human_pairs": 0,
+  "GPI159_accession_rows_in_all_species_file": 19204,
+  "rows_for_resolved_GraphSAGE_GeneIDs": 8171,
+  "human_accessions_defined_by_gp2protein_human": 70625,
+  "human_accessions_with_at_least_one_GeneID_link": 22677,
+  "human_accessions_without_GeneID_link": 47948,
+  "GPI159_objects": 21002,
+  "GPI159_objects_in_human_self_map": 21001,
+  "GPI159_objects_missing_from_human_self_map": [
+    "P0DO97"
+  ],
+  "GPI159_objects_with_at_least_one_full_GeneID_link": 18869,
+  "GPI159_objects_without_full_GeneID_link": 2133,
+  "GAF159_annotated_objects": 19194,
+  "GAF159_annotated_objects_with_at_least_one_full_GeneID_link": 18094,
+  "GAF159_annotated_objects_without_full_GeneID_link": 1100,
+  "GAF159_nonempty_Gene_Product_Form_IDs": [],
+  "resolved_GraphSAGE_GeneIDs": 4268,
+  "resolved_GraphSAGE_GeneIDs_with_any_row_any_accession": 4265,
+  "resolved_GraphSAGE_GeneIDs_without_any_row_any_accession": [
+    337,
+    4018,
+    84919
+  ],
+  "resolved_GraphSAGE_GeneIDs_covered_via_GPI159_objects": 4259,
+  "resolved_GraphSAGE_GeneIDs_missing_via_GPI159_objects": [
+    176,
+    337,
+    3108,
+    4018,
+    7957,
+    10159,
+    29901,
+    55125,
+    84919
+  ],
+  "historical_vs_provisional_mapping_category_counts": {
+    "both_empty": 16665,
+    "historical_nonempty_provisional_empty": 7,
+    "exact_equal_nonempty": 4189,
+    "historical_empty_provisional_nonempty": 85,
+    "historical_strict_subset": 54,
+    "provisional_strict_subset": 2
+  },
+  "historical_vs_provisional_mapping_examples": {
+    "both_empty": [
+      {
+        "accession": "A0A024R161",
+        "historical": [],
+        "provisional": []
+      },
+      {
+        "accession": "A0A044PY82",
+        "historical": [],
+        "provisional": []
+      },
+      {
+        "accession": "A0A075B6F4",
+        "historical": [],
+        "provisional": []
+      },
+      {
+        "accession": "A0A075B6H5",
+        "historical": [],
+        "provisional": []
+      },
+      {
+        "accession": "A0A075B6H7",
+        "historical": [],
+        "provisional": []
+      },
+      {
+        "accession": "A0A075B6H8",
+        "historical": [],
+        "provisional": []
+      },
+      {
+        "accession": "A0A075B6H9",
+        "historical": [],
+        "provisional": []
+      },
+      {
+        "accession": "A0A075B6I0",
+        "historical": [],
+        "provisional": []
+      },
+      {
+        "accession": "A0A075B6I1",
+        "historical": [],
+        "provisional": []
+      },
+      {
+        "accession": "A0A075B6I2",
+        "historical": [],
+        "provisional": []
+      },
+      {
+        "accession": "A0A075B6I3",
+        "historical": [],
+        "provisional": []
+      },
+      {
+        "accession": "A0A075B6I4",
+        "historical": [],
+        "provisional": []
+      },
+      {
+        "accession": "A0A075B6I5",
+        "historical": [],
+        "provisional": []
+      },
+      {
+        "accession": "A0A075B6I6",
+        "historical": [],
+        "provisional": []
+      },
+      {
+        "accession": "A0A075B6I7",
+        "historical": [],
+        "provisional": []
+      },
+      {
+        "accession": "A0A075B6I8",
+        "historical": [],
+        "provisional": []
+      },
+      {
+        "accession": "A0A075B6I9",
+        "historical": [],
+        "provisional": []
+      },
+      {
+        "accession": "A0A075B6J0",
+        "historical": [],
+        "provisional": []
+      },
+      {
+        "accession": "A0A075B6J1",
+        "historical": [],
+        "provisional": []
+      },
+      {
+        "accession": "A0A075B6J2",
+        "historical": [],
+        "provisional": []
+      },
+      {
+        "accession": "A0A075B6J3",
+        "historical": [],
+        "provisional": []
+      },
+      {
+        "accession": "A0A075B6J4",
+        "historical": [],
+        "provisional": []
+      },
+      {
+        "accession": "A0A075B6J5",
+        "historical": [],
+        "provisional": []
+      },
+      {
+        "accession": "A0A075B6J6",
+        "historical": [],
+        "provisional": []
+      },
+      {
+        "accession": "A0A075B6J7",
+        "historical": [],
+        "provisional": []
+      }
+    ],
+    "historical_nonempty_provisional_empty": [
+      {
+        "accession": "A0A0B4J2E2",
+        "historical": [
+          6359
+        ],
+        "provisional": []
+      },
+      {
+        "accession": "A8MWV9",
+        "historical": [
+          3753
+        ],
+        "provisional": []
+      },
+      {
+        "accession": "E7EV46",
+        "historical": [
+          2074
+        ],
+        "provisional": []
+      },
+      {
+        "accession": "O95073",
+        "historical": [
+          25788
+        ],
+        "provisional": []
+      },
+      {
+        "accession": "P0CG08",
+        "historical": [
+          653519
+        ],
+        "provisional": []
+      },
+      {
+        "accession": "P31995",
+        "historical": [
+          2213
+        ],
+        "provisional": []
+      },
+      {
+        "accession": "Q8N328",
+        "historical": [
+          2074
+        ],
+        "provisional": []
+      }
+    ],
+    "exact_equal_nonempty": [
+      {
+        "accession": "A0AVT1",
+        "historical": [
+          55236
+        ],
+        "provisional": [
+          55236
+        ]
+      },
+      {
+        "accession": "A1X283",
+        "historical": [
+          285590
+        ],
+        "provisional": [
+          285590
+        ]
+      },
+      {
+        "accession": "A6NHR9",
+        "historical": [
+          23347
+        ],
+        "provisional": [
+          23347
+        ]
+      },
+      {
+        "accession": "A6NIX2",
+        "historical": [
+          126374
+        ],
+        "provisional": [
+          126374
+        ]
+      },
+      {
+        "accession": "A8K0Z3",
+        "historical": [
+          100287171
+        ],
+        "provisional": [
+          100287171
+        ]
+      },
+      {
+        "accession": "A9YTQ3",
+        "historical": [
+          57491
+        ],
+        "provisional": [
+          57491
+        ]
+      },
+      {
+        "accession": "B5ME19",
+        "historical": [
+          728689
+        ],
+        "provisional": [
+          728689
+        ]
+      },
+      {
+        "accession": "B7ZAQ6",
+        "historical": [
+          653519
+        ],
+        "provisional": [
+          653519
+        ]
+      },
+      {
+        "accession": "O00139",
+        "historical": [
+          3796
+        ],
+        "provisional": [
+          3796
+        ]
+      },
+      {
+        "accession": "O00148",
+        "historical": [
+          10212
+        ],
+        "provisional": [
+          10212
+        ]
+      },
+      {
+        "accession": "O00160",
+        "historical": [
+          4542
+        ],
+        "provisional": [
+          4542
+        ]
+      },
+      {
+        "accession": "O00161",
+        "historical": [
+          8773
+        ],
+        "provisional": [
+          8773
+        ]
+      },
+      {
+        "accession": "O00167",
+        "historical": [
+          2139
+        ],
+        "provisional": [
+          2139
+        ]
+      },
+      {
+        "accession": "O00170",
+        "historical": [
+          9049
+        ],
+        "provisional": [
+          9049
+        ]
+      },
+      {
+        "accession": "O00175",
+        "historical": [
+          6369
+        ],
+        "provisional": [
+          6369
+        ]
+      },
+      {
+        "accession": "O00180",
+        "historical": [
+          3775
+        ],
+        "provisional": [
+          3775
+        ]
+      },
+      {
+        "accession": "O00182",
+        "historical": [
+          3965
+        ],
+        "provisional": [
+          3965
+        ]
+      },
+      {
+        "accession": "O00186",
+        "historical": [
+          6814
+        ],
+        "provisional": [
+          6814
+        ]
+      },
+      {
+        "accession": "O00187",
+        "historical": [
+          10747
+        ],
+        "provisional": [
+          10747
+        ]
+      },
+      {
+        "accession": "O00194",
+        "historical": [
+          5874
+        ],
+        "provisional": [
+          5874
+        ]
+      },
+      {
+        "accession": "O00198",
+        "historical": [
+          8739
+        ],
+        "provisional": [
+          8739
+        ]
+      },
+      {
+        "accession": "O00203",
+        "historical": [
+          8546
+        ],
+        "provisional": [
+          8546
+        ]
+      },
+      {
+        "accession": "O00206",
+        "historical": [
+          7099
+        ],
+        "provisional": [
+          7099
+        ]
+      },
+      {
+        "accession": "O00213",
+        "historical": [
+          322
+        ],
+        "provisional": [
+          322
+        ]
+      },
+      {
+        "accession": "O00217",
+        "historical": [
+          4728
+        ],
+        "provisional": [
+          4728
+        ]
+      }
+    ],
+    "historical_empty_provisional_nonempty": [
+      {
+        "accession": "A6NKF1",
+        "historical": [],
+        "provisional": [
+          29901
+        ]
+      },
+      {
+        "accession": "B3EWF7",
+        "historical": [],
+        "provisional": [
+          7957
+        ]
+      },
+      {
+        "accession": "F6WH68",
+        "historical": [],
+        "provisional": [
+          51750
+        ]
+      },
+      {
+        "accession": "O00144",
+        "historical": [],
+        "provisional": [
+          7976
+        ]
+      },
+      {
+        "accession": "O00330",
+        "historical": [],
+        "provisional": [
+          3651
+        ]
+      },
+      {
+        "accession": "O00590",
+        "historical": [],
+        "provisional": [
+          2826
+        ]
+      },
+      {
+        "accession": "O14520",
+        "historical": [],
+        "provisional": [
+          366
+        ]
+      },
+      {
+        "accession": "O43612",
+        "historical": [],
+        "provisional": [
+          5498
+        ]
+      },
+      {
+        "accession": "O75340",
+        "historical": [],
+        "provisional": [
+          85365
+        ]
+      },
+      {
+        "accession": "O94759",
+        "historical": [],
+        "provisional": [
+          57113
+        ]
+      },
+      {
+        "accession": "O94992",
+        "historical": [],
+        "provisional": [
+          10978
+        ]
+      },
+      {
+        "accession": "O95886",
+        "historical": [],
+        "provisional": [
+          7818
+        ]
+      },
+      {
+        "accession": "O96009",
+        "historical": [],
+        "provisional": [
+          8775
+        ]
+      },
+      {
+        "accession": "P01298",
+        "historical": [],
+        "provisional": [
+          4860
+        ]
+      },
+      {
+        "accession": "P03971",
+        "historical": [],
+        "provisional": [
+          4282
+        ]
+      },
+      {
+        "accession": "P06727",
+        "historical": [],
+        "provisional": [
+          337
+        ]
+      },
+      {
+        "accession": "P08519",
+        "historical": [],
+        "provisional": [
+          4018
+        ]
+      },
+      {
+        "accession": "P11678",
+        "historical": [],
+        "provisional": [
+          2056
+        ]
+      },
+      {
+        "accession": "P13727",
+        "historical": [],
+        "provisional": [
+          4155
+        ]
+      },
+      {
+        "accession": "P16112",
+        "historical": [],
+        "provisional": [
+          176
+        ]
+      },
+      {
+        "accession": "P16415",
+        "historical": [],
+        "provisional": [
+          7538
+        ]
+      },
+      {
+        "accession": "P20848",
+        "historical": [],
+        "provisional": [
+          545
+        ]
+      },
+      {
+        "accession": "P23634",
+        "historical": [],
+        "provisional": [
+          491
+        ]
+      },
+      {
+        "accession": "P28067",
+        "historical": [],
+        "provisional": [
+          3108
+        ]
+      },
+      {
+        "accession": "P29372",
+        "historical": [],
+        "provisional": [
+          4281
+        ]
+      }
+    ],
+    "historical_strict_subset": [
+      {
+        "accession": "O00255",
+        "historical": [
+          4221
+        ],
+        "provisional": [
+          4221,
+          7857
+        ]
+      },
+      {
+        "accession": "O14595",
+        "historical": [
+          10106
+        ],
+        "provisional": [
+          6342,
+          10106
+        ]
+      },
+      {
+        "accession": "O14686",
+        "historical": [
+          8085
+        ],
+        "provisional": [
+          8085,
+          9757
+        ]
+      },
+      {
+        "accession": "O60930",
+        "historical": [
+          246243
+        ],
+        "provisional": [
+          6050,
+          246243
+        ]
+      },
+      {
+        "accession": "O75398",
+        "historical": [
+          10522
+        ],
+        "provisional": [
+          6693,
+          10522
+        ]
+      },
+      {
+        "accession": "O75417",
+        "historical": [
+          10721
+        ],
+        "provisional": [
+          5429,
+          10721
+        ]
+      },
+      {
+        "accession": "O95243",
+        "historical": [
+          8930
+        ],
+        "provisional": [
+          5469,
+          8930
+        ]
+      },
+      {
+        "accession": "O95747",
+        "historical": [
+          9943
+        ],
+        "provisional": [
+          9943,
+          130497
+        ]
+      },
+      {
+        "accession": "P01732",
+        "historical": [
+          925
+        ],
+        "provisional": [
+          925,
+          4118
+        ]
+      },
+      {
+        "accession": "P02655",
+        "historical": [
+          344
+        ],
+        "provisional": [
+          344,
+          10297
+        ]
+      },
+      {
+        "accession": "P05198",
+        "historical": [
+          1965
+        ],
+        "provisional": [
+          1965,
+          83939
+        ]
+      },
+      {
+        "accession": "P11047",
+        "historical": [
+          3915
+        ],
+        "provisional": [
+          3913,
+          3915
+        ]
+      },
+      {
+        "accession": "P17252",
+        "historical": [
+          5578
+        ],
+        "provisional": [
+          5566,
+          5578
+        ]
+      },
+      {
+        "accession": "P19320",
+        "historical": [
+          7412
+        ],
+        "provisional": [
+          3897,
+          7412
+        ]
+      },
+      {
+        "accession": "P25100",
+        "historical": [
+          146
+        ],
+        "provisional": [
+          146,
+          148
+        ]
+      },
+      {
+        "accession": "P28328",
+        "historical": [
+          5828
+        ],
+        "provisional": [
+          5828,
+          54623
+        ]
+      },
+      {
+        "accession": "P31645",
+        "historical": [
+          6532
+        ],
+        "provisional": [
+          3064,
+          6532
+        ]
+      },
+      {
+        "accession": "P33993",
+        "historical": [
+          4176
+        ],
+        "provisional": [
+          4171,
+          4176
+        ]
+      },
+      {
+        "accession": "P40424",
+        "historical": [
+          5087
+        ],
+        "provisional": [
+          5087,
+          5617
+        ]
+      },
+      {
+        "accession": "P43699",
+        "historical": [
+          7080
+        ],
+        "provisional": [
+          7080,
+          7270
+        ]
+      },
+      {
+        "accession": "P56537",
+        "historical": [
+          3692
+        ],
+        "provisional": [
+          3692,
+          8661
+        ]
+      },
+      {
+        "accession": "P58753",
+        "historical": [
+          114609
+        ],
+        "provisional": [
+          4118,
+          114609
+        ]
+      },
+      {
+        "accession": "P60484",
+        "historical": [
+          5728
+        ],
+        "provisional": [
+          5728,
+          7011
+        ]
+      },
+      {
+        "accession": "P68106",
+        "historical": [
+          2281
+        ],
+        "provisional": [
+          2281,
+          11328
+        ]
+      },
+      {
+        "accession": "Q12851",
+        "historical": [
+          5871
+        ],
+        "provisional": [
+          2645,
+          5871
+        ]
+      }
+    ],
+    "provisional_strict_subset": [
+      {
+        "accession": "P0DMV8",
+        "historical": [
+          3303,
+          3304
+        ],
+        "provisional": [
+          3303
+        ]
+      },
+      {
+        "accession": "P0DMV9",
+        "historical": [
+          3303,
+          3304
+        ],
+        "provisional": [
+          3304
+        ]
+      }
+    ]
+  },
+  "mapping_strategy_summaries": {
+    "gp2protein_all_graphsage_links": {
+      "mapped_GPI_objects": 4252,
+      "mapped_annotated_GAF_objects": 4250,
+      "objects_with_multiple_GraphSAGE_GeneIDs": 5,
+      "GraphSAGE_genes_covered_by_GPI_objects": 4259,
+      "GraphSAGE_genes_missing_from_GPI_projection": [
+        176,
+        337,
+        3108,
+        4018,
+        7957,
+        10159,
+        29901,
+        55125,
+        84919
+      ],
+      "GraphSAGE_genes_covered_by_annotated_objects": 4259,
+      "GraphSAGE_genes_missing_from_annotated_projection": [
+        176,
+        337,
+        3108,
+        4018,
+        7957,
+        10159,
+        29901,
+        55125,
+        84919
+      ]
+    },
+    "gp2protein_unique_graphsage_link_only": {
+      "mapped_GPI_objects": 4247,
+      "mapped_annotated_GAF_objects": 4245,
+      "objects_with_multiple_GraphSAGE_GeneIDs": 0,
+      "GraphSAGE_genes_covered_by_GPI_objects": 4240,
+      "GraphSAGE_genes_missing_from_GPI_projection": [
+        176,
+        337,
+        801,
+        805,
+        808,
+        3039,
+        3040,
+        3108,
+        3303,
+        3304,
+        4018,
+        7957,
+        8294,
+        8359,
+        8360,
+        8361,
+        8363,
+        8364,
+        8365,
+        8366,
+        8367,
+        8370,
+        10159,
+        29901,
+        55125,
+        84919,
+        121504,
+        554313
+      ],
+      "GraphSAGE_genes_covered_by_annotated_objects": 4240,
+      "GraphSAGE_genes_missing_from_annotated_projection": [
+        176,
+        337,
+        801,
+        805,
+        808,
+        3039,
+        3040,
+        3108,
+        3303,
+        3304,
+        4018,
+        7957,
+        8294,
+        8359,
+        8360,
+        8361,
+        8363,
+        8364,
+        8365,
+        8366,
+        8367,
+        8370,
+        10159,
+        29901,
+        55125,
+        84919,
+        121504,
+        554313
+      ]
+    },
+    "gp2protein_unique_full_GeneID_link_only": {
+      "mapped_GPI_objects": 4217,
+      "mapped_annotated_GAF_objects": 4216,
+      "objects_with_multiple_GraphSAGE_GeneIDs": 0,
+      "GraphSAGE_genes_covered_by_GPI_objects": 4215,
+      "GraphSAGE_genes_missing_from_GPI_projection": [
+        176,
+        337,
+        648,
+        801,
+        805,
+        808,
+        1139,
+        1409,
+        1454,
+        1673,
+        2966,
+        3039,
+        3040,
+        3108,
+        3303,
+        3304,
+        3439,
+        4018,
+        4681,
+        4831,
+        5540,
+        6231,
+        6693,
+        6818,
+        7335,
+        7957,
+        8294,
+        8359,
+        8360,
+        8361,
+        8363,
+        8364,
+        8365,
+        8366,
+        8367,
+        8370,
+        10159,
+        10432,
+        22914,
+        23308,
+        23678,
+        29901,
+        29970,
+        51256,
+        55125,
+        80755,
+        84919,
+        121504,
+        150094,
+        353376,
+        554313,
+        653519,
+        100137049
+      ],
+      "GraphSAGE_genes_covered_by_annotated_objects": 4215,
+      "GraphSAGE_genes_missing_from_annotated_projection": [
+        176,
+        337,
+        648,
+        801,
+        805,
+        808,
+        1139,
+        1409,
+        1454,
+        1673,
+        2966,
+        3039,
+        3040,
+        3108,
+        3303,
+        3304,
+        3439,
+        4018,
+        4681,
+        4831,
+        5540,
+        6231,
+        6693,
+        6818,
+        7335,
+        7957,
+        8294,
+        8359,
+        8360,
+        8361,
+        8363,
+        8364,
+        8365,
+        8366,
+        8367,
+        8370,
+        10159,
+        10432,
+        22914,
+        23308,
+        23678,
+        29901,
+        29970,
+        51256,
+        55125,
+        80755,
+        84919,
+        121504,
+        150094,
+        353376,
+        554313,
+        653519,
+        100137049
+      ]
+    },
+    "gp2protein_then_primary_symbol_fallback": {
+      "mapped_GPI_objects": 4260,
+      "mapped_annotated_GAF_objects": 4258,
+      "objects_with_multiple_GraphSAGE_GeneIDs": 5,
+      "GraphSAGE_genes_covered_by_GPI_objects": 4267,
+      "GraphSAGE_genes_missing_from_GPI_projection": [
+        10159
+      ],
+      "GraphSAGE_genes_covered_by_annotated_objects": 4267,
+      "GraphSAGE_genes_missing_from_annotated_projection": [
+        10159
+      ]
+    },
+    "gp2protein_then_all_names_fallback": {
+      "mapped_GPI_objects": 4337,
+      "mapped_annotated_GAF_objects": 4335,
+      "objects_with_multiple_GraphSAGE_GeneIDs": 5,
+      "GraphSAGE_genes_covered_by_GPI_objects": 4267,
+      "GraphSAGE_genes_missing_from_GPI_projection": [
+        10159
+      ],
+      "GraphSAGE_genes_covered_by_annotated_objects": 4267,
+      "GraphSAGE_genes_missing_from_annotated_projection": [
+        10159
+      ]
+    },
+    "gp2protein_union_all_names_sensitivity": {
+      "mapped_GPI_objects": 4337,
+      "mapped_annotated_GAF_objects": 4335,
+      "objects_with_multiple_GraphSAGE_GeneIDs": 59,
+      "GraphSAGE_genes_covered_by_GPI_objects": 4267,
+      "GraphSAGE_genes_missing_from_GPI_projection": [
+        10159
+      ],
+      "GraphSAGE_genes_covered_by_annotated_objects": 4267,
+      "GraphSAGE_genes_missing_from_annotated_projection": [
+        10159
+      ]
+    }
+  }
+}

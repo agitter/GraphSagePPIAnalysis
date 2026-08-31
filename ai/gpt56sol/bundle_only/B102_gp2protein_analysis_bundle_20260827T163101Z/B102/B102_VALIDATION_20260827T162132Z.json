@@ -1,0 +1,31 @@
+{
+  "batch_id": "B102",
+  "generated_at_utc": "2026-08-27T16:22:36.415383+00:00",
+  "runtime_seconds": 63.795148611068726,
+  "input_integrity_all_pass": true,
+  "full_inventory_rows": 65,
+  "full_inventory_total_bytes": 2680734828,
+  "gp2protein_human_format_valid": true,
+  "gp2protein_geneid_format_valid": true,
+  "historical_mapping_graphsage_coverage": 4259,
+  "historical_mapping_graphsage_missing": [
+    176,
+    337,
+    3108,
+    4018,
+    7957,
+    10159,
+    29901,
+    55125,
+    84919
+  ],
+  "vectorized_vs_bruteforce_validation_mismatches": [],
+  "vectorized_vs_bruteforce_validation_pass": true,
+  "retained_derivatives_re_read_pass": true,
+  "remote_byte_comparison_performed": false,
+  "remote_byte_comparison_limitation": "Runtime DNS resolution for release.geneontology.org failed. Exact official archive URLs are recorded, and the uploaded bytes match the independently generated full user-local inventory hashes.",
+  "workbook_parser_warnings": [
+    "Unknown extension is not supported and will be removed",
+    "Unknown extension is not supported and will be removed"
+  ]
+}

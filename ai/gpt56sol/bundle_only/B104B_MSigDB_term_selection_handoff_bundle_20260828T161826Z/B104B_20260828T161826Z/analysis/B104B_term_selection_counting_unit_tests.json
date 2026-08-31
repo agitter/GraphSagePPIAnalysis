@@ -1,0 +1,69 @@
+{
+  "accepted_rows": 107568,
+  "target_ids": 121,
+  "tests": [
+    {
+      "rank121": [
+        "GO:0031399",
+        1007
+      ],
+      "rank122": [
+        "GO:0043167",
+        997
+      ],
+      "terms": 16338,
+      "threshold_1000_exact": true,
+      "threshold_1000_extra": 0,
+      "threshold_1000_missing": 0,
+      "threshold_1000_overlap": 121,
+      "threshold_1000_size": 121,
+      "top121_exact": true,
+      "top121_extra": 0,
+      "top121_missing": 0,
+      "top121_overlap": 121,
+      "unit": "unique_historical_GeneID"
+    },
+    {
+      "rank121": [
+        "GO:0031399",
+        1006
+      ],
+      "rank122": [
+        "GO:0043167",
+        990
+      ],
+      "terms": 16357,
+      "threshold_1000_exact": true,
+      "threshold_1000_extra": 0,
+      "threshold_1000_missing": 0,
+      "threshold_1000_overlap": 121,
+      "threshold_1000_size": 121,
+      "top121_exact": true,
+      "top121_extra": 0,
+      "top121_missing": 0,
+      "top121_overlap": 121,
+      "unit": "unique_all_GPI_accession"
+    },
+    {
+      "rank121": [
+        "GO:0031399",
+        1006
+      ],
+      "rank122": [
+        "GO:0043167",
+        990
+      ],
+      "terms": 16357,
+      "threshold_1000_exact": true,
+      "threshold_1000_extra": 0,
+      "threshold_1000_missing": 0,
+      "threshold_1000_overlap": 121,
+      "threshold_1000_size": 121,
+      "top121_exact": true,
+      "top121_extra": 0,
+      "top121_missing": 0,
+      "top121_overlap": 121,
+      "unit": "unique_SwissProt_GPI_accession"
+    }
+  ]
+}

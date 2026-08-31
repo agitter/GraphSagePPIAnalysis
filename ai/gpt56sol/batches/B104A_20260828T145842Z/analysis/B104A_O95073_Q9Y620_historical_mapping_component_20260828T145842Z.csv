@@ -1,0 +1,5 @@
+GeneID,independent_Entrez_symbols_from_MSigDB_v5_2,UniProtKB_accession,GPI159_primary_symbol,GPI159_object_name,in_GPI159,in_GraphSAGE_resolved_gene_set,historical_edge_status
+25788,RAD54B,A0A087X0H2,,,0,1,present_in_2016-06-01_gp2protein.geneid
+25788,RAD54B,O95073,FSBP,Fibrinogen silencer-binding protein,1,1,present_in_2016-06-01_gp2protein.geneid
+25788,RAD54B,Q9Y620,RAD54B,DNA repair and recombination protein RAD54B,1,1,present_in_2016-06-01_gp2protein.geneid
+100861412,,O95073,FSBP,Fibrinogen silencer-binding protein,1,0,present_in_2016-06-01_gp2protein.geneid

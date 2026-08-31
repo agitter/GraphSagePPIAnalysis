@@ -1,0 +1,62 @@
+Directory for index files between database object ID and sequence accession IDs.
+
+Informal Description:
+
+geneObjectID	DBID:seqAcc;DBID:seqAcc;DBID:seqAcc; 
+
+where multiple seqIDs are only added to reflect alternative
+transcripts, not allelic variants.  Separate multiple sequence
+accession numbers with a semicolon (';').
+
+The first column is assumed to be of the form DBID:geneObjectID, where
+DBID is stated or if not present the extension on the filename is
+used.  For example, in the file gp2protein.sgd the first column:
+
+SGD:S0000010	UniProtKB:P31373
+
+At this time only NCBI and UniProtKB accessions are used for loading
+the GOC database.
+
+Formal Description:
+
+There should be one file per group contributing annotations - every
+group contributing a GAF should contribute a gp2protein file.
+
+The file suffix should be the same as the one used in the GAF file
+  E.g. sgd, wb, zfin, ...
+
+Each line in the file is terminated by a single newline "\n" character.
+
+
+Each line in the file has exactly two values separated by a single tab
+"\t" character.
+
+  File --> Line*
+  Line --> MainID "\t" MappingsList "\n"
+
+The first value is a global identifier, of the form <DB>:<LocalID>
+
+  MainID --> DB ":" LocalID
+
+The DB should correspond to whatever is in column 1 in the GAF, the
+LocalID should correspond to column 2 in the GAF (though not every
+entry in the gp2protein file need have a line in the GAF).
+
+The second value is a ';' separated list of global identifiers, also
+of the form <DB>:<LocalID>. A list of length zero IS permitted. (Note
+that if a zero-length list is provided, then the line must have tab
+character, the tab will be immediately followed by the newline character.
+
+  MappingsList --> "" | ID | ID ";" MappingsList 
+
+
+Individual File details:
+
+
+gp2protein.unigene
+------------------
+
+UniGene cluster id to UniProt mapping created with:
+
+loc2UG:    ftp://ftp.ncbi.nih.gov/refseq/LocusLink/loc2UG
+UniProt:   ftp://ftp.ebi.ac.uk/pub/databases/uniprot/current_release/knowledgebase/

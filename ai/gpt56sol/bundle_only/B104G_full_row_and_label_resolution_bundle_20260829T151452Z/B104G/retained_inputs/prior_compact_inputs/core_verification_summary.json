@@ -1,0 +1,205 @@
+{
+  "generated_at_utc": "2026-08-24T15:49:41.515483+00:00",
+  "runtime_seconds": 68.6560435295105,
+  "inputs": {
+    "graphsage_ppi_sha256": "53aeb76e54fd41b645e7edb48b62929240b89839495396b048086fd212503fbd",
+    "dgl_ppi_sha256": "1f5b2b09ac0f897fa6aa1338c64ab75a5473674cbba89380120bede8cddb2a6a",
+    "ohmnet_networks_sha256": "2c79e17f4a7c8680a7cbf8b20cef4acf356a7523c9a75fce586494153c0603d1",
+    "msigdb_v52_sha256": "a618c1c60b11570036034e6357e73e80ee43065ec7a57c1dbd238f205405fbdb"
+  },
+  "graphsage": {
+    "nodes": 56944,
+    "undirected_links_including_loops": 818716,
+    "self_loops": 25084,
+    "features_shape": [
+      56944,
+      50
+    ],
+    "features_dtype": "float64",
+    "labels_shape": [
+      56944,
+      121
+    ],
+    "labels_dtype": "uint8",
+    "split_node_counts": {
+      "train": 44906,
+      "valid": 6514,
+      "test": 5524
+    },
+    "connected_components_total": 295,
+    "safe_cut_count_including_endpoints": 25,
+    "safe_intervals": 24,
+    "node_json_fields": [
+      "id",
+      "test",
+      "val"
+    ],
+    "has_graph_id_field": false
+  },
+  "partition": {
+    "block_count": 24,
+    "bounds": [
+      0,
+      1554,
+      2942,
+      5215,
+      7564,
+      9151,
+      10180,
+      12015,
+      14515,
+      15117,
+      18443,
+      20850,
+      22734,
+      24559,
+      28056,
+      30863,
+      33196,
+      35860,
+      38689,
+      41869,
+      44906,
+      48116,
+      51420,
+      54634,
+      56944
+    ],
+    "tissues": [
+      "adipose_tissue",
+      "adrenal_cortex",
+      "adrenal_gland",
+      "amygdala",
+      "aorta",
+      "astrocyte",
+      "artery",
+      "basal_ganglion",
+      "basophil",
+      "blood",
+      "blood_plasma",
+      "blood_platelet",
+      "bone",
+      "brain",
+      "colon",
+      "eye",
+      "forebrain",
+      "large_intestine",
+      "liver",
+      "gastrointestinal_tract",
+      "heart",
+      "kidney",
+      "lung",
+      "midbrain"
+    ],
+    "all_node_edge_statistics_exact": true
+  },
+  "gene_identity": {
+    "topology_unique_rows": 55878,
+    "topology_unique_genes": 4232,
+    "feature_disambiguated_additional_rows": 533,
+    "mapped_rows_after_features": 56411,
+    "mapped_unique_genes_after_features": 4268,
+    "residual_rows_after_features": 533,
+    "residual_classes_after_features": 183,
+    "ohmnet_entrez_gene_universe_across_24_tissues": 4301,
+    "unresolved_unique_candidate_genes": 117,
+    "edge_verification": {
+      "edges_with_both_endpoints_mapped": 816950,
+      "matched_edges": 816950,
+      "mismatch_count": 0,
+      "mismatch_examples": []
+    }
+  },
+  "features": {
+    "columns": 50,
+    "exact_uniquely_identified_nonzero_columns": 49,
+    "all_zero_columns": [
+      10
+    ],
+    "c1_columns": 29,
+    "c3_columns": 20
+  },
+  "dgl": {
+    "algorithm": [
+      "For each split, assign all rows initially to the split's first graph ID.",
+      "For each of the 24 tissue blocks, assign its largest connected component to that tissue's graph ID.",
+      "Leave every non-largest component in the first graph ID of its split.",
+      "Concatenate rows by graph ID with stable original-row order.",
+      "Fit sklearn StandardScaler on all GraphSAGE training rows as float64 and transform all rows.",
+      "Convert every non-loop undirected edge to both directions and retain exactly one self-loop per node."
+    ],
+    "splits": {
+      "train": {
+        "row_count": 44906,
+        "graph_id_exact": true,
+        "labels_exact": true,
+        "feature_dtype_in_archive": "float64",
+        "feature_shape": [
+          44906,
+          50
+        ],
+        "feature_max_abs_difference_float64_standard_scaler": 1.1368683772161603e-13,
+        "feature_allclose_at_1e_12": true,
+        "edge_set_exact": true,
+        "expected_directed_edge_count_including_one_loop_per_node": 1271274,
+        "dgl_directed_edge_count": 1271274,
+        "missing_edge_count": 0,
+        "extra_edge_count": 0,
+        "original_graphsage_undirected_edge_count_including_loops": 633198,
+        "original_graphsage_loop_count": 20014
+      },
+      "valid": {
+        "row_count": 6514,
+        "graph_id_exact": true,
+        "labels_exact": true,
+        "feature_dtype_in_archive": "float64",
+        "feature_shape": [
+          6514,
+          50
+        ],
+        "feature_max_abs_difference_float64_standard_scaler": 1.1368683772161603e-13,
+        "feature_allclose_at_1e_12": true,
+        "edge_set_exact": true,
+        "expected_directed_edge_count_including_one_loop_per_node": 205434,
+        "dgl_directed_edge_count": 205434,
+        "missing_edge_count": 0,
+        "extra_edge_count": 0,
+        "original_graphsage_undirected_edge_count_including_loops": 102187,
+        "original_graphsage_loop_count": 2727
+      },
+      "test": {
+        "row_count": 5524,
+        "graph_id_exact": true,
+        "labels_exact": true,
+        "feature_dtype_in_archive": "float64",
+        "feature_shape": [
+          5524,
+          50
+        ],
+        "feature_max_abs_difference_float64_standard_scaler": 1.1368683772161603e-13,
+        "feature_allclose_at_1e_12": true,
+        "edge_set_exact": true,
+        "expected_directed_edge_count_including_one_loop_per_node": 167500,
+        "dgl_directed_edge_count": 167500,
+        "missing_edge_count": 0,
+        "extra_edge_count": 0,
+        "original_graphsage_undirected_edge_count_including_loops": 83331,
+        "original_graphsage_loop_count": 2343
+      }
+    },
+    "all_checks_pass": true
+  },
+  "leakage": {
+    "mapping_basis": "topology plus independently identified MSigDB v5.2 features; labels were not used to resolve identities",
+    "test_rows_total": 5524,
+    "test_rows_with_resolved_gene": 5465,
+    "test_rows_seen_in_training": 5430,
+    "test_rows_seen_fraction_of_all_test_rows": 0.9829833454018827,
+    "seen_test_rows_with_identical_label_vector": 5430,
+    "identical_fraction_among_seen_test_rows": 1.0,
+    "lookup_micro_f1_all_test_rows_unresolved_or_unseen_predicted_zero": 0.9940678477347222,
+    "true_positive_labels": 197736,
+    "false_positive_labels": 0,
+    "false_negative_labels": 2360
+  }
+}

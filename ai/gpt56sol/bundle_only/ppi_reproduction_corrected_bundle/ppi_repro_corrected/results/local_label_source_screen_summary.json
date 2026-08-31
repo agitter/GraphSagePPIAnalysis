@@ -1,0 +1,107 @@
+{
+  "generated_at_utc": "2026-08-24T15:54:16.585384+00:00",
+  "runtime_seconds": 5.473070859909058,
+  "comparison_gene_universe": 4268,
+  "label_columns": 121,
+  "gene_identity_basis": "topology plus MSigDB feature membership; GraphSAGE labels were not used to resolve identities",
+  "msigdb": {
+    "5.1": {
+      "unique_gene_sets_all_collections": null,
+      "unique_gene_sets_c5_bp": null,
+      "all_collections": {
+        "labels": 121,
+        "exact_matches": 0,
+        "agreement_at_least_99_percent": 0,
+        "agreement_at_least_95_percent": 0,
+        "median_best_agreement": 0.8071696344892221,
+        "minimum_best_mismatch": 307
+      },
+      "c5_bp": {
+        "labels": 121,
+        "exact_matches": 0,
+        "agreement_at_least_99_percent": 0,
+        "agreement_at_least_95_percent": 0,
+        "median_best_agreement": 0.8043580131208997,
+        "minimum_best_mismatch": 312
+      }
+    },
+    "5.2": {
+      "unique_gene_sets_all_collections": null,
+      "unique_gene_sets_c5_bp": null,
+      "all_collections": {
+        "labels": 121,
+        "exact_matches": 0,
+        "agreement_at_least_99_percent": 1,
+        "agreement_at_least_95_percent": 2,
+        "median_best_agreement": 0.8559044048734771,
+        "minimum_best_mismatch": 10
+      },
+      "c5_bp": {
+        "labels": 121,
+        "exact_matches": 0,
+        "agreement_at_least_99_percent": 0,
+        "agreement_at_least_95_percent": 0,
+        "median_best_agreement": 0.8465323336457358,
+        "minimum_best_mismatch": 265
+      }
+    },
+    "6.0": {
+      "unique_gene_sets_all_collections": null,
+      "unique_gene_sets_c5_bp": null,
+      "all_collections": {
+        "labels": 121,
+        "exact_matches": 0,
+        "agreement_at_least_99_percent": 1,
+        "agreement_at_least_95_percent": 2,
+        "median_best_agreement": 0.8559044048734771,
+        "minimum_best_mismatch": 10
+      },
+      "c5_bp": {
+        "labels": 121,
+        "exact_matches": 0,
+        "agreement_at_least_99_percent": 0,
+        "agreement_at_least_95_percent": 0,
+        "median_best_agreement": 0.8465323336457358,
+        "minimum_best_mismatch": 265
+      }
+    }
+  },
+  "ohmnet": {
+    "OhmNet individual tissue label files, absent genes treated as 0": {
+      "labels": 121,
+      "exact_matches": 0,
+      "agreement_at_least_99_percent": 0,
+      "agreement_at_least_95_percent": 0,
+      "median_best_agreement": 0.7813964386129335,
+      "minimum_best_mismatch": 327
+    },
+    "OhmNet union by GO term across all supplied tissues": {
+      "labels": 121,
+      "exact_matches": 0,
+      "agreement_at_least_99_percent": 0,
+      "agreement_at_least_95_percent": 0,
+      "median_best_agreement": 0.7813964386129335,
+      "minimum_best_mismatch": 327
+    },
+    "OhmNet union by GO term across selected 24 tissues": {
+      "labels": 121,
+      "exact_matches": 0,
+      "agreement_at_least_99_percent": 0,
+      "agreement_at_least_95_percent": 0,
+      "median_best_agreement": 0.7809278350515464,
+      "minimum_best_mismatch": 352
+    }
+  },
+  "ohmnet_same_tissue": {
+    "selected_tissue_label_files_compared": 111,
+    "label_columns_with_any_exact_best_same_tissue_match": 0,
+    "label_columns_with_best_same_tissue_agreement_at_least_99_percent": 0,
+    "label_columns_with_best_same_tissue_agreement_at_least_95_percent": 0
+  },
+  "greene": {
+    "table6_unique_go_ids": 973,
+    "table9_unique_go_ids": 6172,
+    "intersection": 276
+  },
+  "scope_limit": "No historical GOA, NCBI gene2go, GO ontology snapshot, or Bioconductor annotation package binary was supplied in this turn or successfully materialized in the runtime. This screen therefore verifies only the locally available MSigDB, OhmNet, and Greene candidates; it does not claim to resolve the exact GO source."
+}

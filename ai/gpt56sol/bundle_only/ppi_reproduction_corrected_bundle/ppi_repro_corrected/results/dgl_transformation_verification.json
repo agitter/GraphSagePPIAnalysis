@@ -1,0 +1,70 @@
+{
+  "algorithm": [
+    "For each split, assign all rows initially to the split's first graph ID.",
+    "For each of the 24 tissue blocks, assign its largest connected component to that tissue's graph ID.",
+    "Leave every non-largest component in the first graph ID of its split.",
+    "Concatenate rows by graph ID with stable original-row order.",
+    "Fit sklearn StandardScaler on all GraphSAGE training rows as float64 and transform all rows.",
+    "Convert every non-loop undirected edge to both directions and retain exactly one self-loop per node."
+  ],
+  "splits": {
+    "train": {
+      "row_count": 44906,
+      "graph_id_exact": true,
+      "labels_exact": true,
+      "feature_dtype_in_archive": "float64",
+      "feature_shape": [
+        44906,
+        50
+      ],
+      "feature_max_abs_difference_float64_standard_scaler": 1.1368683772161603e-13,
+      "feature_allclose_at_1e_12": true,
+      "edge_set_exact": true,
+      "expected_directed_edge_count_including_one_loop_per_node": 1271274,
+      "dgl_directed_edge_count": 1271274,
+      "missing_edge_count": 0,
+      "extra_edge_count": 0,
+      "original_graphsage_undirected_edge_count_including_loops": 633198,
+      "original_graphsage_loop_count": 20014
+    },
+    "valid": {
+      "row_count": 6514,
+      "graph_id_exact": true,
+      "labels_exact": true,
+      "feature_dtype_in_archive": "float64",
+      "feature_shape": [
+        6514,
+        50
+      ],
+      "feature_max_abs_difference_float64_standard_scaler": 1.1368683772161603e-13,
+      "feature_allclose_at_1e_12": true,
+      "edge_set_exact": true,
+      "expected_directed_edge_count_including_one_loop_per_node": 205434,
+      "dgl_directed_edge_count": 205434,
+      "missing_edge_count": 0,
+      "extra_edge_count": 0,
+      "original_graphsage_undirected_edge_count_including_loops": 102187,
+      "original_graphsage_loop_count": 2727
+    },
+    "test": {
+      "row_count": 5524,
+      "graph_id_exact": true,
+      "labels_exact": true,
+      "feature_dtype_in_archive": "float64",
+      "feature_shape": [
+        5524,
+        50
+      ],
+      "feature_max_abs_difference_float64_standard_scaler": 1.1368683772161603e-13,
+      "feature_allclose_at_1e_12": true,
+      "edge_set_exact": true,
+      "expected_directed_edge_count_including_one_loop_per_node": 167500,
+      "dgl_directed_edge_count": 167500,
+      "missing_edge_count": 0,
+      "extra_edge_count": 0,
+      "original_graphsage_undirected_edge_count_including_loops": 83331,
+      "original_graphsage_loop_count": 2343
+    }
+  },
+  "all_checks_pass": true
+}

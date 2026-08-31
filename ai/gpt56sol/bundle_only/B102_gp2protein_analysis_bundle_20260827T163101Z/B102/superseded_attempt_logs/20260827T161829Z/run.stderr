@@ -1,0 +1,15 @@
+B102: mapping files parsed; starting direct GOA label screen
+B102: direct GOA label screen complete; rows=32,670
+Traceback (most recent call last):
+  File "/mnt/data/ppi_repro_corrected/scripts/analyze_B102_gp2protein.py", line 1246, in <module>
+    main()
+    ~~~~^^
+  File "/mnt/data/ppi_repro_corrected/scripts/analyze_B102_gp2protein.py", line 916, in main
+    with gzip.open(path, "rt", encoding="utf-8", errors="strict", newline="") as fh:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/gzip.py", line 66, in open
+    binary_file = GzipFile(filename, gz_mode, compresslevel)
+  File "/usr/lib/python3.13/gzip.py", line 203, in __init__
+    fileobj = self.myfileobj = builtins.open(filename, mode or 'rb')
+                               ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/mnt/data/ppi_repro_corrected/batches/B102/derived/B102_gp2protein_human_normalized_20260827T161808Z.tsv.gz'

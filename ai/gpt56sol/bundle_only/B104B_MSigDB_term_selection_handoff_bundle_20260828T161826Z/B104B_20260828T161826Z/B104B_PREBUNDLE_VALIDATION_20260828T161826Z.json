@@ -1,0 +1,17 @@
+{
+  "all_checks_passed": true,
+  "checks": {
+    "agent_handoff_present": true,
+    "all_checksum_listed_files_exist": true,
+    "independent_top121_exact": true,
+    "open_questions_report_present": true,
+    "policy_grid_has_24_configurations": true,
+    "policy_grid_has_one_exact_threshold1000_configuration": true,
+    "policy_grid_has_one_exact_top121_configuration": true,
+    "threshold1000_accession_exact": true,
+    "threshold1000_geneid_exact": true
+  },
+  "checksum_file_sha256": "d919e0bcc1acc2eee0a83ecbe5f26e449a0dbba5f05794b9ecad63d110ff3450",
+  "file_count_before_checksum_and_validation": 23,
+  "generated_at_utc": "2026-08-28T16:18:26Z"
+}

@@ -1,0 +1,2 @@
+GraphSAGE n=56944 m=818716 feats=(56944, 50) labels=(56944, 121) graph_ids=295
+OhmNet networks=144

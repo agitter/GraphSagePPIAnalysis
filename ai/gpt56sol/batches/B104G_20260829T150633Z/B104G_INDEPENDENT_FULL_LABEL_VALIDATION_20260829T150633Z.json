@@ -1,0 +1,16 @@
+{
+  "all_checks_pass": true,
+  "cells": 6890224,
+  "columns": 121,
+  "exact_columns": 121,
+  "expected_matrix_sha256": "677cc50459190ba22afc0762356e573ca56e422c80fd36204669a81694afa78d",
+  "first_mismatches": [],
+  "independent_implementation": true,
+  "mismatched_cells": 0,
+  "observed_matrix_sha256": "677cc50459190ba22afc0762356e573ca56e422c80fd36204669a81694afa78d",
+  "rows": 56944,
+  "unique_GeneIDs": 4301,
+  "unmapped_graph_GeneIDs": [
+    10159
+  ]
+}

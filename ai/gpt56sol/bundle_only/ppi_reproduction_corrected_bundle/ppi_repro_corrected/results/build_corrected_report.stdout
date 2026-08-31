@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "report": "/mnt/data/ppi_repro_corrected/results/MASTER_REPRODUCTION_REPORT.md",
+  "actual_inputs": 18,
+  "base_source_rows": 63,
+  "tracked_outputs": 32
+}

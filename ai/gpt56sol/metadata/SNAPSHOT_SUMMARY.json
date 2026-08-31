@@ -1,0 +1,12 @@
+{
+  "all_prior_bundle_members_represented": true,
+  "artifact_occurrences": 900,
+  "bundle_coverage_rows": 15,
+  "created_at_utc": "20260830T124820Z",
+  "local_paths_classified": 117,
+  "snapshot_bytes_excluding_manifest_itself": 79024075,
+  "snapshot_files_excluding_manifest_itself": 610,
+  "snapshot_root_name": "gpt56sol",
+  "unique_artifact_bytes_before_snapshot_metadata": 78078137,
+  "unique_assistant_artifacts": 597
+}

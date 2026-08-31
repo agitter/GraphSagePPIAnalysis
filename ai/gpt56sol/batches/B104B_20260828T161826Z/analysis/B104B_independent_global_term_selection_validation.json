@@ -1,0 +1,98 @@
+{
+  "accepted_GAF_rows": 106929,
+  "accepted_evidence_codes": [
+    "EXP",
+    "IDA",
+    "IEP",
+    "IGI",
+    "IMP",
+    "ISS"
+  ],
+  "accepted_relations": [
+    "enables",
+    "involved_in",
+    "part_of"
+  ],
+  "aspect_quota_exact_set_match": true,
+  "aspect_quota_size": 121,
+  "direct_terms_with_members": 11916,
+  "direct_top121_exact_set_match": false,
+  "direct_top121_intersection_size": 13,
+  "historical_GPI159_linked_geneids": 19056,
+  "implementation": "independent_standard_library_set_based",
+  "input_sha256": {
+    "/mnt/data/ppi_repro_corrected/batches/B104A_20260828T145842Z/analysis/B104A_exact_GO_terms_for_each_label_column_20260828T145842Z.csv": "635d0c2cd9e018834b1a543362969184c520e622010b8c7bdf655bad784cd822",
+    "/mnt/data/ppi_repro_corrected/batches/B104A_20260828T145842Z/retained_inputs/B101_goa_human_gaf159_normalized_20260827T152736Z.tsv.gz": "132066afa3d3ea550752d3d2eb98fcbc238570c23bf239f0ea77e720e34cc274",
+    "/mnt/data/ppi_repro_corrected/batches/B104A_20260828T145842Z/retained_inputs/B102_gp2protein_geneid_relevant_subset_20260827T162132Z.tsv.gz": "9187753eed649d1d72bc0d38764094877b1967d5e7fe7696b292241e1ff12039",
+    "/mnt/data/ppi_repro_corrected/batches/B104A_20260828T145842Z/retained_inputs/B104_repaired_B103_GO_is_a_edges_20260828T030759Z.tsv.gz": "e5c95105ff60d78feb5acb7441d1628083081a28ccb4d858db50334a34259708",
+    "/mnt/data/ppi_repro_corrected/batches/B104A_20260828T145842Z/retained_inputs/B104_repaired_B103_GO_terms_20260828T030759Z.tsv.gz": "4f4e30e4705c669e47d7938948cb8ad81689da8ac0b96bf625a5c6f278024430"
+  },
+  "mapping_correction": "removed O95073 -> GeneID 25788 while retaining other many-to-many historical edges",
+  "propagated_terms_with_members": 16338,
+  "rank_118_to_124": [
+    {
+      "GO_ID": "GO:0042221",
+      "GO_name": "response to chemical",
+      "global_gene_count": 1050,
+      "is_target": true,
+      "namespace": "biological_process",
+      "rank": 118
+    },
+    {
+      "GO_ID": "GO:0043933",
+      "GO_name": "macromolecular complex subunit organization",
+      "global_gene_count": 1037,
+      "is_target": true,
+      "namespace": "biological_process",
+      "rank": 119
+    },
+    {
+      "GO_ID": "GO:0051254",
+      "GO_name": "positive regulation of RNA metabolic process",
+      "global_gene_count": 1016,
+      "is_target": true,
+      "namespace": "biological_process",
+      "rank": 120
+    },
+    {
+      "GO_ID": "GO:0031399",
+      "GO_name": "regulation of protein modification process",
+      "global_gene_count": 1007,
+      "is_target": true,
+      "namespace": "biological_process",
+      "rank": 121
+    },
+    {
+      "GO_ID": "GO:0043167",
+      "GO_name": "ion binding",
+      "global_gene_count": 997,
+      "is_target": false,
+      "namespace": "molecular_function",
+      "rank": 122
+    },
+    {
+      "GO_ID": "GO:0051049",
+      "GO_name": "regulation of transport",
+      "global_gene_count": 991,
+      "is_target": false,
+      "namespace": "biological_process",
+      "rank": 123
+    },
+    {
+      "GO_ID": "GO:0006725",
+      "GO_name": "cellular aromatic compound metabolic process",
+      "global_gene_count": 990,
+      "is_target": false,
+      "namespace": "biological_process",
+      "rank": 124
+    }
+  ],
+  "target_exact_GO_ID_union_size": 121,
+  "threshold_1007_exact_set_match": true,
+  "threshold_1007_size": 121,
+  "top121_exact_set_match": true,
+  "top121_extra_ids": [],
+  "top121_intersection_size": 121,
+  "top121_missing_ids": [],
+  "top121_size": 121
+}

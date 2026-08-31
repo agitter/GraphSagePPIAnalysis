@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "records": 63,
+  "actual_inputs": 18,
+  "public_source_urls_recorded": 55,
+  "csv": "/mnt/data/ppi_repro_corrected/results/actual_input_file_manifest_v2.csv",
+  "xlsx": "/mnt/data/ppi_repro_corrected/results/actual_input_file_manifest_v2.xlsx"
+}

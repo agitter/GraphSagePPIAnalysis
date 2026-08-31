@@ -1,0 +1,52 @@
+{
+  "all_zero_feature_columns_all_rows": [
+    10
+  ],
+  "exact_feature_columns": 50,
+  "feature_matrix_dtype": "float64",
+  "feature_matrix_shape": [
+    56944,
+    50
+  ],
+  "first_unselected_qualifying_set": {
+    "collection": "C3",
+    "description": "http://www.broadinstitute.org/gsea/msigdb/cards/V$CREL_01",
+    "raw_entrez_field_count": 256,
+    "set_name": "V$CREL_01",
+    "source_member": "msigdb_v5.2_files_to_download_locally/msigdb_v5.2_GMTs/c3.all.v5.2.entrez.gmt",
+    "source_row_index_0based": 27,
+    "source_row_index_1based": 28,
+    "unique_entrez_count": 256
+  },
+  "input_sha256": {
+    "graphsage_ppi_zip": "53aeb76e54fd41b645e7edb48b62929240b89839495396b048086fd212503fbd",
+    "msigdb_v5_2_zip": "a618c1c60b11570036034e6357e73e80ee43065ec7a57c1dbd238f205405fbdb",
+    "row_map": "4aaada1751c958db2653e19e05ca5a8e2bdd2da86c1a4441bad26e0468ae7207"
+  },
+  "qualifying_set_count_by_collection": {
+    "C1": 30,
+    "C3": 487
+  },
+  "repeated_gene_feature_conflicts": [],
+  "resolved_feature_cells_compared": 2820550,
+  "resolved_rows": 56411,
+  "resolved_unique_entrez_genes": 4268,
+  "selected_feature_csv": "/mnt/data/ppi_repro_corrected/batches/B104E_20260829T121535Z/analysis/B104E_exact_MSigDB52_feature_generation_rule_20260829T121535Z.csv",
+  "selected_set_count_by_collection": {
+    "C1": 30,
+    "C3": 20,
+    "C7": 0
+  },
+  "selection_rule": {
+    "collection_order": [
+      "C1",
+      "C3",
+      "C7"
+    ],
+    "global_feature_cap": 50,
+    "minimum_unique_entrez_count_in_full_msigdb_set": 200,
+    "preserve_gmt_source_order": true,
+    "stop_when_global_cap_reached": true
+  },
+  "total_resolved_feature_mismatches": 0
+}

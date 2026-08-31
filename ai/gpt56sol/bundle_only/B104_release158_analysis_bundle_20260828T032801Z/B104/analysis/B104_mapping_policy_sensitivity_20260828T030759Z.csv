@@ -1,0 +1,5 @@
+mapping_policy,mapped_accessions,covered_GraphSAGE_GeneIDs,exact_columns,at_least_99pct,at_least_95pct,total_mismatches,false_positives,false_negatives
+component_aware_hybrid,4260,4267,89,114,121,901,901,0
+historical_all_edges_no_symbol_fallback,4252,4259,19,114,121,1085,904,181
+historical_accession_degree_1_only,4247,4240,1,112,121,1940,878,1062
+historical_global_bijective_only,4234,4234,1,112,121,2091,865,1226

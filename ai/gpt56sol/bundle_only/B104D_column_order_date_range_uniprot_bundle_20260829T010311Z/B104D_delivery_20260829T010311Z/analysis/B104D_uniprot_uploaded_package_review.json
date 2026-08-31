@@ -1,0 +1,28 @@
+{
+  "all_archives_deleted_after_success": true,
+  "all_md5_match": true,
+  "all_rows_success": true,
+  "all_sizes_match": true,
+  "all_targets_found": true,
+  "input_zip": "/mnt/data/uniprot_2016_mapping.zip",
+  "input_zip_sha256": "494845b09874e26ef95c724f2a904f3d8cfeadb9c93c662975dc0028fcd0c61a",
+  "input_zip_size_bytes": 1326,
+  "interpretation": "The ledger supports that the user-side script downloaded and checksum-verified all three official archives and found both accessions. It does not expose the extracted record content, so GeneID/GN lines cannot yet be independently reviewed in this runtime.",
+  "ledger_rows": 3,
+  "ledger_sha256": "b2935c37f5aae16675bdd412d00257d84435406548313e61a7b2ca5eeee74378",
+  "missing_from_uploaded_zip": [
+    "2016_04/O95073_Q9Y620_2016_04.dat",
+    "2016_04/O95073_Q9Y620_2016_04.tsv",
+    "2016_04/O95073_Q9Y620_2016_04_provenance.json",
+    "2016_05/O95073_Q9Y620_2016_05.dat",
+    "2016_05/O95073_Q9Y620_2016_05.tsv",
+    "2016_05/O95073_Q9Y620_2016_05_provenance.json",
+    "2016_06/O95073_Q9Y620_2016_06.dat",
+    "2016_06/O95073_Q9Y620_2016_06.tsv",
+    "2016_06/O95073_Q9Y620_2016_06_provenance.json"
+  ],
+  "package_completeness": "ledger_only",
+  "zip_members": [
+    "uniprot_2016_mapping_audit_ledger.csv"
+  ]
+}

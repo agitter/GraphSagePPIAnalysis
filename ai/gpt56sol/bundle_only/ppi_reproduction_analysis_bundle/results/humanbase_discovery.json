@@ -1,0 +1,84 @@
+[
+  {
+    "type": "page",
+    "url": "https://hb.flatironinstitute.org/download",
+    "status": "error",
+    "error": "URLError(gaierror(-3, 'Temporary failure in name resolution'))"
+  },
+  {
+    "type": "page",
+    "url": "https://hb.flatironinstitute.org/",
+    "status": "error",
+    "error": "URLError(gaierror(-3, 'Temporary failure in name resolution'))"
+  },
+  {
+    "type": "page",
+    "url": "https://humanbase.io/download",
+    "status": "error",
+    "error": "URLError(gaierror(-3, 'Temporary failure in name resolution'))"
+  },
+  {
+    "type": "page",
+    "url": "https://humanbase.io/",
+    "status": "error",
+    "error": "URLError(gaierror(-3, 'Temporary failure in name resolution'))"
+  },
+  {
+    "type": "wayback_cdx",
+    "url": "https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fhb.flatironinstitute.org%2Fdownload&from=2015&to=2026&output=json&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest%2Clength&filter=statuscode%3A200&collapse=digest",
+    "status": "error",
+    "error": "URLError(gaierror(-3, 'Temporary failure in name resolution'))"
+  },
+  {
+    "type": "wayback_cdx",
+    "url": "https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Fhb.flatironinstitute.org%2Fdownload&from=2015&to=2026&output=json&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest%2Clength&filter=statuscode%3A200&collapse=digest",
+    "status": "error",
+    "error": "URLError(gaierror(-3, 'Temporary failure in name resolution'))"
+  },
+  {
+    "type": "wayback_cdx",
+    "url": "https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fhb.flatironinstitute.org%2FHumanBase-blood.dat&from=2015&to=2026&output=json&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest%2Clength&filter=statuscode%3A200&collapse=digest",
+    "status": "error",
+    "error": "URLError(gaierror(-3, 'Temporary failure in name resolution'))"
+  },
+  {
+    "type": "wayback_cdx",
+    "url": "https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fhb.flatironinstitute.org%2FHumanBase-kidney.dat&from=2015&to=2026&output=json&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest%2Clength&filter=statuscode%3A200&collapse=digest",
+    "status": "error",
+    "error": "URLError(gaierror(-3, 'Temporary failure in name resolution'))"
+  },
+  {
+    "type": "wayback_cdx",
+    "url": "https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fhb.flatironinstitute.org%2Fblood_sample_tsv.gz&from=2015&to=2026&output=json&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest%2Clength&filter=statuscode%3A200&collapse=digest",
+    "status": "error",
+    "error": "URLError(gaierror(-3, 'Temporary failure in name resolution'))"
+  },
+  {
+    "type": "grep_app",
+    "query": "HumanBase-blood.dat",
+    "url": "https://api.grep.app/v1/search?q=HumanBase-blood.dat",
+    "status": "error",
+    "error": "URLError(gaierror(-3, 'Temporary failure in name resolution'))"
+  },
+  {
+    "type": "grep_app",
+    "query": "HumanBase-kidney.dat",
+    "url": "https://api.grep.app/v1/search?q=HumanBase-kidney.dat",
+    "status": "error",
+    "error": "URLError(gaierror(-3, 'Temporary failure in name resolution'))"
+  },
+  {
+    "type": "grep_app",
+    "query": "blood_sample_tsv.gz",
+    "url": "https://api.grep.app/v1/search?q=blood_sample_tsv.gz",
+    "status": "error",
+    "error": "URLError(gaierror(-3, 'Temporary failure in name resolution'))"
+  },
+  {
+    "type": "grep_app",
+    "query": "HumanBase-blood_top.gz",
+    "url": "https://api.grep.app/v1/search?q=HumanBase-blood_top.gz",
+    "status": "error",
+    "error": "URLError(gaierror(-3, 'Temporary failure in name resolution'))"
+  }
+]

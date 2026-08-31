@@ -1,0 +1,9 @@
+{
+  "C5_rows": 1454,
+  "XML_build_date": "Apr 27, 2015",
+  "normalized_path": "/mnt/data/ppi_repro_corrected/batches/B104C_20260828T194921Z/retained_inputs/B104C_msigdb_v5.0_normalized_entrez_gene_sets_20260828T194921Z.tsv.gz",
+  "normalized_sha256": "6775fb96be44080c768bd5789a0dbb0c802a1a0faa45927aa2a07d70af9f7c1f",
+  "normalized_size_bytes": 2982724,
+  "rows": 10348,
+  "unique_memberships_sum": 1315074
+}

@@ -1,0 +1,6 @@
+node_order_model,matches_previous_independent_rows,previous_independent_rows_compared,agreement_fraction
+first_occurrence,24,56411,0.0004254489372640088
+sorted_integer,30,56411,0.000531811171580011
+reverse_sorted_integer,17,56411,0.00030135966389533954
+python2_integer_dict,23,56411,0.0004077218982113418
+python2_string_dict,56411,56411,1.0

@@ -1,0 +1,5 @@
+# Optional Git LFS suggestions for assistant-generated compact binaries
+*.zip filter=lfs diff=lfs merge=lfs -text
+*.npy filter=lfs diff=lfs merge=lfs -text
+*.npz filter=lfs diff=lfs merge=lfs -text
+*.gz filter=lfs diff=lfs merge=lfs -text

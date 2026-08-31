@@ -1,0 +1,181 @@
+{
+  "gpi_rows_and_unique_objects": 21002,
+  "gaf_annotated_unique_objects": 19194,
+  "gpad_annotated_unique_objects": 19194,
+  "gaf_objects_missing_from_GPI": 0,
+  "gpad_objects_missing_from_GPI": 0,
+  "gpi_objects_without_GAF_annotation": 1808,
+  "gpi_property_counts": {
+    "db_subset=TrEMBL": 988,
+    "db_subset=Swiss-Prot": 20014
+  },
+  "gpi_nonempty_column_counts": {
+    "DB": 21002,
+    "DB_Object_ID": 21002,
+    "DB_Object_Symbol": 20249,
+    "DB_Object_Name": 21002,
+    "DB_Object_Synonyms": 21002,
+    "DB_Object_Type": 21002,
+    "Taxon": 21002,
+    "Properties": 21002
+  },
+  "gpi_DB_Xrefs_nonempty": 0,
+  "gpi_Parent_Object_ID_nonempty": 0,
+  "metadata_mismatch_counts": {
+    "symbol": 394
+  },
+  "symbol_mismatch_pattern": "394 annotated objects have blank GPI symbol; GAF substitutes the UniProt accession as the symbol",
+  "symbol_mismatch_examples": [
+    {
+      "DB": "UniProtKB",
+      "DB_Object_ID": "M0R082",
+      "GPI_Symbol": "",
+      "GAF_Symbols": "M0R082"
+    },
+    {
+      "DB": "UniProtKB",
+      "DB_Object_ID": "A0A096LNY1",
+      "GPI_Symbol": "",
+      "GAF_Symbols": "A0A096LNY1"
+    },
+    {
+      "DB": "UniProtKB",
+      "DB_Object_ID": "A0A0U1RQV5",
+      "GPI_Symbol": "",
+      "GAF_Symbols": "A0A0U1RQV5"
+    },
+    {
+      "DB": "UniProtKB",
+      "DB_Object_ID": "P01593",
+      "GPI_Symbol": "",
+      "GAF_Symbols": "P01593"
+    },
+    {
+      "DB": "UniProtKB",
+      "DB_Object_ID": "H3BM21",
+      "GPI_Symbol": "",
+      "GAF_Symbols": "H3BM21"
+    },
+    {
+      "DB": "UniProtKB",
+      "DB_Object_ID": "P06889",
+      "GPI_Symbol": "",
+      "GAF_Symbols": "P06889"
+    },
+    {
+      "DB": "UniProtKB",
+      "DB_Object_ID": "K7EQS6",
+      "GPI_Symbol": "",
+      "GAF_Symbols": "K7EQS6"
+    },
+    {
+      "DB": "UniProtKB",
+      "DB_Object_ID": "P06315",
+      "GPI_Symbol": "",
+      "GAF_Symbols": "P06315"
+    },
+    {
+      "DB": "UniProtKB",
+      "DB_Object_ID": "Q9UF83",
+      "GPI_Symbol": "",
+      "GAF_Symbols": "Q9UF83"
+    },
+    {
+      "DB": "UniProtKB",
+      "DB_Object_ID": "E7EUB6",
+      "GPI_Symbol": "",
+      "GAF_Symbols": "E7EUB6"
+    },
+    {
+      "DB": "UniProtKB",
+      "DB_Object_ID": "I3L1I5",
+      "GPI_Symbol": "",
+      "GAF_Symbols": "I3L1I5"
+    },
+    {
+      "DB": "UniProtKB",
+      "DB_Object_ID": "F2Z2F3",
+      "GPI_Symbol": "",
+      "GAF_Symbols": "F2Z2F3"
+    },
+    {
+      "DB": "UniProtKB",
+      "DB_Object_ID": "P01768",
+      "GPI_Symbol": "",
+      "GAF_Symbols": "P01768"
+    },
+    {
+      "DB": "UniProtKB",
+      "DB_Object_ID": "C9JAW5",
+      "GPI_Symbol": "",
+      "GAF_Symbols": "C9JAW5"
+    },
+    {
+      "DB": "UniProtKB",
+      "DB_Object_ID": "P80362",
+      "GPI_Symbol": "",
+      "GAF_Symbols": "P80362"
+    },
+    {
+      "DB": "UniProtKB",
+      "DB_Object_ID": "A0A096LP31",
+      "GPI_Symbol": "",
+      "GAF_Symbols": "A0A096LP31"
+    },
+    {
+      "DB": "UniProtKB",
+      "DB_Object_ID": "P01773",
+      "GPI_Symbol": "",
+      "GAF_Symbols": "P01773"
+    },
+    {
+      "DB": "UniProtKB",
+      "DB_Object_ID": "J3KR12",
+      "GPI_Symbol": "",
+      "GAF_Symbols": "J3KR12"
+    },
+    {
+      "DB": "UniProtKB",
+      "DB_Object_ID": "B4DLN1",
+      "GPI_Symbol": "",
+      "GAF_Symbols": "B4DLN1"
+    },
+    {
+      "DB": "UniProtKB",
+      "DB_Object_ID": "U3KPZ7",
+      "GPI_Symbol": "",
+      "GAF_Symbols": "U3KPZ7"
+    },
+    {
+      "DB": "UniProtKB",
+      "DB_Object_ID": "P06310",
+      "GPI_Symbol": "",
+      "GAF_Symbols": "P06310"
+    },
+    {
+      "DB": "UniProtKB",
+      "DB_Object_ID": "E5RI56",
+      "GPI_Symbol": "",
+      "GAF_Symbols": "E5RI56"
+    },
+    {
+      "DB": "UniProtKB",
+      "DB_Object_ID": "P80419",
+      "GPI_Symbol": "",
+      "GAF_Symbols": "P80419"
+    },
+    {
+      "DB": "UniProtKB",
+      "DB_Object_ID": "P06331",
+      "GPI_Symbol": "",
+      "GAF_Symbols": "P06331"
+    },
+    {
+      "DB": "UniProtKB",
+      "DB_Object_ID": "E7ENX8",
+      "GPI_Symbol": "",
+      "GAF_Symbols": "E7ENX8"
+    }
+  ],
+  "conclusion_about_Entrez_mapping": "The GPI file does not supply Entrez Gene cross-references: DB_Xrefs is empty for every one of the 21,002 rows, consistent with its own header. An external identifier map is required."
+}

@@ -1,0 +1,23 @@
+# Local external data and caches
+/data/raw/
+/data/cache/
+/data/reference_papers/
+/data/derived/
+
+# Keep manifests and explanatory READMEs
+!/data/manifests/
+!/data/README.md
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+
+# OS/editor
+.DS_Store
+Thumbs.db
+*.swp
+
+# Temporary downloads
+*.part
+*.tmp

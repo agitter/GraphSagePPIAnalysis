@@ -1,0 +1,553 @@
+ancestor_GO_ID,descendant_GO_ID,ancestor_name,descendant_name,direct_parent_child
+GO:0003674,GO:0003676,molecular_function,nucleic acid binding,0
+GO:0003674,GO:0003723,molecular_function,RNA binding,0
+GO:0003674,GO:0003824,molecular_function,catalytic activity,1
+GO:0003674,GO:0005488,molecular_function,binding,1
+GO:0003674,GO:0005515,molecular_function,protein binding,0
+GO:0003674,GO:0016740,molecular_function,transferase activity,0
+GO:0003674,GO:0044822,molecular_function,poly(A) RNA binding,0
+GO:0003674,GO:0097159,molecular_function,organic cyclic compound binding,0
+GO:0003674,GO:1901363,molecular_function,heterocyclic compound binding,0
+GO:0003676,GO:0003723,nucleic acid binding,RNA binding,1
+GO:0003676,GO:0044822,nucleic acid binding,poly(A) RNA binding,0
+GO:0003723,GO:0044822,RNA binding,poly(A) RNA binding,1
+GO:0003824,GO:0016740,catalytic activity,transferase activity,1
+GO:0005488,GO:0003676,binding,nucleic acid binding,0
+GO:0005488,GO:0003723,binding,RNA binding,0
+GO:0005488,GO:0005515,binding,protein binding,1
+GO:0005488,GO:0044822,binding,poly(A) RNA binding,0
+GO:0005488,GO:0097159,binding,organic cyclic compound binding,1
+GO:0005488,GO:1901363,binding,heterocyclic compound binding,1
+GO:0005575,GO:0005634,cellular_component,nucleus,0
+GO:0005575,GO:0005654,cellular_component,nucleoplasm,0
+GO:0005575,GO:0005737,cellular_component,cytoplasm,0
+GO:0005575,GO:0005886,cellular_component,plasma membrane,0
+GO:0005575,GO:0016020,cellular_component,membrane,1
+GO:0005575,GO:0031982,cellular_component,vesicle,0
+GO:0005575,GO:0032991,cellular_component,macromolecular complex,1
+GO:0005575,GO:0043226,cellular_component,organelle,1
+GO:0005575,GO:0043227,cellular_component,membrane-bounded organelle,0
+GO:0005575,GO:0043228,cellular_component,non-membrane-bounded organelle,0
+GO:0005575,GO:0043229,cellular_component,intracellular organelle,0
+GO:0005575,GO:0043230,cellular_component,extracellular organelle,0
+GO:0005575,GO:0043231,cellular_component,intracellular membrane-bounded organelle,0
+GO:0005575,GO:0043232,cellular_component,intracellular non-membrane-bounded organelle,0
+GO:0005575,GO:0043234,cellular_component,protein complex,0
+GO:0005575,GO:0044421,cellular_component,extracellular region part,1
+GO:0005575,GO:0044422,cellular_component,organelle part,1
+GO:0005575,GO:0044424,cellular_component,intracellular part,0
+GO:0005575,GO:0044425,cellular_component,membrane part,1
+GO:0005575,GO:0044428,cellular_component,nuclear part,0
+GO:0005575,GO:0044444,cellular_component,cytoplasmic part,0
+GO:0005575,GO:0044446,cellular_component,intracellular organelle part,0
+GO:0005575,GO:0044464,cellular_component,cell part,1
+GO:0005575,GO:0070062,cellular_component,extracellular exosome,0
+GO:0005575,GO:1903561,cellular_component,extracellular vesicle,0
+GO:0006807,GO:0034641,nitrogen compound metabolic process,cellular nitrogen compound metabolic process,1
+GO:0006810,GO:0044765,transport,single-organism transport,1
+GO:0006996,GO:1902589,organelle organization,single-organism organelle organization,1
+GO:0008150,GO:0006355,biological_process,"regulation of transcription, DNA-templated",0
+GO:0008150,GO:0006464,biological_process,cellular protein modification process,0
+GO:0008150,GO:0006807,biological_process,nitrogen compound metabolic process,0
+GO:0008150,GO:0006810,biological_process,transport,0
+GO:0008150,GO:0006950,biological_process,response to stress,0
+GO:0008150,GO:0006996,biological_process,organelle organization,0
+GO:0008150,GO:0007165,biological_process,signal transduction,0
+GO:0008150,GO:0008152,biological_process,metabolic process,1
+GO:0008150,GO:0009889,biological_process,regulation of biosynthetic process,0
+GO:0008150,GO:0009891,biological_process,positive regulation of biosynthetic process,0
+GO:0008150,GO:0009892,biological_process,negative regulation of metabolic process,0
+GO:0008150,GO:0009893,biological_process,positive regulation of metabolic process,0
+GO:0008150,GO:0009966,biological_process,regulation of signal transduction,0
+GO:0008150,GO:0009987,biological_process,cellular process,1
+GO:0008150,GO:0010468,biological_process,regulation of gene expression,0
+GO:0008150,GO:0010556,biological_process,regulation of macromolecule biosynthetic process,0
+GO:0008150,GO:0010557,biological_process,positive regulation of macromolecule biosynthetic process,0
+GO:0008150,GO:0010604,biological_process,positive regulation of macromolecule metabolic process,0
+GO:0008150,GO:0010605,biological_process,negative regulation of macromolecule metabolic process,0
+GO:0008150,GO:0010628,biological_process,positive regulation of gene expression,0
+GO:0008150,GO:0010646,biological_process,regulation of cell communication,0
+GO:0008150,GO:0016043,biological_process,cellular component organization,0
+GO:0008150,GO:0019219,biological_process,regulation of nucleobase-containing compound metabolic process,0
+GO:0008150,GO:0019222,biological_process,regulation of metabolic process,0
+GO:0008150,GO:0019538,biological_process,protein metabolic process,0
+GO:0008150,GO:0023051,biological_process,regulation of signaling,0
+GO:0008150,GO:0031323,biological_process,regulation of cellular metabolic process,0
+GO:0008150,GO:0031324,biological_process,negative regulation of cellular metabolic process,0
+GO:0008150,GO:0031325,biological_process,positive regulation of cellular metabolic process,0
+GO:0008150,GO:0031326,biological_process,regulation of cellular biosynthetic process,0
+GO:0008150,GO:0031328,biological_process,positive regulation of cellular biosynthetic process,0
+GO:0008150,GO:0031399,biological_process,regulation of protein modification process,0
+GO:0008150,GO:0032268,biological_process,regulation of cellular protein metabolic process,0
+GO:0008150,GO:0032502,biological_process,developmental process,1
+GO:0008150,GO:0032879,biological_process,regulation of localization,0
+GO:0008150,GO:0034641,biological_process,cellular nitrogen compound metabolic process,0
+GO:0008150,GO:0036211,biological_process,protein modification process,0
+GO:0008150,GO:0042221,biological_process,response to chemical,0
+GO:0008150,GO:0043170,biological_process,macromolecule metabolic process,0
+GO:0008150,GO:0043412,biological_process,macromolecule modification,0
+GO:0008150,GO:0043933,biological_process,macromolecular complex subunit organization,0
+GO:0008150,GO:0044237,biological_process,cellular metabolic process,0
+GO:0008150,GO:0044238,biological_process,primary metabolic process,0
+GO:0008150,GO:0044260,biological_process,cellular macromolecule metabolic process,0
+GO:0008150,GO:0044267,biological_process,cellular protein metabolic process,0
+GO:0008150,GO:0044699,biological_process,single-organism process,1
+GO:0008150,GO:0044710,biological_process,single-organism metabolic process,0
+GO:0008150,GO:0044763,biological_process,single-organism cellular process,0
+GO:0008150,GO:0044765,biological_process,single-organism transport,0
+GO:0008150,GO:0044767,biological_process,single-organism developmental process,0
+GO:0008150,GO:0045935,biological_process,positive regulation of nucleobase-containing compound metabolic process,0
+GO:0008150,GO:0048518,biological_process,positive regulation of biological process,0
+GO:0008150,GO:0048519,biological_process,negative regulation of biological process,0
+GO:0008150,GO:0048522,biological_process,positive regulation of cellular process,0
+GO:0008150,GO:0048523,biological_process,negative regulation of cellular process,0
+GO:0008150,GO:0048583,biological_process,regulation of response to stimulus,0
+GO:0008150,GO:0048584,biological_process,positive regulation of response to stimulus,0
+GO:0008150,GO:0050789,biological_process,regulation of biological process,0
+GO:0008150,GO:0050793,biological_process,regulation of developmental process,0
+GO:0008150,GO:0050794,biological_process,regulation of cellular process,0
+GO:0008150,GO:0050896,biological_process,response to stimulus,1
+GO:0008150,GO:0051128,biological_process,regulation of cellular component organization,0
+GO:0008150,GO:0051171,biological_process,regulation of nitrogen compound metabolic process,0
+GO:0008150,GO:0051173,biological_process,positive regulation of nitrogen compound metabolic process,0
+GO:0008150,GO:0051179,biological_process,localization,1
+GO:0008150,GO:0051234,biological_process,establishment of localization,0
+GO:0008150,GO:0051239,biological_process,regulation of multicellular organismal process,0
+GO:0008150,GO:0051246,biological_process,regulation of protein metabolic process,0
+GO:0008150,GO:0051252,biological_process,regulation of RNA metabolic process,0
+GO:0008150,GO:0051254,biological_process,positive regulation of RNA metabolic process,0
+GO:0008150,GO:0051716,biological_process,cellular response to stimulus,0
+GO:0008150,GO:0060255,biological_process,regulation of macromolecule metabolic process,0
+GO:0008150,GO:0065007,biological_process,biological regulation,1
+GO:0008150,GO:0065008,biological_process,regulation of biological quality,0
+GO:0008150,GO:0065009,biological_process,regulation of molecular function,0
+GO:0008150,GO:0071704,biological_process,organic substance metabolic process,0
+GO:0008150,GO:0071840,biological_process,cellular component organization or biogenesis,1
+GO:0008150,GO:0080090,biological_process,regulation of primary metabolic process,0
+GO:0008150,GO:1901360,biological_process,organic cyclic compound metabolic process,0
+GO:0008150,GO:1902578,biological_process,single-organism localization,0
+GO:0008150,GO:1902589,biological_process,single-organism organelle organization,0
+GO:0008150,GO:1903506,biological_process,regulation of nucleic acid-templated transcription,0
+GO:0008150,GO:2000112,biological_process,regulation of cellular macromolecule biosynthetic process,0
+GO:0008150,GO:2001141,biological_process,regulation of RNA biosynthetic process,0
+GO:0008152,GO:0006464,metabolic process,cellular protein modification process,0
+GO:0008152,GO:0006807,metabolic process,nitrogen compound metabolic process,1
+GO:0008152,GO:0019538,metabolic process,protein metabolic process,0
+GO:0008152,GO:0034641,metabolic process,cellular nitrogen compound metabolic process,0
+GO:0008152,GO:0036211,metabolic process,protein modification process,0
+GO:0008152,GO:0043170,metabolic process,macromolecule metabolic process,0
+GO:0008152,GO:0043412,metabolic process,macromolecule modification,0
+GO:0008152,GO:0044237,metabolic process,cellular metabolic process,1
+GO:0008152,GO:0044238,metabolic process,primary metabolic process,1
+GO:0008152,GO:0044260,metabolic process,cellular macromolecule metabolic process,0
+GO:0008152,GO:0044267,metabolic process,cellular protein metabolic process,0
+GO:0008152,GO:0044710,metabolic process,single-organism metabolic process,1
+GO:0008152,GO:0071704,metabolic process,organic substance metabolic process,1
+GO:0008152,GO:1901360,metabolic process,organic cyclic compound metabolic process,0
+GO:0009889,GO:0006355,regulation of biosynthetic process,"regulation of transcription, DNA-templated",0
+GO:0009889,GO:0009891,regulation of biosynthetic process,positive regulation of biosynthetic process,1
+GO:0009889,GO:0010556,regulation of biosynthetic process,regulation of macromolecule biosynthetic process,1
+GO:0009889,GO:0010557,regulation of biosynthetic process,positive regulation of macromolecule biosynthetic process,0
+GO:0009889,GO:0031326,regulation of biosynthetic process,regulation of cellular biosynthetic process,1
+GO:0009889,GO:0031328,regulation of biosynthetic process,positive regulation of cellular biosynthetic process,0
+GO:0009889,GO:1903506,regulation of biosynthetic process,regulation of nucleic acid-templated transcription,0
+GO:0009889,GO:2000112,regulation of biosynthetic process,regulation of cellular macromolecule biosynthetic process,0
+GO:0009889,GO:2001141,regulation of biosynthetic process,regulation of RNA biosynthetic process,0
+GO:0009891,GO:0010557,positive regulation of biosynthetic process,positive regulation of macromolecule biosynthetic process,1
+GO:0009891,GO:0031328,positive regulation of biosynthetic process,positive regulation of cellular biosynthetic process,1
+GO:0009892,GO:0010605,negative regulation of metabolic process,negative regulation of macromolecule metabolic process,1
+GO:0009892,GO:0031324,negative regulation of metabolic process,negative regulation of cellular metabolic process,1
+GO:0009893,GO:0009891,positive regulation of metabolic process,positive regulation of biosynthetic process,1
+GO:0009893,GO:0010557,positive regulation of metabolic process,positive regulation of macromolecule biosynthetic process,0
+GO:0009893,GO:0010604,positive regulation of metabolic process,positive regulation of macromolecule metabolic process,1
+GO:0009893,GO:0010628,positive regulation of metabolic process,positive regulation of gene expression,0
+GO:0009893,GO:0031325,positive regulation of metabolic process,positive regulation of cellular metabolic process,1
+GO:0009893,GO:0031328,positive regulation of metabolic process,positive regulation of cellular biosynthetic process,0
+GO:0009893,GO:0045935,positive regulation of metabolic process,positive regulation of nucleobase-containing compound metabolic process,0
+GO:0009893,GO:0051173,positive regulation of metabolic process,positive regulation of nitrogen compound metabolic process,1
+GO:0009893,GO:0051254,positive regulation of metabolic process,positive regulation of RNA metabolic process,0
+GO:0009987,GO:0006464,cellular process,cellular protein modification process,0
+GO:0009987,GO:0006996,cellular process,organelle organization,0
+GO:0009987,GO:0016043,cellular process,cellular component organization,1
+GO:0009987,GO:0034641,cellular process,cellular nitrogen compound metabolic process,0
+GO:0009987,GO:0043933,cellular process,macromolecular complex subunit organization,0
+GO:0009987,GO:0044237,cellular process,cellular metabolic process,1
+GO:0009987,GO:0044260,cellular process,cellular macromolecule metabolic process,0
+GO:0009987,GO:0044267,cellular process,cellular protein metabolic process,0
+GO:0009987,GO:0044763,cellular process,single-organism cellular process,1
+GO:0009987,GO:0051716,cellular process,cellular response to stimulus,1
+GO:0009987,GO:1902589,cellular process,single-organism organelle organization,0
+GO:0010468,GO:0006355,regulation of gene expression,"regulation of transcription, DNA-templated",1
+GO:0010468,GO:0010628,regulation of gene expression,positive regulation of gene expression,1
+GO:0010556,GO:0006355,regulation of macromolecule biosynthetic process,"regulation of transcription, DNA-templated",0
+GO:0010556,GO:0010557,regulation of macromolecule biosynthetic process,positive regulation of macromolecule biosynthetic process,1
+GO:0010556,GO:1903506,regulation of macromolecule biosynthetic process,regulation of nucleic acid-templated transcription,0
+GO:0010556,GO:2000112,regulation of macromolecule biosynthetic process,regulation of cellular macromolecule biosynthetic process,1
+GO:0010556,GO:2001141,regulation of macromolecule biosynthetic process,regulation of RNA biosynthetic process,1
+GO:0010604,GO:0010557,positive regulation of macromolecule metabolic process,positive regulation of macromolecule biosynthetic process,1
+GO:0010604,GO:0010628,positive regulation of macromolecule metabolic process,positive regulation of gene expression,1
+GO:0010604,GO:0051254,positive regulation of macromolecule metabolic process,positive regulation of RNA metabolic process,1
+GO:0010646,GO:0009966,regulation of cell communication,regulation of signal transduction,1
+GO:0016020,GO:0005886,membrane,plasma membrane,1
+GO:0016043,GO:0006996,cellular component organization,organelle organization,1
+GO:0016043,GO:0043933,cellular component organization,macromolecular complex subunit organization,1
+GO:0016043,GO:1902589,cellular component organization,single-organism organelle organization,0
+GO:0019219,GO:0006355,regulation of nucleobase-containing compound metabolic process,"regulation of transcription, DNA-templated",0
+GO:0019219,GO:0045935,regulation of nucleobase-containing compound metabolic process,positive regulation of nucleobase-containing compound metabolic process,1
+GO:0019219,GO:0051252,regulation of nucleobase-containing compound metabolic process,regulation of RNA metabolic process,1
+GO:0019219,GO:0051254,regulation of nucleobase-containing compound metabolic process,positive regulation of RNA metabolic process,0
+GO:0019219,GO:1903506,regulation of nucleobase-containing compound metabolic process,regulation of nucleic acid-templated transcription,0
+GO:0019219,GO:2001141,regulation of nucleobase-containing compound metabolic process,regulation of RNA biosynthetic process,0
+GO:0019222,GO:0006355,regulation of metabolic process,"regulation of transcription, DNA-templated",0
+GO:0019222,GO:0009889,regulation of metabolic process,regulation of biosynthetic process,1
+GO:0019222,GO:0009891,regulation of metabolic process,positive regulation of biosynthetic process,0
+GO:0019222,GO:0009892,regulation of metabolic process,negative regulation of metabolic process,1
+GO:0019222,GO:0009893,regulation of metabolic process,positive regulation of metabolic process,1
+GO:0019222,GO:0010468,regulation of metabolic process,regulation of gene expression,0
+GO:0019222,GO:0010556,regulation of metabolic process,regulation of macromolecule biosynthetic process,0
+GO:0019222,GO:0010557,regulation of metabolic process,positive regulation of macromolecule biosynthetic process,0
+GO:0019222,GO:0010604,regulation of metabolic process,positive regulation of macromolecule metabolic process,0
+GO:0019222,GO:0010605,regulation of metabolic process,negative regulation of macromolecule metabolic process,0
+GO:0019222,GO:0010628,regulation of metabolic process,positive regulation of gene expression,0
+GO:0019222,GO:0019219,regulation of metabolic process,regulation of nucleobase-containing compound metabolic process,0
+GO:0019222,GO:0031323,regulation of metabolic process,regulation of cellular metabolic process,1
+GO:0019222,GO:0031324,regulation of metabolic process,negative regulation of cellular metabolic process,0
+GO:0019222,GO:0031325,regulation of metabolic process,positive regulation of cellular metabolic process,0
+GO:0019222,GO:0031326,regulation of metabolic process,regulation of cellular biosynthetic process,0
+GO:0019222,GO:0031328,regulation of metabolic process,positive regulation of cellular biosynthetic process,0
+GO:0019222,GO:0031399,regulation of metabolic process,regulation of protein modification process,0
+GO:0019222,GO:0032268,regulation of metabolic process,regulation of cellular protein metabolic process,0
+GO:0019222,GO:0045935,regulation of metabolic process,positive regulation of nucleobase-containing compound metabolic process,0
+GO:0019222,GO:0051171,regulation of metabolic process,regulation of nitrogen compound metabolic process,1
+GO:0019222,GO:0051173,regulation of metabolic process,positive regulation of nitrogen compound metabolic process,0
+GO:0019222,GO:0051246,regulation of metabolic process,regulation of protein metabolic process,0
+GO:0019222,GO:0051252,regulation of metabolic process,regulation of RNA metabolic process,0
+GO:0019222,GO:0051254,regulation of metabolic process,positive regulation of RNA metabolic process,0
+GO:0019222,GO:0060255,regulation of metabolic process,regulation of macromolecule metabolic process,1
+GO:0019222,GO:0080090,regulation of metabolic process,regulation of primary metabolic process,1
+GO:0019222,GO:1903506,regulation of metabolic process,regulation of nucleic acid-templated transcription,0
+GO:0019222,GO:2000112,regulation of metabolic process,regulation of cellular macromolecule biosynthetic process,0
+GO:0019222,GO:2001141,regulation of metabolic process,regulation of RNA biosynthetic process,0
+GO:0019538,GO:0006464,protein metabolic process,cellular protein modification process,0
+GO:0019538,GO:0036211,protein metabolic process,protein modification process,1
+GO:0019538,GO:0044267,protein metabolic process,cellular protein metabolic process,1
+GO:0023051,GO:0009966,regulation of signaling,regulation of signal transduction,1
+GO:0031323,GO:0006355,regulation of cellular metabolic process,"regulation of transcription, DNA-templated",0
+GO:0031323,GO:0019219,regulation of cellular metabolic process,regulation of nucleobase-containing compound metabolic process,1
+GO:0031323,GO:0031324,regulation of cellular metabolic process,negative regulation of cellular metabolic process,1
+GO:0031323,GO:0031325,regulation of cellular metabolic process,positive regulation of cellular metabolic process,1
+GO:0031323,GO:0031326,regulation of cellular metabolic process,regulation of cellular biosynthetic process,1
+GO:0031323,GO:0031328,regulation of cellular metabolic process,positive regulation of cellular biosynthetic process,0
+GO:0031323,GO:0031399,regulation of cellular metabolic process,regulation of protein modification process,0
+GO:0031323,GO:0032268,regulation of cellular metabolic process,regulation of cellular protein metabolic process,1
+GO:0031323,GO:0045935,regulation of cellular metabolic process,positive regulation of nucleobase-containing compound metabolic process,0
+GO:0031323,GO:0051252,regulation of cellular metabolic process,regulation of RNA metabolic process,0
+GO:0031323,GO:0051254,regulation of cellular metabolic process,positive regulation of RNA metabolic process,0
+GO:0031323,GO:1903506,regulation of cellular metabolic process,regulation of nucleic acid-templated transcription,0
+GO:0031323,GO:2000112,regulation of cellular metabolic process,regulation of cellular macromolecule biosynthetic process,0
+GO:0031323,GO:2001141,regulation of cellular metabolic process,regulation of RNA biosynthetic process,0
+GO:0031325,GO:0031328,positive regulation of cellular metabolic process,positive regulation of cellular biosynthetic process,1
+GO:0031325,GO:0045935,positive regulation of cellular metabolic process,positive regulation of nucleobase-containing compound metabolic process,1
+GO:0031325,GO:0051254,positive regulation of cellular metabolic process,positive regulation of RNA metabolic process,0
+GO:0031326,GO:0006355,regulation of cellular biosynthetic process,"regulation of transcription, DNA-templated",0
+GO:0031326,GO:0031328,regulation of cellular biosynthetic process,positive regulation of cellular biosynthetic process,1
+GO:0031326,GO:1903506,regulation of cellular biosynthetic process,regulation of nucleic acid-templated transcription,0
+GO:0031326,GO:2000112,regulation of cellular biosynthetic process,regulation of cellular macromolecule biosynthetic process,1
+GO:0031326,GO:2001141,regulation of cellular biosynthetic process,regulation of RNA biosynthetic process,1
+GO:0031982,GO:0070062,vesicle,extracellular exosome,0
+GO:0031982,GO:1903561,vesicle,extracellular vesicle,1
+GO:0032268,GO:0031399,regulation of cellular protein metabolic process,regulation of protein modification process,1
+GO:0032502,GO:0044767,developmental process,single-organism developmental process,1
+GO:0032991,GO:0043234,macromolecular complex,protein complex,1
+GO:0036211,GO:0006464,protein modification process,cellular protein modification process,1
+GO:0043170,GO:0006464,macromolecule metabolic process,cellular protein modification process,0
+GO:0043170,GO:0019538,macromolecule metabolic process,protein metabolic process,1
+GO:0043170,GO:0036211,macromolecule metabolic process,protein modification process,0
+GO:0043170,GO:0043412,macromolecule metabolic process,macromolecule modification,1
+GO:0043170,GO:0044260,macromolecule metabolic process,cellular macromolecule metabolic process,1
+GO:0043170,GO:0044267,macromolecule metabolic process,cellular protein metabolic process,0
+GO:0043226,GO:0005634,organelle,nucleus,0
+GO:0043226,GO:0031982,organelle,vesicle,0
+GO:0043226,GO:0043227,organelle,membrane-bounded organelle,1
+GO:0043226,GO:0043228,organelle,non-membrane-bounded organelle,1
+GO:0043226,GO:0043229,organelle,intracellular organelle,1
+GO:0043226,GO:0043230,organelle,extracellular organelle,1
+GO:0043226,GO:0043231,organelle,intracellular membrane-bounded organelle,0
+GO:0043226,GO:0043232,organelle,intracellular non-membrane-bounded organelle,0
+GO:0043226,GO:0070062,organelle,extracellular exosome,0
+GO:0043226,GO:1903561,organelle,extracellular vesicle,0
+GO:0043227,GO:0005634,membrane-bounded organelle,nucleus,0
+GO:0043227,GO:0031982,membrane-bounded organelle,vesicle,1
+GO:0043227,GO:0043231,membrane-bounded organelle,intracellular membrane-bounded organelle,1
+GO:0043227,GO:0070062,membrane-bounded organelle,extracellular exosome,0
+GO:0043227,GO:1903561,membrane-bounded organelle,extracellular vesicle,0
+GO:0043228,GO:0043232,non-membrane-bounded organelle,intracellular non-membrane-bounded organelle,1
+GO:0043229,GO:0005634,intracellular organelle,nucleus,0
+GO:0043229,GO:0043231,intracellular organelle,intracellular membrane-bounded organelle,1
+GO:0043229,GO:0043232,intracellular organelle,intracellular non-membrane-bounded organelle,1
+GO:0043230,GO:0070062,extracellular organelle,extracellular exosome,0
+GO:0043230,GO:1903561,extracellular organelle,extracellular vesicle,1
+GO:0043231,GO:0005634,intracellular membrane-bounded organelle,nucleus,1
+GO:0043412,GO:0006464,macromolecule modification,cellular protein modification process,0
+GO:0043412,GO:0036211,macromolecule modification,protein modification process,1
+GO:0044237,GO:0006464,cellular metabolic process,cellular protein modification process,0
+GO:0044237,GO:0034641,cellular metabolic process,cellular nitrogen compound metabolic process,1
+GO:0044237,GO:0044260,cellular metabolic process,cellular macromolecule metabolic process,1
+GO:0044237,GO:0044267,cellular metabolic process,cellular protein metabolic process,0
+GO:0044238,GO:0006464,primary metabolic process,cellular protein modification process,0
+GO:0044238,GO:0019538,primary metabolic process,protein metabolic process,1
+GO:0044238,GO:0036211,primary metabolic process,protein modification process,0
+GO:0044238,GO:0044267,primary metabolic process,cellular protein metabolic process,0
+GO:0044260,GO:0006464,cellular macromolecule metabolic process,cellular protein modification process,0
+GO:0044260,GO:0044267,cellular macromolecule metabolic process,cellular protein metabolic process,1
+GO:0044267,GO:0006464,cellular protein metabolic process,cellular protein modification process,1
+GO:0044421,GO:0043230,extracellular region part,extracellular organelle,1
+GO:0044421,GO:0070062,extracellular region part,extracellular exosome,0
+GO:0044421,GO:1903561,extracellular region part,extracellular vesicle,0
+GO:0044422,GO:0005654,organelle part,nucleoplasm,0
+GO:0044422,GO:0044428,organelle part,nuclear part,0
+GO:0044422,GO:0044446,organelle part,intracellular organelle part,1
+GO:0044424,GO:0005634,intracellular part,nucleus,0
+GO:0044424,GO:0005654,intracellular part,nucleoplasm,0
+GO:0044424,GO:0005737,intracellular part,cytoplasm,1
+GO:0044424,GO:0043229,intracellular part,intracellular organelle,1
+GO:0044424,GO:0043231,intracellular part,intracellular membrane-bounded organelle,0
+GO:0044424,GO:0043232,intracellular part,intracellular non-membrane-bounded organelle,0
+GO:0044424,GO:0044428,intracellular part,nuclear part,0
+GO:0044424,GO:0044444,intracellular part,cytoplasmic part,1
+GO:0044424,GO:0044446,intracellular part,intracellular organelle part,1
+GO:0044428,GO:0005654,nuclear part,nucleoplasm,1
+GO:0044446,GO:0005654,intracellular organelle part,nucleoplasm,0
+GO:0044446,GO:0044428,intracellular organelle part,nuclear part,1
+GO:0044464,GO:0005634,cell part,nucleus,0
+GO:0044464,GO:0005654,cell part,nucleoplasm,0
+GO:0044464,GO:0005737,cell part,cytoplasm,0
+GO:0044464,GO:0005886,cell part,plasma membrane,1
+GO:0044464,GO:0043229,cell part,intracellular organelle,0
+GO:0044464,GO:0043231,cell part,intracellular membrane-bounded organelle,0
+GO:0044464,GO:0043232,cell part,intracellular non-membrane-bounded organelle,0
+GO:0044464,GO:0044424,cell part,intracellular part,1
+GO:0044464,GO:0044428,cell part,nuclear part,0
+GO:0044464,GO:0044444,cell part,cytoplasmic part,0
+GO:0044464,GO:0044446,cell part,intracellular organelle part,0
+GO:0044699,GO:0044710,single-organism process,single-organism metabolic process,1
+GO:0044699,GO:0044763,single-organism process,single-organism cellular process,1
+GO:0044699,GO:0044765,single-organism process,single-organism transport,0
+GO:0044699,GO:0044767,single-organism process,single-organism developmental process,1
+GO:0044699,GO:1902578,single-organism process,single-organism localization,1
+GO:0044699,GO:1902589,single-organism process,single-organism organelle organization,0
+GO:0044763,GO:1902589,single-organism cellular process,single-organism organelle organization,1
+GO:0045935,GO:0051254,positive regulation of nucleobase-containing compound metabolic process,positive regulation of RNA metabolic process,1
+GO:0048518,GO:0009891,positive regulation of biological process,positive regulation of biosynthetic process,0
+GO:0048518,GO:0009893,positive regulation of biological process,positive regulation of metabolic process,1
+GO:0048518,GO:0010557,positive regulation of biological process,positive regulation of macromolecule biosynthetic process,0
+GO:0048518,GO:0010604,positive regulation of biological process,positive regulation of macromolecule metabolic process,0
+GO:0048518,GO:0010628,positive regulation of biological process,positive regulation of gene expression,0
+GO:0048518,GO:0031325,positive regulation of biological process,positive regulation of cellular metabolic process,0
+GO:0048518,GO:0031328,positive regulation of biological process,positive regulation of cellular biosynthetic process,0
+GO:0048518,GO:0045935,positive regulation of biological process,positive regulation of nucleobase-containing compound metabolic process,0
+GO:0048518,GO:0048522,positive regulation of biological process,positive regulation of cellular process,1
+GO:0048518,GO:0048584,positive regulation of biological process,positive regulation of response to stimulus,1
+GO:0048518,GO:0051173,positive regulation of biological process,positive regulation of nitrogen compound metabolic process,0
+GO:0048518,GO:0051254,positive regulation of biological process,positive regulation of RNA metabolic process,0
+GO:0048519,GO:0009892,negative regulation of biological process,negative regulation of metabolic process,1
+GO:0048519,GO:0010605,negative regulation of biological process,negative regulation of macromolecule metabolic process,0
+GO:0048519,GO:0031324,negative regulation of biological process,negative regulation of cellular metabolic process,0
+GO:0048519,GO:0048523,negative regulation of biological process,negative regulation of cellular process,1
+GO:0048522,GO:0031325,positive regulation of cellular process,positive regulation of cellular metabolic process,1
+GO:0048522,GO:0031328,positive regulation of cellular process,positive regulation of cellular biosynthetic process,0
+GO:0048522,GO:0045935,positive regulation of cellular process,positive regulation of nucleobase-containing compound metabolic process,0
+GO:0048522,GO:0051254,positive regulation of cellular process,positive regulation of RNA metabolic process,0
+GO:0048523,GO:0031324,negative regulation of cellular process,negative regulation of cellular metabolic process,1
+GO:0048583,GO:0009966,regulation of response to stimulus,regulation of signal transduction,1
+GO:0048583,GO:0048584,regulation of response to stimulus,positive regulation of response to stimulus,1
+GO:0050789,GO:0006355,regulation of biological process,"regulation of transcription, DNA-templated",0
+GO:0050789,GO:0007165,regulation of biological process,signal transduction,0
+GO:0050789,GO:0009889,regulation of biological process,regulation of biosynthetic process,0
+GO:0050789,GO:0009891,regulation of biological process,positive regulation of biosynthetic process,0
+GO:0050789,GO:0009892,regulation of biological process,negative regulation of metabolic process,0
+GO:0050789,GO:0009893,regulation of biological process,positive regulation of metabolic process,0
+GO:0050789,GO:0009966,regulation of biological process,regulation of signal transduction,0
+GO:0050789,GO:0010468,regulation of biological process,regulation of gene expression,0
+GO:0050789,GO:0010556,regulation of biological process,regulation of macromolecule biosynthetic process,0
+GO:0050789,GO:0010557,regulation of biological process,positive regulation of macromolecule biosynthetic process,0
+GO:0050789,GO:0010604,regulation of biological process,positive regulation of macromolecule metabolic process,0
+GO:0050789,GO:0010605,regulation of biological process,negative regulation of macromolecule metabolic process,0
+GO:0050789,GO:0010628,regulation of biological process,positive regulation of gene expression,0
+GO:0050789,GO:0010646,regulation of biological process,regulation of cell communication,0
+GO:0050789,GO:0019219,regulation of biological process,regulation of nucleobase-containing compound metabolic process,0
+GO:0050789,GO:0019222,regulation of biological process,regulation of metabolic process,1
+GO:0050789,GO:0023051,regulation of biological process,regulation of signaling,1
+GO:0050789,GO:0031323,regulation of biological process,regulation of cellular metabolic process,0
+GO:0050789,GO:0031324,regulation of biological process,negative regulation of cellular metabolic process,0
+GO:0050789,GO:0031325,regulation of biological process,positive regulation of cellular metabolic process,0
+GO:0050789,GO:0031326,regulation of biological process,regulation of cellular biosynthetic process,0
+GO:0050789,GO:0031328,regulation of biological process,positive regulation of cellular biosynthetic process,0
+GO:0050789,GO:0031399,regulation of biological process,regulation of protein modification process,0
+GO:0050789,GO:0032268,regulation of biological process,regulation of cellular protein metabolic process,0
+GO:0050789,GO:0032879,regulation of biological process,regulation of localization,1
+GO:0050789,GO:0045935,regulation of biological process,positive regulation of nucleobase-containing compound metabolic process,0
+GO:0050789,GO:0048518,regulation of biological process,positive regulation of biological process,1
+GO:0050789,GO:0048519,regulation of biological process,negative regulation of biological process,1
+GO:0050789,GO:0048522,regulation of biological process,positive regulation of cellular process,0
+GO:0050789,GO:0048523,regulation of biological process,negative regulation of cellular process,0
+GO:0050789,GO:0048583,regulation of biological process,regulation of response to stimulus,1
+GO:0050789,GO:0048584,regulation of biological process,positive regulation of response to stimulus,0
+GO:0050789,GO:0050793,regulation of biological process,regulation of developmental process,1
+GO:0050789,GO:0050794,regulation of biological process,regulation of cellular process,1
+GO:0050789,GO:0051128,regulation of biological process,regulation of cellular component organization,0
+GO:0050789,GO:0051171,regulation of biological process,regulation of nitrogen compound metabolic process,0
+GO:0050789,GO:0051173,regulation of biological process,positive regulation of nitrogen compound metabolic process,0
+GO:0050789,GO:0051239,regulation of biological process,regulation of multicellular organismal process,1
+GO:0050789,GO:0051246,regulation of biological process,regulation of protein metabolic process,0
+GO:0050789,GO:0051252,regulation of biological process,regulation of RNA metabolic process,0
+GO:0050789,GO:0051254,regulation of biological process,positive regulation of RNA metabolic process,0
+GO:0050789,GO:0060255,regulation of biological process,regulation of macromolecule metabolic process,0
+GO:0050789,GO:0080090,regulation of biological process,regulation of primary metabolic process,0
+GO:0050789,GO:1903506,regulation of biological process,regulation of nucleic acid-templated transcription,0
+GO:0050789,GO:2000112,regulation of biological process,regulation of cellular macromolecule biosynthetic process,0
+GO:0050789,GO:2001141,regulation of biological process,regulation of RNA biosynthetic process,0
+GO:0050794,GO:0006355,regulation of cellular process,"regulation of transcription, DNA-templated",0
+GO:0050794,GO:0007165,regulation of cellular process,signal transduction,1
+GO:0050794,GO:0009966,regulation of cellular process,regulation of signal transduction,0
+GO:0050794,GO:0010646,regulation of cellular process,regulation of cell communication,1
+GO:0050794,GO:0019219,regulation of cellular process,regulation of nucleobase-containing compound metabolic process,0
+GO:0050794,GO:0031323,regulation of cellular process,regulation of cellular metabolic process,1
+GO:0050794,GO:0031324,regulation of cellular process,negative regulation of cellular metabolic process,0
+GO:0050794,GO:0031325,regulation of cellular process,positive regulation of cellular metabolic process,0
+GO:0050794,GO:0031326,regulation of cellular process,regulation of cellular biosynthetic process,0
+GO:0050794,GO:0031328,regulation of cellular process,positive regulation of cellular biosynthetic process,0
+GO:0050794,GO:0031399,regulation of cellular process,regulation of protein modification process,0
+GO:0050794,GO:0032268,regulation of cellular process,regulation of cellular protein metabolic process,0
+GO:0050794,GO:0045935,regulation of cellular process,positive regulation of nucleobase-containing compound metabolic process,0
+GO:0050794,GO:0048522,regulation of cellular process,positive regulation of cellular process,1
+GO:0050794,GO:0048523,regulation of cellular process,negative regulation of cellular process,1
+GO:0050794,GO:0051128,regulation of cellular process,regulation of cellular component organization,1
+GO:0050794,GO:0051252,regulation of cellular process,regulation of RNA metabolic process,0
+GO:0050794,GO:0051254,regulation of cellular process,positive regulation of RNA metabolic process,0
+GO:0050794,GO:1903506,regulation of cellular process,regulation of nucleic acid-templated transcription,0
+GO:0050794,GO:2000112,regulation of cellular process,regulation of cellular macromolecule biosynthetic process,0
+GO:0050794,GO:2001141,regulation of cellular process,regulation of RNA biosynthetic process,0
+GO:0050896,GO:0006950,response to stimulus,response to stress,1
+GO:0050896,GO:0042221,response to stimulus,response to chemical,1
+GO:0050896,GO:0051716,response to stimulus,cellular response to stimulus,1
+GO:0051171,GO:0006355,regulation of nitrogen compound metabolic process,"regulation of transcription, DNA-templated",0
+GO:0051171,GO:0019219,regulation of nitrogen compound metabolic process,regulation of nucleobase-containing compound metabolic process,1
+GO:0051171,GO:0045935,regulation of nitrogen compound metabolic process,positive regulation of nucleobase-containing compound metabolic process,0
+GO:0051171,GO:0051173,regulation of nitrogen compound metabolic process,positive regulation of nitrogen compound metabolic process,1
+GO:0051171,GO:0051252,regulation of nitrogen compound metabolic process,regulation of RNA metabolic process,0
+GO:0051171,GO:0051254,regulation of nitrogen compound metabolic process,positive regulation of RNA metabolic process,0
+GO:0051171,GO:1903506,regulation of nitrogen compound metabolic process,regulation of nucleic acid-templated transcription,0
+GO:0051171,GO:2001141,regulation of nitrogen compound metabolic process,regulation of RNA biosynthetic process,0
+GO:0051173,GO:0045935,positive regulation of nitrogen compound metabolic process,positive regulation of nucleobase-containing compound metabolic process,1
+GO:0051173,GO:0051254,positive regulation of nitrogen compound metabolic process,positive regulation of RNA metabolic process,0
+GO:0051179,GO:0006810,localization,transport,0
+GO:0051179,GO:0044765,localization,single-organism transport,0
+GO:0051179,GO:0051234,localization,establishment of localization,1
+GO:0051179,GO:1902578,localization,single-organism localization,1
+GO:0051234,GO:0006810,establishment of localization,transport,1
+GO:0051234,GO:0044765,establishment of localization,single-organism transport,0
+GO:0051246,GO:0031399,regulation of protein metabolic process,regulation of protein modification process,0
+GO:0051246,GO:0032268,regulation of protein metabolic process,regulation of cellular protein metabolic process,1
+GO:0051252,GO:0006355,regulation of RNA metabolic process,"regulation of transcription, DNA-templated",0
+GO:0051252,GO:0051254,regulation of RNA metabolic process,positive regulation of RNA metabolic process,1
+GO:0051252,GO:1903506,regulation of RNA metabolic process,regulation of nucleic acid-templated transcription,0
+GO:0051252,GO:2001141,regulation of RNA metabolic process,regulation of RNA biosynthetic process,1
+GO:0060255,GO:0006355,regulation of macromolecule metabolic process,"regulation of transcription, DNA-templated",0
+GO:0060255,GO:0010468,regulation of macromolecule metabolic process,regulation of gene expression,1
+GO:0060255,GO:0010556,regulation of macromolecule metabolic process,regulation of macromolecule biosynthetic process,1
+GO:0060255,GO:0010557,regulation of macromolecule metabolic process,positive regulation of macromolecule biosynthetic process,0
+GO:0060255,GO:0010604,regulation of macromolecule metabolic process,positive regulation of macromolecule metabolic process,1
+GO:0060255,GO:0010605,regulation of macromolecule metabolic process,negative regulation of macromolecule metabolic process,1
+GO:0060255,GO:0010628,regulation of macromolecule metabolic process,positive regulation of gene expression,0
+GO:0060255,GO:0031399,regulation of macromolecule metabolic process,regulation of protein modification process,0
+GO:0060255,GO:0032268,regulation of macromolecule metabolic process,regulation of cellular protein metabolic process,0
+GO:0060255,GO:0051246,regulation of macromolecule metabolic process,regulation of protein metabolic process,1
+GO:0060255,GO:0051252,regulation of macromolecule metabolic process,regulation of RNA metabolic process,1
+GO:0060255,GO:0051254,regulation of macromolecule metabolic process,positive regulation of RNA metabolic process,0
+GO:0060255,GO:1903506,regulation of macromolecule metabolic process,regulation of nucleic acid-templated transcription,0
+GO:0060255,GO:2000112,regulation of macromolecule metabolic process,regulation of cellular macromolecule biosynthetic process,0
+GO:0060255,GO:2001141,regulation of macromolecule metabolic process,regulation of RNA biosynthetic process,0
+GO:0065007,GO:0006355,biological regulation,"regulation of transcription, DNA-templated",0
+GO:0065007,GO:0007165,biological regulation,signal transduction,0
+GO:0065007,GO:0009889,biological regulation,regulation of biosynthetic process,0
+GO:0065007,GO:0009891,biological regulation,positive regulation of biosynthetic process,0
+GO:0065007,GO:0009892,biological regulation,negative regulation of metabolic process,0
+GO:0065007,GO:0009893,biological regulation,positive regulation of metabolic process,0
+GO:0065007,GO:0009966,biological regulation,regulation of signal transduction,0
+GO:0065007,GO:0010468,biological regulation,regulation of gene expression,0
+GO:0065007,GO:0010556,biological regulation,regulation of macromolecule biosynthetic process,0
+GO:0065007,GO:0010557,biological regulation,positive regulation of macromolecule biosynthetic process,0
+GO:0065007,GO:0010604,biological regulation,positive regulation of macromolecule metabolic process,0
+GO:0065007,GO:0010605,biological regulation,negative regulation of macromolecule metabolic process,0
+GO:0065007,GO:0010628,biological regulation,positive regulation of gene expression,0
+GO:0065007,GO:0010646,biological regulation,regulation of cell communication,0
+GO:0065007,GO:0019219,biological regulation,regulation of nucleobase-containing compound metabolic process,0
+GO:0065007,GO:0019222,biological regulation,regulation of metabolic process,0
+GO:0065007,GO:0023051,biological regulation,regulation of signaling,0
+GO:0065007,GO:0031323,biological regulation,regulation of cellular metabolic process,0
+GO:0065007,GO:0031324,biological regulation,negative regulation of cellular metabolic process,0
+GO:0065007,GO:0031325,biological regulation,positive regulation of cellular metabolic process,0
+GO:0065007,GO:0031326,biological regulation,regulation of cellular biosynthetic process,0
+GO:0065007,GO:0031328,biological regulation,positive regulation of cellular biosynthetic process,0
+GO:0065007,GO:0031399,biological regulation,regulation of protein modification process,0
+GO:0065007,GO:0032268,biological regulation,regulation of cellular protein metabolic process,0
+GO:0065007,GO:0032879,biological regulation,regulation of localization,0
+GO:0065007,GO:0045935,biological regulation,positive regulation of nucleobase-containing compound metabolic process,0
+GO:0065007,GO:0048518,biological regulation,positive regulation of biological process,0
+GO:0065007,GO:0048519,biological regulation,negative regulation of biological process,0
+GO:0065007,GO:0048522,biological regulation,positive regulation of cellular process,0
+GO:0065007,GO:0048523,biological regulation,negative regulation of cellular process,0
+GO:0065007,GO:0048583,biological regulation,regulation of response to stimulus,0
+GO:0065007,GO:0048584,biological regulation,positive regulation of response to stimulus,0
+GO:0065007,GO:0050789,biological regulation,regulation of biological process,1
+GO:0065007,GO:0050793,biological regulation,regulation of developmental process,0
+GO:0065007,GO:0050794,biological regulation,regulation of cellular process,0
+GO:0065007,GO:0051128,biological regulation,regulation of cellular component organization,0
+GO:0065007,GO:0051171,biological regulation,regulation of nitrogen compound metabolic process,0
+GO:0065007,GO:0051173,biological regulation,positive regulation of nitrogen compound metabolic process,0
+GO:0065007,GO:0051239,biological regulation,regulation of multicellular organismal process,0
+GO:0065007,GO:0051246,biological regulation,regulation of protein metabolic process,0
+GO:0065007,GO:0051252,biological regulation,regulation of RNA metabolic process,0
+GO:0065007,GO:0051254,biological regulation,positive regulation of RNA metabolic process,0
+GO:0065007,GO:0060255,biological regulation,regulation of macromolecule metabolic process,0
+GO:0065007,GO:0065008,biological regulation,regulation of biological quality,1
+GO:0065007,GO:0065009,biological regulation,regulation of molecular function,1
+GO:0065007,GO:0080090,biological regulation,regulation of primary metabolic process,0
+GO:0065007,GO:1903506,biological regulation,regulation of nucleic acid-templated transcription,0
+GO:0065007,GO:2000112,biological regulation,regulation of cellular macromolecule biosynthetic process,0
+GO:0065007,GO:2001141,biological regulation,regulation of RNA biosynthetic process,0
+GO:0071704,GO:0006464,organic substance metabolic process,cellular protein modification process,0
+GO:0071704,GO:0019538,organic substance metabolic process,protein metabolic process,0
+GO:0071704,GO:0036211,organic substance metabolic process,protein modification process,0
+GO:0071704,GO:0043170,organic substance metabolic process,macromolecule metabolic process,1
+GO:0071704,GO:0043412,organic substance metabolic process,macromolecule modification,0
+GO:0071704,GO:0044260,organic substance metabolic process,cellular macromolecule metabolic process,0
+GO:0071704,GO:0044267,organic substance metabolic process,cellular protein metabolic process,0
+GO:0071704,GO:1901360,organic substance metabolic process,organic cyclic compound metabolic process,1
+GO:0071840,GO:0006996,cellular component organization or biogenesis,organelle organization,0
+GO:0071840,GO:0016043,cellular component organization or biogenesis,cellular component organization,1
+GO:0071840,GO:0043933,cellular component organization or biogenesis,macromolecular complex subunit organization,0
+GO:0071840,GO:1902589,cellular component organization or biogenesis,single-organism organelle organization,0
+GO:0080090,GO:0006355,regulation of primary metabolic process,"regulation of transcription, DNA-templated",0
+GO:0080090,GO:0019219,regulation of primary metabolic process,regulation of nucleobase-containing compound metabolic process,1
+GO:0080090,GO:0031399,regulation of primary metabolic process,regulation of protein modification process,0
+GO:0080090,GO:0032268,regulation of primary metabolic process,regulation of cellular protein metabolic process,0
+GO:0080090,GO:0045935,regulation of primary metabolic process,positive regulation of nucleobase-containing compound metabolic process,0
+GO:0080090,GO:0051246,regulation of primary metabolic process,regulation of protein metabolic process,1
+GO:0080090,GO:0051252,regulation of primary metabolic process,regulation of RNA metabolic process,0
+GO:0080090,GO:0051254,regulation of primary metabolic process,positive regulation of RNA metabolic process,0
+GO:0080090,GO:1903506,regulation of primary metabolic process,regulation of nucleic acid-templated transcription,0
+GO:0080090,GO:2001141,regulation of primary metabolic process,regulation of RNA biosynthetic process,0
+GO:0097159,GO:0003676,organic cyclic compound binding,nucleic acid binding,1
+GO:0097159,GO:0003723,organic cyclic compound binding,RNA binding,0
+GO:0097159,GO:0044822,organic cyclic compound binding,poly(A) RNA binding,0
+GO:1901363,GO:0003676,heterocyclic compound binding,nucleic acid binding,1
+GO:1901363,GO:0003723,heterocyclic compound binding,RNA binding,0
+GO:1901363,GO:0044822,heterocyclic compound binding,poly(A) RNA binding,0
+GO:1902578,GO:0044765,single-organism localization,single-organism transport,1
+GO:1903506,GO:0006355,regulation of nucleic acid-templated transcription,"regulation of transcription, DNA-templated",1
+GO:1903561,GO:0070062,extracellular vesicle,extracellular exosome,1
+GO:2000112,GO:0006355,regulation of cellular macromolecule biosynthetic process,"regulation of transcription, DNA-templated",1
+GO:2001141,GO:0006355,regulation of RNA biosynthetic process,"regulation of transcription, DNA-templated",0
+GO:2001141,GO:1903506,regulation of RNA biosynthetic process,regulation of nucleic acid-templated transcription,1

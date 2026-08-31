@@ -1,0 +1,176 @@
+{
+  "files": [
+    {
+      "kind": "uploaded_or_prior_generated",
+      "relative_path": "Greene2015.pdf",
+      "absolute_path": "/mnt/data/Greene2015.pdf",
+      "size": 1729378,
+      "sha256": "15c734d37bf63dc586d9bfb95673612209a2f2d298a0a1dc84fa63a1d7a17ce2",
+      "source_url": "",
+      "recorded_at_utc": "2026-08-24T04:56:52.563023+00:00"
+    },
+    {
+      "kind": "uploaded_or_prior_generated",
+      "relative_path": "Greene2015_Table6.xlsx",
+      "absolute_path": "/mnt/data/Greene2015_Table6.xlsx",
+      "size": 37992,
+      "sha256": "691b9d895ac6d0f6ed7abedb96d9b206965fe221e3ccdae940b4daa5db50533e",
+      "source_url": "",
+      "recorded_at_utc": "2026-08-24T04:56:52.563023+00:00"
+    },
+    {
+      "kind": "uploaded_or_prior_generated",
+      "relative_path": "Greene2015_Table9.xlsx",
+      "absolute_path": "/mnt/data/Greene2015_Table9.xlsx",
+      "size": 140272,
+      "sha256": "18ae68f28d9b84f4b1cb7f7c7c1cc8eb76716414de2089a329f070a5aeca6cd5",
+      "source_url": "",
+      "recorded_at_utc": "2026-08-24T04:56:52.563023+00:00"
+    },
+    {
+      "kind": "uploaded_or_prior_generated",
+      "relative_path": "Greene2015_sup.pdf",
+      "absolute_path": "/mnt/data/Greene2015_sup.pdf",
+      "size": 6701167,
+      "sha256": "89e84c545590a3d34890f24cf6543a336b59cace8926a83701f503afcd979ed9",
+      "source_url": "",
+      "recorded_at_utc": "2026-08-24T04:56:52.563023+00:00"
+    },
+    {
+      "kind": "uploaded_or_prior_generated",
+      "relative_path": "OhmNet.pdf",
+      "absolute_path": "/mnt/data/OhmNet.pdf",
+      "size": 1458562,
+      "sha256": "e60daf8341d0e322ce58e7c6ad194f7e4b573df7c8aba1716ad78c98992b02fe",
+      "source_url": "",
+      "recorded_at_utc": "2026-08-24T04:56:52.563023+00:00"
+    },
+    {
+      "kind": "uploaded_or_prior_generated",
+      "relative_path": "Pasted markdown(1).md",
+      "absolute_path": "/mnt/data/Pasted markdown(1).md",
+      "size": 237584,
+      "sha256": "f856e6f29f02a17c83650724f2b8434383dc7952c03e5200d4bb9c47c1c8782e",
+      "source_url": "",
+      "recorded_at_utc": "2026-08-24T04:56:52.563023+00:00"
+    },
+    {
+      "kind": "uploaded_or_prior_generated",
+      "relative_path": "bio-tissue-hierarchy.tar.gz",
+      "absolute_path": "/mnt/data/bio-tissue-hierarchy.tar.gz",
+      "size": 421785,
+      "sha256": "c4568a68bb83319bff854eecf73a93f698fe2c41ed6e95639af974dd024ffef7",
+      "source_url": "",
+      "recorded_at_utc": "2026-08-24T04:56:52.563023+00:00"
+    },
+    {
+      "kind": "uploaded_or_prior_generated",
+      "relative_path": "bio-tissue-labels.tar.gz",
+      "absolute_path": "/mnt/data/bio-tissue-labels.tar.gz",
+      "size": 1793328,
+      "sha256": "6abf272940d2407849bd779e5f85c0377a2fb07c2351d1ebc82e3d06a46bc11d",
+      "source_url": "",
+      "recorded_at_utc": "2026-08-24T04:56:52.563023+00:00"
+    },
+    {
+      "kind": "uploaded_or_prior_generated",
+      "relative_path": "bio-tissue-networks.tar.gz",
+      "absolute_path": "/mnt/data/bio-tissue-networks.tar.gz",
+      "size": 15568869,
+      "sha256": "2c79e17f4a7c8680a7cbf8b20cef4acf356a7523c9a75fce586494153c0603d1",
+      "source_url": "",
+      "recorded_at_utc": "2026-08-24T04:56:52.563023+00:00"
+    },
+    {
+      "kind": "uploaded_or_prior_generated",
+      "relative_path": "bio-tissue-readme.txt",
+      "absolute_path": "/mnt/data/bio-tissue-readme.txt",
+      "size": 1465,
+      "sha256": "7f3372f8ae3a90852951c73b18980386ceb4ad2f5d32d81366adf22fd75e2b20",
+      "source_url": "",
+      "recorded_at_utc": "2026-08-24T04:56:52.563023+00:00"
+    },
+    {
+      "kind": "uploaded_or_prior_generated",
+      "relative_path": "dgl_ppi.zip",
+      "absolute_path": "/mnt/data/dgl_ppi.zip",
+      "size": 7088822,
+      "sha256": "1f5b2b09ac0f897fa6aa1338c64ab75a5473674cbba89380120bede8cddb2a6a",
+      "source_url": "",
+      "recorded_at_utc": "2026-08-24T04:56:52.563023+00:00"
+    },
+    {
+      "kind": "uploaded_or_prior_generated",
+      "relative_path": "graphsage_ppi.zip",
+      "absolute_path": "/mnt/data/graphsage_ppi.zip",
+      "size": 27029260,
+      "sha256": "53aeb76e54fd41b645e7edb48b62929240b89839495396b048086fd212503fbd",
+      "source_url": "",
+      "recorded_at_utc": "2026-08-24T04:56:52.563023+00:00"
+    },
+    {
+      "kind": "uploaded_or_prior_generated",
+      "relative_path": "historical_go_mapping_inventory.md",
+      "absolute_path": "/mnt/data/historical_go_mapping_inventory.md",
+      "size": 55969,
+      "sha256": "ad10c6ed2919409a3dda0f2e89f4a5f7709cb739f9e3129297b1fa9f497f4b0c",
+      "source_url": "",
+      "recorded_at_utc": "2026-08-24T04:56:52.563023+00:00"
+    },
+    {
+      "kind": "uploaded_or_prior_generated",
+      "relative_path": "investigation_summary_2026_08_23.md",
+      "absolute_path": "/mnt/data/investigation_summary_2026_08_23.md",
+      "size": 13819,
+      "sha256": "fe23f5d35c1c3a21bba13c2241e0c8c783c31a0a31026c8e5f1c0d7a8c320d16",
+      "source_url": "",
+      "recorded_at_utc": "2026-08-24T04:56:52.563023+00:00"
+    },
+    {
+      "kind": "uploaded_or_prior_generated",
+      "relative_path": "msigdb_v5.1_files_to_download_locally.zip",
+      "absolute_path": "/mnt/data/msigdb_v5.1_files_to_download_locally.zip",
+      "size": 69702250,
+      "sha256": "5a8b3f10ea92f8e71eaaa0705ab9d3a5229d838864eec9699544b75884bc9e29",
+      "source_url": "",
+      "recorded_at_utc": "2026-08-24T04:56:52.563023+00:00"
+    },
+    {
+      "kind": "uploaded_or_prior_generated",
+      "relative_path": "msigdb_v5.2_chip_files_to_download_locally.zip",
+      "absolute_path": "/mnt/data/msigdb_v5.2_chip_files_to_download_locally.zip",
+      "size": 67891640,
+      "sha256": "252befc853b5e01cfe99439ec50a7ab8de747cd0abe6224a93077f2d9b0b20fc",
+      "source_url": "",
+      "recorded_at_utc": "2026-08-24T04:56:52.563023+00:00"
+    },
+    {
+      "kind": "uploaded_or_prior_generated",
+      "relative_path": "msigdb_v5.2_files_to_download_locally.zip",
+      "absolute_path": "/mnt/data/msigdb_v5.2_files_to_download_locally.zip",
+      "size": 92768160,
+      "sha256": "a618c1c60b11570036034e6357e73e80ee43065ec7a57c1dbd238f205405fbdb",
+      "source_url": "",
+      "recorded_at_utc": "2026-08-24T04:56:52.563023+00:00"
+    },
+    {
+      "kind": "uploaded_or_prior_generated",
+      "relative_path": "msigdb_v6.0_files_to_download_locally.zip",
+      "absolute_path": "/mnt/data/msigdb_v6.0_files_to_download_locally.zip",
+      "size": 72144318,
+      "sha256": "39fa82c4cedc9183c532afb1c1431683536b5945e50fb8be4f5bcce3ac136edf",
+      "source_url": "",
+      "recorded_at_utc": "2026-08-24T04:56:52.563023+00:00"
+    },
+    {
+      "kind": "downloaded_or_cloned",
+      "relative_path": "downloads/papers/GraphSAGE_arXiv_1706.02216.pdf",
+      "absolute_path": "/mnt/data/ppi_repro/downloads/papers/GraphSAGE_arXiv_1706.02216.pdf",
+      "size": 1086007,
+      "sha256": "e1f354eb12011cde24af1eb500d72463fc971b09d26b55688c7f918a86e31ce8",
+      "source_url": "",
+      "recorded_at_utc": "2026-08-24T04:56:52.563023+00:00"
+    }
+  ],
+  "repositories": []
+}

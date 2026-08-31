@@ -1,0 +1,12 @@
+{
+  "manifest": "/mnt/data/ppi_repro_corrected/results/actual_input_file_manifest_through_B104C_20260828T200948Z.csv",
+  "ledger_prebundle": "/mnt/data/ppi_repro_corrected/results/source_ledger_through_B104C_PREBUNDLE_20260828T200948Z.csv",
+  "events_prebundle": "/mnt/data/ppi_repro_corrected/results/provenance_events_through_B104C_PREBUNDLE_20260828T200948Z.csv",
+  "receipt": "/mnt/data/ppi_repro_corrected/batches/B104C_20260828T194921Z/B104C_INPUT_RECEIPT_20260828T200948Z.md",
+  "storage_update": "/mnt/data/ppi_repro_corrected/results/user_local_storage_status_update_B104C_20260828T200948Z.csv",
+  "rows": {
+    "manifest": 47,
+    "ledger": 462,
+    "events": 118
+  }
+}

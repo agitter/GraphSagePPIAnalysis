@@ -1,0 +1,10 @@
+Entrez_GeneID,MSigDB52_symbols,all_gp2protein_geneid_accessions,accessions_in_gp2protein_human,accessions_in_GPI159,GPI159_accessions_with_matching_symbol_or_synonym,reason_not_covered
+176,ACAN,E7ENV9|E7EX88|H0YM81,E7ENV9|E7EX88|H0YM81,,P16112,"GeneID maps to human accessions, but none is the GPI159 reference-proteome object"
+337,APOA4,,,,P06727,GeneID has no row in gp2protein.geneid
+3108,HLA-DMA,Q31604|Q6ICR9,,,P28067,GeneID maps only to accessions outside gp2protein.human and outside GPI159
+4018,LPA,,,,P08519,GeneID has no row in gp2protein.geneid
+7957,EPM2A,H0UI04|O95278,O95278,,B3EWF7,"GeneID maps to human accessions, but none is the GPI159 reference-proteome object"
+10159,ATP6AP2,O75787,O75787,,,"GeneID maps to human accessions, but none is the GPI159 reference-proteome object"
+29901,SAC3D1,F8WC89,F8WC89,,A6NKF1,"GeneID maps to human accessions, but none is the GPI159 reference-proteome object"
+55125,CEP192,B7ZMF0|Q9HCK3,,,Q8TEP8,GeneID maps only to accessions outside gp2protein.human and outside GPI159
+84919,PPP1R15B,,,,Q5SWA1,GeneID has no row in gp2protein.geneid

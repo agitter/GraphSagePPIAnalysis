@@ -1,0 +1,9 @@
+version,build_date,scope,gene_sets_tested,C5_gene_sets,target_GO_IDs_present_in_C5,target_GO_IDs_total,target_GO_memberships_directly_exact,exact_label_columns,closest_mismatch,median_best_mismatch,columns_ge_99pct,columns_ge_95pct
+5.0,"Apr 27, 2015",C5,1454,1454,57,121,0,0,307,823,0,0
+5.0,"Apr 27, 2015",ALL,10348,1454,57,121,0,0,307,823,0,0
+5.1,"Jan 27, 2016",C5,1454,1454,57,121,0,0,307,823,0,0
+5.1,"Jan 27, 2016",ALL,13311,1454,57,121,0,0,307,823,0,0
+5.2,"Sep 22, 2016",C5,6166,6166,6,121,0,0,10,615,1,2
+5.2,"Sep 22, 2016",ALL,18890,6166,6,121,0,0,10,615,1,2
+6.0,"Feb 22, 2017",C5,5917,5917,6,121,0,0,10,615,1,2
+6.0,"Feb 22, 2017",ALL,18643,5917,6,121,0,0,10,615,1,2

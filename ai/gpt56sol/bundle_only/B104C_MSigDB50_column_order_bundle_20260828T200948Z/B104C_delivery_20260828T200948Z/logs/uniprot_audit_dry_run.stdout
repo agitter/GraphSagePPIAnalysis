@@ -1,0 +1,15 @@
+
+[2016_04] https://ftp.uniprot.org/pub/databases/uniprot/previous_releases/release-2016_04/knowledgebase/uniprot_sprot-only2016_04.tar.gz
+  expected size: 1516525310 bytes
+  expected MD5:  e607b83de1ac87e6f63b13715c049a3f
+  scratch:       uniprot_audit_work/2016_04/uniprot_sprot-only2016_04.tar.gz
+
+[2016_05] https://ftp.uniprot.org/pub/databases/uniprot/previous_releases/release-2016_05/knowledgebase/uniprot_sprot-only2016_05.tar.gz
+  expected size: 1504161063 bytes
+  expected MD5:  fe9525832026b03ab34f0971b43c0c81
+  scratch:       uniprot_audit_work/2016_05/uniprot_sprot-only2016_05.tar.gz
+
+[2016_06] https://ftp.uniprot.org/pub/databases/uniprot/previous_releases/release-2016_06/knowledgebase/uniprot_sprot-only2016_06.tar.gz
+  expected size: 1504963399 bytes
+  expected MD5:  e3a5ac5a166efc95e9ad06465d5bd2c4
+  scratch:       uniprot_audit_work/2016_06/uniprot_sprot-only2016_06.tar.gz

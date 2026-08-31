@@ -1,0 +1,36 @@
+{
+  "best": {
+    "ancestor_order": "sorted_asc",
+    "duplicate_flips": "001",
+    "exact_positions": 10,
+    "exact_prefix": 3,
+    "filter": "exact_historical_mapped",
+    "inner_kind": NaN,
+    "input_terms": 673508,
+    "kendall_p": 1.1590073347039899e-35,
+    "kendall_tau": 0.7663911845730027,
+    "key_mode": "GO_ID",
+    "lcs": 90,
+    "mask_bits": "",
+    "model": "annotation_pair_set_then_terms",
+    "outer_count": NaN,
+    "outer_kind": NaN,
+    "pair_count": 48007,
+    "pair_kind": "go_gene",
+    "pairwise_concordance": 0.8831955922865014,
+    "row_order": "source",
+    "set_policy": "three_fifths",
+    "table_size": "",
+    "unique_dictionary_terms": 13302
+  },
+  "duplicate_orientation_counts_all": {
+    "001": 36
+  },
+  "duplicate_orientation_counts_top100": {
+    "001": 36
+  },
+  "models_lcs_100_or_more": 0,
+  "models_lcs_120_or_more": 0,
+  "models_scored": 36,
+  "perfect_order_models": 0
+}

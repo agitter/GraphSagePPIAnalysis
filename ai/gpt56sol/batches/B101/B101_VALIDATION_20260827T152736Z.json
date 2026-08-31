@@ -1,0 +1,42 @@
+{
+  "batch_id": "B101",
+  "validated_at_utc": "2026-08-27T15:33:19.298657+00:00",
+  "status": "PASS",
+  "checks": {
+    "input_hashes_match_B000": true,
+    "gzip_integrity_all_inputs": true,
+    "normalized_derivative_row_counts_match": true,
+    "normalized_derivative_raw_data_hashes_match": true,
+    "gaf_gpad_projected_assertion_sets_identical": true,
+    "gpi_annotated_object_coverage_complete": true,
+    "gpi_DB_Xrefs_nonempty_rows": 0,
+    "direct_grid_rows_expected": true,
+    "bruteforce_spot_check_121_of_121": true,
+    "report_summary_minimum_consistency": true
+  },
+  "selected_best_configuration_minimum_mismatch": 281,
+  "global_closest_full_grid": {
+    "agreement": 0.9358013120899719,
+    "best_candidate_positive_genes": 395,
+    "best_go_id": "GO:0045944",
+    "best_term_name": "",
+    "comparison_scope": "all_4268_resolved_genes",
+    "evidence_filter": "experimental_plus_IBA_ISS_IC",
+    "f1": 0.7385496183206107,
+    "false_negatives": 266,
+    "false_positives": 8,
+    "jaccard": 0.5854765506807866,
+    "label_column": 72,
+    "mapping_strategy": "fallback_synonym_union",
+    "mismatch_genes": 274,
+    "observed_positive_genes": 653,
+    "source_name": "GOA human GAF v159 direct BP annotations",
+    "term_scope": "all_bp",
+    "tie_count": 1,
+    "tied_go_ids": "GO:0045944",
+    "true_positives": 387
+  },
+  "notes": [
+    "Selected best-overall configuration and globally closest individual match are distinct metrics."
+  ]
+}

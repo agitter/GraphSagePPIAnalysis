@@ -1,0 +1,986 @@
+{
+  "implementation": "independent set-based validation; no pandas, numpy, or bitset predictor",
+  "gene_count": 4268,
+  "label_column_count": 121,
+  "accepted_mapped_GAF_rows": 59042,
+  "qualifier_relation_rows_excluded_before_mapping": {
+    "contributes_to": 728,
+    "colocalizes_with": 1021
+  },
+  "all_121_columns_exact": true,
+  "total_false_positives": 0,
+  "total_false_negatives": 0,
+  "predicted_matrix_row_major_sha256": "f4d6f0febbf252689c6f8a60575d0106ea1e1262b0145695103efa9137e86045",
+  "observed_matrix_row_major_sha256": "f4d6f0febbf252689c6f8a60575d0106ea1e1262b0145695103efa9137e86045",
+  "matrix_hashes_identical": true,
+  "per_column": [
+    {
+      "label_column": 0,
+      "GO_ID": "GO:0050789",
+      "observed_positive_genes": 2647,
+      "predicted_positive_genes": 2647,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 1,
+      "GO_ID": "GO:0070062",
+      "observed_positive_genes": 943,
+      "predicted_positive_genes": 943,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 2,
+      "GO_ID": "GO:0044710",
+      "observed_positive_genes": 820,
+      "predicted_positive_genes": 820,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 3,
+      "GO_ID": "GO:1901363",
+      "observed_positive_genes": 935,
+      "predicted_positive_genes": 935,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 4,
+      "GO_ID": "GO:1901360",
+      "observed_positive_genes": 542,
+      "predicted_positive_genes": 542,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 5,
+      "GO_ID": "GO:0003676",
+      "observed_positive_genes": 749,
+      "predicted_positive_genes": 749,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 6,
+      "GO_ID": "GO:0097159",
+      "observed_positive_genes": 961,
+      "predicted_positive_genes": 961,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 7,
+      "GO_ID": "GO:0005737",
+      "observed_positive_genes": 1307,
+      "predicted_positive_genes": 1307,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 8,
+      "GO_ID": "GO:1902589",
+      "observed_positive_genes": 556,
+      "predicted_positive_genes": 556,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 9,
+      "GO_ID": "GO:0043170",
+      "observed_positive_genes": 1284,
+      "predicted_positive_genes": 1284,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 10,
+      "GO_ID": "GO:0043412",
+      "observed_positive_genes": 757,
+      "predicted_positive_genes": 757,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 11,
+      "GO_ID": "GO:0009966",
+      "observed_positive_genes": 890,
+      "predicted_positive_genes": 890,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 12,
+      "GO_ID": "GO:0003674",
+      "observed_positive_genes": 2905,
+      "predicted_positive_genes": 2905,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 13,
+      "GO_ID": "GO:0051239",
+      "observed_positive_genes": 845,
+      "predicted_positive_genes": 845,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 14,
+      "GO_ID": "GO:0045935",
+      "observed_positive_genes": 748,
+      "predicted_positive_genes": 748,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 15,
+      "GO_ID": "GO:0048519",
+      "observed_positive_genes": 1450,
+      "predicted_positive_genes": 1450,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 16,
+      "GO_ID": "GO:0003723",
+      "observed_positive_genes": 395,
+      "predicted_positive_genes": 395,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 17,
+      "GO_ID": "GO:0006810",
+      "observed_positive_genes": 610,
+      "predicted_positive_genes": 610,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 18,
+      "GO_ID": "GO:0044421",
+      "observed_positive_genes": 1117,
+      "predicted_positive_genes": 1117,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 19,
+      "GO_ID": "GO:0008152",
+      "observed_positive_genes": 1657,
+      "predicted_positive_genes": 1657,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 20,
+      "GO_ID": "GO:0005654",
+      "observed_positive_genes": 692,
+      "predicted_positive_genes": 692,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 21,
+      "GO_ID": "GO:0050794",
+      "observed_positive_genes": 2534,
+      "predicted_positive_genes": 2534,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 22,
+      "GO_ID": "GO:1903506",
+      "observed_positive_genes": 893,
+      "predicted_positive_genes": 893,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 23,
+      "GO_ID": "GO:0071840",
+      "observed_positive_genes": 1227,
+      "predicted_positive_genes": 1227,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 24,
+      "GO_ID": "GO:0043228",
+      "observed_positive_genes": 597,
+      "predicted_positive_genes": 597,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 25,
+      "GO_ID": "GO:0043227",
+      "observed_positive_genes": 2437,
+      "predicted_positive_genes": 2437,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 26,
+      "GO_ID": "GO:0043226",
+      "observed_positive_genes": 2603,
+      "predicted_positive_genes": 2603,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 27,
+      "GO_ID": "GO:0005634",
+      "observed_positive_genes": 1208,
+      "predicted_positive_genes": 1208,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 28,
+      "GO_ID": "GO:0009987",
+      "observed_positive_genes": 2816,
+      "predicted_positive_genes": 2816,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 29,
+      "GO_ID": "GO:0010557",
+      "observed_positive_genes": 721,
+      "predicted_positive_genes": 721,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 30,
+      "GO_ID": "GO:0065007",
+      "observed_positive_genes": 2793,
+      "predicted_positive_genes": 2793,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 31,
+      "GO_ID": "GO:1902578",
+      "observed_positive_genes": 613,
+      "predicted_positive_genes": 613,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 32,
+      "GO_ID": "GO:0008150",
+      "observed_positive_genes": 3696,
+      "predicted_positive_genes": 3696,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 33,
+      "GO_ID": "GO:0042221",
+      "observed_positive_genes": 657,
+      "predicted_positive_genes": 657,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 34,
+      "GO_ID": "GO:0032268",
+      "observed_positive_genes": 819,
+      "predicted_positive_genes": 819,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 35,
+      "GO_ID": "GO:0032991",
+      "observed_positive_genes": 1253,
+      "predicted_positive_genes": 1253,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 36,
+      "GO_ID": "GO:0051128",
+      "observed_positive_genes": 746,
+      "predicted_positive_genes": 746,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 37,
+      "GO_ID": "GO:0009892",
+      "observed_positive_genes": 819,
+      "predicted_positive_genes": 819,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 38,
+      "GO_ID": "GO:0080090",
+      "observed_positive_genes": 1626,
+      "predicted_positive_genes": 1626,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 39,
+      "GO_ID": "GO:0006464",
+      "observed_positive_genes": 742,
+      "predicted_positive_genes": 742,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 40,
+      "GO_ID": "GO:0006807",
+      "observed_positive_genes": 599,
+      "predicted_positive_genes": 599,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 41,
+      "GO_ID": "GO:0032502",
+      "observed_positive_genes": 900,
+      "predicted_positive_genes": 900,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 42,
+      "GO_ID": "GO:0065009",
+      "observed_positive_genes": 794,
+      "predicted_positive_genes": 794,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 43,
+      "GO_ID": "GO:0065008",
+      "observed_positive_genes": 880,
+      "predicted_positive_genes": 880,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 44,
+      "GO_ID": "GO:0005886",
+      "observed_positive_genes": 550,
+      "predicted_positive_genes": 550,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 45,
+      "GO_ID": "GO:0009889",
+      "observed_positive_genes": 1124,
+      "predicted_positive_genes": 1124,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 46,
+      "GO_ID": "GO:0044238",
+      "observed_positive_genes": 1486,
+      "predicted_positive_genes": 1486,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 47,
+      "GO_ID": "GO:0044237",
+      "observed_positive_genes": 1522,
+      "predicted_positive_genes": 1522,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 48,
+      "GO_ID": "GO:0043230",
+      "observed_positive_genes": 948,
+      "predicted_positive_genes": 948,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 49,
+      "GO_ID": "GO:0051246",
+      "observed_positive_genes": 882,
+      "predicted_positive_genes": 882,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 50,
+      "GO_ID": "GO:0048523",
+      "observed_positive_genes": 1378,
+      "predicted_positive_genes": 1378,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 51,
+      "GO_ID": "GO:0048583",
+      "observed_positive_genes": 1164,
+      "predicted_positive_genes": 1164,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 52,
+      "GO_ID": "GO:0048522",
+      "observed_positive_genes": 1731,
+      "predicted_positive_genes": 1731,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 53,
+      "GO_ID": "GO:0060255",
+      "observed_positive_genes": 1635,
+      "predicted_positive_genes": 1635,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 54,
+      "GO_ID": "GO:0023051",
+      "observed_positive_genes": 957,
+      "predicted_positive_genes": 957,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 55,
+      "GO_ID": "GO:2000112",
+      "observed_positive_genes": 1017,
+      "predicted_positive_genes": 1017,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 56,
+      "GO_ID": "GO:0050793",
+      "observed_positive_genes": 698,
+      "predicted_positive_genes": 698,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 57,
+      "GO_ID": "GO:0031399",
+      "observed_positive_genes": 624,
+      "predicted_positive_genes": 624,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 58,
+      "GO_ID": "GO:0043933",
+      "observed_positive_genes": 604,
+      "predicted_positive_genes": 604,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 59,
+      "GO_ID": "GO:0006355",
+      "observed_positive_genes": 892,
+      "predicted_positive_genes": 892,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 60,
+      "GO_ID": "GO:0048518",
+      "observed_positive_genes": 1829,
+      "predicted_positive_genes": 1829,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 61,
+      "GO_ID": "GO:0051234",
+      "observed_positive_genes": 668,
+      "predicted_positive_genes": 668,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 62,
+      "GO_ID": "GO:0032879",
+      "observed_positive_genes": 796,
+      "predicted_positive_genes": 796,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 63,
+      "GO_ID": "GO:0006464",
+      "observed_positive_genes": 742,
+      "predicted_positive_genes": 742,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 64,
+      "GO_ID": "GO:0051716",
+      "observed_positive_genes": 762,
+      "predicted_positive_genes": 762,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 65,
+      "GO_ID": "GO:0044765",
+      "observed_positive_genes": 536,
+      "predicted_positive_genes": 536,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 66,
+      "GO_ID": "GO:0044763",
+      "observed_positive_genes": 2043,
+      "predicted_positive_genes": 2043,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 67,
+      "GO_ID": "GO:0016020",
+      "observed_positive_genes": 1291,
+      "predicted_positive_genes": 1291,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 68,
+      "GO_ID": "GO:0044422",
+      "observed_positive_genes": 1737,
+      "predicted_positive_genes": 1737,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 69,
+      "GO_ID": "GO:0043234",
+      "observed_positive_genes": 1080,
+      "predicted_positive_genes": 1080,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 70,
+      "GO_ID": "GO:0043230",
+      "observed_positive_genes": 948,
+      "predicted_positive_genes": 948,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 71,
+      "GO_ID": "GO:0043228",
+      "observed_positive_genes": 597,
+      "predicted_positive_genes": 597,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 72,
+      "GO_ID": "GO:0051254",
+      "observed_positive_genes": 653,
+      "predicted_positive_genes": 653,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 73,
+      "GO_ID": "GO:0051171",
+      "observed_positive_genes": 1159,
+      "predicted_positive_genes": 1159,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 74,
+      "GO_ID": "GO:0051173",
+      "observed_positive_genes": 773,
+      "predicted_positive_genes": 773,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 75,
+      "GO_ID": "GO:0051179",
+      "observed_positive_genes": 808,
+      "predicted_positive_genes": 808,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 76,
+      "GO_ID": "GO:0016043",
+      "observed_positive_genes": 1225,
+      "predicted_positive_genes": 1225,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 77,
+      "GO_ID": "GO:0034641",
+      "observed_positive_genes": 547,
+      "predicted_positive_genes": 547,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 78,
+      "GO_ID": "GO:0010556",
+      "observed_positive_genes": 1054,
+      "predicted_positive_genes": 1054,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 79,
+      "GO_ID": "GO:2001141",
+      "observed_positive_genes": 900,
+      "predicted_positive_genes": 900,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 80,
+      "GO_ID": "GO:0044267",
+      "observed_positive_genes": 758,
+      "predicted_positive_genes": 758,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 81,
+      "GO_ID": "GO:0005488",
+      "observed_positive_genes": 2035,
+      "predicted_positive_genes": 2035,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 82,
+      "GO_ID": "GO:0019219",
+      "observed_positive_genes": 1103,
+      "predicted_positive_genes": 1103,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 83,
+      "GO_ID": "GO:0007165",
+      "observed_positive_genes": 785,
+      "predicted_positive_genes": 785,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 84,
+      "GO_ID": "GO:0016740",
+      "observed_positive_genes": 582,
+      "predicted_positive_genes": 582,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 85,
+      "GO_ID": "GO:0044699",
+      "observed_positive_genes": 2406,
+      "predicted_positive_genes": 2406,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 86,
+      "GO_ID": "GO:0044822",
+      "observed_positive_genes": 339,
+      "predicted_positive_genes": 339,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 87,
+      "GO_ID": "GO:0010604",
+      "observed_positive_genes": 1132,
+      "predicted_positive_genes": 1132,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 88,
+      "GO_ID": "GO:0010468",
+      "observed_positive_genes": 1108,
+      "predicted_positive_genes": 1108,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 89,
+      "GO_ID": "GO:0010605",
+      "observed_positive_genes": 766,
+      "predicted_positive_genes": 766,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 90,
+      "GO_ID": "GO:0048584",
+      "observed_positive_genes": 702,
+      "predicted_positive_genes": 702,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 91,
+      "GO_ID": "GO:0019538",
+      "observed_positive_genes": 913,
+      "predicted_positive_genes": 913,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 92,
+      "GO_ID": "GO:0044260",
+      "observed_positive_genes": 1174,
+      "predicted_positive_genes": 1174,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 93,
+      "GO_ID": "GO:0010628",
+      "observed_positive_genes": 725,
+      "predicted_positive_genes": 725,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 94,
+      "GO_ID": "GO:0044767",
+      "observed_positive_genes": 864,
+      "predicted_positive_genes": 864,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 95,
+      "GO_ID": "GO:0003824",
+      "observed_positive_genes": 1149,
+      "predicted_positive_genes": 1149,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 96,
+      "GO_ID": "GO:0006950",
+      "observed_positive_genes": 658,
+      "predicted_positive_genes": 658,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 97,
+      "GO_ID": "GO:0071704",
+      "observed_positive_genes": 1577,
+      "predicted_positive_genes": 1577,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 98,
+      "GO_ID": "GO:0019222",
+      "observed_positive_genes": 1741,
+      "predicted_positive_genes": 1741,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 99,
+      "GO_ID": "GO:0031982",
+      "observed_positive_genes": 1042,
+      "predicted_positive_genes": 1042,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 100,
+      "GO_ID": "GO:0043231",
+      "observed_positive_genes": 1893,
+      "predicted_positive_genes": 1893,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 101,
+      "GO_ID": "GO:0010646",
+      "observed_positive_genes": 977,
+      "predicted_positive_genes": 977,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 102,
+      "GO_ID": "GO:0044425",
+      "observed_positive_genes": 726,
+      "predicted_positive_genes": 726,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 103,
+      "GO_ID": "GO:0009893",
+      "observed_positive_genes": 1207,
+      "predicted_positive_genes": 1207,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 104,
+      "GO_ID": "GO:0009891",
+      "observed_positive_genes": 774,
+      "predicted_positive_genes": 774,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 105,
+      "GO_ID": "GO:0050896",
+      "observed_positive_genes": 1170,
+      "predicted_positive_genes": 1170,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 106,
+      "GO_ID": "GO:0005515",
+      "observed_positive_genes": 1153,
+      "predicted_positive_genes": 1153,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 107,
+      "GO_ID": "GO:0006996",
+      "observed_positive_genes": 695,
+      "predicted_positive_genes": 695,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 108,
+      "GO_ID": "GO:0044446",
+      "observed_positive_genes": 1697,
+      "predicted_positive_genes": 1697,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 109,
+      "GO_ID": "GO:0044444",
+      "observed_positive_genes": 1389,
+      "predicted_positive_genes": 1389,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 110,
+      "GO_ID": "GO:0044428",
+      "observed_positive_genes": 1149,
+      "predicted_positive_genes": 1149,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 111,
+      "GO_ID": "GO:0031328",
+      "observed_positive_genes": 761,
+      "predicted_positive_genes": 761,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 112,
+      "GO_ID": "GO:0031326",
+      "observed_positive_genes": 1108,
+      "predicted_positive_genes": 1108,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 113,
+      "GO_ID": "GO:0031325",
+      "observed_positive_genes": 1155,
+      "predicted_positive_genes": 1155,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 114,
+      "GO_ID": "GO:0031324",
+      "observed_positive_genes": 777,
+      "predicted_positive_genes": 777,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 115,
+      "GO_ID": "GO:0031323",
+      "observed_positive_genes": 1663,
+      "predicted_positive_genes": 1663,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 116,
+      "GO_ID": "GO:0005575",
+      "observed_positive_genes": 3612,
+      "predicted_positive_genes": 3612,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 117,
+      "GO_ID": "GO:0044424",
+      "observed_positive_genes": 2929,
+      "predicted_positive_genes": 2929,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 118,
+      "GO_ID": "GO:0044464",
+      "observed_positive_genes": 3252,
+      "predicted_positive_genes": 3252,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 119,
+      "GO_ID": "GO:0043229",
+      "observed_positive_genes": 2101,
+      "predicted_positive_genes": 2101,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    },
+    {
+      "label_column": 120,
+      "GO_ID": "GO:0051252",
+      "observed_positive_genes": 959,
+      "predicted_positive_genes": 959,
+      "false_positive_GeneIDs": [],
+      "false_negative_GeneIDs": []
+    }
+  ]
+}

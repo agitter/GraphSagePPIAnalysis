@@ -1,0 +1,2 @@
+failed_exit_1_after_shared_output_collision
+A concurrent/superseded run attempted to re-read a derivative that had been moved or cleaned from the shared output directory, causing FileNotFoundError.

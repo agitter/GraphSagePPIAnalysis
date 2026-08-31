@@ -1,0 +1,2 @@
+event_time_utc,scope,artifact_group,reported_status,file_level_status_changed,reason,conversation_runtime_status,reupload_needed_now
+2026-08-28T20:09:48Z,user-local storage,previously held MSigDB archives predating the new v5.0 upload,deleted locally to free space,no,The user did not enumerate exact deleted filenames; preserve prior per-file records and add this collection-level event.,previously uploaded copies were still available at B104C analysis time,no; compact results and cross-version metadata retained

@@ -1,0 +1,22 @@
+{
+  "all_required_outputs_exist": true,
+  "bundle_exists": true,
+  "bundle_sha256": "85919c607a867d317f62d91eb83d521ed78b4a727adfab133b88a53c95e74324",
+  "final_ledger_sha256": "1a2e6a55d1dbb4a794f882195124003a3447570a3000903fa7ab158dabe8808a",
+  "zip_integrity": true,
+  "zip_members": [
+    "B104I_PPI_PROVENANCE_MENCHE_AND_SPLIT_REPORT_20260830T114918Z.md",
+    "B104I_EVIDENCE_VS_LITERATURE_REGISTER_20260830T114918Z.csv",
+    "B104I_GRAPHSAGE_GITHUB_ISSUES_TRACKER_20260830T114918Z.csv",
+    "B104I_GRAPHSAGE_GITHUB_ISSUES_TRACKER_20260830T114918Z.md",
+    "derived/graphsage_ppi_entrez_split_membership_20260830T114918Z.tsv.gz",
+    "B104I_VALIDATION_20260830T114918Z.json",
+    "B104I_DELETION_CLEARANCE_20260830T114918Z.md",
+    "results/actual_input_file_manifest_through_B104I_20260830T114918Z.csv",
+    "results/source_ledger_through_B104I_20260830T114918Z.csv",
+    "results/provenance_events_through_B104I_20260830T114918Z.csv",
+    "retained_inputs/README_20260830T113352Z.md",
+    "retained_inputs/biosnap_ppi_provenance_audit_20260830T113352Z.json",
+    "retained_inputs/biosnap_ppi_provenance_audit_20260830T113352Z.zip"
+  ]
+}

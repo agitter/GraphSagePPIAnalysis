@@ -1,0 +1,2 @@
+foreground_wrapper_signal_15
+The container wrapper terminated the foreground process before completion; no Python exception was emitted.

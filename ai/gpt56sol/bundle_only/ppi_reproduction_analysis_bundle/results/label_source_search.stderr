@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/mnt/data/ppi_repro/scripts/label_source_search.py", line 44, in <module>
+    if not coll.exists():raise FileNotFoundError('Run core_reproduction.py first: collapsed_gene_labels.csv absent')
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: Run core_reproduction.py first: collapsed_gene_labels.csv absent

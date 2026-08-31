@@ -1,0 +1,6 @@
+policy,included_relations,false_positives,false_negatives,total_mismatches,exact_columns,at_least_99pct,at_least_95pct
+all_positive_relations,colocalizes_with|contributes_to|enables|involved_in|part_of,901,0,901,89,114,121
+exclude_colocalizes_with,contributes_to|enables|involved_in|part_of,400,0,400,99,118,121
+exclude_contributes_to,colocalizes_with|enables|involved_in|part_of,514,0,514,98,117,121
+default_relations_only,enables|involved_in|part_of,13,0,13,108,121,121
+default_propagation_plus_qualified_direct_only,all; qualified relations only at distance 0,33,0,33,105,121,121

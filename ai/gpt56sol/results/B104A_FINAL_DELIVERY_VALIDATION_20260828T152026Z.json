@@ -1,0 +1,55 @@
+{
+  "batch_id": "B104A",
+  "generated_at_utc": "2026-08-28T15:20:26Z",
+  "bundle_path": "/mnt/data/B104A_exact_GO_reconstruction_bundle_20260828T152026Z.zip",
+  "bundle_size_bytes": 13069650,
+  "bundle_sha256": "5b3d36c2f1325933ec73140d557c9e69f9433eb02fef72a1bf792ed9ef03134a",
+  "all_checks_passed": true,
+  "checks": [
+    {
+      "check": "zip_crc_integrity",
+      "passed": true,
+      "details": "None"
+    },
+    {
+      "check": "report_present",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "primary_validation_present",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "independent_validation_present",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "checksum_inventory_present",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "deleted_raw_uploads_excluded",
+      "passed": true,
+      "details": "[]"
+    },
+    {
+      "check": "archive_members_match_checksum_inventory",
+      "passed": true,
+      "details": "missing=[]; bad_hash=[]; bad_size=[]; rows=81"
+    },
+    {
+      "check": "final_ledger_bundle_hash",
+      "passed": true,
+      "details": "computed=5b3d36c2f1325933ec73140d557c9e69f9433eb02fef72a1bf792ed9ef03134a; ledger=5b3d36c2f1325933ec73140d557c9e69f9433eb02fef72a1bf792ed9ef03134a"
+    },
+    {
+      "check": "scientific_exactness",
+      "passed": true,
+      "details": ""
+    }
+  ]
+}

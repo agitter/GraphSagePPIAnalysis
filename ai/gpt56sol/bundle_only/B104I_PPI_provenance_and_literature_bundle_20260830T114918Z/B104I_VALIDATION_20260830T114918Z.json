@@ -1,0 +1,112 @@
+{
+  "audit_assertions": {
+    "biosnap_combined_equals_local_ohmnet_union": true,
+    "biosnap_combined_missing_from_local_count": true,
+    "biosnap_combined_unique_edge_pairs": true,
+    "biosnap_global_unique_edge_pairs": true,
+    "local_missing_from_biosnap_combined_count": true,
+    "local_ohmnet_edge_rows_across_tissues": true,
+    "local_ohmnet_edges_absent_from_biosnap_global_count": true,
+    "local_ohmnet_tissues": true,
+    "local_ohmnet_union_is_subset_of_biosnap_global": true,
+    "local_ohmnet_unique_edge_pairs": true
+  },
+  "generated_artifacts": {
+    "B104I_EVIDENCE_VS_LITERATURE_REGISTER_20260830T114918Z.csv": {
+      "path": "/mnt/data/ppi_repro_corrected/batches/B104I_20260830T114918Z/B104I_EVIDENCE_VS_LITERATURE_REGISTER_20260830T114918Z.csv",
+      "sha256": "0c4726ceb550e36b2a4ed54f627549d26a4476162249e31939bef1406ccaf716",
+      "size_bytes": 6926
+    },
+    "B104I_GRAPHSAGE_GITHUB_ISSUES_TRACKER_20260830T114918Z.csv": {
+      "path": "/mnt/data/ppi_repro_corrected/batches/B104I_20260830T114918Z/B104I_GRAPHSAGE_GITHUB_ISSUES_TRACKER_20260830T114918Z.csv",
+      "sha256": "c40e21b44e67eade3ba84036e1bfe72a83775eb25d2b31140b02bb1c866a07a5",
+      "size_bytes": 2414
+    },
+    "B104I_GRAPHSAGE_GITHUB_ISSUES_TRACKER_20260830T114918Z.md": {
+      "path": "/mnt/data/ppi_repro_corrected/batches/B104I_20260830T114918Z/B104I_GRAPHSAGE_GITHUB_ISSUES_TRACKER_20260830T114918Z.md",
+      "sha256": "c8f32e481409187b4a132bae412504b33214454f73e711c6f320d0fdde62a3d1",
+      "size_bytes": 3445
+    },
+    "B104I_PPI_PROVENANCE_MENCHE_AND_SPLIT_REPORT_20260830T114918Z.md": {
+      "path": "/mnt/data/ppi_repro_corrected/batches/B104I_20260830T114918Z/B104I_PPI_PROVENANCE_MENCHE_AND_SPLIT_REPORT_20260830T114918Z.md",
+      "sha256": "49f0bfb2a40d4e0fa6947d5f4c5de1c30800c1708889fc64f097ce1beae24361",
+      "size_bytes": 4813
+    },
+    "actual_input_file_manifest_through_B104I_20260830T114918Z.csv": {
+      "path": "/mnt/data/ppi_repro_corrected/results/actual_input_file_manifest_through_B104I_20260830T114918Z.csv",
+      "sha256": "f840324e44a8c7caf8108b72b3d86c57df95a065bdfab28ae4279efc75a77910",
+      "size_bytes": 86807
+    },
+    "graphsage_ppi_entrez_split_membership_20260830T114918Z.tsv.gz": {
+      "path": "/mnt/data/ppi_repro_corrected/batches/B104I_20260830T114918Z/derived/graphsage_ppi_entrez_split_membership_20260830T114918Z.tsv.gz",
+      "sha256": "81b21cf764526fd06a8c9c35352d4040eba8d79cc92911176d203d882496ff99",
+      "size_bytes": 19240
+    },
+    "provenance_events_through_B104I_20260830T114918Z.csv": {
+      "path": "/mnt/data/ppi_repro_corrected/results/provenance_events_through_B104I_20260830T114918Z.csv",
+      "sha256": "544ed3665923972ff1079b5e3b8dc4f9572e645edf4c0bcb17fc0d5ba295e136",
+      "size_bytes": 46052
+    },
+    "source_ledger_through_B104I_20260830T114918Z.csv": {
+      "path": "/mnt/data/ppi_repro_corrected/results/source_ledger_through_B104I_20260830T114918Z.csv",
+      "sha256": "6dbb3ade4e9b453f1734280518d46fa3dce157981d24da75644b1dddabc2b698",
+      "size_bytes": 540901
+    }
+  },
+  "generated_at_utc": "20260830T114918Z",
+  "split_semantics": {
+    "distinct_genes": 4301,
+    "genes_in_multiple_splits": 3599,
+    "graphs": 24,
+    "graphs_with_multiple_splits": 0,
+    "rows": 56944,
+    "split_counts": {
+      "test": 5524,
+      "train": 44906,
+      "validation": 6514
+    },
+    "splitset_counts": {
+      "test": 13,
+      "train": 620,
+      "train;test": 166,
+      "train;validation": 345,
+      "train;validation;test": 3067,
+      "validation": 69,
+      "validation;test": 21
+    }
+  },
+  "uploaded_inputs": [
+    {
+      "name": "README_20260830T113352Z.md",
+      "sha256": "33fc9098ec2cb24e6d81a04df737daaf308ddc8629f245292fc125e2c1a2810e",
+      "size_bytes": 376
+    },
+    {
+      "name": "biosnap_ppi_provenance_audit_20260830T113352Z.json",
+      "sha256": "83e90690a7eef16ba0baa42c73e5510931a95557017b402b60bd5c482067bded",
+      "size_bytes": 1355
+    },
+    {
+      "name": "biosnap_ppi_provenance_audit_20260830T113352Z.zip",
+      "sha256": "adaf28f8bcbe2490d4af9ad212fc646d3ea183b315f0c95835cc3fa36f0df0c3",
+      "size_bytes": 1126
+    }
+  ],
+  "zip_members": [
+    {
+      "member": "biosnap_ppi_provenance_audit_20260830T113352Z.json",
+      "sha256": "83e90690a7eef16ba0baa42c73e5510931a95557017b402b60bd5c482067bded",
+      "size_bytes": 1355
+    },
+    {
+      "member": "README_20260830T113352Z.md",
+      "sha256": "33fc9098ec2cb24e6d81a04df737daaf308ddc8629f245292fc125e2c1a2810e",
+      "size_bytes": 376
+    }
+  ],
+  "zip_members_equal_standalone": {
+    "README_20260830T113352Z.md": true,
+    "biosnap_ppi_provenance_audit_20260830T113352Z.json": true
+  },
+  "zip_test_pass": true
+}

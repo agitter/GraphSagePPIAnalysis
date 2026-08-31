@@ -1,0 +1,45 @@
+{
+  "previous_901_definition": "Each prior residual was one GeneID x GraphSAGE label-column cell where the release-159 reconstruction predicted 1 but the deposited matrix contained 0. There were no deposited positives missed by that model.",
+  "qualifier_effect": {
+    "prior_false_positives": 901,
+    "false_positives_removed_by_excluding_colocalizes_with": 501,
+    "false_positives_removed_by_excluding_contributes_to": 387,
+    "false_positives_remaining_after_both_exclusions_with_old_mapping": 13
+  },
+  "mapping_effect": {
+    "remaining_13_gene": 25788,
+    "remaining_13_accession": "O95073",
+    "remaining_13_GPI_symbol": "FSBP",
+    "independent_GeneID_25788_symbol": "RAD54B",
+    "correct_RAD54B_GPI_accession": "Q9Y620",
+    "historical_O95073_GeneIDs": [
+      25788,
+      100861412
+    ],
+    "effect_of_resolving_O95073_component": "13 remaining false positives removed; zero false negatives introduced"
+  },
+  "final_release159_result": {
+    "exact_columns": 121,
+    "at_least_99pct": 121,
+    "at_least_95pct": 121,
+    "false_positives": 0,
+    "false_negatives": 0,
+    "total_mismatches": 0
+  },
+  "release158_final_policy_result": {
+    "exact_columns": 8,
+    "at_least_99pct": 119,
+    "at_least_95pct": 121,
+    "false_positives": 21,
+    "false_negatives": 825,
+    "total_mismatches": 846
+  },
+  "exact_term_identification": {
+    "columns_exact_for_selected_term": 121,
+    "columns_with_any_exact_term": 121,
+    "columns_with_multiple_exact_term_ties": 6,
+    "maximum_exact_term_tie_count": 2,
+    "unique_selected_GO_IDs": 118,
+    "unique_label_vectors": 118
+  }
+}

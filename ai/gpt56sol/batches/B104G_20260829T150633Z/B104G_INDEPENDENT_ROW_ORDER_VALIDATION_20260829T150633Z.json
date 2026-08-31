@@ -1,0 +1,43 @@
+{
+  "all_checks_pass": true,
+  "edge_set_mismatch_tissues": [],
+  "feature_vector_conflict_GeneIDs": [],
+  "independent_implementation": true,
+  "input_sha256": {
+    "graphsage": "53aeb76e54fd41b645e7edb48b62929240b89839495396b048086fd212503fbd",
+    "ohmnet": "2c79e17f4a7c8680a7cbf8b20cef4acf356a7523c9a75fce586494153c0603d1",
+    "primary_map": "a21a6532e287bfe82102cdc9d6642a0c9aff77f9c7449997cbafb597d1145737"
+  },
+  "label_vector_conflict_GeneIDs": [],
+  "node_set_mismatch_tissues": [],
+  "primary_map_mismatches": 0,
+  "primary_map_rows_compared": 56944,
+  "rows": 56944,
+  "table_sizes_by_tissue": {
+    "adipose_tissue": 8192,
+    "adrenal_cortex": 8192,
+    "adrenal_gland": 8192,
+    "amygdala": 8192,
+    "aorta": 8192,
+    "artery": 8192,
+    "astrocyte": 2048,
+    "basal_ganglion": 8192,
+    "basophil": 2048,
+    "blood": 8192,
+    "blood_plasma": 8192,
+    "blood_platelet": 8192,
+    "bone": 8192,
+    "brain": 8192,
+    "colon": 8192,
+    "eye": 8192,
+    "forebrain": 8192,
+    "gastrointestinal_tract": 8192,
+    "heart": 8192,
+    "kidney": 8192,
+    "large_intestine": 8192,
+    "liver": 8192,
+    "lung": 8192,
+    "midbrain": 8192
+  },
+  "unique_GeneIDs": 4301
+}

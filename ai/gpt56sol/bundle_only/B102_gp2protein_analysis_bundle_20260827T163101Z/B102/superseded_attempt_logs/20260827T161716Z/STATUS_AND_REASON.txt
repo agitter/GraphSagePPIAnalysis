@@ -1,0 +1,2 @@
+timed_out_or_interrupted
+Initial exhaustive matching implementation was too memory/time intensive and produced only partial mapping outputs.

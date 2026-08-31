@@ -1,0 +1,10 @@
+version,scope,gene_sets_tested,exact_label_columns,exact_set_label_pairs,columns_ge_99pct,columns_ge_95pct,closest_mismatch,median_best_mismatch,mean_best_mismatch
+5.1,C5,1454,0,0,0,0,307,823,995.6446280991736
+5.1,ALL,13311,0,0,0,0,307,823,995.1074380165289
+5.1,TARGET_IDENTITY,1454,,,,,,,
+5.2,C5,6166,0,0,1,2,10,615,865.7685950413223
+5.2,ALL,18890,0,0,1,2,10,615,865.5454545454545
+5.2,TARGET_IDENTITY,6166,,,,,,,
+6.0,C5,5917,0,0,1,2,10,615,865.7685950413223
+6.0,ALL,18643,0,0,1,2,10,615,865.5454545454545
+6.0,TARGET_IDENTITY,5917,,,,,,,

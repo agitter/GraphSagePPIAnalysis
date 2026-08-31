@@ -1,0 +1,5 @@
+GOA_release,mapping_policy,relation_policy,evidence_codes,propagation,accepted_mapped_GAF_rows,relation_row_counts,exact_columns,at_least_99pct,at_least_95pct,false_positives,false_negatives,total_mismatches
+159,original_component_aware_projection,all_positive_GAF_relations,EXP|IDA|IEP|IGI|IMP|ISS,is_a_only_including_self,60133,"{""colocalizes_with"": 578, ""contributes_to"": 510, ""enables"": 10218, ""involved_in"": 30866, ""part_of"": 17961}",89,114,121,901,0,901
+159,original_component_aware_projection,default_aspect_relations_only,EXP|IDA|IEP|IGI|IMP|ISS,is_a_only_including_self,59045,"{""enables"": 10218, ""involved_in"": 30866, ""part_of"": 17961}",108,121,121,13,0,13
+159,symbol_resolved_full_component_projection,all_positive_GAF_relations,EXP|IDA|IEP|IGI|IMP|ISS,is_a_only_including_self,60130,"{""colocalizes_with"": 578, ""contributes_to"": 510, ""enables"": 10218, ""involved_in"": 30866, ""part_of"": 17958}",90,116,121,888,0,888
+159,symbol_resolved_full_component_projection,default_aspect_relations_only,EXP|IDA|IEP|IGI|IMP|ISS,is_a_only_including_self,59042,"{""enables"": 10218, ""involved_in"": 30866, ""part_of"": 17958}",121,121,121,0,0,0

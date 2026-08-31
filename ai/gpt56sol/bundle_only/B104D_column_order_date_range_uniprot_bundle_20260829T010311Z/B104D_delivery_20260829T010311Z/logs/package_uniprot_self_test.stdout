@@ -1,0 +1,9 @@
+{
+  "included_files": 4,
+  "output": "/mnt/data/ppi_repro_corrected/work_B104D/package_test/test_package_20260829T010353Z.zip",
+  "releases": [
+    "2016_04"
+  ],
+  "sha256": "79848f63e59c7cce7c33c0cf5c98d6cc2700c9a706409a9eeb320c0c1a8a3bcb",
+  "size_bytes": 2488
+}

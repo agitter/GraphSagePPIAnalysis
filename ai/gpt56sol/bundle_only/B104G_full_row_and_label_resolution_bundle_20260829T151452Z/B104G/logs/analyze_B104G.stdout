@@ -1,0 +1,250 @@
+{
+  "dhimmel": [
+    {
+      "best_any_term_columns_at_least_95pct": 7,
+      "best_any_term_columns_at_least_99pct": 4,
+      "best_any_term_exact_columns": 0,
+      "bytes": 4247863,
+      "candidate_GO_ID_columns_exact": 0,
+      "candidate_GO_ID_total_mismatched_gene_label_cells": 342145,
+      "closest_any_term_mismatch_gene_count": 9,
+      "directly_reproduces_full_GraphSAGE_label_matrix": 0,
+      "file": "GO_annotations-9606-direct-allev.tsv",
+      "median_best_any_term_mismatch_gene_count": 753,
+      "selected_121_GO_IDs_present": 56,
+      "sha256": "2bda650477f7a8571f9926480ae7099871c00c46707b14a89b9b8e25f6f8d329",
+      "term_rows": 16440
+    },
+    {
+      "best_any_term_columns_at_least_95pct": 11,
+      "best_any_term_columns_at_least_99pct": 5,
+      "best_any_term_exact_columns": 0,
+      "bytes": 1846292,
+      "candidate_GO_ID_columns_exact": 0,
+      "candidate_GO_ID_total_mismatched_gene_label_cells": 386784,
+      "closest_any_term_mismatch_gene_count": 1,
+      "directly_reproduces_full_GraphSAGE_label_matrix": 0,
+      "file": "GO_annotations-9606-direct-expev.tsv",
+      "median_best_any_term_mismatch_gene_count": 760,
+      "selected_121_GO_IDs_present": 39,
+      "sha256": "08d85330226b9d127e4ac004b7fb597f1eb2766798d42d5928424ecf556ac18f",
+      "term_rows": 10174
+    },
+    {
+      "best_any_term_columns_at_least_95pct": 8,
+      "best_any_term_columns_at_least_99pct": 4,
+      "best_any_term_exact_columns": 0,
+      "bytes": 22907854,
+      "candidate_GO_ID_columns_exact": 0,
+      "candidate_GO_ID_total_mismatched_gene_label_cells": 114692,
+      "closest_any_term_mismatch_gene_count": 9,
+      "directly_reproduces_full_GraphSAGE_label_matrix": 0,
+      "file": "GO_annotations-9606-inferred-allev.tsv",
+      "median_best_any_term_mismatch_gene_count": 546,
+      "selected_121_GO_IDs_present": 114,
+      "sha256": "c97255b18672a1af321910739a434778cd7730b13a9bb6023dae08666930b2e2",
+      "term_rows": 20671
+    },
+    {
+      "best_any_term_columns_at_least_95pct": 74,
+      "best_any_term_columns_at_least_99pct": 6,
+      "best_any_term_exact_columns": 0,
+      "bytes": 9132101,
+      "candidate_GO_ID_columns_exact": 0,
+      "candidate_GO_ID_total_mismatched_gene_label_cells": 59520,
+      "closest_any_term_mismatch_gene_count": 1,
+      "directly_reproduces_full_GraphSAGE_label_matrix": 0,
+      "file": "GO_annotations-9606-inferred-expev.tsv",
+      "median_best_any_term_mismatch_gene_count": 179,
+      "selected_121_GO_IDs_present": 114,
+      "sha256": "e56acc1184324df3e7bb0abafd2678b97eb38925fe57840d75ae7188c8c50ed1",
+      "term_rows": 14797
+    }
+  ],
+  "duplicate_GO_candidates": [
+    {
+      "candidate_GO_ID_A": "GO:0043228",
+      "candidate_GO_ID_B": "GO:0043232",
+      "conclusion": "matrix cannot disambiguate candidate orientation",
+      "differing_GeneIDs": "",
+      "full_graph_unique_genes_compared": 4301,
+      "membership_differing_gene_count": 0,
+      "membership_vectors_identical_on_all_4301_genes": 1
+    },
+    {
+      "candidate_GO_ID_A": "GO:0006464",
+      "candidate_GO_ID_B": "GO:0036211",
+      "conclusion": "matrix cannot disambiguate candidate orientation",
+      "differing_GeneIDs": "",
+      "full_graph_unique_genes_compared": 4301,
+      "membership_differing_gene_count": 0,
+      "membership_vectors_identical_on_all_4301_genes": 1
+    },
+    {
+      "candidate_GO_ID_A": "GO:0043230",
+      "candidate_GO_ID_B": "GO:1903561",
+      "conclusion": "matrix cannot disambiguate candidate orientation",
+      "differing_GeneIDs": "",
+      "full_graph_unique_genes_compared": 4301,
+      "membership_differing_gene_count": 0,
+      "membership_vectors_identical_on_all_4301_genes": 1
+    }
+  ],
+  "features": {
+    "cells_compared": 2847200,
+    "claim_scope": "exact matrix reproduction; source procedure remains a strong hypothesis, not original-code proof",
+    "columns": 50,
+    "exact_columns": 50,
+    "mismatched_cells": 0,
+    "repeated_gene_conflicts": 0,
+    "rows": 56944,
+    "unique_GeneIDs": 4301
+  },
+  "full_row_identity": {
+    "claim_strength": "strongly supported full row resolution; original preprocessing source code not located",
+    "former_classes_candidate_sets_exact": 183,
+    "former_unresolved_classes": 183,
+    "former_unresolved_rows": 533,
+    "graphsage_rows": 56944,
+    "mapping_model": "64-bit unrandomized CPython2 string-key dictionary table iteration after inserting node tokens from each original OhmNet edgelist in line order",
+    "previous_independent_row_agreements": 56411,
+    "previous_independent_row_disagreements": 0,
+    "previous_independent_rows_compared": 56411,
+    "unique_Entrez_GeneIDs": 4301
+  },
+  "graph_selection": {
+    "GraphSAGE_selected_tissues": 24,
+    "all_selected_meet_15000_edges": false,
+    "networks_at_least_15000_edges": 105,
+    "networks_at_least_35000_edges": 36,
+    "selected_set_equals_top24_by_edge_count": false,
+    "selected_tissues_not_in_top24_by_edge_count": [
+      "adipose_tissue",
+      "adrenal_cortex",
+      "adrenal_gland",
+      "amygdala",
+      "aorta",
+      "artery",
+      "astrocyte",
+      "basal_ganglion",
+      "basophil",
+      "blood_plasma",
+      "blood_platelet",
+      "bone",
+      "eye",
+      "midbrain"
+    ],
+    "selection_and_split_procedure_recovered": false,
+    "top24_tissues_not_selected": [
+      "bone_marrow",
+      "central_nervous_system",
+      "fetus",
+      "intestine",
+      "leukocyte",
+      "nervous_system",
+      "ovary",
+      "pancreas",
+      "placenta",
+      "prostate_gland",
+      "skeletal_muscle",
+      "small_intestine",
+      "spleen",
+      "testis"
+    ],
+    "total_OhmNet_networks": 144,
+    "validation_test_all_meet_35000_edges": false
+  },
+  "input_sha256": {
+    "GAF159_normalized": "132066afa3d3ea550752d3d2eb98fcbc238570c23bf239f0ea77e720e34cc274",
+    "GO_annotations-9606-direct-allev.tsv": "2bda650477f7a8571f9926480ae7099871c00c46707b14a89b9b8e25f6f8d329",
+    "GO_annotations-9606-direct-expev.tsv": "08d85330226b9d127e4ac004b7fb597f1eb2766798d42d5928424ecf556ac18f",
+    "GO_annotations-9606-inferred-allev.tsv": "c97255b18672a1af321910739a434778cd7730b13a9bb6023dae08666930b2e2",
+    "GO_annotations-9606-inferred-expev.tsv": "e56acc1184324df3e7bb0abafd2678b97eb38925fe57840d75ae7188c8c50ed1",
+    "GO_is_a_edges": "e5c95105ff60d78feb5acb7441d1628083081a28ccb4d858db50334a34259708",
+    "GO_terms": "4f4e30e4705c669e47d7938948cb8ad81689da8ac0b96bf625a5c6f278024430",
+    "GPI159_normalized": "4a69bf547b951d060c1b38a4fc208b116ff0917ce74b941675d244b3315c34b1",
+    "MSigDB_normalized": "6775fb96be44080c768bd5789a0dbb0c802a1a0faa45927aa2a07d70af9f7c1f",
+    "bio-tissue-networks.tar.gz": "2c79e17f4a7c8680a7cbf8b20cef4acf356a7523c9a75fce586494153c0603d1",
+    "column_map": "155d61ed60b4ad20a7d2dc4ad703d9f62a1d68b0fa360ea995643e0ef17ce89c",
+    "core_summary": "3d4e3624a4d00d6c8c85dcdaab01f951c55a0b6cdf338c97a492ce3930983ec0",
+    "feature_rule": "a66ea20e5face0a6f6d35ae308ea4a3bc59ba19c4f377201cbc2151a83c7a489",
+    "gp2protein_relevant_subset": "9187753eed649d1d72bc0d38764094877b1967d5e7fe7696b292241e1ff12039",
+    "graphsage_ppi.zip": "53aeb76e54fd41b645e7edb48b62929240b89839495396b048086fd212503fbd",
+    "known_row_map": "4aaada1751c958db2653e19e05ca5a8e2bdd2da86c1a4441bad26e0468ae7207",
+    "residual_classes": "664ab9a55cb4087316a632be8eaa92bd5da72dff4a80fe4a94976f1a28dced93",
+    "symbol_map": "ed6b1f3f949cc91562cb8ddc59666b6e0caa760beb54170da7488aaa56141595"
+  },
+  "labels": {
+    "accepted_GAF_rows_contributing_to_candidate_terms": 59214,
+    "cells_compared": 6890224,
+    "claim_scope": "exact values on all rows under a single fixed transformation; literal upstream source/product still inferential",
+    "columns": 121,
+    "exact_columns": 121,
+    "global_policy": {
+      "GOA": "human release 159",
+      "NOT_excluded": true,
+      "evidence": [
+        "EXP",
+        "IDA",
+        "IEP",
+        "IGI",
+        "IMP",
+        "ISS"
+      ],
+      "excluded_positive_qualifier_relations": [
+        "colocalizes_with",
+        "contributes_to"
+      ],
+      "per_gene_or_per_column_tuning": false,
+      "propagation": "is_a only including direct term",
+      "relations": [
+        "enables",
+        "involved_in",
+        "part_of"
+      ]
+    },
+    "mismatched_cells": 0,
+    "repeated_gene_conflicts": 0,
+    "rows": 56944,
+    "unique_GeneIDs": 4301,
+    "unmapped_graph_GeneIDs": [
+      10159
+    ]
+  },
+  "leakage": [
+    {
+      "false_negative_label_cells": 2912,
+      "false_positive_label_cells": 0,
+      "fraction_rows_with_GeneID_seen_in_training": 0.9844949339883329,
+      "lookup_micro_F1_zero_for_unseen": 0.9936893477403445,
+      "rows": 6514,
+      "rows_with_GeneID_seen_in_training": 6413,
+      "split": "val",
+      "true_positive_label_cells": 229265,
+      "unique_GeneIDs": 3502,
+      "unique_GeneIDs_seen_in_training": 3412,
+      "unique_GeneIDs_unseen_in_training": 90,
+      "unseen_GeneIDs": "94|477|525|554|775|859|1482|2122|2200|2318|2326|2775|3207|3225|3226|3236|3248|3670|3696|3784|4192|4223|4607|4624|4625|4633|4634|4635|4756|4796|4803|4804|4868|4982|5089|5159|5270|5318|5327|5784|5787|6300|6495|6541|6569|6935|7003|7004|7005|7049|7135|7137|7139|7480|7490|7704|7849|8321|8325|8456|8557|8626|9127|9149|9314|9421|10365|10367|10461|11082|22795|23315|29970|30819|53405|54361|55867|79400|80310|84676|84700|116085|121457|126374|142680|151887|153572|171392|255743|349565"
+    },
+    {
+      "false_negative_label_cells": 1126,
+      "false_positive_label_cells": 0,
+      "fraction_rows_with_GeneID_seen_in_training": 0.9938450398262129,
+      "lookup_micro_F1_zero_for_unseen": 0.9971784115910651,
+      "rows": 5524,
+      "rows_with_GeneID_seen_in_training": 5490,
+      "split": "test",
+      "true_positive_label_cells": 198970,
+      "unique_GeneIDs": 3267,
+      "unique_GeneIDs_seen_in_training": 3233,
+      "unique_GeneIDs_unseen_in_training": 34,
+      "unseen_GeneIDs": "94|580|633|2122|2200|2294|2295|2922|3696|3784|5159|5784|5787|6569|7005|7080|7476|7486|7704|8321|8626|8989|10365|10461|26256|50489|53405|55655|80310|84700|89780|121457|153572|349565"
+    }
+  ],
+  "topology": {
+    "GraphSAGE_undirected_links_including_loops": 818716,
+    "all_24_edge_sets_exact": true,
+    "all_24_node_sets_exact": true,
+    "all_links_verified": 818716
+  }
+}

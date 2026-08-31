@@ -1,0 +1,85 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "check": "actual_manifest_row_count",
+      "pass": true,
+      "detail": "18"
+    },
+    {
+      "check": "actual_manifest_only_actual_inputs",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "public_actual_inputs_have_urls",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "actual_input_paths_exist",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "actual_input_hashes_match",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "source_ledger_has_historical_candidates",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "all_historical_candidates_have_urls",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "actual_input_file_manifest.xlsx_opens",
+      "pass": true,
+      "detail": "19 rows"
+    },
+    {
+      "check": "source_ledger.xlsx_opens",
+      "pass": true,
+      "detail": "100 rows"
+    },
+    {
+      "check": "master_contains_execution_diagnostics_section",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "master_contains_exact_superseded_errors",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "diagnostics_contains_final_and_superseded",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "no_dangling_old_error_phrase",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "run_status_no_missing_output",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "required_outputs_exist",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "report_artifact_references_exist",
+      "pass": true,
+      "detail": ""
+    }
+  ]
+}

@@ -1,0 +1,159 @@
+{
+  "batch_id": "B104C",
+  "column_order": {
+    "all_ontology_terms_negative_control_metrics": {
+      "exact_positions": 1,
+      "inversions": 2773,
+      "kendall_p_value": 0.00012310495714162574,
+      "kendall_tau": 0.2360881542699724,
+      "lcs_length": 38,
+      "pair_count": 7260,
+      "pairwise_concordance": 0.6180440771349862,
+      "prefix_exact": 0
+    },
+    "best_duplicate_assignment_bits": "001",
+    "conservative_10000_hypothesis_bonferroni_p": 3.544643223878391e-32,
+    "full_GAF_dictionary_metrics": {
+      "exact_positions": 6,
+      "inversions": 827,
+      "kendall_p_value": 3.5446432238783906e-36,
+      "kendall_tau": 0.7721763085399448,
+      "lcs_length": 92,
+      "pair_count": 7260,
+      "pairwise_concordance": 0.8860881542699725,
+      "prefix_exact": 5
+    },
+    "full_dictionary_table_size": 32768,
+    "full_dictionary_unique_keys": 16357,
+    "interpretation": "Strong evidence that columns inherit the scan order of a large legacy Python2 GO-term dictionary, likely filtered directly at the >=1000 threshold rather than copied into and re-iterated from a new 121-key dictionary.",
+    "new_121_key_dictionary_negative_control_metrics": {
+      "exact_positions": 0,
+      "inversions": 3457,
+      "kendall_p_value": 0.43825649698231894,
+      "kendall_tau": 0.04765840220385674,
+      "lcs_length": 23,
+      "pair_count": 7260,
+      "pairwise_concordance": 0.5238292011019283,
+      "prefix_exact": 0
+    },
+    "raw_hash_low15_metrics": {
+      "exact_positions": 16,
+      "inversions": 1039,
+      "kendall_p_value": 3.701098241920313e-31,
+      "kendall_tau": 0.7137741046831956,
+      "lcs_length": 86,
+      "pair_count": 7260,
+      "pairwise_concordance": 0.8568870523415978,
+      "prefix_exact": 5
+    }
+  },
+  "duplicate_vector_disambiguation": {
+    "columns_24_71": {
+      "24": "GO:0043228",
+      "71": "GO:0043232"
+    },
+    "columns_39_63": {
+      "39": "GO:0006464",
+      "63": "GO:0036211"
+    },
+    "columns_48_70": {
+      "48": "GO:1903561",
+      "70": "GO:0043230"
+    },
+    "earlier_GAF_simulation_variants_unanimous": 48,
+    "status": "strongly supported, pending original preprocessing code or an exact-order source list"
+  },
+  "generated_at_utc": "20260828T194921Z",
+  "graphsage_class_map_serialization_environment": {
+    "32_bit_exact_positions": 5410,
+    "64_bit_exact_keys": 56944,
+    "64_bit_python2_dict_sequence_exact": true,
+    "inference": "The JSON class-map key sequence is exactly reproduced by an unrandomized 64-bit CPython2-style dictionary built from string keys '0' through '56943' in ascending insertion order.",
+    "total_keys": 56944
+  },
+  "input_hashes": {
+    "/mnt/data/graphsage_ppi.zip": {
+      "sha256": "53aeb76e54fd41b645e7edb48b62929240b89839495396b048086fd212503fbd",
+      "size_bytes": 27029260
+    },
+    "/mnt/data/msigdb_v5.0_files_to_download_locally.zip": {
+      "sha256": "d372fc23f229cbb79656d824e0519587db6110963d22d1f4c95e5154963a32d2",
+      "size_bytes": 115484475
+    },
+    "/mnt/data/ppi_repro_corrected/work_B104C/B104A/analysis/B104A_exact_GO_terms_for_each_label_column_20260828T145842Z.csv": {
+      "sha256": "635d0c2cd9e018834b1a543362969184c520e622010b8c7bdf655bad784cd822",
+      "size_bytes": 14473
+    },
+    "/mnt/data/ppi_repro_corrected/work_B104C/B104A/retained_inputs/B101_goa_human_gaf159_normalized_20260827T152736Z.tsv.gz": {
+      "sha256": "132066afa3d3ea550752d3d2eb98fcbc238570c23bf239f0ea77e720e34cc274",
+      "size_bytes": 5123439
+    },
+    "/mnt/data/ppi_repro_corrected/work_B104C/B104A/retained_inputs/B104_repaired_B103_GO_is_a_edges_20260828T030759Z.tsv.gz": {
+      "sha256": "e5c95105ff60d78feb5acb7441d1628083081a28ccb4d858db50334a34259708",
+      "size_bytes": 316121
+    },
+    "/mnt/data/ppi_repro_corrected/work_B104C/B104A/retained_inputs/B104_repaired_B103_GO_terms_20260828T030759Z.tsv.gz": {
+      "sha256": "4f4e30e4705c669e47d7938948cb8ad81689da8ac0b96bf625a5c6f278024430",
+      "size_bytes": 510862
+    },
+    "/mnt/data/ppi_repro_corrected/work_B104C/B104A/retained_inputs/collapsed_gene_labels_topology_features.csv": {
+      "sha256": "4fd88002b2600c0b7c5dcb076390f5b74a39edcb34184f1b0768d9926dcb1907",
+      "size_bytes": 1061035
+    },
+    "/mnt/data/ppi_repro_corrected/work_B104C/B104B_20260828T161826Z/analysis/B104B_global_human_GOA_term_counts.csv.gz": {
+      "sha256": "9d48b4b157d8220b1b210978d49004818e22e525f20b82fb71c2287c2788defd",
+      "size_bytes": 233339
+    }
+  },
+  "msigdb_v5.0": {
+    "build_date": "Apr 27, 2015",
+    "comparison_to_v5.1": {
+      "common_sets_with_identical_Entrez_membership_on_full_set": 1452,
+      "common_standard_names": 1452,
+      "same_C5_standard_name_sequence": false,
+      "v5.0_C5_sets": 1454,
+      "v5.0_only_standard_names": 2,
+      "v5.1_C5_sets": 1454,
+      "v5.1_only_standard_names": 2
+    },
+    "direct_ALL_result": {
+      "C5_gene_sets": 1454,
+      "build_date": "Apr 27, 2015",
+      "closest_mismatch": 307,
+      "columns_ge_95pct": 0,
+      "columns_ge_99pct": 0,
+      "exact_label_columns": 0,
+      "gene_sets_tested": 10348,
+      "median_best_mismatch": 823,
+      "scope": "ALL",
+      "target_GO_IDs_present_in_C5": 57,
+      "target_GO_IDs_total": 121,
+      "target_GO_memberships_directly_exact": 0,
+      "version": "5.0"
+    },
+    "direct_C5_result": {
+      "C5_gene_sets": 1454,
+      "build_date": "Apr 27, 2015",
+      "closest_mismatch": 307,
+      "columns_ge_95pct": 0,
+      "columns_ge_99pct": 0,
+      "exact_label_columns": 0,
+      "gene_sets_tested": 1454,
+      "median_best_mismatch": 823,
+      "scope": "C5",
+      "target_GO_IDs_present_in_C5": 57,
+      "target_GO_IDs_total": 121,
+      "target_GO_memberships_directly_exact": 0,
+      "version": "5.0"
+    },
+    "expected_sha256_verified": true,
+    "expected_size_verified": true,
+    "gene_sets_C5": 1454,
+    "gene_sets_total": 10348,
+    "path": "/mnt/data/msigdb_v5.0_files_to_download_locally.zip",
+    "sha256": "d372fc23f229cbb79656d824e0519587db6110963d22d1f4c95e5154963a32d2",
+    "size_bytes": 115484475,
+    "version": "5.0",
+    "xml_member": "msigdb_v5.0_files_to_download_locally/msigdb_v5.0.xml"
+  }
+}

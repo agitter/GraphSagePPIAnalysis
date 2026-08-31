@@ -1,0 +1,440 @@
+{
+  "all_checks_passed": true,
+  "checks": [
+    {
+      "check": "uniprot_zip_integrity",
+      "details": "None",
+      "passed": true
+    },
+    {
+      "check": "goa_zip_integrity",
+      "details": "None",
+      "passed": true
+    },
+    {
+      "check": "uniprot_three_successful_releases",
+      "details": "rows=3",
+      "passed": true
+    },
+    {
+      "check": "uniprot_2016_04_dat_exists",
+      "details": "/mnt/data/ppi_repro_corrected/batches/B104E_work/uniprot/2016_04/O95073_Q9Y620_2016_04.dat",
+      "passed": true
+    },
+    {
+      "check": "uniprot_2016_04_dat_sha256",
+      "details": "observed=2abb3f223e2f51d634b21002d0dcad004339d5eb6f6ec3843e2edfef1aa015a5 expected=2abb3f223e2f51d634b21002d0dcad004339d5eb6f6ec3843e2edfef1aa015a5",
+      "passed": true
+    },
+    {
+      "check": "uniprot_2016_04_tsv_exists",
+      "details": "/mnt/data/ppi_repro_corrected/batches/B104E_work/uniprot/2016_04/O95073_Q9Y620_2016_04.tsv",
+      "passed": true
+    },
+    {
+      "check": "uniprot_2016_04_tsv_sha256",
+      "details": "observed=95652bad82c4587f1ef95c5f4a8aab994999a5c05230b0fc0f9b6231d147fb48 expected=95652bad82c4587f1ef95c5f4a8aab994999a5c05230b0fc0f9b6231d147fb48",
+      "passed": true
+    },
+    {
+      "check": "uniprot_2016_04_archive_size",
+      "details": "",
+      "passed": true
+    },
+    {
+      "check": "uniprot_2016_04_archive_md5",
+      "details": "",
+      "passed": true
+    },
+    {
+      "check": "uniprot_2016_04_archive_sha256",
+      "details": "",
+      "passed": true
+    },
+    {
+      "check": "uniprot_2016_04_archive_deleted",
+      "details": "",
+      "passed": true
+    },
+    {
+      "check": "uniprot_2016_04_both_targets",
+      "details": "{'Q9Y620', 'O95073'}",
+      "passed": true
+    },
+    {
+      "check": "uniprot_2016_04_O95073_symbol",
+      "details": "",
+      "passed": true
+    },
+    {
+      "check": "uniprot_2016_04_Q9Y620_symbol",
+      "details": "",
+      "passed": true
+    },
+    {
+      "check": "uniprot_2016_04_O95073_geneids",
+      "details": "",
+      "passed": true
+    },
+    {
+      "check": "uniprot_2016_04_Q9Y620_geneids",
+      "details": "",
+      "passed": true
+    },
+    {
+      "check": "uniprot_2016_05_dat_exists",
+      "details": "/mnt/data/ppi_repro_corrected/batches/B104E_work/uniprot/2016_05/O95073_Q9Y620_2016_05.dat",
+      "passed": true
+    },
+    {
+      "check": "uniprot_2016_05_dat_sha256",
+      "details": "observed=f893a80ede1b4982b618a277a3686279ca958b02c2879e64ddac42e63ae481e2 expected=f893a80ede1b4982b618a277a3686279ca958b02c2879e64ddac42e63ae481e2",
+      "passed": true
+    },
+    {
+      "check": "uniprot_2016_05_tsv_exists",
+      "details": "/mnt/data/ppi_repro_corrected/batches/B104E_work/uniprot/2016_05/O95073_Q9Y620_2016_05.tsv",
+      "passed": true
+    },
+    {
+      "check": "uniprot_2016_05_tsv_sha256",
+      "details": "observed=144b8831d8cab943157d6123b4f121ef400882997ccf6a22db95deac388f5f0e expected=144b8831d8cab943157d6123b4f121ef400882997ccf6a22db95deac388f5f0e",
+      "passed": true
+    },
+    {
+      "check": "uniprot_2016_05_archive_size",
+      "details": "",
+      "passed": true
+    },
+    {
+      "check": "uniprot_2016_05_archive_md5",
+      "details": "",
+      "passed": true
+    },
+    {
+      "check": "uniprot_2016_05_archive_sha256",
+      "details": "",
+      "passed": true
+    },
+    {
+      "check": "uniprot_2016_05_archive_deleted",
+      "details": "",
+      "passed": true
+    },
+    {
+      "check": "uniprot_2016_05_both_targets",
+      "details": "{'Q9Y620', 'O95073'}",
+      "passed": true
+    },
+    {
+      "check": "uniprot_2016_05_O95073_symbol",
+      "details": "",
+      "passed": true
+    },
+    {
+      "check": "uniprot_2016_05_Q9Y620_symbol",
+      "details": "",
+      "passed": true
+    },
+    {
+      "check": "uniprot_2016_05_O95073_geneids",
+      "details": "",
+      "passed": true
+    },
+    {
+      "check": "uniprot_2016_05_Q9Y620_geneids",
+      "details": "",
+      "passed": true
+    },
+    {
+      "check": "uniprot_2016_06_dat_exists",
+      "details": "/mnt/data/ppi_repro_corrected/batches/B104E_work/uniprot/2016_06/O95073_Q9Y620_2016_06.dat",
+      "passed": true
+    },
+    {
+      "check": "uniprot_2016_06_dat_sha256",
+      "details": "observed=c9ef724cb42304f4b9271fb41d6ac92e6ec590a39605dc38527b8f85fc65385f expected=c9ef724cb42304f4b9271fb41d6ac92e6ec590a39605dc38527b8f85fc65385f",
+      "passed": true
+    },
+    {
+      "check": "uniprot_2016_06_tsv_exists",
+      "details": "/mnt/data/ppi_repro_corrected/batches/B104E_work/uniprot/2016_06/O95073_Q9Y620_2016_06.tsv",
+      "passed": true
+    },
+    {
+      "check": "uniprot_2016_06_tsv_sha256",
+      "details": "observed=422aeb8a5a146a458c0f7fc9e0f93ea1a1a75822d7249b84bc52cd19f955c91f expected=422aeb8a5a146a458c0f7fc9e0f93ea1a1a75822d7249b84bc52cd19f955c91f",
+      "passed": true
+    },
+    {
+      "check": "uniprot_2016_06_archive_size",
+      "details": "",
+      "passed": true
+    },
+    {
+      "check": "uniprot_2016_06_archive_md5",
+      "details": "",
+      "passed": true
+    },
+    {
+      "check": "uniprot_2016_06_archive_sha256",
+      "details": "",
+      "passed": true
+    },
+    {
+      "check": "uniprot_2016_06_archive_deleted",
+      "details": "",
+      "passed": true
+    },
+    {
+      "check": "uniprot_2016_06_both_targets",
+      "details": "{'Q9Y620', 'O95073'}",
+      "passed": true
+    },
+    {
+      "check": "uniprot_2016_06_O95073_symbol",
+      "details": "",
+      "passed": true
+    },
+    {
+      "check": "uniprot_2016_06_Q9Y620_symbol",
+      "details": "",
+      "passed": true
+    },
+    {
+      "check": "uniprot_2016_06_O95073_geneids",
+      "details": "",
+      "passed": true
+    },
+    {
+      "check": "uniprot_2016_06_Q9Y620_geneids",
+      "details": "",
+      "passed": true
+    },
+    {
+      "check": "goa_twelve_releases",
+      "details": "['158', '159', '160', '161', '162', '163', '164', '165', '166', '167', '168', '169']",
+      "passed": true
+    },
+    {
+      "check": "goa_release_158_summary_matches_json",
+      "details": "",
+      "passed": true
+    },
+    {
+      "check": "goa_release_159_summary_matches_json",
+      "details": "",
+      "passed": true
+    },
+    {
+      "check": "goa_release_160_summary_matches_json",
+      "details": "",
+      "passed": true
+    },
+    {
+      "check": "goa_release_161_summary_matches_json",
+      "details": "",
+      "passed": true
+    },
+    {
+      "check": "goa_release_162_summary_matches_json",
+      "details": "",
+      "passed": true
+    },
+    {
+      "check": "goa_release_163_summary_matches_json",
+      "details": "",
+      "passed": true
+    },
+    {
+      "check": "goa_release_164_summary_matches_json",
+      "details": "",
+      "passed": true
+    },
+    {
+      "check": "goa_release_165_summary_matches_json",
+      "details": "",
+      "passed": true
+    },
+    {
+      "check": "goa_release_166_summary_matches_json",
+      "details": "",
+      "passed": true
+    },
+    {
+      "check": "goa_release_167_summary_matches_json",
+      "details": "",
+      "passed": true
+    },
+    {
+      "check": "goa_release_168_summary_matches_json",
+      "details": "",
+      "passed": true
+    },
+    {
+      "check": "goa_release_169_summary_matches_json",
+      "details": "",
+      "passed": true
+    },
+    {
+      "check": "goa_release159_uniquely_exact",
+      "details": "[159]",
+      "passed": true
+    },
+    {
+      "check": "goa_duplicate_orientation_stable",
+      "details": "{'001'}",
+      "passed": true
+    },
+    {
+      "check": "goa_release_158_events_recorded",
+      "details": "events=3",
+      "passed": true
+    },
+    {
+      "check": "goa_release_158_source_deleted_after_success",
+      "details": "2026-08-29t12:03:49.583407z 158 source_integrity passed gaf=c:\\users\\agitter\\desktop\\ppi\\goa_date_screen_cache\\goa_human.gaf.158.gz;gpi=c:\\users\\agitter\\desktop\\ppi\\goa_date_screen_cache\\goa_human.gpi.158.gz 2026-08-29t12:03:51.339795z 158 analysis passed output=c:\\users\\agitter\\desktop\\ppi\\goa_date",
+      "passed": true
+    },
+    {
+      "check": "goa_release_159_events_recorded",
+      "details": "events=3",
+      "passed": true
+    },
+    {
+      "check": "goa_release_159_source_deleted_after_success",
+      "details": "2026-08-29t12:03:56.942649z 159 source_integrity passed gaf=c:\\users\\agitter\\desktop\\ppi\\goa_date_screen_cache\\goa_human.gaf.159.gz;gpi=c:\\users\\agitter\\desktop\\ppi\\goa_date_screen_cache\\goa_human.gpi.159.gz 2026-08-29t12:03:58.608177z 159 analysis passed output=c:\\users\\agitter\\desktop\\ppi\\goa_date",
+      "passed": true
+    },
+    {
+      "check": "goa_release_160_events_recorded",
+      "details": "events=3",
+      "passed": true
+    },
+    {
+      "check": "goa_release_160_source_deleted_after_success",
+      "details": "2026-08-29t12:04:20.447426z 160 source_integrity passed gaf=c:\\users\\agitter\\desktop\\ppi\\goa_date_screen_cache\\goa_human.gaf.160.gz;gpi=c:\\users\\agitter\\desktop\\ppi\\goa_date_screen_cache\\goa_human.gpi.160.gz 2026-08-29t12:04:22.076646z 160 analysis passed output=c:\\users\\agitter\\desktop\\ppi\\goa_date",
+      "passed": true
+    },
+    {
+      "check": "goa_release_161_events_recorded",
+      "details": "events=3",
+      "passed": true
+    },
+    {
+      "check": "goa_release_161_source_deleted_after_success",
+      "details": "2026-08-29t12:04:28.628654z 161 source_integrity passed gaf=c:\\users\\agitter\\desktop\\ppi\\goa_date_screen_cache\\goa_human.gaf.161.gz;gpi=c:\\users\\agitter\\desktop\\ppi\\goa_date_screen_cache\\goa_human.gpi.161.gz 2026-08-29t12:04:30.227160z 161 analysis passed output=c:\\users\\agitter\\desktop\\ppi\\goa_date",
+      "passed": true
+    },
+    {
+      "check": "goa_release_162_events_recorded",
+      "details": "events=3",
+      "passed": true
+    },
+    {
+      "check": "goa_release_162_source_deleted_after_success",
+      "details": "2026-08-29t12:04:42.853877z 162 source_integrity passed gaf=c:\\users\\agitter\\desktop\\ppi\\goa_date_screen_cache\\goa_human.gaf.162.gz;gpi=c:\\users\\agitter\\desktop\\ppi\\goa_date_screen_cache\\goa_human.gpi.162.gz 2026-08-29t12:04:44.871827z 162 analysis passed output=c:\\users\\agitter\\desktop\\ppi\\goa_date",
+      "passed": true
+    },
+    {
+      "check": "goa_release_163_events_recorded",
+      "details": "events=3",
+      "passed": true
+    },
+    {
+      "check": "goa_release_163_source_deleted_after_success",
+      "details": "2026-08-29t12:04:51.686356z 163 source_integrity passed gaf=c:\\users\\agitter\\desktop\\ppi\\goa_date_screen_cache\\goa_human.gaf.163.gz;gpi=c:\\users\\agitter\\desktop\\ppi\\goa_date_screen_cache\\goa_human.gpi.163.gz 2026-08-29t12:04:54.311374z 163 analysis passed output=c:\\users\\agitter\\desktop\\ppi\\goa_date",
+      "passed": true
+    },
+    {
+      "check": "goa_release_164_events_recorded",
+      "details": "events=3",
+      "passed": true
+    },
+    {
+      "check": "goa_release_164_source_deleted_after_success",
+      "details": "2026-08-29t12:05:00.318150z 164 source_integrity passed gaf=c:\\users\\agitter\\desktop\\ppi\\goa_date_screen_cache\\goa_human.gaf.164.gz;gpi=c:\\users\\agitter\\desktop\\ppi\\goa_date_screen_cache\\goa_human.gpi.164.gz 2026-08-29t12:05:04.253452z 164 analysis passed output=c:\\users\\agitter\\desktop\\ppi\\goa_date",
+      "passed": true
+    },
+    {
+      "check": "goa_release_165_events_recorded",
+      "details": "events=3",
+      "passed": true
+    },
+    {
+      "check": "goa_release_165_source_deleted_after_success",
+      "details": "2026-08-29t12:05:14.667021z 165 source_integrity passed gaf=c:\\users\\agitter\\desktop\\ppi\\goa_date_screen_cache\\goa_human.gaf.165.gz;gpi=c:\\users\\agitter\\desktop\\ppi\\goa_date_screen_cache\\goa_human.gpi.165.gz 2026-08-29t12:05:16.730654z 165 analysis passed output=c:\\users\\agitter\\desktop\\ppi\\goa_date",
+      "passed": true
+    },
+    {
+      "check": "goa_release_166_events_recorded",
+      "details": "events=3",
+      "passed": true
+    },
+    {
+      "check": "goa_release_166_source_deleted_after_success",
+      "details": "2026-08-29t12:05:29.516464z 166 source_integrity passed gaf=c:\\users\\agitter\\desktop\\ppi\\goa_date_screen_cache\\goa_human.gaf.166.gz;gpi=c:\\users\\agitter\\desktop\\ppi\\goa_date_screen_cache\\goa_human.gpi.166.gz 2026-08-29t12:05:31.693129z 166 analysis passed output=c:\\users\\agitter\\desktop\\ppi\\goa_date",
+      "passed": true
+    },
+    {
+      "check": "goa_release_167_events_recorded",
+      "details": "events=3",
+      "passed": true
+    },
+    {
+      "check": "goa_release_167_source_deleted_after_success",
+      "details": "2026-08-29t12:05:43.597843z 167 source_integrity passed gaf=c:\\users\\agitter\\desktop\\ppi\\goa_date_screen_cache\\goa_human.gaf.167.gz;gpi=c:\\users\\agitter\\desktop\\ppi\\goa_date_screen_cache\\goa_human.gpi.167.gz 2026-08-29t12:05:45.354810z 167 analysis passed output=c:\\users\\agitter\\desktop\\ppi\\goa_date",
+      "passed": true
+    },
+    {
+      "check": "goa_release_168_events_recorded",
+      "details": "events=3",
+      "passed": true
+    },
+    {
+      "check": "goa_release_168_source_deleted_after_success",
+      "details": "2026-08-29t12:05:55.783027z 168 source_integrity passed gaf=c:\\users\\agitter\\desktop\\ppi\\goa_date_screen_cache\\goa_human.gaf.168.gz;gpi=c:\\users\\agitter\\desktop\\ppi\\goa_date_screen_cache\\goa_human.gpi.168.gz 2026-08-29t12:05:57.540218z 168 analysis passed output=c:\\users\\agitter\\desktop\\ppi\\goa_date",
+      "passed": true
+    },
+    {
+      "check": "goa_release_169_events_recorded",
+      "details": "events=3",
+      "passed": true
+    },
+    {
+      "check": "goa_release_169_source_deleted_after_success",
+      "details": "2026-08-29t12:06:13.115613z 169 source_integrity passed gaf=c:\\users\\agitter\\desktop\\ppi\\goa_date_screen_cache\\goa_human.gaf.169.gz;gpi=c:\\users\\agitter\\desktop\\ppi\\goa_date_screen_cache\\goa_human.gpi.169.gz 2026-08-29t12:06:14.948209z 169 analysis passed output=c:\\users\\agitter\\desktop\\ppi\\goa_date",
+      "passed": true
+    }
+  ],
+  "created_from": {
+    "goa_zip": {
+      "bytes": 54246,
+      "path": "/mnt/data/goa_date_screen_results.zip",
+      "sha256": "502c8ffdb7b809c1665e82d31db52b72e7e855e7e9fcc06a8a2f46a64bc30de9"
+    },
+    "uniprot_zip": {
+      "bytes": 30449,
+      "path": "/mnt/data/uniprot_2016_mapping_audit_ledger.zip",
+      "sha256": "4ac8cb1a900215ded9dc35a4fc44a4abaaff3e5e774cf62769592f1ab153a7b0"
+    }
+  },
+  "goa_exact_releases": [
+    159
+  ],
+  "goa_lcs_by_release": {
+    "158": 94,
+    "159": 94,
+    "160": 94,
+    "161": 94,
+    "162": 94,
+    "163": 94,
+    "164": 94,
+    "165": 94,
+    "166": 94,
+    "167": 93,
+    "168": 93,
+    "169": 93
+  },
+  "uniprot_normalized_summary": "/mnt/data/ppi_repro_corrected/batches/B104E_20260829T121535Z/analysis/B104E_UniProt_2016_O95073_Q9Y620_mapping_audit_summary.csv"
+}

@@ -1,0 +1,2 @@
+timed_out
+Large candidate-by-label arrays were repeatedly materialized. Replaced by precomputed Python-integer bit-count distance matrices.

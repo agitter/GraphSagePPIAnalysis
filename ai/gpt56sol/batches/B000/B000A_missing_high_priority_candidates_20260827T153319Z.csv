@@ -1,0 +1,6 @@
+artifact_name,reason,direct_or_canonical_source_url,priority
+gp_information.goa_human.157.gz,Legacy release-157 GPI companion is absent from complete local listing.,https://ftp.ebi.ac.uk/pub/databases/GO/goa/old/HUMAN/gp_information.goa_human.157.gz,high_after_release159_mapping_and_ontology
+2016-06-29-go.obo,GAF v159 header identifies the 2016-06-29 ontology; only 2016-06-01 ontology files are local.,,high
+org.Hs.eg.db_3.2.3.tar.gz,"Intermediate September-2015 Bioconductor snapshot is absent; 3.0.0, 3.1.2, 3.3.0, and 3.4.0 are local.",https://bioconductor.statistik.tu-dortmund.de/packages/3.2/data/annotation/src/contrib/org.Hs.eg.db_3.2.3.tar.gz,medium
+idmapping_selected.tab.2015_03.gz,Historical UniProt mapping snapshot is absent from complete local listing.,https://ftp.uniprot.org/pub/databases/uniprot/knowledgebase/idmapping/idmapping_selected.tab.2015_03.gz,medium
+gene2go_may2016.gz,Raw May-2016 gene2go is absent; derived dhimmel TSVs are present but are not the raw snapshot.,,medium

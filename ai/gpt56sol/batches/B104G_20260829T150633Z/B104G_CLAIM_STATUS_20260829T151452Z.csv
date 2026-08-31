@@ -1,0 +1,11 @@
+component,current_status,evidence,remaining_ambiguity
+24 graph block-to-tissue identities,exactly verified,all node and edge sets match the assigned OhmNet tissue networks,none at dataset-comparison level
+"row-to-Entrez identity for 56,944 rows",strongly supported full resolution,"Python-2 string-dict order agrees with all 56,411 previously independent row identities; resolves every former class; all 818,716 edges, 50 features, and 121 labels validate",original preprocessing source code not located; the exact mechanism is inferred from deterministic serialization behavior
+50 feature values,exactly reproduced on all rows,"zero differences across 2,847,200 cells under the retained MSigDB membership rule","literal source code, exact threshold operator, whether C7 was traversed, and MSigDB release are not identifiable from the matrix"
+121 label values,exactly reproduced on all rows under one global transformation,"zero differences across 6,890,224 cells","GOA v159 is uniquely exact among tested releases, but an equivalent Entrez-native/preprocessed source could have been used"
+GO term identities,115 columns uniquely identified; six identities strongly supported,"three duplicate-vector pairs remain identical across all 4,301 genes","orientation of columns 24/71, 39/63, and 48/70 remains provisional"
+GO term selection,strongly supported,"release-159 full-human top 121 equals all terms at the natural approximately 1,000-gene/protein boundary",top-121 versus >=1000 and gene versus protein counting are observationally equivalent here
+GO column ordering,strong Python-2 dictionary fingerprint; not perfectly reconstructed,best tested LCS 94/121 plus exact independent class_map JSON-key-order control,exact dictionary insertion history or ordered source list
+24-network selection and 20/2/2 split,partially characterized,sizes and stated thresholds can be checked,exact selection and split assignment procedure
+DGL conversion,exactly reproduced previously,"labels, graph IDs, float64 standardization, directed edges, self-loops, and component handling",none at output-comparison level
+identifier mapping semantics,globally consistent mapping gives exact labels,historical many-to-many edges retained; O95073 nested-gene projection separated semantically,whether the original pipeline used GOA+mapping or an Entrez-native source

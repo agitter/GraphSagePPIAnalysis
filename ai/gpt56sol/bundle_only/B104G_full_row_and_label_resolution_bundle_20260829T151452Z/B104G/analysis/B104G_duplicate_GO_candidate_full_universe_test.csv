@@ -1,0 +1,4 @@
+candidate_GO_ID_A,candidate_GO_ID_B,full_graph_unique_genes_compared,membership_differing_gene_count,membership_vectors_identical_on_all_4301_genes,differing_GeneIDs,conclusion
+GO:0043228,GO:0043232,4301,0,1,,matrix cannot disambiguate candidate orientation
+GO:0006464,GO:0036211,4301,0,1,,matrix cannot disambiguate candidate orientation
+GO:0043230,GO:1903561,4301,0,1,,matrix cannot disambiguate candidate orientation

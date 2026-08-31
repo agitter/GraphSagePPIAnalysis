@@ -1,0 +1,5 @@
+model_family,models_scored,perfect_models,models_lcs_ge_100,best_lcs,best_kendall_tau,best_pairwise_concordance,best_exact_positions,best_exact_prefix,best_duplicate_orientation,best_model,best_key_mode,best_filter,best_row_order,best_ancestor_order
+B104C prior GAF-derived,48,0,0,94,0.7661157024793387,0.8830578512396694,13,5,001,first_direct_occurrence_then_ancestors,,exact_historical_mapped_accessions,date_accession_GO,sorted_asc
+B104D targeted key/construction,256,0,0,94,0.7661157024793387,0.8830578512396694,13,5,001,first_direct_then_ancestors,GO_ID,exact_historical_mapped,date_accession_GO,sorted_asc
+B104D graph-mapped,200,0,0,94,0.7661157024793387,0.8830578512396694,13,5,001,first_direct_then_ancestors,GO_ID,exact_graph_mapped,date_accession_GO,sorted_asc
+B104D outer/pair inversion,36,0,0,90,0.7663911845730027,0.8831955922865014,10,3,001,annotation_pair_set_then_terms,GO_ID,exact_historical_mapped,source,sorted_asc

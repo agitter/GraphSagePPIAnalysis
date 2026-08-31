@@ -1,0 +1,1 @@
+Failed before parsing because the generated full inventory cannot contain its own hash; superseded by corrected input-integrity logic.

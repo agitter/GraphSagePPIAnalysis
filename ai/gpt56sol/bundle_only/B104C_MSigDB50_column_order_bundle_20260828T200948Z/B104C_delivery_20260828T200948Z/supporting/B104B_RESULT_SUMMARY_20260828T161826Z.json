@@ -1,0 +1,193 @@
+{
+  "batch_id": "B104B",
+  "current_interpretation": [
+    "MSigDB v5.1, v5.2, and v6.0 direct Entrez memberships do not reproduce any deposited label column exactly.",
+    "The 121 exact GO candidates are exactly the 121 most prevalent propagated terms in the full historical human GOA159 universe.",
+    "A round threshold of at least 1000 distinct historical human genes or reviewed accessions gives exactly the same set in release 159.",
+    "Release 158 has the same top-121 set but only 120 terms at the 1000 threshold.",
+    "The remaining provenance questions concern source-list/threshold intent, column ordering, duplicate-vector GO identity, and date-matched mapping audit."
+  ],
+  "direct_MSigDB_membership": [
+    {
+      "closest_mismatch": 307,
+      "columns_ge_95pct": 0,
+      "columns_ge_99pct": 0,
+      "exact_label_columns": 0,
+      "gene_sets_tested": 1454,
+      "scope": "C5",
+      "version": "5.1"
+    },
+    {
+      "closest_mismatch": 307,
+      "columns_ge_95pct": 0,
+      "columns_ge_99pct": 0,
+      "exact_label_columns": 0,
+      "gene_sets_tested": 13311,
+      "scope": "ALL",
+      "version": "5.1"
+    },
+    {
+      "closest_mismatch": 10,
+      "columns_ge_95pct": 2,
+      "columns_ge_99pct": 1,
+      "exact_label_columns": 0,
+      "gene_sets_tested": 6166,
+      "scope": "C5",
+      "version": "5.2"
+    },
+    {
+      "closest_mismatch": 10,
+      "columns_ge_95pct": 2,
+      "columns_ge_99pct": 1,
+      "exact_label_columns": 0,
+      "gene_sets_tested": 18890,
+      "scope": "ALL",
+      "version": "5.2"
+    },
+    {
+      "closest_mismatch": 10,
+      "columns_ge_95pct": 2,
+      "columns_ge_99pct": 1,
+      "exact_label_columns": 0,
+      "gene_sets_tested": 5917,
+      "scope": "C5",
+      "version": "6.0"
+    },
+    {
+      "closest_mismatch": 10,
+      "columns_ge_95pct": 2,
+      "columns_ge_99pct": 1,
+      "exact_label_columns": 0,
+      "gene_sets_tested": 18643,
+      "scope": "ALL",
+      "version": "6.0"
+    }
+  ],
+  "full_human_term_selection": {
+    "counting_unit_tests": [
+      {
+        "rank121": [
+          "GO:0031399",
+          1007
+        ],
+        "rank122": [
+          "GO:0043167",
+          997
+        ],
+        "terms": 16338,
+        "threshold_1000_exact": true,
+        "threshold_1000_extra": 0,
+        "threshold_1000_missing": 0,
+        "threshold_1000_overlap": 121,
+        "threshold_1000_size": 121,
+        "top121_exact": true,
+        "top121_extra": 0,
+        "top121_missing": 0,
+        "top121_overlap": 121,
+        "unit": "unique_historical_GeneID"
+      },
+      {
+        "rank121": [
+          "GO:0031399",
+          1006
+        ],
+        "rank122": [
+          "GO:0043167",
+          990
+        ],
+        "terms": 16357,
+        "threshold_1000_exact": true,
+        "threshold_1000_extra": 0,
+        "threshold_1000_missing": 0,
+        "threshold_1000_overlap": 121,
+        "threshold_1000_size": 121,
+        "top121_exact": true,
+        "top121_extra": 0,
+        "top121_missing": 0,
+        "top121_overlap": 121,
+        "unit": "unique_all_GPI_accession"
+      },
+      {
+        "rank121": [
+          "GO:0031399",
+          1006
+        ],
+        "rank122": [
+          "GO:0043167",
+          990
+        ],
+        "terms": 16357,
+        "threshold_1000_exact": true,
+        "threshold_1000_extra": 0,
+        "threshold_1000_missing": 0,
+        "threshold_1000_overlap": 121,
+        "threshold_1000_size": 121,
+        "top121_exact": true,
+        "top121_extra": 0,
+        "top121_missing": 0,
+        "top121_overlap": 121,
+        "unit": "unique_SwissProt_GPI_accession"
+      }
+    ],
+    "historical_GPI159_linked_geneids": 19056,
+    "independent_implementation": "standard-library CSV parser plus ordinary Python sets",
+    "policy_robustness": {
+      "configurations_tested": 24,
+      "threshold1000_exact_configurations": 1,
+      "top121_exact_configurations": 1,
+      "unique_exact_policy": {
+        "evidence": "EXP, IDA, IEP, IGI, IMP, ISS",
+        "propagation": "is_a",
+        "relations": "involved_in, part_of, enables"
+      }
+    },
+    "propagated_terms_with_members": 16338,
+    "rank_121": {
+      "GO_ID": "GO:0031399",
+      "GO_name": "regulation of protein modification process",
+      "global_gene_count": 1007,
+      "is_target": true,
+      "namespace": "biological_process",
+      "rank": 121
+    },
+    "rank_122": {
+      "GO_ID": "GO:0043167",
+      "GO_name": "ion binding",
+      "global_gene_count": 997,
+      "is_target": false,
+      "namespace": "molecular_function",
+      "rank": 122
+    },
+    "release158_sensitivity": {
+      "accepted_rows": 104961,
+      "rank121": [
+        "GO:0031399",
+        995
+      ],
+      "rank122": [
+        "GO:0051049",
+        987
+      ],
+      "threshold1000_extra": [],
+      "threshold1000_missing": [
+        "GO:0031399"
+      ],
+      "threshold1000_overlap_target": 120,
+      "threshold1000_size": 120,
+      "top121_extra": [],
+      "top121_missing": [],
+      "top121_overlap_target": 121,
+      "top121_size": 121
+    },
+    "threshold_1000_exact_candidate_set_match": true,
+    "top_121_exact_candidate_set_match": true
+  },
+  "generated_at_utc": "2026-08-28T16:18:26Z",
+  "scope": {
+    "compared_binary_cells": 516428,
+    "distinct_deposited_vectors": 118,
+    "distinct_exact_GO_candidate_ids": 121,
+    "label_columns": 121,
+    "resolved_entrez_gene_ids": 4268
+  }
+}

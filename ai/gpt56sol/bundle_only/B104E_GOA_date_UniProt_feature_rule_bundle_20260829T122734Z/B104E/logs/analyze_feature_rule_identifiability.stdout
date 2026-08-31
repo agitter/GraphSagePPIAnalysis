@@ -1,0 +1,12 @@
+{
+  "thresholds_producing_same_ordered_selected_sets": [
+    200,
+    201
+  ],
+  "minimum_selected_set_size": 201,
+  "first_unselected_qualifying_after_cap": {
+    "collection": "C3",
+    "last_selected_name": "V$NFKAPPAB65_01"
+  },
+  "interpretation": "The exact feature matrix does not distinguish >=200 from >=201 (equivalently >200), because both produce the same selected sequence. A cutoff described as 200 is natural but not source-code proven."
+}

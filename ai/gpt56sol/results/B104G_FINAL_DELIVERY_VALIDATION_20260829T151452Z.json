@@ -1,0 +1,169 @@
+{
+  "batch": "B104G",
+  "bundle": {
+    "path": "/mnt/data/B104G_full_row_and_label_resolution_bundle_20260829T151452Z.zip",
+    "sha256": "3db03af494bafad614b21e3c55b1d03b8cd8373325d704b3dbc5c1152d0e01a8",
+    "size_bytes": 26458521
+  },
+  "check_count": 31,
+  "checks": [
+    {
+      "check": "B104G_INDEPENDENT_ROW_ORDER_VALIDATION_20260829T150633Z.json:all_checks_pass",
+      "details": "True",
+      "passed": true
+    },
+    {
+      "check": "B104G_INDEPENDENT_FULL_FEATURE_VALIDATION_20260829T150633Z.json:all_checks_pass",
+      "details": "True",
+      "passed": true
+    },
+    {
+      "check": "B104G_INDEPENDENT_FULL_LABEL_VALIDATION_20260829T150633Z.json:all_checks_pass",
+      "details": "True",
+      "passed": true
+    },
+    {
+      "check": "full_row_map_has_56944_rows",
+      "details": "56944",
+      "passed": true
+    },
+    {
+      "check": "gene_universe_has_4301_rows",
+      "details": "4301",
+      "passed": true
+    },
+    {
+      "check": "topology_exact",
+      "details": "{\"GraphSAGE_undirected_links_including_loops\": 818716, \"all_24_edge_sets_exact\": true, \"all_24_node_sets_exact\": true, \"all_links_verified\": 818716}",
+      "passed": true
+    },
+    {
+      "check": "features_exact_all_rows",
+      "details": "{\"cells_compared\": 2847200, \"claim_scope\": \"exact matrix reproduction; source procedure remains a strong hypothesis, not original-code proof\", \"columns\": 50, \"exact_columns\": 50, \"mismatched_cells\": 0, \"repeated_gene_conflicts\": 0, \"rows\": 56944, \"unique_GeneIDs\": 4301}",
+      "passed": true
+    },
+    {
+      "check": "labels_exact_all_rows",
+      "details": "{\"accepted_GAF_rows_contributing_to_candidate_terms\": 59214, \"cells_compared\": 6890224, \"claim_scope\": \"exact values on all rows under a single fixed transformation; literal upstream source/product still inferential\", \"columns\": 121, \"exact_columns\": 121, \"global_policy\": {\"GOA\": \"human release 159\", \"NOT_excluded\": true, \"evidence\": [\"EXP\", \"IDA\", \"IEP\", \"IGI\", \"IMP\", \"ISS\"], \"excluded_positive_qualifier_relations\": [\"colocalizes_with\", \"contributes_to\"], \"per_gene_or_per_column_tuning\": false, \"propagation\": \"is_a only including direct term\", \"relations\": [\"enables\", \"involved_in\", \"part_of\"]}, \"mismatched_cells\": 0, \"repeated_gene_conflicts\": 0, \"rows\": 56944, \"unique_GeneIDs\": 4301, \"unmapped_graph_GeneIDs\": [10159]}",
+      "passed": true
+    },
+    {
+      "check": "previous_independent_mapping_agreement",
+      "details": "{\"claim_strength\": \"strongly supported full row resolution; original preprocessing source code not located\", \"former_classes_candidate_sets_exact\": 183, \"former_unresolved_classes\": 183, \"former_unresolved_rows\": 533, \"graphsage_rows\": 56944, \"mapping_model\": \"64-bit unrandomized CPython2 string-key dictionary table iteration after inserting node tokens from each original OhmNet edgelist in line order\", \"previous_independent_row_agreements\": 56411, \"previous_independent_row_disagreements\": 0, \"previous_independent_rows_compared\": 56411, \"unique_Entrez_GeneIDs\": 4301}",
+      "passed": true
+    },
+    {
+      "check": "four_raw_to_retained_records",
+      "details": "4",
+      "passed": true
+    },
+    {
+      "check": "retained:GO_annotations-9606-direct-allev.tsv.gz",
+      "details": "sha256=1e8a2e9d82b34d1cf2511661c1b2413f3fd0c3e502fd694d9e50aad29e3ebb66",
+      "passed": true
+    },
+    {
+      "check": "retained:GO_annotations-9606-direct-expev.tsv.gz",
+      "details": "sha256=1b3525d3e300a83624f5d98dd22457ba3690e74b8564080f060e4ab9d7e4e8fb",
+      "passed": true
+    },
+    {
+      "check": "retained:GO_annotations-9606-inferred-allev.tsv.gz",
+      "details": "sha256=8fec17121978720d73ff306c5fa8080d9de1eca35cdacc2eebb06c1bf5decc8f",
+      "passed": true
+    },
+    {
+      "check": "retained:GO_annotations-9606-inferred-expev.tsv.gz",
+      "details": "sha256=83f9a3a514042a867b5881175125e27b8246eb66bdc40afca171efdb05d5f6cd",
+      "passed": true
+    },
+    {
+      "check": "manifest_has_four_B104G_raw_inputs",
+      "details": "4",
+      "passed": true
+    },
+    {
+      "check": "all_B104G_inputs_have_urls",
+      "details": "https://raw.githubusercontent.com/dhimmel/gene-ontology/962a5e12f8590400c2891cde93fd6a783b26e02e/annotations/taxid_9606/GO_annotations-9606-direct-allev.tsv;https://raw.githubusercontent.com/dhimmel/gene-ontology/962a5e12f8590400c2891cde93fd6a783b26e02e/annotations/taxid_9606/GO_annotations-9606-direct-expev.tsv;https://raw.githubusercontent.com/dhimmel/gene-ontology/962a5e12f8590400c2891cde93fd6a783b26e02e/annotations/taxid_9606/GO_annotations-9606-inferred-allev.tsv;https://raw.githubusercontent.com/dhimmel/gene-ontology/962a5e12f8590400c2891cde93fd6a783b26e02e/annotations/taxid_9606/GO_annotations-9606-inferred-expev.tsv",
+      "passed": true
+    },
+    {
+      "check": "all_B104G_inputs_have_hashes",
+      "details": "",
+      "passed": true
+    },
+    {
+      "check": "B104F_deletion_confirmation_recorded",
+      "details": "",
+      "passed": true
+    },
+    {
+      "check": "report_explicitly_moderates_row_claim",
+      "details": "",
+      "passed": true
+    },
+    {
+      "check": "report_defines_prior_scope",
+      "details": "",
+      "passed": true
+    },
+    {
+      "check": "bundle_zip_integrity",
+      "details": "None",
+      "passed": true
+    },
+    {
+      "check": "bundle_excludes_raw_uncompressed_dhimmel",
+      "details": "",
+      "passed": true
+    },
+    {
+      "check": "bundle_includes_four_retained_gzip_inputs",
+      "details": "",
+      "passed": true
+    },
+    {
+      "check": "bundle_includes_full_row_map",
+      "details": "",
+      "passed": true
+    },
+    {
+      "check": "final_ledger_has_bundle_hash",
+      "details": "3db03af494bafad614b21e3c55b1d03b8cd8373325d704b3dbc5c1152d0e01a8",
+      "passed": true
+    },
+    {
+      "check": "exists:B104G_REPORT_20260829T151452Z.md",
+      "details": "/mnt/data/ppi_repro_corrected/batches/B104G_20260829T150633Z/B104G_REPORT_20260829T151452Z.md",
+      "passed": true
+    },
+    {
+      "check": "exists:B104G_UPDATED_AGENT_HANDOFF_20260829T151452Z.md",
+      "details": "/mnt/data/ppi_repro_corrected/batches/B104G_20260829T150633Z/B104G_UPDATED_AGENT_HANDOFF_20260829T151452Z.md",
+      "passed": true
+    },
+    {
+      "check": "exists:B104G_DELETION_CLEARANCE_20260829T151452Z.md",
+      "details": "/mnt/data/ppi_repro_corrected/batches/B104G_20260829T150633Z/B104G_DELETION_CLEARANCE_20260829T151452Z.md",
+      "passed": true
+    },
+    {
+      "check": "exists:source_ledger_through_B104G_FINAL_20260829T151452Z.csv",
+      "details": "/mnt/data/ppi_repro_corrected/results/source_ledger_through_B104G_FINAL_20260829T151452Z.csv",
+      "passed": true
+    },
+    {
+      "check": "exists:provenance_events_through_B104G_FINAL_20260829T151452Z.csv",
+      "details": "/mnt/data/ppi_repro_corrected/results/provenance_events_through_B104G_FINAL_20260829T151452Z.csv",
+      "passed": true
+    },
+    {
+      "check": "exists:B104G_full_row_and_label_resolution_bundle_20260829T151452Z.zip",
+      "details": "/mnt/data/B104G_full_row_and_label_resolution_bundle_20260829T151452Z.zip",
+      "passed": true
+    }
+  ],
+  "failed_checks": [],
+  "passed": true,
+  "timestamp": "20260829T151452Z"
+}

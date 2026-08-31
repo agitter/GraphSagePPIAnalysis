@@ -1,0 +1,27 @@
+{
+  "all_checks_passed": true,
+  "bundle": {
+    "path": "/mnt/data/B104B_MSigDB_term_selection_handoff_bundle_20260828T161826Z.zip",
+    "sha256": "732db5d7fefa5a0e72ebfb1fd2c71728bfa3e665a0d009e27d528b0209026511",
+    "size_bytes": 341801,
+    "zip_test_bad_member": null
+  },
+  "checks": {
+    "actual_input_manifest_present": true,
+    "all_tested_msigdb_direct_exact_counts_zero": true,
+    "bundle_hash_text_matches": true,
+    "bundle_integrity": true,
+    "only_one_of_24_policy_configurations_exact_threshold1000": true,
+    "only_one_of_24_policy_configurations_exact_top121": true,
+    "raw_large_inputs_excluded": true,
+    "required_members": true,
+    "threshold1000_accession_exact": true,
+    "threshold1000_geneid_exact": true,
+    "top121_exact_independent": true
+  },
+  "generated_at_utc": "2026-08-28T16:18:26Z",
+  "notes": [
+    "This validation supersedes B104B_FINAL_DELIVERY_VALIDATION_20260828T161826Z.json created before the policy-robustness grid was added.",
+    "No new raw user attachment was introduced in B104B."
+  ]
+}

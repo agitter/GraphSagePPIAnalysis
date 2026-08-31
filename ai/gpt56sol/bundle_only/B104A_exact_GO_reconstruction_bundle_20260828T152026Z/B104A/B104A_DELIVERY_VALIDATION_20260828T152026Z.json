@@ -1,0 +1,117 @@
+{
+  "batch_id": "B104A",
+  "generated_at_utc": "2026-08-28T15:20:26Z",
+  "all_checks_passed": true,
+  "checks": [
+    {
+      "check": "primary_exact_121",
+      "passed": true,
+      "details": "{\"cell_mismatch_count\": 0, \"columns_with_at_least_one_exact_GO_term\": 121}"
+    },
+    {
+      "check": "matrix_hashes_identical",
+      "passed": true,
+      "details": "f4d6f0febbf252689c6f8a60575d0106ea1e1262b0145695103efa9137e86045"
+    },
+    {
+      "check": "independent_set_validation",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "factorial_final_zero",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "factorial_baseline_901",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "release159_temporal_specificity",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "full_mapping_component_present",
+      "passed": true,
+      "details": "[(25788, 'A0A087X0H2'), (25788, 'O95073'), (25788, 'Q9Y620'), (100861412, 'O95073')]"
+    },
+    {
+      "check": "exists_actual_input_file_manifest_through_B104A_20260828T152026Z.csv",
+      "passed": true,
+      "details": "/mnt/data/ppi_repro_corrected/results/actual_input_file_manifest_through_B104A_20260828T152026Z.csv"
+    },
+    {
+      "check": "exists_source_ledger_through_B104A_20260828T152026Z.csv",
+      "passed": true,
+      "details": "/mnt/data/ppi_repro_corrected/results/source_ledger_through_B104A_20260828T152026Z.csv"
+    },
+    {
+      "check": "exists_provenance_events_through_B104A_20260828T152026Z.csv",
+      "passed": true,
+      "details": "/mnt/data/ppi_repro_corrected/results/provenance_events_through_B104A_20260828T152026Z.csv"
+    },
+    {
+      "check": "retained_input_paths_and_hashes",
+      "passed": true,
+      "details": "missing=[]; bad_hash=[]"
+    },
+    {
+      "check": "B104_deletion_confirmed_goa_human.gaf.158.gz",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "B104_deletion_confirmed_goa_human.gpa.158.gz",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "B104_deletion_confirmed_goa_human.gpi.158.gz",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "no_deleted_raw_paths_in_B104A_scripts",
+      "passed": true,
+      "details": "[]"
+    },
+    {
+      "check": "report_contains_What \u201cresidual\u201d meant",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "report_contains_Ontology depth and breadth",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "report_contains_Uniform qualifier handling",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "report_contains_121 / 121",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "report_contains_Revised assessment of ontology drift",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "report_contains_Remaining unmatched",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "matrix_derivative_shape",
+      "passed": true,
+      "details": "rows=4268; columns=122"
+    }
+  ]
+}

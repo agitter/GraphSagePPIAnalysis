@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "tracked": 40,
+  "missing": [],
+  "ledger_types": {
+    "actual_input": 18,
+    "analysis_script": 8,
+    "generated_output": 34,
+    "historical_candidate_not_materialized": 31,
+    "web_reference": 8
+  }
+}

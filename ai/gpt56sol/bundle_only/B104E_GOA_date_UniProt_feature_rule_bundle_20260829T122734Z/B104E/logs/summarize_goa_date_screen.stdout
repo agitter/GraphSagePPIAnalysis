@@ -1,0 +1,40 @@
+{
+  "closest_non159_release": {
+    "release": 160,
+    "total_mismatches": 652
+  },
+  "column_order_best_lcs": 94,
+  "column_order_perfect_in_tested_range": false,
+  "column_order_releases_with_best_lcs": [
+    158,
+    159,
+    160,
+    161,
+    162,
+    163,
+    164,
+    165,
+    166
+  ],
+  "duplicate_orientation_values": [
+    "001"
+  ],
+  "exact_membership_releases": [
+    159
+  ],
+  "ge1000_candidate_set_exact_releases": [
+    159
+  ],
+  "interpretive_limits": [
+    "Identifier mapping and ontology were fixed across releases; this isolates annotation-release effects but is not a joint search over all historical inputs.",
+    "The screen results were produced by the user-side audited script; source hashes and deletion events are retained, but raw releases 160-169 were not re-downloaded in this runtime."
+  ],
+  "release_range": [
+    158,
+    169
+  ],
+  "top121_candidate_set_exact_releases": [
+    158,
+    159
+  ]
+}

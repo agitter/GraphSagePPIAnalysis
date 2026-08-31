@@ -1,0 +1,82 @@
+{
+  "batch_id": "B104F",
+  "generated_at_utc": "2026-08-29T14:03:33Z",
+  "all_checks_passed": true,
+  "checks": [
+    {
+      "check": "primary resolved rows exact",
+      "passed": true,
+      "detail": "0"
+    },
+    {
+      "check": "primary all unresolved classes exact",
+      "passed": true,
+      "detail": "183/183"
+    },
+    {
+      "check": "primary all rows exact up to class permutation",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "independent validation passes",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "independent counts agree",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "four dhimmel uploads audited",
+      "passed": true,
+      "detail": "4"
+    },
+    {
+      "check": "all dhimmel uploads rejected as HTML",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "twelve verifier genes accounted for",
+      "passed": true,
+      "detail": "12"
+    },
+    {
+      "check": "all twelve outside independently resolved map",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "eleven uniquely matched; one ambiguous",
+      "passed": true,
+      "detail": "11"
+    },
+    {
+      "check": "scripts compile",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "present B104F_CLARIFICATION_AND_FULL_CLASS_VALIDATION_REPORT_20260829T140333Z.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "present B104F_RESPONSE_TO_INDEPENDENT_AGENT_20260829T140333Z.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "present B104F_EXECUTION_DIAGNOSTICS_20260829T140333Z.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "present B104F_DELETION_CLEARANCE_20260829T140333Z.md",
+      "passed": true,
+      "detail": ""
+    }
+  ]
+}

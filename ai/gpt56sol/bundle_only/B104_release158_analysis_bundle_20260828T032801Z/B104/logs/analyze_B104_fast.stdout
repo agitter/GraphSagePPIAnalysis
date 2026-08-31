@@ -1,0 +1,33 @@
+{
+  "release158": {
+    "exact": 4,
+    "at_least_99pct": 112,
+    "at_least_95pct": 121,
+    "total_mismatches": 1733,
+    "false_positives": 919,
+    "false_negatives": 814,
+    "median_best_agreement": 0.9985941893158388
+  },
+  "release159": {
+    "exact": 89,
+    "at_least_99pct": 114,
+    "at_least_95pct": 121,
+    "total_mismatches": 901,
+    "false_positives": 901,
+    "false_negatives": 0,
+    "median_best_agreement": 1.0
+  },
+  "resolved_fn": 814,
+  "removed_fp": 22,
+  "added_fp": 4,
+  "residual_fp_pairs": 901,
+  "direct_fp_pairs": 23,
+  "only158": [
+    "P0C852",
+    "P0DMU6",
+    "Q5QP74"
+  ],
+  "uncovered": [
+    10159
+  ]
+}
