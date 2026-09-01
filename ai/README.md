@@ -6,6 +6,7 @@ Its goal is to identify as many of the unlabeled attributes as the dataset as po
 ## Claude Opus 4.6
 Claude Opus (primarily 4.6, may have started with 5 though) generated results in the [`opus46`](opus46) subdirectory.
 The analysis started here.
+The primary overviews are a [summary of results and evidence](opus46/2026-08-31_current_findings.md) and a [log of the exploration](opus46/2026-08-31_investigation_narrative.md).
 
 ## GPT 5.6 Sol
 GPT 5.6 Sol took over the analysis from Claude, starting from Claude's results [summary](opus46/investigation_summary_2026_08_23.md).
