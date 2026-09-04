@@ -12,6 +12,7 @@ The primary overviews are a [summary of results and evidence](opus46/2026-08-31_
 GPT 5.6 Sol took over the analysis from Claude, starting from Claude's results [summary](opus46/investigation_summary_2026_08_23.md).
 Its results are in the [`gpt56sol`](gpt56sol) subdirectory.
 The primary overviews are a [summary of results and evidence](gpt56sol/CURRENT_FINDINGS_AND_EVIDENCE_SUMMARY_20260831T205314Z.md) and a [log of the exploration](gpt56sol/INVESTIGATION_HISTORY_AND_EXPLORATION_LOG_20260831T205314Z.md).
+Once the conversation reached the maximum length, GPT prepared a [summary](gpt56sol/conversation_handoff/) to reinitialize a fresh chat.
 
 ## TODOs
 - Create a summary of claims in the manuscripts that are incorrect and the evidence (partially complete)

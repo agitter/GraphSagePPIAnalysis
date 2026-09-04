@@ -15,6 +15,11 @@
 /gpt56sol/gpt56sol_complete_artifact_snapshot_*.zip
 
 # ----------------------------------------------------------------------
+# GPT-5.6 Sol conversation handoff after length limit reached
+# ----------------------------------------------------------------------
+gpt56sol/conversation_handoff/GraphSAGE_PPI_new_conversation_handoff_20260904T115559Z.zip
+
+# ----------------------------------------------------------------------
 # Redundant Opus 4.6 snapshot package
 # The extracted opus46/ tree is the canonical repository copy.
 # ----------------------------------------------------------------------
