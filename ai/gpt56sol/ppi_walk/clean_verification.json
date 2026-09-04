@@ -1,0 +1,68 @@
+{
+  "all_checks_pass": true,
+  "cases": {
+    "full": {
+      "adjacency_sha256": "3f3a13110634458dd4cc5ebd44032460de94173dfb6384c3db88ed7f4404bfc1",
+      "all_expected_invariants": true,
+      "byte_exact": true,
+      "expected": {
+        "adjacency_sha256": "3f3a13110634458dd4cc5ebd44032460de94173dfb6384c3db88ed7f4404bfc1",
+        "bytes": 100459319,
+        "pairs": 8730249,
+        "sha256": "d0d5b5b3f2521d3727e88be3147029bac27a5409ee60c5106b9f12a58e75dbcc"
+      },
+      "graph": "/tmp/graphsage-walk-verify-iwsk07kz/ppi-G.json",
+      "graph_sha256": "7b323bbb677de2538c0b4c17d13a1bf691af6e6d76946035b7649c6c2fce3013",
+      "output": "/tmp/graphsage-walk-verify-iwsk07kz/full-replayed.txt",
+      "output_bytes": 100459319,
+      "output_sha256": "d0d5b5b3f2521d3727e88be3147029bac27a5409ee60c5106b9f12a58e75dbcc",
+      "pairs": 8730249,
+      "stored_indices": 8981200,
+      "tape": "/mnt/data/GraphSAGE_PPI_walk_reproduction_20260904/resources/full_choice_tape.u16le.gz",
+      "target_sha256": "d0d5b5b3f2521d3727e88be3147029bac27a5409ee60c5106b9f12a58e75dbcc",
+      "trailing_newline": false
+    },
+    "toy": {
+      "adjacency_sha256": "77560dac9abdc43f26022da9053ad9423992cf8c9e1b690f6d627f86fa9957cf",
+      "all_expected_invariants": true,
+      "byte_exact": true,
+      "expected": {
+        "adjacency_sha256": "77560dac9abdc43f26022da9053ad9423992cf8c9e1b690f6d627f86fa9957cf",
+        "bytes": 18523412,
+        "pairs": 1895817,
+        "sha256": "4edfb102dad4a1100b992c16412e14a58e051f1d8a7f01c7373336d0d6e864b0"
+      },
+      "graph": "/tmp/graphsage-walk-verify-iwsk07kz/toy-ppi-G.json",
+      "graph_sha256": "bcd3c3e21a0758ce5672301aac5ef985831269842cacbc9981b3d6a78eb35f1d",
+      "output": "/tmp/graphsage-walk-verify-iwsk07kz/toy-replayed.txt",
+      "output_bytes": 18523412,
+      "output_sha256": "4edfb102dad4a1100b992c16412e14a58e051f1d8a7f01c7373336d0d6e864b0",
+      "pairs": 1895817,
+      "stored_indices": 1943200,
+      "tape": "/mnt/data/GraphSAGE_PPI_walk_reproduction_20260904/resources/toy_choice_tape.u16le.gz",
+      "target_sha256": "4edfb102dad4a1100b992c16412e14a58e051f1d8a7f01c7373336d0d6e864b0",
+      "trailing_newline": false
+    }
+  },
+  "format": "graphsage_ppi_walk_reproduction_verification_v1",
+  "input_checks": {
+    "dgl_zip": {
+      "expected_sha256": "1f5b2b09ac0f897fa6aa1338c64ab75a5473674cbba89380120bede8cddb2a6a",
+      "hash_match": true,
+      "path": "/mnt/data/dgl_ppi.zip",
+      "sha256": "1f5b2b09ac0f897fa6aa1338c64ab75a5473674cbba89380120bede8cddb2a6a"
+    },
+    "ppi_zip": {
+      "expected_sha256": "53aeb76e54fd41b645e7edb48b62929240b89839495396b048086fd212503fbd",
+      "hash_match": true,
+      "path": "/mnt/data/graphsage_ppi.zip",
+      "sha256": "53aeb76e54fd41b645e7edb48b62929240b89839495396b048086fd212503fbd"
+    },
+    "source_zip": {
+      "expected_sha256": "f55e81854adeca2bd34a7e28b1d5c051ecdd0294c23515099bb3cf7d412de8a1",
+      "hash_match": true,
+      "path": "/mnt/data/GraphSAGE-a0fdef9.zip",
+      "sha256": "f55e81854adeca2bd34a7e28b1d5c051ecdd0294c23515099bb3cf7d412de8a1"
+    }
+  }
+}

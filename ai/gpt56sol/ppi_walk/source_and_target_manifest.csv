@@ -1,0 +1,4 @@
+source_id,origin,path_at_analysis,size_bytes,sha256,role
+graphsage_source_zip,user_upload,/mnt/data/GraphSAGE-a0fdef9.zip,6696008,f55e81854adeca2bd34a7e28b1d5c051ecdd0294c23515099bb3cf7d412de8a1,GraphSAGE source snapshot at commit a0fdef95dca7b456dab01cb35034717c8b6dd017
+graphsage_ppi_zip,user_upload,/mnt/data/graphsage_ppi.zip,27029260,53aeb76e54fd41b645e7edb48b62929240b89839495396b048086fd212503fbd,Released GraphSAGE PPI dataset and target walks
+dgl_ppi_zip,user_upload,/mnt/data/dgl_ppi.zip,7088822,1f5b2b09ac0f897fa6aa1338c64ab75a5473674cbba89380120bede8cddb2a6a,Released DGL derivative; retained for project continuity but unused by the walk experiment

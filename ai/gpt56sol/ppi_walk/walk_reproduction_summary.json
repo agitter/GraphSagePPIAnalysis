@@ -1,0 +1,361 @@
+{
+  "conclusion": {
+    "all_nonnegative_uint32_integer_seeds_exhausted_for_python2_choice": true,
+    "byte_exact_target_derived_replay": true,
+    "equivalent_mt19937_state_identified": false,
+    "historical_seed_identified": false
+  },
+  "exact_replay": {
+    "full": {
+      "adjacency_variant": "NetworkX 1.11 subgraph with 64-bit CPython 2.7 integer dict order",
+      "ambiguous_source_decompositions": 14956,
+      "block_report_sha256": "d865797a2c0a7882d425769b6c314741e69463d6d65ecaf96e5f184bbd9b7da9",
+      "derivation": "canonical dynamic-programming decomposition of deposited walk pairs; first four choices stored per walk; hidden fifth choice fixed to neighbor index 0",
+      "dtype": "uint16_le",
+      "failed_source_decompositions": 0,
+      "format": "graphsage_walk_choice_tape_v1",
+      "graph_path": "/mnt/data/walk_investigation/ppi/ppi/ppi-G.json",
+      "graph_sha256": "7b323bbb677de2538c0b4c17d13a1bf691af6e6d76946035b7649c6c2fce3013",
+      "isolated_sources_skipped": 0,
+      "parallel_jobs": 8,
+      "processed_nonzero_degree_sources": 44906,
+      "silent_self_loop_only_sources": 209,
+      "stored_choices_per_walk": 4,
+      "stored_indices": 8981200,
+      "tape_bytes": 17962400,
+      "tape_sha256": "984d42ce3c9e4cc1b20a5cac7f97c5fcd1372ecb2bd4ec3204ec88f041faa75a",
+      "target_emitting_source_blocks": 44697,
+      "target_pairs": 8730249,
+      "target_walks_path": "/mnt/data/walk_investigation/ppi/ppi/ppi-walks.txt",
+      "target_walks_sha256": "d0d5b5b3f2521d3727e88be3147029bac27a5409ee60c5106b9f12a58e75dbcc",
+      "training_sources_total": 44906,
+      "unique_source_decompositions": 29741,
+      "walks_per_source": 50
+    },
+    "toy": {
+      "adjacency_variant": "NetworkX 1.11 subgraph with 64-bit CPython 2.7 integer dict order",
+      "ambiguous_source_decompositions": 2784,
+      "block_report_sha256": "25973ff6b899c6d6d1c001e6f8d0bf5fc9693dde4032766acb4c447493dbe292",
+      "derivation": "canonical dynamic-programming decomposition of deposited walk pairs; first four choices stored per walk; hidden fifth choice fixed to neighbor index 0",
+      "dtype": "uint16_le",
+      "failed_source_decompositions": 0,
+      "format": "graphsage_walk_choice_tape_v1",
+      "graph_path": "/mnt/data/walk_investigation/source/GraphSAGE-master/example_data/toy-ppi-G.json",
+      "graph_sha256": "bcd3c3e21a0758ce5672301aac5ef985831269842cacbc9981b3d6a78eb35f1d",
+      "isolated_sources_skipped": 0,
+      "processed_nonzero_degree_sources": 9716,
+      "silent_self_loop_only_sources": 32,
+      "stored_choices_per_walk": 4,
+      "stored_indices": 1943200,
+      "tape_bytes": 3886400,
+      "tape_sha256": "2683e549915d04b292fb3e7299bf84f0d9fdcadfce08330d6f3952367656a484",
+      "target_emitting_source_blocks": 9684,
+      "target_pairs": 1895817,
+      "target_walks_path": "/mnt/data/walk_investigation/source/GraphSAGE-master/example_data/toy-ppi-walks.txt",
+      "target_walks_sha256": "4edfb102dad4a1100b992c16412e14a58e051f1d8a7f01c7373336d0d6e864b0",
+      "training_sources_total": 9716,
+      "unique_source_decompositions": 6900,
+      "walks_per_source": 50
+    }
+  },
+  "format": "graphsage_ppi_walk_search_summary_v1",
+  "limitations": [
+    "The default seed(None) path can use operating-system entropy and is not enumerated by a 32-bit integer sweep.",
+    "Arbitrary strings, integers wider than 32 bits, and arbitrary pre-advanced MT19937 states form much larger spaces and were not exhaustively enumerated.",
+    "The output hides every fifth transition and suppresses states equal to the source, so the deposited text does not uniquely identify the original choice sequence.",
+    "The exact replay tape is derived from the target and is therefore a forensic replay resource, not a non-circular historical reconstruction."
+  ],
+  "seed_searches": [
+    {
+      "domain": "51 common/repository/date-motivated integer seeds",
+      "graph_machines": "toy/full x five neighbor orders",
+      "result": "no exact candidate",
+      "rng": "Python-2 float choice and Python-3 getrandbits choice",
+      "search_id": "common_explicit_seeds"
+    },
+    {
+      "domain": "0 <= seed < 2^24 (16,777,216 seeds)",
+      "exact_survivors": 0,
+      "four_choice_survivors": 545,
+      "graph_machines": 10,
+      "max_matched_pairs": 6,
+      "rng": "CPython integer seeding + Python-2 float-based choice",
+      "search_id": "py2_uint24"
+    },
+    {
+      "domain": "0 <= seed < 2^24 (16,777,216 seeds)",
+      "exact_survivors": 0,
+      "four_choice_survivors": 521,
+      "graph_machines": 10,
+      "max_matched_pairs": 6,
+      "rng": "CPython integer seeding + Python-3 getrandbits/_randbelow choice",
+      "search_id": "py3_uint24"
+    },
+    {
+      "best_candidates": [
+        {
+          "dataset": "full",
+          "draws": "12",
+          "first_mismatch": "((0, 1101), (0, 766), 0, 766)",
+          "matched_limit": "False",
+          "matched_pairs": "8",
+          "seed": "864452726",
+          "variant": "nx111_py2_exact"
+        },
+        {
+          "dataset": "full",
+          "draws": "12",
+          "first_mismatch": "((0, 1101), (0, 766), 0, 766)",
+          "matched_limit": "False",
+          "matched_pairs": "8",
+          "seed": "2650936163",
+          "variant": "nx111_py2_exact"
+        },
+        {
+          "dataset": "full",
+          "draws": "10",
+          "first_mismatch": "((0, 262), (0, 1425), 0, 1425)",
+          "matched_limit": "False",
+          "matched_pairs": "7",
+          "seed": "283869504",
+          "variant": "json_insertion"
+        },
+        {
+          "dataset": "full",
+          "draws": "10",
+          "first_mismatch": "((0, 262), (0, 1073), 0, 1073)",
+          "matched_limit": "False",
+          "matched_pairs": "7",
+          "seed": "285993033",
+          "variant": "json_insertion"
+        },
+        {
+          "dataset": "full",
+          "draws": "10",
+          "first_mismatch": "((0, 262), (0, 1079), 0, 1079)",
+          "matched_limit": "False",
+          "matched_pairs": "7",
+          "seed": "749115751",
+          "variant": "json_insertion"
+        },
+        {
+          "dataset": "full",
+          "draws": "10",
+          "first_mismatch": "((0, 262), (0, 646), 0, 646)",
+          "matched_limit": "False",
+          "matched_pairs": "7",
+          "seed": "823356539",
+          "variant": "json_insertion"
+        },
+        {
+          "dataset": "full",
+          "draws": "10",
+          "first_mismatch": "((0, 262), (0, 784), 0, 784)",
+          "matched_limit": "False",
+          "matched_pairs": "7",
+          "seed": "1251059592",
+          "variant": "json_insertion"
+        },
+        {
+          "dataset": "full",
+          "draws": "10",
+          "first_mismatch": "((0, 262), (0, 672), 0, 672)",
+          "matched_limit": "False",
+          "matched_pairs": "7",
+          "seed": "1409451006",
+          "variant": "json_insertion"
+        },
+        {
+          "dataset": "full",
+          "draws": "10",
+          "first_mismatch": "((0, 262), (0, 1149), 0, 1149)",
+          "matched_limit": "False",
+          "matched_pairs": "7",
+          "seed": "2325795900",
+          "variant": "json_insertion"
+        },
+        {
+          "dataset": "full",
+          "draws": "10",
+          "first_mismatch": "((0, 262), (0, 608), 0, 608)",
+          "matched_limit": "False",
+          "matched_pairs": "7",
+          "seed": "2505939995",
+          "variant": "json_insertion"
+        },
+        {
+          "dataset": "full",
+          "draws": "10",
+          "first_mismatch": "((0, 262), (0, 725), 0, 725)",
+          "matched_limit": "False",
+          "matched_pairs": "7",
+          "seed": "2544709984",
+          "variant": "json_insertion"
+        },
+        {
+          "dataset": "full",
+          "draws": "10",
+          "first_mismatch": "((0, 262), (0, 1058), 0, 1058)",
+          "matched_limit": "False",
+          "matched_pairs": "7",
+          "seed": "2820193771",
+          "variant": "json_insertion"
+        },
+        {
+          "dataset": "full",
+          "draws": "10",
+          "first_mismatch": "((0, 262), (0, 245), 0, 245)",
+          "matched_limit": "False",
+          "matched_pairs": "7",
+          "seed": "3037915818",
+          "variant": "json_insertion"
+        },
+        {
+          "dataset": "full",
+          "draws": "10",
+          "first_mismatch": "((0, 262), (0, 1073), 0, 1073)",
+          "matched_limit": "False",
+          "matched_pairs": "7",
+          "seed": "3648607316",
+          "variant": "json_insertion"
+        },
+        {
+          "dataset": "full",
+          "draws": "10",
+          "first_mismatch": "((0, 262), (0, 942), 0, 942)",
+          "matched_limit": "False",
+          "matched_pairs": "7",
+          "seed": "685776406",
+          "variant": "nx111_py2_exact"
+        },
+        {
+          "dataset": "full",
+          "draws": "10",
+          "first_mismatch": "((0, 262), (0, 1096), 0, 1096)",
+          "matched_limit": "False",
+          "matched_pairs": "7",
+          "seed": "1113880095",
+          "variant": "nx111_py2_exact"
+        },
+        {
+          "dataset": "full",
+          "draws": "10",
+          "first_mismatch": "((0, 262), (0, 882), 0, 882)",
+          "matched_limit": "False",
+          "matched_pairs": "7",
+          "seed": "1186669677",
+          "variant": "nx111_py2_exact"
+        },
+        {
+          "dataset": "full",
+          "draws": "10",
+          "first_mismatch": "((0, 262), (0, 1149), 0, 1149)",
+          "matched_limit": "False",
+          "matched_pairs": "7",
+          "seed": "1242663902",
+          "variant": "nx111_py2_exact"
+        },
+        {
+          "dataset": "full",
+          "draws": "10",
+          "first_mismatch": "((0, 262), (0, 1058), 0, 1058)",
+          "matched_limit": "False",
+          "matched_pairs": "7",
+          "seed": "1266345734",
+          "variant": "nx111_py2_exact"
+        },
+        {
+          "dataset": "full",
+          "draws": "10",
+          "first_mismatch": "((0, 262), (0, 1215), 0, 1215)",
+          "matched_limit": "False",
+          "matched_pairs": "7",
+          "seed": "1689776599",
+          "variant": "nx111_py2_exact"
+        }
+      ],
+      "domain": "0 <= seed < 2^32 (4,294,967,296 seeds)",
+      "exact_survivors": 0,
+      "four_choice_survivors": 136241,
+      "graph_machines": 10,
+      "max_matched_pairs": 8,
+      "rng": "CPython integer seeding + Python-2 float-based choice",
+      "search_id": "py2_uint32_complete"
+    },
+    {
+      "domain": "51 seeds x offsets 0..10,000,000",
+      "graph_machines": 4,
+      "hits": 0,
+      "rng": "Python-2 float choice",
+      "search_id": "common_seed_prior_offsets"
+    },
+    {
+      "domain": "seeds {0,1,42,123} x offsets 0..100,000,000",
+      "graph_machines": 4,
+      "hits": 0,
+      "rng": "Python-2 float choice",
+      "search_id": "high_priority_seed_prior_offsets"
+    },
+    {
+      "domain": "50,688,001 values per dataset (1/256-second values over combined +/-24h UTC/Pacific interpretation windows)",
+      "exact_survivors": 0,
+      "four_choice_survivors": 1649,
+      "graph_machines": "five per dataset",
+      "max_matched_pairs": 6,
+      "rng": "Python-2 float choice",
+      "search_id": "zip_timestamp_fallback_windows"
+    }
+  ],
+  "uint32_four_choice_hits_by_machine": [
+    {
+      "dataset": "full",
+      "hits": 23988,
+      "variant": "json_insertion"
+    },
+    {
+      "dataset": "full",
+      "hits": 24033,
+      "variant": "nx111_py2_exact"
+    },
+    {
+      "dataset": "full",
+      "hits": 23965,
+      "variant": "orig_py2_filtered"
+    },
+    {
+      "dataset": "full",
+      "hits": 23896,
+      "variant": "reverse_sorted"
+    },
+    {
+      "dataset": "full",
+      "hits": 23593,
+      "variant": "sorted"
+    },
+    {
+      "dataset": "toy",
+      "hits": 3355,
+      "variant": "json_insertion"
+    },
+    {
+      "dataset": "toy",
+      "hits": 3379,
+      "variant": "nx111_py2_exact"
+    },
+    {
+      "dataset": "toy",
+      "hits": 3287,
+      "variant": "orig_py2_filtered"
+    },
+    {
+      "dataset": "toy",
+      "hits": 3291,
+      "variant": "reverse_sorted"
+    },
+    {
+      "dataset": "toy",
+      "hits": 3454,
+      "variant": "sorted"
+    }
+  ]
+}
