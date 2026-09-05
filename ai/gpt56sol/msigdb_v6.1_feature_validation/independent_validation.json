@@ -1,0 +1,14 @@
+{
+  "distinct_genes_checked": 4301,
+  "first_mismatch_rows": [],
+  "method": "independent per-gene 50-bit feature signatures",
+  "result": "PASS",
+  "row_signature_mismatches": 0,
+  "rows_checked": 56944,
+  "selected_C1": 30,
+  "selected_C3": 20,
+  "selected_ge_200_count": 50,
+  "selected_ge_gt_identical": true,
+  "selected_gt_200_count": 50,
+  "v6_1_memberships_equal_v6_0": true
+}

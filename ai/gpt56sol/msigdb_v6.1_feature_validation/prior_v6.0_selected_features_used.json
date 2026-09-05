@@ -1,0 +1,428 @@
+{
+  "prior_v6_0_selected_features": [
+    {
+      "collection": "C1",
+      "column": 0,
+      "membership_sha256": "3409427e97c759ae3c959e397aac124bb9892a892c82ea28673e88b76f045518",
+      "mismatches": 0,
+      "name": "chr8q24",
+      "unique_entrez_count": 214
+    },
+    {
+      "collection": "C1",
+      "column": 1,
+      "membership_sha256": "33050a5a8508171e1d983605ea068db6816926f37605fbbb0842ad4811a26faf",
+      "mismatches": 0,
+      "name": "chr14q11",
+      "unique_entrez_count": 330
+    },
+    {
+      "collection": "C1",
+      "column": 2,
+      "membership_sha256": "faa18c4a004365eb13f6cbb2a34db0b31fb39569b8fcb02e4df31af7373b12c9",
+      "mismatches": 0,
+      "name": "chr12q24",
+      "unique_entrez_count": 285
+    },
+    {
+      "collection": "C1",
+      "column": 3,
+      "membership_sha256": "d015bbc81e7526b86081e298b5ff94757acf34e83d9a2d6f6b917e861217dc59",
+      "mismatches": 0,
+      "name": "chr19p13",
+      "unique_entrez_count": 645
+    },
+    {
+      "collection": "C1",
+      "column": 4,
+      "membership_sha256": "76b9a18612db02c27da64d2d57cfa8059ed83dbc2d4888a2a76fc2c2607f465b",
+      "mismatches": 0,
+      "name": "chr11q12",
+      "unique_entrez_count": 225
+    },
+    {
+      "collection": "C1",
+      "column": 5,
+      "membership_sha256": "78e90728c35d9ebcb95ab8e1a79c4974733e30bb9d580f00c58a46b49adb8441",
+      "mismatches": 0,
+      "name": "chr22q13",
+      "unique_entrez_count": 235
+    },
+    {
+      "collection": "C1",
+      "column": 6,
+      "membership_sha256": "adcef9b0f2421ace1ba6cdfb34adf011cffa7648bef269d829f7d0e704ce5ca5",
+      "mismatches": 0,
+      "name": "chr22q11",
+      "unique_entrez_count": 369
+    },
+    {
+      "collection": "C1",
+      "column": 7,
+      "membership_sha256": "cca6b5fda031934414d4bd907cfb8b3bf11c01d3b32e1b0b593f305e765f89da",
+      "mismatches": 0,
+      "name": "chr1q21",
+      "unique_entrez_count": 358
+    },
+    {
+      "collection": "C1",
+      "column": 8,
+      "membership_sha256": "68313856415967a48f4bb205f37963fd058e187b756ff5a2cfc45dd2cff439d0",
+      "mismatches": 0,
+      "name": "chr6p21",
+      "unique_entrez_count": 544
+    },
+    {
+      "collection": "C1",
+      "column": 9,
+      "membership_sha256": "fd89bac05b8cecaa3056be91b4c62937bb6d57729eeb8c41b7e9872c68e4afb9",
+      "mismatches": 0,
+      "name": "chr5q31",
+      "unique_entrez_count": 247
+    },
+    {
+      "collection": "C1",
+      "column": 10,
+      "membership_sha256": "98dc9e25ea4a7a0a4beee4ce0c1309077ba46644a9703cd384bf0f6ca60f3f08",
+      "mismatches": 0,
+      "name": "chryq11",
+      "unique_entrez_count": 204
+    },
+    {
+      "collection": "C1",
+      "column": 11,
+      "membership_sha256": "ddb640bdc871241011d32f2e1c0ba656a342295bae493449f60da0d456f96576",
+      "mismatches": 0,
+      "name": "chr19q13",
+      "unique_entrez_count": 948
+    },
+    {
+      "collection": "C1",
+      "column": 12,
+      "membership_sha256": "ffdeae657cc008d8bf3694c6d25e3c93f928b10b3eb7c27d651e4ca1e36522cf",
+      "mismatches": 0,
+      "name": "chr8p23",
+      "unique_entrez_count": 201
+    },
+    {
+      "collection": "C1",
+      "column": 13,
+      "membership_sha256": "0cddbd74e310c9defe0b5cb6aab0f136c227f5b354fb8cacba0f826015d78822",
+      "mismatches": 0,
+      "name": "chr17p13",
+      "unique_entrez_count": 293
+    },
+    {
+      "collection": "C1",
+      "column": 14,
+      "membership_sha256": "b2f83c5b21e7d13ae627cfda77f4defce2951bb7da71d2c46f3046439ba08245",
+      "mismatches": 0,
+      "name": "chr14q32",
+      "unique_entrez_count": 432
+    },
+    {
+      "collection": "C1",
+      "column": 15,
+      "membership_sha256": "bc031564afd2118107e3ec8279e4e76fef7f6d1844dd61b82b2961800f6245be",
+      "mismatches": 0,
+      "name": "chr3p21",
+      "unique_entrez_count": 271
+    },
+    {
+      "collection": "C1",
+      "column": 16,
+      "membership_sha256": "76574b522e52f42dc87570cc340a43d4a2870a409534d36d9b7729dde5bc6abf",
+      "mismatches": 0,
+      "name": "chr21q22",
+      "unique_entrez_count": 261
+    },
+    {
+      "collection": "C1",
+      "column": 17,
+      "membership_sha256": "061c303e3b4312153ee39cce414181409268a897e5f89f353df4df9e5a1baf3b",
+      "mismatches": 0,
+      "name": "chr9q34",
+      "unique_entrez_count": 267
+    },
+    {
+      "collection": "C1",
+      "column": 18,
+      "membership_sha256": "912d6f6ead22f7d5c6d0ca6408a51773ddbf4ada7778fb9dda879181757e81b7",
+      "mismatches": 0,
+      "name": "chr11q13",
+      "unique_entrez_count": 347
+    },
+    {
+      "collection": "C1",
+      "column": 19,
+      "membership_sha256": "5d9aeb36773cff9db03e14d61878ee9225dbc07408adfa692fde2cceed97c0ca",
+      "mismatches": 0,
+      "name": "chr17q25",
+      "unique_entrez_count": 218
+    },
+    {
+      "collection": "C1",
+      "column": 20,
+      "membership_sha256": "0508c3f43b05d1f37614af502ec89914963152787813538d2637dd2f2d500239",
+      "mismatches": 0,
+      "name": "chrxp11",
+      "unique_entrez_count": 287
+    },
+    {
+      "collection": "C1",
+      "column": 21,
+      "membership_sha256": "2cf94770a6f3f66330677780df7bf982f847e4a7c968d07c22ce0c41606aa69e",
+      "mismatches": 0,
+      "name": "chr1p36",
+      "unique_entrez_count": 504
+    },
+    {
+      "collection": "C1",
+      "column": 22,
+      "membership_sha256": "74453492aa329c8cb0017dbb5246abf0b6e80eb0dd52ba28db443431ccaa57b5",
+      "mismatches": 0,
+      "name": "chr17q21",
+      "unique_entrez_count": 339
+    },
+    {
+      "collection": "C1",
+      "column": 23,
+      "membership_sha256": "2556e594e10865d65504cf69aefd5a0da297ae4dc4ebf628ac3f709da44fb145",
+      "mismatches": 0,
+      "name": "chr11p15",
+      "unique_entrez_count": 456
+    },
+    {
+      "collection": "C1",
+      "column": 24,
+      "membership_sha256": "554e2ecc5485a4a3c6e8ee816cf4eb89af6668b7e9ebf1a443d64629b009e7a1",
+      "mismatches": 0,
+      "name": "chr20q13",
+      "unique_entrez_count": 244
+    },
+    {
+      "collection": "C1",
+      "column": 25,
+      "membership_sha256": "1fdef7fdc45a03c5ab0999ce7388aa7b46b58f0074fb7ea08af9e6535f50a08f",
+      "mismatches": 0,
+      "name": "chr12q13",
+      "unique_entrez_count": 311
+    },
+    {
+      "collection": "C1",
+      "column": 26,
+      "membership_sha256": "b298a1e0f39aca10623509f0813e5a07936113169106b42907d4ed33dfce00a7",
+      "mismatches": 0,
+      "name": "chr16p13",
+      "unique_entrez_count": 338
+    },
+    {
+      "collection": "C1",
+      "column": 27,
+      "membership_sha256": "3629de15697370933ac747af139d67317a8045cc2fcafb9c8f36278aa6af5bf0",
+      "mismatches": 0,
+      "name": "chr7q11",
+      "unique_entrez_count": 208
+    },
+    {
+      "collection": "C1",
+      "column": 28,
+      "membership_sha256": "a4a3a341903acb9462060858c9162a8bd7e35e5bfb8cce2d55353217d9cc49d2",
+      "mismatches": 0,
+      "name": "chr16p11",
+      "unique_entrez_count": 212
+    },
+    {
+      "collection": "C1",
+      "column": 29,
+      "membership_sha256": "5ee871ed9b0b221c5cd499e77a794e3641c9a5e6a5afebeea965a87c90bf6483",
+      "mismatches": 0,
+      "name": "chr12p13",
+      "unique_entrez_count": 270
+    },
+    {
+      "collection": "C3",
+      "column": 30,
+      "membership_sha256": "c93bc6bbab33654b65e6720d6be57f7294244ac627d080bf79b1ce40004fea16",
+      "mismatches": 0,
+      "name": "AAAYRNCTG_UNKNOWN",
+      "unique_entrez_count": 374
+    },
+    {
+      "collection": "C3",
+      "column": 31,
+      "membership_sha256": "2ad792f7956625af6f076cf985ab64c39c61a0c229dda6d5441915f898681907",
+      "mismatches": 0,
+      "name": "MYOD_01",
+      "unique_entrez_count": 265
+    },
+    {
+      "collection": "C3",
+      "column": 32,
+      "membership_sha256": "ad2e32e4467666d865c09bc4aeb1ae74d3ad3beb9e2ba506592d770747a9ec5c",
+      "mismatches": 0,
+      "name": "E47_01",
+      "unique_entrez_count": 253
+    },
+    {
+      "collection": "C3",
+      "column": 33,
+      "membership_sha256": "fc5edfffe8b325265f9004d042a4bb4fb6ded6b3fd3c58c12c754594c71061f9",
+      "mismatches": 0,
+      "name": "CMYB_01",
+      "unique_entrez_count": 249
+    },
+    {
+      "collection": "C3",
+      "column": 34,
+      "membership_sha256": "184ecb1d27626371e104b03d742e12a18dc23ad7a61d4bb7696077a0e87edb79",
+      "mismatches": 0,
+      "name": "AP4_01",
+      "unique_entrez_count": 262
+    },
+    {
+      "collection": "C3",
+      "column": 35,
+      "membership_sha256": "31d4723cefaf528436136ef4ad8cdafb940e267a6fa4b6c8d6107396634fb404",
+      "mismatches": 0,
+      "name": "AAAYWAACM_HFH4_01",
+      "unique_entrez_count": 1890
+    },
+    {
+      "collection": "C3",
+      "column": 36,
+      "membership_sha256": "871c4c1aa4d676baea8c85609d54aec3be4324cca59064466195ef842393b480",
+      "mismatches": 0,
+      "name": "ELK1_01",
+      "unique_entrez_count": 269
+    },
+    {
+      "collection": "C3",
+      "column": 37,
+      "membership_sha256": "2e48fad6eda6ca03f877b4d143affe646621c43ec1914e49ffcb3a16fcc70d01",
+      "mismatches": 0,
+      "name": "SP1_01",
+      "unique_entrez_count": 237
+    },
+    {
+      "collection": "C3",
+      "column": 38,
+      "membership_sha256": "e47441fa39ca99fec7dcca9c6c40cf7d8c61f428b3b02cbcc36a11e90699de8e",
+      "mismatches": 0,
+      "name": "ATF_01",
+      "unique_entrez_count": 259
+    },
+    {
+      "collection": "C3",
+      "column": 39,
+      "membership_sha256": "6570b24a451e52c9ea44202dbf12024ee3524b46fbfdbd524ee4920488e5e357",
+      "mismatches": 0,
+      "name": "ELK1_02",
+      "unique_entrez_count": 248
+    },
+    {
+      "collection": "C3",
+      "column": 40,
+      "membership_sha256": "4894bb2e2fad6485051a829693297d786e39255591ab5aa1c14528177ca06e8a",
+      "mismatches": 0,
+      "name": "RSRFC4_01",
+      "unique_entrez_count": 245
+    },
+    {
+      "collection": "C3",
+      "column": 41,
+      "membership_sha256": "f7933b1289b3d6a72c3ddc5c3ba91307ed7128faa336a04875387383709a4508",
+      "mismatches": 0,
+      "name": "CETS1P54_01",
+      "unique_entrez_count": 258
+    },
+    {
+      "collection": "C3",
+      "column": 42,
+      "membership_sha256": "c016a222ab879b71a655ebadf941a98dc2795ba61459d82ce4a06b636a00e309",
+      "mismatches": 0,
+      "name": "P300_01",
+      "unique_entrez_count": 249
+    },
+    {
+      "collection": "C3",
+      "column": 43,
+      "membership_sha256": "52ff5e8635965b905767a9e1676a9fe0ef1c3b3b3ecd6757c6e2dd0f1e6c2234",
+      "mismatches": 0,
+      "name": "NFE2_01",
+      "unique_entrez_count": 272
+    },
+    {
+      "collection": "C3",
+      "column": 44,
+      "membership_sha256": "e50eea112d7a704ba2430fd727184888e729e679e48f98650db829a9b2207115",
+      "mismatches": 0,
+      "name": "CREB_01",
+      "unique_entrez_count": 262
+    },
+    {
+      "collection": "C3",
+      "column": 45,
+      "membership_sha256": "e0ff0350181adca2ec812d5b108d6186036a5e99fcf116c1387fd1d76b16b3fe",
+      "mismatches": 0,
+      "name": "CREBP1CJUN_01",
+      "unique_entrez_count": 259
+    },
+    {
+      "collection": "C3",
+      "column": 46,
+      "membership_sha256": "9be9820db38f5a841752bcbda431ed73516df5c653103392843f3955b215f315",
+      "mismatches": 0,
+      "name": "SOX5_01",
+      "unique_entrez_count": 265
+    },
+    {
+      "collection": "C3",
+      "column": 47,
+      "membership_sha256": "e843887a22e4c244df1ef7c43a57e3eaf20c8a12d25adf71f2cf6423b1898762",
+      "mismatches": 0,
+      "name": "E4BP4_01",
+      "unique_entrez_count": 223
+    },
+    {
+      "collection": "C3",
+      "column": 48,
+      "membership_sha256": "7fafbf9ca84e47fe3d253d1022f6bde3206e553dc7957671e477f20c3eb24365",
+      "mismatches": 0,
+      "name": "E2F_02",
+      "unique_entrez_count": 235
+    },
+    {
+      "collection": "C3",
+      "column": 49,
+      "membership_sha256": "4d02f8afecba55d9874cb575296d918e145d686b2becc90a0222d5093f443e4a",
+      "mismatches": 0,
+      "name": "NFKAPPAB65_01",
+      "unique_entrez_count": 237
+    }
+  ],
+  "prior_v6_0_summary": {
+    "exact_columns": 50,
+    "first_name": "chr8q24",
+    "input_path": "/mnt/data/msigdb_v6.0_files_to_download_locally.zip",
+    "input_sha256": "39fa82c4cedc9183c532afb1c1431683536b5945e50fb8be4f5bcce3ac136edf",
+    "input_type": "prior user-supplied raw archive",
+    "last_name": "NFKAPPAB65_01",
+    "membership_sequence_sha256": "41c5d821e1b706ec4c8dceb47ab25c5dbad689998483e34e9e41d08094448101",
+    "qualifying_C1": 30,
+    "qualifying_C3": 487,
+    "qualifying_C7": 3708,
+    "selected_C1": 30,
+    "selected_C3": 20,
+    "selected_C7": 0,
+    "total_mismatches": 0,
+    "version": "6.0"
+  },
+  "provenance": {
+    "repository_commit": "31590e4d2ab5da3b74a7ac74b585df6c67bca478",
+    "source_archive": "GraphSagePPIAnalysis-ai-31590e4.zip",
+    "source_archive_sha256": "3339dcd09332c148e5df92bd4ff7caa8e3a6990459c4d5c5dec75ea8bd9ff88b",
+    "source_member": "ai/gpt56sol/bundle_only/B104E_GOA_date_UniProt_feature_rule_bundle_20260829T122734Z/B104E/analysis/B104E_MSigDB_feature_version_screen_PROVENANCE_SAFE_details_20260829T121535Z.json",
+    "source_member_sha256": "634cd1de253aa087a1b69c8ff71f95461e7fef8c6fadab5939cea6e3e3dfc7fb"
+  }
+}

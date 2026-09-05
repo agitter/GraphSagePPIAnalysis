@@ -1,0 +1,142 @@
+{
+  "acceptance_checks": {
+    "all_2847200_graphsage_cells_exact": true,
+    "all_50_graphsage_columns_exact": true,
+    "all_50_memberships_match_v6_0": true,
+    "exact_30_C1_and_20_C3": true,
+    "membership_sequence_hash_matches_prior": true,
+    "no_repeated_gene_feature_conflicts": true,
+    "same_selected_sequence_under_ge_200_and_gt_200": true
+  },
+  "canonical_source_recommendation": "MSigDB v6.1 C1/C3 is acceptable as the canonical reproduction source",
+  "cross_version": {
+    "all_50_collections_match_v6_0_by_column": true,
+    "all_50_memberships_match_v6_0_by_column": true,
+    "changed_selected_names": [
+      {
+        "column_0based": 35,
+        "column_1based": 36,
+        "membership_sha256": "31d4723cefaf528436136ef4ad8cdafb940e267a6fa4b6c8d6107396634fb404",
+        "v6_0_name": "AAAYWAACM_HFH4_01",
+        "v6_1_name": "AACTTT_UNKNOWN"
+      }
+    ],
+    "changed_selected_names_count": 1,
+    "expected_previously_observed_sequence_sha256": "41c5d821e1b706ec4c8dceb47ab25c5dbad689998483e34e9e41d08094448101",
+    "prior_v6_0_selected_membership_sequence_sha256": "41c5d821e1b706ec4c8dceb47ab25c5dbad689998483e34e9e41d08094448101",
+    "v6_1_selected_membership_sequence_sha256": "41c5d821e1b706ec4c8dceb47ab25c5dbad689998483e34e9e41d08094448101"
+  },
+  "gmt": {
+    "C1": {
+      "duplicate_name_count": 0,
+      "newline": {
+        "contains_bare_cr": false,
+        "contains_crlf": false,
+        "ends_with_newline": true
+      },
+      "row_count": 326,
+      "unique_name_count": 326
+    },
+    "C3": {
+      "duplicate_name_count": 0,
+      "newline": {
+        "contains_bare_cr": false,
+        "contains_crlf": false,
+        "ends_with_newline": true
+      },
+      "row_count": 836,
+      "unique_name_count": 836
+    }
+  },
+  "graphsage_comparison": {
+    "all_zero_columns_0based": [
+      10
+    ],
+    "cells_compared": 2847200,
+    "distinct_entrez_gene_count": 4301,
+    "exact_columns": 50,
+    "matrix_dtype": "float64",
+    "matrix_shape": [
+      56944,
+      50
+    ],
+    "observed_matrix_raw_c_order_sha256": "dc2420e5fe912f9c14292a6a14ffc0f5ef0ef781d830a0aa3e05085ba53d365a",
+    "ppi_feats_npy_member_sha256": "953149689098eed72c0154fb40a8fff4e634d34c5ad139c7ae9d601db1cad3d3",
+    "reconstructed_matrix_raw_c_order_sha256": "dc2420e5fe912f9c14292a6a14ffc0f5ef0ef781d830a0aa3e05085ba53d365a",
+    "repeated_gene_feature_conflicts": [],
+    "row_count": 56944,
+    "total_mismatches": 0
+  },
+  "inputs": {
+    "full_row_map": {
+      "filename": "B104G_full_graphsage_row_to_entrez_mapping.csv.gz",
+      "sha256": "a21a6532e287bfe82102cdc9d6642a0c9aff77f9c7449997cbafb597d1145737",
+      "size_bytes": 651211,
+      "source_id": "full_row_map"
+    },
+    "graphsage_ppi_reference": {
+      "filename": "graphsage_ppi.zip",
+      "sha256": "53aeb76e54fd41b645e7edb48b62929240b89839495396b048086fd212503fbd",
+      "size_bytes": 27029260,
+      "source_id": "graphsage_ppi_reference"
+    },
+    "msigdb_c1_v6_1": {
+      "filename": "c1.all.v6.1.entrez.gmt",
+      "sha256": "c87eddfc173c34420cd082b0b04a8edc65d6cf79ec9d86388426a6bdd3a2de02",
+      "size_bytes": 208819,
+      "source_id": "msigdb_c1_v6_1"
+    },
+    "msigdb_c3_v6_1": {
+      "filename": "c3.all.v6.1.entrez.gmt",
+      "sha256": "8f9d8218a0eaf9476ba009bb1a97f6161bc64a73152ce8de07e739eb7e91d30e",
+      "size_bytes": 1171503,
+      "source_id": "msigdb_c3_v6_1"
+    },
+    "prior_v6_0_feature_details": {
+      "filename": "B104E_MSigDB_feature_version_screen_PROVENANCE_SAFE_details_20260829T121535Z.json",
+      "sha256": "634cd1de253aa087a1b69c8ff71f95461e7fef8c6fadab5939cea6e3e3dfc7fb",
+      "size_bytes": 53484,
+      "source_id": "prior_v6_0_feature_details"
+    }
+  },
+  "result": "PASS",
+  "selection_rule": {
+    "collection_order": [
+      "C1",
+      "C3"
+    ],
+    "global_cap": 50,
+    "greater_than_or_equal_qualifying_counts": {
+      "C1": 30,
+      "C3": 487
+    },
+    "minimum_source_unique_entrez_members": 200,
+    "preserve_source_row_order": true,
+    "selected_counts": {
+      "C1": 30,
+      "C3": 20
+    },
+    "selected_sequences_identical_for_ge_200_and_gt_200": true,
+    "sets_with_exactly_200_unique_members": {
+      "C1": [],
+      "C3": [
+        {
+          "name": "CEBP_C",
+          "source_row_index_1based": 144
+        },
+        {
+          "name": "HFH4_01",
+          "source_row_index_1based": 393
+        },
+        {
+          "name": "TGTGTGA_MIR377",
+          "source_row_index_1based": 708
+        }
+      ]
+    },
+    "strictly_greater_qualifying_counts": {
+      "C1": 30,
+      "C3": 484
+    }
+  }
+}
