@@ -1,0 +1,3 @@
+id,statement,evidence,status,report_action
+SPLIT-THRESHOLD-001,The deposited GraphSAGE PPI split is incompatible with the manuscript edge thresholds when applied to the current released OhmNet edgelists.,"astrocyte and basophil training layers have 9,635 and 4,193 raw edge records; midbrain test has 31,665, below the stated 15,000/35,000 cutoffs.",confirmed for current release; historical cause unresolved,state alongside other manuscript/data discrepancies
+SPLIT-HIERARCHY-002,The midbrain test layer is a descendant and exact subnetwork of the brain training layer.,"all 2,310 midbrain tissue-instance rows are present in training; midbrain nodes and edges are contained in brain.",confirmed,state as a limitation of the unseen-graph interpretation

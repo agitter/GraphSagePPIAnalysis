@@ -1,0 +1,11 @@
+universe=leaf107
+method=conditional_mean_wup
+eligible_train=69
+eligible_heldout=15
+total_H=1365
+feasible_H=1365
+best_primary=165652362
+best_secondary=2450448
+best_tertiary=-804
+best_count=1
+BEST	leaf107	conditional_mean_wup	47|48|96|125	fetus|forebrain|pancreas|temporal_lobe	4|5|7|12|31|40|73|83|88|95|103|104|105|114|126|128|134|138|139|143	aorta|artery|b_lymphocyte|blood_platelet|colon|duodenum|macrophage|myometrium|neutrophil|oviduct|prostate_gland|renal_glomerulus|renal_tubule|spermatid|testis|thymocyte|umbilical_cord|uterine_cervix|uterine_endometrium|vermiform_appendix	165652362	2450448	-804	0.169002119204	0.2	0.188461538462	10.05	8	8.75	0	5	3	36967	481288	11754	179057	0	0	11754	672	0.942827973456	3693	432	0.883021933387	420352	16035	0.961853399056	0.980555835129

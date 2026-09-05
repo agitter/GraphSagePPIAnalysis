@@ -1,0 +1,11 @@
+claim_id,claim,evidence_basis,confidence
+HA-001,The literal raw-edge threshold universe contains 69 training-eligible and 15 heldout-eligible hierarchy leaves.,direct computation from supplied OhmNet files,high
+HA-002,"The primary hierarchy-aware algorithm exactly evaluated all 1,062 feasible leaf heldout quartets.",exhaustive enumeration + independent reimplementation,high
+HA-003,"Conditional on the same heldout quartet and hard constraints, hierarchy optimization lowers mean Wu-Palmer similarity for every quartet.",paired exact/Monte Carlo comparison,high
+HA-004,The corresponding reduction in node overlap is typical but not universal.,paired comparison; lower row overlap for 69.6% of quartets before and 66.8% after tight size matching,high
+HA-005,Hierarchy separation alone does not guarantee biological-entity separation.,broad-coverage hierarchy optimum has low WUP but 98.95% row overlap and lookup F1 0.99548,high
+HA-006,"The primary leaf optimum is unchanged when optimizing Wu-Palmer similarity, mean path distance, or minimum path distance.",metric sensitivity enumeration,high
+HA-007,"Lookup F1 outside the original 4,301-gene universe uses the recovered global GO transformation for 209 additional OhmNet genes.",derived-label sensitivity caveat,qualified
+HA-008,"After matching training node and edge totals closely, hierarchy-aware selection still lowers row overlap and lookup F1 on average, but not for every heldout quartet.","K=25 nearest-size conditional comparison across all 1,062 feasible leaf heldout quartets",high
+HA-009,The deposited split is not in the literal current-release threshold-defined universe.,"raw edge-record counts for astrocyte, basophil, and midbrain versus the manuscript thresholds",high for current release; historical cause unresolved
+HA-010,"All 2,310 midbrain test rows have GeneIDs present in training and the midbrain graph is contained in training brain.","canonical node mapping, OhmNet hierarchy, and exact node/edge containment",high

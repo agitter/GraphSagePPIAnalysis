@@ -1,0 +1,11 @@
+universe=leaf107
+method=branch_distinct_coverall_mean_wup
+eligible_train=69
+eligible_heldout=15
+total_H=1365
+feasible_H=1080
+best_primary=185268390
+best_secondary=3063060
+best_tertiary=-724
+best_count=1
+BEST	leaf107	branch_distinct_coverall_mean_wup	31|47|96|125	colon|fetus|pancreas|temporal_lobe	0|3|4|12|28|32|45|53|70|73|75|82|83|104|107|114|128|134|138|139	adipose_tissue|amygdala|aorta|blood_platelet|chondrocyte|cornea|esophagus|hair_follicle|lung|macrophage|mammary_gland|muscle|myometrium|renal_glomerulus|salivary_gland|spermatid|thymocyte|umbilical_cord|uterine_cervix|uterine_endometrium	185268390	3063060	-724	0.189014814842	0.25	0.232954545455	9.05	6	6.75	0	14	4	36411	466870	11897	183240	0	0	11897	457	0.961586954694	3758	360	0.904204364023	427202	12558	0.970604070206	0.985082782362

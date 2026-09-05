@@ -1,0 +1,38 @@
+path,description
+EXECUTIVE_SUMMARY.md,Concise answer and recommended hierarchy-aware paired design.
+REPORT.md,Complete methods results interpretation limitations and quality control.
+README.md,Bundle orientation and key file map.
+ATTRIBUTION_AND_PROVENANCE.md,Attribution evidence classes and non-circularity statement.
+REPRODUCIBILITY_NOTES.md,Compilation regeneration and verification guidance.
+SOURCE_MANIFEST.csv,Hashes sizes and roles for all supplied source archives used.
+ANALYSIS_MANIFEST.json,Exact enumeration counts Monte Carlo seeds and environment metadata.
+RESULTS_SUMMARY.json,Machine-readable headline findings and selected splits.
+results/method_definitions.csv,Formal definitions of primary null and sensitivity procedures.
+results/headline_comparison.csv,Headline hierarchy overlap F1 and graph-size comparison.
+results/primary_leaf_split_tissues.tsv,Maximum-separation leaf-only stress-test split.
+results/broad_coverage_leaf_split_tissues.tsv,Broad training-branch coverage sensitivity split.
+results/primary_metric_sensitivity.csv,Agreement of the primary optimum across WUP and path-distance objectives.
+results/paired_conditional_on_heldout_summary.csv,Paired hierarchy-aware minus matched-random effects for every heldout quartet.
+results/leaf107_size_matched_conditional_summary.csv,Tight training-node and edge-size matched sensitivity.
+results/null_distribution_summary.csv,One-million-split null distributions and quantiles.
+results/candidate_vs_null_percentiles.csv,Locations of optimized and released splits in the null distributions.
+results/actual_split_metrics_recomputed.csv,Recomputed released validation test and combined heldout metrics.
+results/discrepancy_register_additions.csv,Threshold and brain-midbrain findings for the project discrepancy register.
+results/CLAIMS.csv,Claim evidence and confidence register.
+results/leaf107__branch_distinct_node_stratified_minimax_wup.tsv.gz,Exact primary table for all 1062 feasible leaf heldout quartets.
+results/all144__branch_distinct_node_stratified_minimax_wup.tsv.gz,Exact all-layer sensitivity table for all 26830 feasible heldout quartets.
+plots/leaf107_mean_wup_ecdf.png,Hierarchy similarity distributions.
+plots/leaf107_row_overlap_ecdf.png,Heldout biological-node reuse distributions.
+plots/leaf107_lookup_f1_ecdf.png,GeneID lookup diagnostic distributions.
+plots/leaf107_paired_wup_vs_f1_effect.png,Paired hierarchy and F1 changes conditional on heldout quartet.
+plots/leaf107_global_method_tradeoff.png,Global method tradeoff between hierarchy separation and node reuse.
+tests/primary_leaf_exact_enumeration_independent_check_summary.csv,Independent all-row primary exact-enumeration check.
+tests/independent_exact_optima_check.csv,Independent recomputation of all reported exact optima.
+tests/null_deterministic_rerun_sha256.txt,Byte-identical null-stream regeneration checks.
+tests/null_first1000_independent_metric_check.csv,Independent metric recomputation for first 1000 records of each null stream.
+scripts/enumerate_hierarchy_aware_splits.cpp,Exact hierarchy-aware split enumerator.
+scripts/sample_hierarchy_null.cpp,Fixed-seed uniform and matched-null sampler.
+scripts/hierarchy_meta.hpp,Generated hierarchy metadata used by the C++ analyses.
+scripts/sampler_data.hpp,Generated graph gene and label evidence arrays used by C++ analyses.
+results/paired_effects_interpretable.csv,Human-readable paired effect sizes including percentage-point differences.
+tests/final_bundle_qc.json,Aggregate final QC record covering 84 checks with zero failures.

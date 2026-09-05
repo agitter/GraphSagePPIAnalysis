@@ -1,0 +1,8 @@
+source_label,filename,size_bytes,sha256,analysis_role
+GraphSAGE manuscript supplied by user,GraphSAGE.pdf,1086007,e1f354eb12011cde24af1eb500d72463fc971b09d26b55688c7f918a86e31ce8,primary manuscript source
+OhmNet README supplied by user,bio-tissue-readme.txt,1465,7f3372f8ae3a90852951c73b18980386ceb4ad2f5d32d81366adf22fd75e2b20,primary data documentation
+OhmNet tissue networks supplied by user,bio-tissue-networks.tar(1).gz,15568869,2c79e17f4a7c8680a7cbf8b20cef4acf356a7523c9a75fce586494153c0603d1,primary graph layers
+OhmNet tissue hierarchy supplied by user,bio-tissue-hierarchy.tar.gz,421785,c4568a68bb83319bff854eecf73a93f698fe2c41ed6e95639af974dd024ffef7,primary hierarchy
+OhmNet tissue labels supplied by user,bio-tissue-labels.tar.gz,1793328,6abf272940d2407849bd779e5f85c0377a2fb07c2351d1ebc82e3d06a46bc11d,retained for provenance; not used to optimize splits
+GraphSAGE PPI dataset supplied by user,graphsage_ppi.zip,27029260,53aeb76e54fd41b645e7edb48b62929240b89839495396b048086fd212503fbd,released split and target labels
+Prior split-overlap evidence bundle,GraphSAGE_PPI_split_overlap_hierarchy_20260904.zip,5408473,ae594b91af51b60035ca61dc0f349c414e2d067f0830206e69b4ff072f26aa64,"recovered node identities, labels, and prior hierarchy audit"

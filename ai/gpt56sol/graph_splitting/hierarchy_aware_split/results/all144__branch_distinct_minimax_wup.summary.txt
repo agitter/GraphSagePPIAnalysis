@@ -1,0 +1,12 @@
+universe=all144
+method=branch_distinct_minimax_wup
+eligible_train=105
+eligible_heldout=36
+total_H=58905
+feasible_H=26830
+best_primary=2227680
+best_secondary=163510080
+best_tertiary=-804
+best_count=2
+BEST	all144	branch_distinct_minimax_wup	31|47|55|68	colon|fetus|hematopoietic_stem_cell|liver	26|27|33|49|58|77|79|83|90|94|95|100|103|104|114|125|128|134|138|139	cerebellum|cerebral_cortex|corpus_callosum|frontal_lobe|hypophysis|medulla_oblongata|midbrain|myometrium|occipital_lobe|ovary|oviduct|placenta|prostate_gland|renal_glomerulus|spermatid|temporal_lobe|thymocyte|umbilical_cord|uterine_cervix|uterine_endometrium	2227680	163510080	-804	0.166816516817	0.181818181818	0.181818181818	10.05	9	9	0	3	4	41157	559009	12097	184385	5	1	12097	543	0.955112837894	3899	447	0.885355219287	434352	16662	0.961639407669	0.980444625969
+BEST	all144	branch_distinct_minimax_wup	31|47|55|96	colon|fetus|hematopoietic_stem_cell|pancreas	26|27|33|49|58|77|79|83|90|94|95|100|103|104|114|125|128|134|138|139	cerebellum|cerebral_cortex|corpus_callosum|frontal_lobe|hypophysis|medulla_oblongata|midbrain|myometrium|occipital_lobe|ovary|oviduct|placenta|prostate_gland|renal_glomerulus|spermatid|temporal_lobe|thymocyte|umbilical_cord|uterine_cervix|uterine_endometrium	2227680	163510080	-804	0.166816516817	0.181818181818	0.181818181818	10.05	9	9	0	3	4	41157	559009	11960	183378	5	0	11960	458	0.961705685619	3846	389	0.898855954238	430604	13702	0.96817958031	0.983832562837

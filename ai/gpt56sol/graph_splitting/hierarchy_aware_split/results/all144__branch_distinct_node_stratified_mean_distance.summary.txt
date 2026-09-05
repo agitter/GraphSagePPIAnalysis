@@ -1,0 +1,12 @@
+universe=all144
+method=branch_distinct_node_stratified_mean_distance
+eligible_train=105
+eligible_heldout=36
+total_H=58905
+feasible_H=26830
+best_primary=-796
+best_secondary=-7
+best_tertiary=167600154
+best_count=2
+BEST	all144	branch_distinct_node_stratified_mean_distance	31|47|68|125	colon|fetus|liver|temporal_lobe	7|11|12|52|55|72|73|78|83|88|94|100|103|104|114|126|128|134|138|140	b_lymphocyte|blood_plasma|blood_platelet|granulocyte|hematopoietic_stem_cell|lymphocyte|macrophage|megakaryocyte|myometrium|neutrophil|ovary|placenta|prostate_gland|renal_glomerulus|spermatid|testis|thymocyte|umbilical_cord|uterine_cervix|uterus	-796	-7	167600154	0.170989298692	0.222222222222	0.208333333333	9.95	7	7.75	0	3	4	43140	598279	12034	184247	6	1	12034	324	0.973076283862	3819	263	0.931133804661	430950	7976	0.981492052442	0.990659590315
+BEST	all144	branch_distinct_node_stratified_mean_distance	31|47|96|125	colon|fetus|pancreas|temporal_lobe	7|11|12|52|55|72|73|78|83|88|94|100|103|104|114|126|128|134|138|140	b_lymphocyte|blood_plasma|blood_platelet|granulocyte|hematopoietic_stem_cell|lymphocyte|macrophage|megakaryocyte|myometrium|neutrophil|ovary|placenta|prostate_gland|renal_glomerulus|spermatid|testis|thymocyte|umbilical_cord|uterine_cervix|uterus	-796	-7	167600154	0.170989298692	0.222222222222	0.208333333333	9.95	7	7.75	0	3	4	43140	598279	11897	183240	6	0	11897	295	0.975203832899	3758	244	0.935071846727	427202	6612	0.98452254437	0.992200917206

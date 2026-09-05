@@ -1,0 +1,127 @@
+NULL HEADLINES
+
+ all144 uniform
+mean_wup mean 0.2768596726898253 q05 0.24344919249415398 median 0.2758207321166992 q95 0.3138257697224617
+row_overlap mean 0.9828478554769754 q05 0.9582788854837417 median 0.9859203100204468 q95 0.9973084330558777
+f1 mean 0.9932906080228686 q05 0.9837090969085693 median 0.9944958686828613 q95 0.9989457726478577
+role_min_f1 mean 0.9909770462912917 q05 0.9786741673946381 median 0.992490291595459 q95 0.9983959197998047
+train_nodes mean 44327.645544 q05 40594.0 median 44298.0 q95 48148.0
+train_edges mean 616837.368782 q05 543653.0 median 616212.0 q95 691893.0
+
+ all144 matched_stratified
+mean_wup mean 0.24777423603105544 q05 0.2211831957101822 median 0.24691016972064972 q95 0.2773244082927704
+row_overlap mean 0.9796645597954392 q05 0.9622481942176819 median 0.9810629785060883 q95 0.9923434317111969
+f1 mean 0.9920846751658916 q05 0.9852392643690109 median 0.9926446676254272 q95 0.9970299631357193
+role_min_f1 mean 0.9897292923368216 q05 0.9804728001356124 median 0.9904593229293823 q95 0.996307197213173
+train_nodes mean 44823.404858 q05 43836.0 median 44789.0 q95 45939.0
+train_edges mean 627378.067254 q05 610124.95 median 626937.0 q95 646251.0
+
+ leaf107 uniform
+mean_wup mean 0.25034942654475567 q05 0.22773330360651017 median 0.25016218423843384 q95 0.27361972630023956
+row_overlap mean 0.9696340649139881 q05 0.9287031859159469 median 0.9748257994651794 q95 0.9902875423431396
+f1 mean 0.9875681042786241 q05 0.9690654695034027 median 0.989956796169281 q95 0.9962391883134842
+role_min_f1 mean 0.9843684588286281 q05 0.9616376608610153 median 0.987189769744873 q95 0.9952330619096756
+train_nodes mean 40510.412948 q05 37533.0 median 40480.0 q95 43583.0
+train_edges mean 541670.24703 q05 483571.0 median 541042.0 q95 601840.0499999999
+
+ leaf107 matched_stratified
+mean_wup mean 0.2336931256541908 q05 0.2130780838429928 median 0.23380286991596222 q95 0.25426074862480164
+row_overlap mean 0.9756343424247503 q05 0.9532252550125122 median 0.9782001376152039 q95 0.989936888217926
+f1 mean 0.9901765127496124 q05 0.9808810323476791 median 0.9912065863609314 q95 0.9960634738206864
+role_min_f1 mean 0.9878109985461235 q05 0.9768868684768677 median 0.9887696504592896 q95 0.9952916502952576
+train_nodes mean 41749.040073 q05 40835.0 median 41742.0 q95 42685.0
+train_edges mean 567141.931761 q05 549764.0 median 567171.0 q95 584386.0
+
+PAIRED
+universe                         metric  n_heldout_sets  mean_difference  median_difference           q05           q95  fraction_optimized_lower  fraction_optimized_higher
+  all144                       mean_wup           26830        -0.036999      -3.736439e-02     -0.053141 -2.022141e-02                  1.000000                   0.000000
+  all144                        max_wup           26830        -0.046314      -3.243244e-02     -0.126111 -5.960464e-09                  0.995714                   0.000000
+  all144                    row_overlap           26830        -0.002939      -2.372863e-03     -0.012079  5.010676e-03                  0.656839                   0.343161
+  all144                 unique_overlap           26830        -0.006898      -5.894308e-03     -0.028140  1.208466e-02                  0.664443                   0.335557
+  all144                lookup_micro_f1           26830        -0.001182      -9.046158e-04     -0.005011  1.859124e-03                  0.679389                   0.320611
+  all144            training_node_total           26830      -549.619736      -5.267862e+02  -1414.678750  3.132925e+02                  0.809057                   0.190943
+  all144            training_edge_total           26830     -9534.729341      -1.009591e+04 -25339.037054  6.362428e+03                  0.798807                   0.201193
+  all144 spearman_delta_wup_vs_delta_f1           26830         0.484767       0.000000e+00           NaN           NaN                       NaN                        NaN
+ leaf107                       mean_wup            1062        -0.030583      -3.141512e-02     -0.044706 -1.470090e-02                  1.000000                   0.000000
+ leaf107                        max_wup            1062        -0.035347      -4.756956e-02     -0.083280 -9.934441e-09                  0.964218                   0.000000
+ leaf107                    row_overlap            1062        -0.005530      -1.660607e-03     -0.023411  2.658636e-03                  0.695857                   0.304143
+ leaf107                 unique_overlap            1062        -0.011405      -4.527730e-03     -0.047700  5.652976e-03                  0.696798                   0.303202
+ leaf107                lookup_micro_f1            1062        -0.002158      -6.555170e-04     -0.009890  1.434756e-03                  0.651601                   0.348399
+ leaf107            training_node_total            1062      -306.820167      -2.928796e+02   -838.161258  1.487510e+02                  0.838983                   0.161017
+ leaf107            training_edge_total            1062     -4092.641826      -3.857687e+03 -13455.132073  4.405402e+03                  0.767420                   0.232580
+ leaf107 spearman_delta_wup_vs_delta_f1            1062         0.279152       1.838947e-20           NaN           NaN                       NaN                        NaN
+
+ACTUAL {
+  "actual_combined_heldout": {
+    "label": "actual_combined_heldout",
+    "training_tissues": "adipose_tissue|adrenal_cortex|adrenal_gland|amygdala|aorta|artery|astrocyte|basal_ganglion|basophil|blood|blood_plasma|blood_platelet|bone|brain|colon|eye|forebrain|gastrointestinal_tract|large_intestine|liver",
+    "heldout_tissues": "heart|kidney|lung|midbrain",
+    "mean_wup": 0.2814285714285714,
+    "max_wup": 0.8,
+    "mean_heldout_best_wup": 0.5083333333333333,
+    "mean_distance": 5.95,
+    "min_distance": 2,
+    "mean_heldout_nearest_distance": 3.0,
+    "ancestor_descendant_pairs": 1,
+    "train_branch_count": 8,
+    "heldout_branch_count": 4,
+    "total_rows": 12038,
+    "unseen_rows": 135,
+    "row_overlap": 0.9887855125436119,
+    "unique_genes": 3681,
+    "unseen_unique": 103,
+    "unique_overlap": 0.9720184732409671,
+    "total_positive_labels": 432273,
+    "false_negative_labels": 4038,
+    "positive_coverage": 0.990658680972441,
+    "lookup_micro_f1": 0.9953074230570779
+  },
+  "actual_validation": {
+    "label": "actual_validation",
+    "training_tissues": "adipose_tissue|adrenal_cortex|adrenal_gland|amygdala|aorta|artery|astrocyte|basal_ganglion|basophil|blood|blood_plasma|blood_platelet|bone|brain|colon|eye|forebrain|gastrointestinal_tract|large_intestine|liver",
+    "heldout_tissues": "heart|kidney",
+    "mean_wup": 0.280755772005772,
+    "max_wup": 0.5,
+    "mean_heldout_best_wup": 0.4166666666666667,
+    "mean_distance": 5.6,
+    "min_distance": 3,
+    "mean_heldout_nearest_distance": 3.5,
+    "ancestor_descendant_pairs": 0,
+    "train_branch_count": 8,
+    "heldout_branch_count": 2,
+    "total_rows": 6514,
+    "unseen_rows": 101,
+    "row_overlap": 0.9844949339883329,
+    "unique_genes": 3502,
+    "unseen_unique": 90,
+    "unique_overlap": 0.9743003997715591,
+    "total_positive_labels": 232177,
+    "false_negative_labels": 2912,
+    "positive_coverage": 0.9874578446616159,
+    "lookup_micro_f1": 0.9936893477403445
+  },
+  "actual_test": {
+    "label": "actual_test",
+    "training_tissues": "adipose_tissue|adrenal_cortex|adrenal_gland|amygdala|aorta|artery|astrocyte|basal_ganglion|basophil|blood|blood_plasma|blood_platelet|bone|brain|colon|eye|forebrain|gastrointestinal_tract|large_intestine|liver",
+    "heldout_tissues": "lung|midbrain",
+    "mean_wup": 0.2821013708513709,
+    "max_wup": 0.8,
+    "mean_heldout_best_wup": 0.6,
+    "mean_distance": 6.3,
+    "min_distance": 2,
+    "mean_heldout_nearest_distance": 2.5,
+    "ancestor_descendant_pairs": 1,
+    "train_branch_count": 8,
+    "heldout_branch_count": 2,
+    "total_rows": 5524,
+    "unseen_rows": 34,
+    "row_overlap": 0.9938450398262129,
+    "unique_genes": 3267,
+    "unseen_unique": 34,
+    "unique_overlap": 0.9895928986838077,
+    "total_positive_labels": 200096,
+    "false_negative_labels": 1126,
+    "positive_coverage": 0.9943727011034703,
+    "lookup_micro_f1": 0.9971784115910651
+  }
+}

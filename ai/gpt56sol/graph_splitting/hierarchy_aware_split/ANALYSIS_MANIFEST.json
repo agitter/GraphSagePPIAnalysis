@@ -1,0 +1,31 @@
+{
+  "exact_enumeration": {
+    "all144_branch_distinct_feasible": 26830,
+    "all144_heldout_quartets_total": 58905,
+    "leaf107_branch_distinct_feasible": 1062,
+    "leaf107_heldout_quartets_total": 1365
+  },
+  "generated_at_utc": "2026-09-04T23:07:52.613631+00:00",
+  "gpp": "g++ (Debian 14.2.0-19) 14.2.0",
+  "monte_carlo_streams": {
+    "all144_matched_stratified": {
+      "N": 1000000,
+      "seed": 2026090501
+    },
+    "all144_uniform": {
+      "N": 1000000,
+      "seed": 2026090401
+    },
+    "leaf107_matched_stratified": {
+      "N": 1000000,
+      "seed": 2026090502
+    },
+    "leaf107_uniform": {
+      "N": 1000000,
+      "seed": 2026090402
+    }
+  },
+  "optimization_blinding": "No gene identities, gene sets, or labels were used to select hierarchy-aware splits; they were used only after split selection for evaluation.",
+  "platform": "Linux-6.18.35-x86_64-with-glibc2.41",
+  "python": "3.13.5"
+}

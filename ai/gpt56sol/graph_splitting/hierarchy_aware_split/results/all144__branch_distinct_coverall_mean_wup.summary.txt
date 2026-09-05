@@ -1,0 +1,12 @@
+universe=all144
+method=branch_distinct_coverall_mean_wup
+eligible_train=105
+eligible_heldout=36
+total_H=58905
+feasible_H=26830
+best_primary=184594782
+best_secondary=3063060
+best_tertiary=-728
+best_count=2
+BEST	all144	branch_distinct_coverall_mean_wup	31|47|68|125	colon|fetus|liver|temporal_lobe	0|3|4|12|28|32|45|53|70|75|78|82|83|104|107|114|128|134|138|139	adipose_tissue|amygdala|aorta|blood_platelet|chondrocyte|cornea|esophagus|hair_follicle|lung|mammary_gland|megakaryocyte|muscle|myometrium|renal_glomerulus|salivary_gland|spermatid|thymocyte|umbilical_cord|uterine_cervix|uterine_endometrium	184594782	3063060	-728	0.188327585405	0.25	0.232954545455	9.1	6	6.75	0	14	4	36263	464640	12034	184247	1	1	12034	537	0.955376433439	3819	421	0.889761717727	430950	14968	0.965267432417	0.982326798373
+BEST	all144	branch_distinct_coverall_mean_wup	31|47|96|125	colon|fetus|pancreas|temporal_lobe	0|3|4|12|28|32|45|53|70|75|78|82|83|104|107|114|128|134|138|139	adipose_tissue|amygdala|aorta|blood_platelet|chondrocyte|cornea|esophagus|hair_follicle|lung|mammary_gland|megakaryocyte|muscle|myometrium|renal_glomerulus|salivary_gland|spermatid|thymocyte|umbilical_cord|uterine_cervix|uterine_endometrium	184594782	3063060	-728	0.188327585405	0.25	0.232954545455	9.1	6	6.75	0	14	4	36263	464640	11897	183240	1	0	11897	493	0.95856098176	3758	380	0.898882384247	427202	13487	0.968429454918	0.983961556253

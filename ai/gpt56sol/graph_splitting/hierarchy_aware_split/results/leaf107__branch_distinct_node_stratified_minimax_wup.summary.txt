@@ -1,0 +1,11 @@
+universe=leaf107
+method=branch_distinct_node_stratified_minimax_wup
+eligible_train=69
+eligible_heldout=15
+total_H=1365
+feasible_H=1062
+best_primary=2450448
+best_secondary=169187808
+best_tertiary=-776
+best_count=1
+BEST	leaf107	branch_distinct_node_stratified_minimax_wup	31|47|55|96	colon|fetus|hematopoietic_stem_cell|pancreas	4|7|21|33|48|49|58|77|79|83|103|104|114|125|126|127|128|134|138|139	aorta|b_lymphocyte|caudate_nucleus|corpus_callosum|forebrain|frontal_lobe|hypophysis|medulla_oblongata|midbrain|myometrium|prostate_gland|renal_glomerulus|spermatid|temporal_lobe|testis|thalamus|thymocyte|umbilical_cord|uterine_cervix|uterine_endometrium	2450448	169187808	-776	0.172609057609	0.2	0.2	9.7	8	8	0	4	4	40713	553047	11960	183378	0	0	11960	797	0.933361204013	3846	560	0.854394175767	430604	23364	0.945741330782	0.97211414058

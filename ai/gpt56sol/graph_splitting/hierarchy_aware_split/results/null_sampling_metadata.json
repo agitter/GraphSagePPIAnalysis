@@ -1,0 +1,26 @@
+{
+  "all144__matched_stratified": {
+    "Hpool": 26830,
+    "N": 1000000,
+    "record_size": 117,
+    "seed": 2026090501
+  },
+  "all144__uniform": {
+    "Hpool": 58905,
+    "N": 1000000,
+    "record_size": 117,
+    "seed": 2026090401
+  },
+  "leaf107__matched_stratified": {
+    "Hpool": 1062,
+    "N": 1000000,
+    "record_size": 117,
+    "seed": 2026090502
+  },
+  "leaf107__uniform": {
+    "Hpool": 1365,
+    "N": 1000000,
+    "record_size": 117,
+    "seed": 2026090402
+  }
+}

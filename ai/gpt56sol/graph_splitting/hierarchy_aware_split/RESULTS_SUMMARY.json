@@ -1,0 +1,129 @@
+{
+  "broad_coverage_sensitivity_first_tie": {
+    "heldout_tissues": [
+      "colon",
+      "pancreas",
+      "prostate_gland",
+      "temporal_lobe"
+    ],
+    "lookup_micro_f1": 0.9954782712,
+    "max_wup": 0.25,
+    "mean_wup": 0.194151577589,
+    "number_of_tied_hierarchy_optima": 2,
+    "row_overlap": 0.989475577944,
+    "training_root_branches": 14,
+    "training_tissues": [
+      "adipose_tissue",
+      "amygdala",
+      "aorta",
+      "blood_plasma",
+      "blood_platelet",
+      "chondrocyte",
+      "cornea",
+      "embryo",
+      "esophagus",
+      "fetus",
+      "hematopoietic_stem_cell",
+      "lung",
+      "macrophage",
+      "mammary_gland",
+      "mononuclear_phagocyte",
+      "neutrophil",
+      "salivary_gland",
+      "skeletal_muscle",
+      "thymocyte",
+      "vascular_endothelial_cell"
+    ],
+    "unique_overlap": 0.971562591615
+  },
+  "generated_at_utc": "2026-09-04T23:07:52.611610+00:00",
+  "interpretation": "Hierarchy-aware splitting lowers biological identity reuse on average, but hierarchy distance is an imperfect proxy and does not guarantee gene-disjoint evaluation.",
+  "paired_leaf_effects_optimized_minus_matched_random": {
+    "fraction_lower_lookup_micro_f1": 0.6516007532956686,
+    "fraction_lower_row_overlap": 0.6958568738229756,
+    "lookup_micro_f1": -0.0021578852838494,
+    "mean_wup": -0.0305833557655348,
+    "row_overlap": -0.0055301903405899,
+    "unique_overlap": -0.0114045403600096
+  },
+  "primary_algorithm": {
+    "gene_or_label_data_used_for_optimization": false,
+    "heldout_constraints": "four hierarchy leaves, each from a different root branch",
+    "objective": "lexicographically minimize worst train-heldout Wu-Palmer similarity, then total similarity, then maximize total path distance",
+    "role_assignment": "2+2 partition selected using hierarchy only to minimize worse role similarity and then role imbalance",
+    "training_constraints": "exclude heldout root branches; choose 20 leaves with four from each training-node-count quintile"
+  },
+  "primary_global_stress_test": {
+    "heldout_tissues": [
+      "colon",
+      "fetus",
+      "hematopoietic_stem_cell",
+      "pancreas"
+    ],
+    "lookup_micro_f1": 0.97211414058,
+    "max_wup": 0.2,
+    "mean_path_distance": 9.7,
+    "mean_wup": 0.172609057609,
+    "minimum_path_distance": 8,
+    "role_A_lookup_micro_f1": 0.9711082363087538,
+    "role_B_lookup_micro_f1": 0.9732053987339252,
+    "role_pair_A": [
+      "colon",
+      "fetus"
+    ],
+    "role_pair_B": [
+      "hematopoietic_stem_cell",
+      "pancreas"
+    ],
+    "row_overlap": 0.933361204013,
+    "training_edges": 553047,
+    "training_nodes": 40713,
+    "training_root_branches": 4,
+    "training_tissues": [
+      "aorta",
+      "b_lymphocyte",
+      "caudate_nucleus",
+      "corpus_callosum",
+      "forebrain",
+      "frontal_lobe",
+      "hypophysis",
+      "medulla_oblongata",
+      "midbrain",
+      "myometrium",
+      "prostate_gland",
+      "renal_glomerulus",
+      "spermatid",
+      "temporal_lobe",
+      "testis",
+      "thalamus",
+      "thymocyte",
+      "umbilical_cord",
+      "uterine_cervix",
+      "uterine_endometrium"
+    ],
+    "unique_overlap": 0.854394175767
+  },
+  "primary_universe": {
+    "all_heldout_quartets": 1365,
+    "description": "OhmNet hierarchy leaves only; literal raw-edgelist thresholds",
+    "eligible_heldout_layers": 15,
+    "eligible_training_layers": 69,
+    "feasible_branch_distinct_quartets": 1062
+  },
+  "question": "Does a hierarchy-aware graph split reduce biological node reuse relative to hierarchy-blind splitting under the GraphSAGE edge thresholds?",
+  "released_split_context": {
+    "actual_test_lookup_micro_f1": 0.9971784115910652,
+    "actual_test_row_overlap": 0.9938450398262128,
+    "midbrain_relationship": "descendant and exact subnetwork of training brain layer",
+    "midbrain_test_rows_seen_in_training": "2310 of 2310",
+    "threshold_compatible_with_current_ohmnet_release": false
+  },
+  "size_matched_K25_leaf_effects": {
+    "lookup_micro_f1": -0.0013402897784128,
+    "mean_wup": -0.0298271779095597,
+    "row_overlap": -0.0034936678037815,
+    "training_edges_difference": 137.52207156308967,
+    "training_nodes_difference": -12.466440677966157,
+    "unique_overlap": -0.0069951499398826
+  }
+}

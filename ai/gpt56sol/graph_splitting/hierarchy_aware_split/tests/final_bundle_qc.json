@@ -1,0 +1,427 @@
+{
+  "checks": [
+    {
+      "check": "json:ANALYSIS_MANIFEST.json",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "json:RESULTS_SUMMARY.json",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "json:results/null_sampling_metadata.json",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "gzip:results/all144__ancestor_blocked_mean_wup.tsv.gz",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "gzip:results/all144__branch_distinct_coverall_mean_wup.tsv.gz",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "gzip:results/all144__branch_distinct_mean_wup.tsv.gz",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "gzip:results/all144__branch_distinct_minimax_wup.tsv.gz",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "gzip:results/all144__branch_distinct_node_stratified_maximin_distance.tsv.gz",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "gzip:results/all144__branch_distinct_node_stratified_mean_distance.tsv.gz",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "gzip:results/all144__branch_distinct_node_stratified_mean_wup.tsv.gz",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "gzip:results/all144__branch_distinct_node_stratified_minimax_wup.tsv.gz",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "gzip:results/all144__conditional_mean_wup.tsv.gz",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "gzip:results/all144__conditional_minimax_wup.tsv.gz",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "gzip:results/leaf107__ancestor_blocked_mean_wup.tsv.gz",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "gzip:results/leaf107__branch_distinct_coverall_mean_wup.tsv.gz",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "gzip:results/leaf107__branch_distinct_coverall_node_stratified_mean_wup.tsv.gz",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "gzip:results/leaf107__branch_distinct_mean_wup.tsv.gz",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "gzip:results/leaf107__branch_distinct_minimax_wup.tsv.gz",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "gzip:results/leaf107__branch_distinct_node_stratified_maximin_distance.tsv.gz",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "gzip:results/leaf107__branch_distinct_node_stratified_mean_distance.tsv.gz",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "gzip:results/leaf107__branch_distinct_node_stratified_mean_wup.tsv.gz",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "gzip:results/leaf107__branch_distinct_node_stratified_minimax_wup.tsv.gz",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "gzip:results/leaf107__conditional_mean_wup.tsv.gz",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "gzip:results/leaf107__conditional_minimax_wup.tsv.gz",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "table:ARTIFACT_INDEX.csv",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "table:SOURCE_MANIFEST.csv",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "table:prepared/all_ohmnet_genes.tsv",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "table:prepared/ohmnet_144_layer_classification.csv",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "table:prepared/ohmnet_network_metadata.tsv",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "table:results/CLAIMS.csv",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "table:results/actual_split_metrics_recomputed.csv",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "table:results/all144__matched_stratified__first1000.tsv",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "table:results/all144__uniform__first1000.tsv",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "table:results/broad_coverage_leaf_split_tissues.tsv",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "table:results/candidate_vs_null_percentiles.csv",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "table:results/discrepancy_register_additions.csv",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "table:results/exact_global_optima_and_balanced_roles.csv",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "table:results/exact_method_distribution_summary.csv",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "table:results/headline_comparison.csv",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "table:results/leaf107__matched_stratified__first1000.tsv",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "table:results/leaf107__uniform__first1000.tsv",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "table:results/leaf107_size_matched_conditional_effects.csv",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "table:results/leaf107_size_matched_conditional_summary.csv",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "table:results/method_definitions.csv",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "table:results/null_block_convergence.csv",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "table:results/null_distribution_summary.csv",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "table:results/paired_conditional_on_heldout_effects.csv",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "table:results/paired_conditional_on_heldout_summary.csv",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "table:results/paired_effects_interpretable.csv",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "table:results/primary_leaf_split_tissues.tsv",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "table:results/primary_metric_sensitivity.csv",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "table:tests/independent_exact_optima_check.csv",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "table:tests/leaf107_conditional_sample_coverage.csv",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "table:tests/null_first1000_independent_metric_check.csv",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "table:tests/null_heldout_marginal_uniformity.csv",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "table:tests/primary_leaf_exact_enumeration_independent_check_failures.csv",
+      "detail": "intentional empty failure table",
+      "pass": true
+    },
+    {
+      "check": "table:tests/primary_leaf_exact_enumeration_independent_check_summary.csv",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "image:plots/leaf107_global_method_tradeoff.png",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "image:plots/leaf107_lookup_f1_ecdf.png",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "image:plots/leaf107_mean_wup_ecdf.png",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "image:plots/leaf107_paired_wup_vs_f1_effect.png",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "image:plots/leaf107_row_overlap_ecdf.png",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "primary_leaf_split_tissues.tsv:20_training",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "primary_leaf_split_tissues.tsv:4_heldout",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "primary_leaf_split_tissues.tsv:all_train_threshold",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "primary_leaf_split_tissues.tsv:all_heldout_threshold",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "primary_leaf_split_tissues.tsv:all_leaf",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "primary_leaf_split_tissues.tsv:four_heldout_branches",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "primary_leaf_split_tissues.tsv:heldout_branches_absent_train",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "broad_coverage_leaf_split_tissues.tsv:20_training",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "broad_coverage_leaf_split_tissues.tsv:4_heldout",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "broad_coverage_leaf_split_tissues.tsv:all_train_threshold",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "broad_coverage_leaf_split_tissues.tsv:all_heldout_threshold",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "broad_coverage_leaf_split_tissues.tsv:all_leaf",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "broad_coverage_leaf_split_tissues.tsv:four_heldout_branches",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "broad_coverage_leaf_split_tissues.tsv:heldout_branches_absent_train",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "primary_exact_independent_check",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "all_exact_optima_independent_checks",
+      "detail": "n=35",
+      "pass": true
+    },
+    {
+      "check": "null_first1000_independent_checks",
+      "detail": "n=4",
+      "pass": true
+    },
+    {
+      "check": "null_deterministic_rerun_hashes",
+      "detail": "pass_count=4",
+      "pass": true
+    },
+    {
+      "check": "metric_sensitivity_identical_heldouts",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "metric_sensitivity_identical_training",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "threshold_discrepancy_retained",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "midbrain_containment_retained",
+      "detail": "",
+      "pass": true
+    }
+  ],
+  "n_checks": 84,
+  "n_failures": 0,
+  "passed": true
+}

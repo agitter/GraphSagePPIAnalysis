@@ -1,0 +1,9 @@
+comparison,metric,optimized_minus_random,difference_percentage_points,fraction_optimized_lower
+All matched random controls,mean_wup,-0.0305833557655348,,1.0
+All matched random controls,row_overlap,-0.0055301903405899,-0.55301903405899,0.6958568738229756
+All matched random controls,unique_overlap,-0.0114045403600096,-1.14045403600096,0.696798493408663
+All matched random controls,lookup_micro_f1,-0.0021578852838494,-0.21578852838494,0.6516007532956686
+25 nearest node/edge-size controls,mean_wup,-0.0298271779095597,,1.0
+25 nearest node/edge-size controls,row_overlap,-0.0034936678037815,-0.34936678037815,0.667608286252354
+25 nearest node/edge-size controls,unique_overlap,-0.0069951499398826,-0.69951499398826,0.6666666666666666
+25 nearest node/edge-size controls,lookup_micro_f1,-0.0013402897784128,-0.13402897784128,0.6290018832391714

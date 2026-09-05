@@ -1,0 +1,12 @@
+universe=all144
+method=branch_distinct_node_stratified_maximin_distance
+eligible_train=105
+eligible_heldout=36
+total_H=58905
+feasible_H=26830
+best_primary=-8
+best_secondary=-788
+best_tertiary=166628832
+best_count=2
+BEST	all144	branch_distinct_node_stratified_maximin_distance	31|47|55|68	colon|fetus|hematopoietic_stem_cell|liver	7|26|27|33|49|58|77|79|83|90|94|100|103|114|125|126|127|128|138|140	b_lymphocyte|cerebellum|cerebral_cortex|corpus_callosum|frontal_lobe|hypophysis|medulla_oblongata|midbrain|myometrium|occipital_lobe|ovary|placenta|prostate_gland|spermatid|temporal_lobe|testis|thalamus|thymocyte|uterine_cervix|uterus	-8	-788	166628832	0.169998334998	0.2	0.2	9.85	8	8	0	3	4	43958	617258	12097	184385	6	1	12097	429	0.964536661982	3899	369	0.905360348807	434352	12823	0.970477861274	0.985017777004
+BEST	all144	branch_distinct_node_stratified_maximin_distance	31|47|55|96	colon|fetus|hematopoietic_stem_cell|pancreas	7|26|27|33|49|58|77|79|83|90|94|100|103|114|125|126|127|128|138|140	b_lymphocyte|cerebellum|cerebral_cortex|corpus_callosum|frontal_lobe|hypophysis|medulla_oblongata|midbrain|myometrium|occipital_lobe|ovary|placenta|prostate_gland|spermatid|temporal_lobe|testis|thalamus|thymocyte|uterine_cervix|uterus	-8	-788	166628832	0.169998334998	0.2	0.2	9.85	8	8	0	3	4	43958	617258	11960	183378	6	0	11960	363	0.969648829431	3846	322	0.916276651066	430604	10440	0.97575498602	0.987728734508

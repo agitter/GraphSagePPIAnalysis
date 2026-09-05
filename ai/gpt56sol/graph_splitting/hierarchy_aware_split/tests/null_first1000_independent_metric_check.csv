@@ -1,0 +1,5 @@
+universe,null,records_checked,max_abs_difference,failures_tolerance_2e-6,pass
+all144,uniform,1000,5.23264493734743e-07,0,True
+all144,matched_stratified,1000,5.271009448915009e-07,0,True
+leaf107,uniform,1000,5.269394557361196e-07,0,True
+leaf107,matched_stratified,1000,5.260311258803441e-07,0,True

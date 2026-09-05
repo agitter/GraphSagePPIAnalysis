@@ -1,0 +1,8 @@
+analysis_row,universe,construction,N_or_count,mean_wup,max_wup_mean,row_overlap,unique_overlap,lookup_micro_f1,training_nodes,training_edges
+All-144 manuscript-threshold random null,all144,uniform valid random,1000000,0.2768597900867462,0.8211049437522888,0.9828476309776306,0.9567636251449585,0.9932909607887268,44327.645544,616837.368782
+Leaf-only manuscript-threshold random null,leaf107,uniform valid random,1000000,0.25034940242767334,0.6942818760871887,0.9696338176727295,0.9276366829872131,0.9875681400299072,40510.412948,541670.24703
+Leaf-only matched random null,leaf107,branch-blocked + 4-per-size-stratum random,1000000,0.23369307816028595,0.329552561044693,0.9756342172622681,0.9397550225257874,0.9901766180992126,41749.040073,567141.931761
+Leaf-only hierarchy-optimized ensemble mean,leaf107,"exact minimax hierarchy training for each of 1,062 feasible heldout quartets",1062,0.2030857718451337,0.2941754102768738,0.9701010267962608,0.9283392763145443,0.9880172927588304,41442.24199623352,563050.7740112995
+Leaf-only global hierarchy optimum,leaf107,branch_distinct_node_stratified_minimax_wup,1,0.172609057609,0.2,0.933361204013,0.854394175767,0.97211414058,40713.0,553047.0
+Leaf-only broad-coverage hierarchy optimum,leaf107,branch_distinct_coverall_node_stratified_mean_wup,1,0.194151577589,0.25,0.989475577944,0.971562591615,0.9954782712,42350.0,575499.0
+Released GraphSAGE split (external comparison),released24,deposited split; does not satisfy current-release literal thresholds,1,0.2814285714285714,0.8,0.988785512543612,0.9720184732409672,0.995307423057078,44906.0,633198.0

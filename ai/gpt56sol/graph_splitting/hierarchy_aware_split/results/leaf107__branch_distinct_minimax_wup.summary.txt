@@ -1,0 +1,11 @@
+universe=leaf107
+method=branch_distinct_minimax_wup
+eligible_train=69
+eligible_heldout=15
+total_H=1365
+feasible_H=1080
+best_primary=2450448
+best_secondary=166455306
+best_tertiary=-800
+best_count=1
+BEST	leaf107	branch_distinct_minimax_wup	31|47|96|125	colon|fetus|pancreas|temporal_lobe	4|5|7|12|53|55|73|81|83|88|95|103|104|105|114|126|128|134|138|139	aorta|artery|b_lymphocyte|blood_platelet|hair_follicle|hematopoietic_stem_cell|macrophage|mononuclear_phagocyte|myometrium|neutrophil|oviduct|prostate_gland|renal_glomerulus|renal_tubule|spermatid|testis|thymocyte|umbilical_cord|uterine_cervix|uterine_endometrium	2450448	166455306	-800	0.169821300024	0.2	0.188461538462	10	8	8.75	0	5	4	37647	490846	11897	183240	0	0	11897	756	0.936454568379	3758	496	0.868014901543	427202	19782	0.953694037013	0.976298252383

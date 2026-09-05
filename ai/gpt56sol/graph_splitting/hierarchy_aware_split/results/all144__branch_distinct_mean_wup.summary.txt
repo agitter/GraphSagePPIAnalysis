@@ -1,0 +1,12 @@
+universe=all144
+method=branch_distinct_mean_wup
+eligible_train=105
+eligible_heldout=36
+total_H=58905
+feasible_H=26830
+best_primary=161766978
+best_secondary=2450448
+best_tertiary=-824
+best_count=2
+BEST	all144	branch_distinct_mean_wup	31|47|68|125	colon|fetus|liver|temporal_lobe	4|12|73|78|83|88|94|95|100|103|104|105|114|115|126|128|134|138|139|140	aorta|blood_platelet|macrophage|megakaryocyte|myometrium|neutrophil|ovary|oviduct|placenta|prostate_gland|renal_glomerulus|renal_tubule|spermatid|spermatocyte|testis|thymocyte|umbilical_cord|uterine_cervix|uterine_endometrium|uterus	161766978	2450448	-824	0.16503816649	0.2	0.188461538462	10.3	8	8.75	0	4	4	39159	521550	12034	184247	5	1	12034	386	0.967924214725	3819	315	0.917517674784	430950	9713	0.977461422439	0.988602266873
+BEST	all144	branch_distinct_mean_wup	31|47|96|125	colon|fetus|pancreas|temporal_lobe	4|12|73|78|83|88|94|95|100|103|104|105|114|115|126|128|134|138|139|140	aorta|blood_platelet|macrophage|megakaryocyte|myometrium|neutrophil|ovary|oviduct|placenta|prostate_gland|renal_glomerulus|renal_tubule|spermatid|spermatocyte|testis|thymocyte|umbilical_cord|uterine_cervix|uterine_endometrium|uterus	161766978	2450448	-824	0.16503816649	0.2	0.188461538462	10.3	8	8.75	0	4	4	39159	521550	11897	183240	5	0	11897	335	0.97184164075	3758	277	0.926290580096	427202	7709	0.981954672497	0.990895186578

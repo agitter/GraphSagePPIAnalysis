@@ -1,0 +1,12 @@
+universe=leaf107
+method=branch_distinct_coverall_node_stratified_mean_wup
+eligible_train=69
+eligible_heldout=15
+total_H=1365
+feasible_H=1062
+best_primary=190303338
+best_secondary=3063060
+best_tertiary=-688
+best_count=2
+BEST	leaf107	branch_distinct_coverall_node_stratified_mean_wup	31|96|103|125	colon|pancreas|prostate_gland|temporal_lobe	0|3|4|11|12|28|32|42|45|47|55|70|73|75|81|88|107|109|128|141	adipose_tissue|amygdala|aorta|blood_plasma|blood_platelet|chondrocyte|cornea|embryo|esophagus|fetus|hematopoietic_stem_cell|lung|macrophage|mammary_gland|mononuclear_phagocyte|neutrophil|salivary_gland|skeletal_muscle|thymocyte|vascular_endothelial_cell	190303338	3063060	-688	0.194151577589	0.25	0.22601010101	8.6	6	7	0	14	4	42350	575499	11117	171051	0	0	11117	117	0.989475577944	3411	97	0.971562591615	405876	3654	0.990997250392	0.9954782712
+BEST	leaf107	branch_distinct_coverall_node_stratified_mean_wup	31|96|125|126	colon|pancreas|temporal_lobe|testis	0|3|4|11|12|28|32|42|45|47|55|70|73|75|81|88|107|109|128|141	adipose_tissue|amygdala|aorta|blood_plasma|blood_platelet|chondrocyte|cornea|embryo|esophagus|fetus|hematopoietic_stem_cell|lung|macrophage|mammary_gland|mononuclear_phagocyte|neutrophil|salivary_gland|skeletal_muscle|thymocyte|vascular_endothelial_cell	190303338	3063060	-688	0.194151577589	0.25	0.22601010101	8.6	6	7	0	14	4	42350	575499	11448	178295	0	0	11448	182	0.984102026555	3531	148	0.958085528179	415622	5547	0.986653738253	0.993282039295

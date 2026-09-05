@@ -1,0 +1,9 @@
+component,name,definition
+Primary clean universe,leaf107,"Only hierarchy leaves; raw edgelist thresholds >=15,000 training and >=35,000 heldout records."
+Primary hard separation,distinct heldout branches,Four heldout leaves must occupy four different root branches; all layers in those branches are excluded from training.
+Primary size control,five node-count strata,"Twenty training layers, exactly four from each eligible-node-count quintile."
+Primary hierarchy objective,lexicographic minimax,Minimize the largest train-heldout Wu-Palmer similarity; then the total similarity; then maximize total path distance.
+Role assignment,balanced 2+2 partition,"Partition four heldouts into two pairs by minimizing the worse train-to-role mean similarity, then the imbalance; no gene or label data used."
+Primary matched null,heldout-first conditional randomization,"Same leaf, threshold, branch-blocking, and size-stratum constraints; random heldout quartet and random training selections within strata."
+Broad-coverage sensitivity,all remaining branches represented,Add at least one training leaf from every non-heldout root branch while retaining four-per-stratum size balance.
+Release-mirroring sensitivity,all144,"Allow both hierarchy leaves and internal hierarchy layers, under the same raw thresholds."
