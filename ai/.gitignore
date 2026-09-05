@@ -57,3 +57,17 @@ desktop.ini
 *.part
 *.tmp
 *.temp
+
+# ----------------------------------------------------------------------
+# Clean reproduction workflow: generated and local state
+# ----------------------------------------------------------------------
+/reproduction/.pixi/
+/reproduction/.snakemake/
+/reproduction/build/
+/reproduction/results/
+/reproduction/.coverage
+/reproduction/.coverage.*
+/reproduction/coverage.xml
+/reproduction/htmlcov/
+/reproduction/dist/
+/reproduction/src/*.egg-info/

@@ -1,0 +1,15 @@
+* text=auto
+
+*.py       text eol=lf
+*.md       text eol=lf
+*.toml     text eol=lf
+*.yaml     text eol=lf
+*.tsv      text eol=lf
+*.json     text eol=lf
+Snakefile  text eol=lf
+
+*.gz   binary
+*.npy  binary
+*.pdf  binary
+*.tar  binary
+*.zip  binary

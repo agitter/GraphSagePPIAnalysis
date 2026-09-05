@@ -1,0 +1,90 @@
+schema_version: 1
+reconstruction:
+  selected_graphs: spec/selected_graphs.tsv
+  feature_columns: spec/feature_columns.tsv
+  label_columns: spec/label_columns.tsv
+  identifier_decisions: spec/identifier_decisions.tsv
+  node_order:
+    method: cpython27_string_dict
+    word_size_bits: 64
+    hash_randomization: false
+    keep_entrez_ids_as_strings: true
+  features:
+    source_version: MSigDB 6.1
+    collections:
+    - C1
+    - C3
+    minimum_source_members: 200
+    threshold_operator: '>='
+    maximum_columns: 50
+    preserve_gmt_order: true
+    project_after_selection: true
+  labels:
+    goa_release: 159
+    evidence_codes:
+    - EXP
+    - IDA
+    - IEP
+    - IGI
+    - IMP
+    - ISS
+    exclude_not: true
+    allowed_relations:
+      biological_process: involved_in
+      cellular_component: part_of
+      molecular_function: enables
+    excluded_relations:
+    - colocalizes_with
+    - contributes_to
+    canonicalize_alt_ids: true
+    propagation_relations:
+    - is_a
+    term_selection: top_121_by_full_human_prevalence
+  graphsage:
+    include_unsupervised_walks: false
+  dgl:
+    fit_standard_scaler_on: training_rows_only
+    feature_computation_dtype: float64
+    directed_edge_expansion: true
+    one_self_loop_per_node: true
+validation:
+  expected:
+    graphs: 24
+    rows: 56944
+    distinct_entrez_gene_ids: 4301
+    graphsage_edge_records: 818716
+    split_graph_counts:
+      train: 20
+      validation: 2
+      test: 2
+    split_row_counts:
+      train: 44906
+      validation: 6514
+      test: 5524
+    topology_content_hashes:
+      entrez_row_sequence_sha256: b2f345c46ff720ac3b67b8a65809c86bd2e3e2f6b9c2e0556f7d0dce0d3732ec
+      node_id_entrez_pairs_sha256: 988200b3c2290f5f3111a7a98da4492754ec11a3a00116276ff058fe164cbf8b
+      source_order_node_edge_pairs_sha256: ee35627d9a329a380260e3dcfa132c1f8f10864644b5835827f2e3e5eca6f255
+    feature_shape:
+    - 56944
+    - 50
+    feature_collection_counts:
+      C1: 30
+      C3: 20
+    feature_all_zero_columns_0based:
+    - 10
+    feature_float64_c_order_data_sha256: dc2420e5fe912f9c14292a6a14ffc0f5ef0ef781d830a0aa3e05085ba53d365a
+    feature_uint8_c_order_data_sha256: 274ecfee66596b7e9dfb19b71a7fb39a2611a3c140bc199c25062c6ca75bfca1
+    graphsage_feature_npy_sha256: 953149689098eed72c0154fb40a8fff4e634d34c5ad139c7ae9d601db1cad3d3
+    label_shape:
+    - 56944
+    - 121
+    label_uint8_c_order_data_sha256: 677cc50459190ba22afc0762356e573ca56e422c80fd36204669a81694afa78d
+    label_distinct_membership_vectors: 118
+  comparison_levels:
+    graphsage_topology: structurally_exact
+    graphsage_features: array_exact_and_byte_exact_npy
+    graphsage_labels: array_exact
+    dgl: logical_and_data_equivalent
+  dgl_feature_atol: 1.0e-12
+  dgl_feature_rtol: 0.0

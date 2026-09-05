@@ -1,0 +1,26 @@
+[workspace]
+name = "graphsage-ppi-reproduction"
+description = "Deterministic reconstruction and validation of the GraphSAGE PPI data"
+channels = ["conda-forge", "bioconda"]
+platforms = ["linux-64", "win-64"]
+channel-priority = "strict"
+repository = "https://github.com/ntalluri/GraphSagePPIAnalysis"
+
+[dependencies]
+python = "3.11.*"
+numpy = "1.26.*"
+pyyaml = ">=6,<7"
+pip = "*"
+pytest = ">=8,<9"
+ruff = ">=0.12,<1"
+snakemake-minimal = ">=9.13,<10"
+
+[pypi-dependencies]
+graphsage-ppi-repro = { path = ".", editable = true }
+
+[tasks]
+reproduce = "snakemake --cores 1 reproduce"
+validate = "snakemake --cores 1 validate"
+test = "ruff check . && ruff format --check . && pytest -q"
+format = "ruff check --fix . && ruff format ."
+clean = "python -m graphsage_ppi_repro.cli clean --directory build --directory results"

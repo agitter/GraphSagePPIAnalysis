@@ -1,0 +1,226 @@
+"""Readable workflow for the central GraphSAGE PPI reconstruction.
+
+The current milestone reconstructs the complete biological row order, logical
+PPI topology, and 50 input features.  Released GraphSAGE data are deliberately
+absent from the ``reproduce`` dependency graph and enter only through
+``validate``.
+"""
+
+from pathlib import Path
+
+
+configfile: "spec/specification.yaml"
+
+REPRO_ROOT = Path(workflow.basedir).resolve()
+PROJECT_ROOT = REPRO_ROOT.parent
+DATA_DIR = PROJECT_ROOT / "data"
+
+SOURCES = REPRO_ROOT / "spec" / "sources.tsv"
+GRAPH_SPEC = REPRO_ROOT / "spec" / "selected_graphs.tsv"
+FEATURE_SPEC = REPRO_ROOT / "spec" / "feature_columns.tsv"
+SPECIFICATION = REPRO_ROOT / "spec" / "specification.yaml"
+
+OHMNET = DATA_DIR / "bio-tissue-networks.tar.gz"
+MSIGDB_C1 = DATA_DIR / "c1.all.v6.1.entrez.gmt"
+MSIGDB_C3 = DATA_DIR / "c3.all.v6.1.entrez.gmt"
+GRAPHSAGE_REFERENCE = DATA_DIR / "graphsage_ppi.zip"
+
+SOURCE_REPORT = REPRO_ROOT / "build" / "sources" / "upstream_milestone1.json"
+REFERENCE_REPORT = REPRO_ROOT / "build" / "sources" / "graphsage_reference.json"
+NODE_MAPPING = REPRO_ROOT / "build" / "topology" / "node_to_entrez.tsv.gz"
+EDGE_TABLE = REPRO_ROOT / "build" / "topology" / "edges.tsv.gz"
+TOPOLOGY_SUMMARY = REPRO_ROOT / "build" / "topology" / "summary.json"
+FEATURE_MATRIX = REPRO_ROOT / "build" / "features" / "ppi-feats.npy"
+SELECTED_FEATURES = REPRO_ROOT / "build" / "features" / "selected_features.tsv"
+FEATURE_SUMMARY = REPRO_ROOT / "build" / "features" / "summary.json"
+RECONSTRUCTION_CHECKS = REPRO_ROOT / "build" / "reconstruction_checks.json"
+RUN_MANIFEST = REPRO_ROOT / "results" / "reconstruction_manifest.json"
+VALIDATION_JSON = REPRO_ROOT / "results" / "validation.json"
+VALIDATION_MD = REPRO_ROOT / "results" / "validation.md"
+
+
+rule all:
+    input:
+        str(RUN_MANIFEST),
+
+
+rule reproduce:
+    input:
+        str(RUN_MANIFEST),
+
+
+rule validate:
+    input:
+        str(VALIDATION_JSON),
+        str(VALIDATION_MD),
+
+
+rule acquire_upstream_sources:
+    input:
+        manifest=str(SOURCES),
+    output:
+        report=str(SOURCE_REPORT),
+        ohmnet=str(OHMNET),
+        c1=str(MSIGDB_C1),
+        c3=str(MSIGDB_C3),
+    params:
+        data_dir=str(DATA_DIR),
+    shell:
+        """
+        python -m graphsage_ppi_repro.cli ensure-sources \
+          --manifest {input.manifest:q} \
+          --data-dir {params.data_dir:q} \
+          --source-id ohmnet_networks \
+          --source-id msigdb_c1_v61 \
+          --source-id msigdb_c3_v61 \
+          --report {output.report:q}
+        """
+
+
+rule reconstruct_topology:
+    input:
+        archive=rules.acquire_upstream_sources.output.ohmnet,
+        graph_spec=str(GRAPH_SPEC),
+    output:
+        mapping=str(NODE_MAPPING),
+        edges=str(EDGE_TABLE),
+        summary=str(TOPOLOGY_SUMMARY),
+    params:
+        word_size_bits=config["reconstruction"]["node_order"]["word_size_bits"],
+    shell:
+        """
+        python -m graphsage_ppi_repro.cli reconstruct-topology \
+          --archive {input.archive:q} \
+          --graph-spec {input.graph_spec:q} \
+          --mapping-output {output.mapping:q} \
+          --edge-output {output.edges:q} \
+          --summary-output {output.summary:q} \
+          --word-size-bits {params.word_size_bits}
+        """
+
+
+rule reconstruct_features:
+    input:
+        mapping=rules.reconstruct_topology.output.mapping,
+        c1=rules.acquire_upstream_sources.output.c1,
+        c3=rules.acquire_upstream_sources.output.c3,
+        feature_spec=str(FEATURE_SPEC),
+    output:
+        matrix=str(FEATURE_MATRIX),
+        selected=str(SELECTED_FEATURES),
+        summary=str(FEATURE_SUMMARY),
+    params:
+        minimum=config["reconstruction"]["features"]["minimum_source_members"],
+        maximum=config["reconstruction"]["features"]["maximum_columns"],
+    shell:
+        """
+        python -m graphsage_ppi_repro.cli reconstruct-features \
+          --mapping {input.mapping:q} \
+          --c1 {input.c1:q} \
+          --c3 {input.c3:q} \
+          --feature-spec {input.feature_spec:q} \
+          --matrix-output {output.matrix:q} \
+          --selected-output {output.selected:q} \
+          --summary-output {output.summary:q} \
+          --minimum-source-members {params.minimum} \
+          --maximum-columns {params.maximum}
+        """
+
+
+rule check_reconstruction:
+    input:
+        specification=str(SPECIFICATION),
+        topology=rules.reconstruct_topology.output.summary,
+        features=rules.reconstruct_features.output.summary,
+    output:
+        checks=str(RECONSTRUCTION_CHECKS),
+    shell:
+        """
+        python -m graphsage_ppi_repro.cli check-milestone \
+          --specification {input.specification:q} \
+          --topology-summary {input.topology:q} \
+          --feature-summary {input.features:q} \
+          --output {output.checks:q}
+        """
+
+
+rule write_reconstruction_manifest:
+    input:
+        source_report=rules.acquire_upstream_sources.output.report,
+        mapping=rules.reconstruct_topology.output.mapping,
+        edges=rules.reconstruct_topology.output.edges,
+        topology_summary=rules.reconstruct_topology.output.summary,
+        matrix=rules.reconstruct_features.output.matrix,
+        selected=rules.reconstruct_features.output.selected,
+        feature_summary=rules.reconstruct_features.output.summary,
+        checks=rules.check_reconstruction.output.checks,
+        sources=str(SOURCES),
+        specification=str(SPECIFICATION),
+        graph_spec=str(GRAPH_SPEC),
+        feature_spec=str(FEATURE_SPEC),
+    output:
+        manifest=str(RUN_MANIFEST),
+    params:
+        project_root=str(PROJECT_ROOT),
+        reproduction_root=str(REPRO_ROOT),
+    shell:
+        """
+        python -m graphsage_ppi_repro.cli write-manifest \
+          --output {output.manifest:q} \
+          --project-root {params.project_root:q} \
+          --reproduction-root {params.reproduction_root:q} \
+          --source-report {input.source_report:q} \
+          --stage topology_and_features \
+          --artifact {input.mapping:q} \
+          --artifact {input.edges:q} \
+          --artifact {input.topology_summary:q} \
+          --artifact {input.matrix:q} \
+          --artifact {input.selected:q} \
+          --artifact {input.feature_summary:q} \
+          --artifact {input.checks:q} \
+          --specification {input.sources:q} \
+          --specification {input.specification:q} \
+          --specification {input.graph_spec:q} \
+          --specification {input.feature_spec:q}
+        """
+
+
+rule acquire_graphsage_reference:
+    input:
+        manifest=str(SOURCES),
+    output:
+        report=str(REFERENCE_REPORT),
+        archive=str(GRAPHSAGE_REFERENCE),
+    params:
+        data_dir=str(DATA_DIR),
+    shell:
+        """
+        python -m graphsage_ppi_repro.cli ensure-sources \
+          --manifest {input.manifest:q} \
+          --data-dir {params.data_dir:q} \
+          --source-id graphsage_ppi_reference \
+          --role reference \
+          --report {output.report:q}
+        """
+
+
+rule validate_topology_and_features:
+    input:
+        reconstruction=rules.write_reconstruction_manifest.output.manifest,
+        reference=rules.acquire_graphsage_reference.output.archive,
+        mapping=rules.reconstruct_topology.output.mapping,
+        edges=rules.reconstruct_topology.output.edges,
+        features=rules.reconstruct_features.output.matrix,
+    output:
+        json=str(VALIDATION_JSON),
+        markdown=str(VALIDATION_MD),
+    shell:
+        """
+        python -m graphsage_ppi_repro.cli validate-topology-features \
+          --reference {input.reference:q} \
+          --mapping {input.mapping:q} \
+          --edges {input.edges:q} \
+          --features {input.features:q} \
+          --json-output {output.json:q} \
+          --markdown-output {output.markdown:q}
+        """
