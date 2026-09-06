@@ -160,9 +160,7 @@ class Python2InsertionDict(Generic[Key]):
         return [(slot, entry.key) for slot, entry in self.occupied_entries()]
 
 
-def ordered_string_keys(
-    keys: Iterable[str], *, word_size_bits: int = 64
-) -> list[str]:
+def ordered_string_keys(keys: Iterable[str], *, word_size_bits: int = 64) -> list[str]:
     table: Python2InsertionDict[str] = Python2InsertionDict(
         python2_string_hash, word_size_bits=word_size_bits
     )

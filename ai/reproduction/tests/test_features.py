@@ -167,9 +167,7 @@ def test_full_feature_reconstruction_on_tiny_inputs(tmp_path: Path) -> None:
         maximum_columns=3,
     )
     observed = np.load(matrix_path, allow_pickle=False)
-    expected = np.array(
-        [[1, 0, 1], [1, 1, 0], [0, 1, 0], [1, 0, 1]], dtype=np.float64
-    )
+    expected = np.array([[1, 0, 1], [1, 1, 0], [0, 1, 0], [1, 0, 1]], dtype=np.float64)
     assert np.array_equal(observed, expected)
 
 

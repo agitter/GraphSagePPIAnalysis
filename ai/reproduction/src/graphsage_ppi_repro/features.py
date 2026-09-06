@@ -7,9 +7,9 @@ import hashlib
 import os
 import struct
 import tempfile
+from collections.abc import Sequence
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Sequence
 
 import numpy as np
 
@@ -249,8 +249,7 @@ def _validate_selected_against_spec(
         if failed:
             raise FeatureError(
                 f"Derived feature column {index} disagrees with the accepted "
-                "specification: "
-                + ", ".join(failed)
+                "specification: " + ", ".join(failed)
             )
 
 

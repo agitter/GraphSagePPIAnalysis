@@ -249,9 +249,7 @@ def reconstruct_topology(
     """Reconstruct all rows and logical undirected edges from OhmNet."""
 
     specs = read_graph_specs(graph_spec_path)
-    networks = parse_selected_networks(
-        archive_path, specs, word_size_bits=word_size_bits
-    )
+    networks = parse_selected_networks(archive_path, specs, word_size_bits=word_size_bits)
 
     mapping_rows: list[dict[str, object]] = []
     graph_rows: list[dict[str, object]] = []
@@ -345,13 +343,10 @@ def reconstruct_topology(
 
     split_graph_counts = Counter(network.spec.split for network in networks)
     split_row_counts = Counter(str(row["split"]) for row in mapping_rows)
-    row_gene_hash = _hash_lines(
-        iter(f"{row['entrez_gene_id']}\n" for row in mapping_rows)
-    )
+    row_gene_hash = _hash_lines(iter(f"{row['entrez_gene_id']}\n" for row in mapping_rows))
     node_gene_pair_hash = _hash_lines(
         iter(
-            f"{row['graphsage_node_id']}\t{row['entrez_gene_id']}\n"
-            for row in mapping_rows
+            f"{row['graphsage_node_id']}\t{row['entrez_gene_id']}\n" for row in mapping_rows
         )
     )
     edge_count = sum(len(network.raw_edges) for network in networks)

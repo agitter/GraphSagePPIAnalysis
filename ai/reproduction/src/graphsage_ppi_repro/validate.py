@@ -121,9 +121,7 @@ def validate_topology_and_features(
     graph = json.loads(graph_bytes)
     id_map = json.loads(id_map_bytes)
     target_features = np.load(io.BytesIO(feature_bytes), allow_pickle=False)
-    target_edges = [
-        (int(edge["source"]), int(edge["target"])) for edge in graph["links"]
-    ]
+    target_edges = [(int(edge["source"]), int(edge["target"])) for edge in graph["links"]]
 
     expected_node_ids = list(range(len(mapping)))
     mapping_node_ids = [int(row["graphsage_node_id"]) for row in mapping]

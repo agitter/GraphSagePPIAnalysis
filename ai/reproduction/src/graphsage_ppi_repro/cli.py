@@ -28,9 +28,7 @@ def _path(value: str) -> Path:
     return Path(value).expanduser()
 
 
-def _add_path_argument(
-    parser: argparse.ArgumentParser, name: str, help_text: str
-) -> None:
+def _add_path_argument(parser: argparse.ArgumentParser, name: str, help_text: str) -> None:
     parser.add_argument(name, type=_path, help=help_text)
 
 

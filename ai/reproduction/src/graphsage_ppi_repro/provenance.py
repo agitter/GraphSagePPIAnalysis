@@ -25,7 +25,7 @@ import urllib.request
 import zipfile
 from collections.abc import Iterable, Sequence
 from dataclasses import asdict, dataclass
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any
 
@@ -90,7 +90,7 @@ class FileVerification:
 def utc_now() -> str:
     """Return an ISO-8601 UTC timestamp with second precision."""
 
-    return datetime.now(timezone.utc).isoformat(timespec="seconds")
+    return datetime.now(UTC).isoformat(timespec="seconds")
 
 
 def sha256_file(path: Path, chunk_size: int = 1024 * 1024) -> str:
@@ -190,9 +190,7 @@ def read_source_manifest(path: Path) -> list[SourceRecord]:
     return records
 
 
-def _validate_source_record(
-    record: SourceRecord, *, path: Path, line_number: int
-) -> None:
+def _validate_source_record(record: SourceRecord, *, path: Path, line_number: int) -> None:
     location = f"{path}:{line_number}"
     if not record.source_id:
         raise SourceError(f"Blank source_id at {location}")
@@ -336,9 +334,7 @@ def validate_source_file(path: Path, record: SourceRecord) -> FileVerification:
     )
 
 
-def _download_to(
-    url: str, temporary: Path, timeout_seconds: int
-) -> str:
+def _download_to(url: str, temporary: Path, timeout_seconds: int) -> str:
     request = urllib.request.Request(
         url,
         headers={
@@ -524,16 +520,13 @@ def check_reconstruction_milestone(
             == expected.get("distinct_entrez_gene_ids")
         ),
         "edge_record_count": (
-            topology_counts.get("edge_records")
-            == expected.get("graphsage_edge_records")
+            topology_counts.get("edge_records") == expected.get("graphsage_edge_records")
         ),
         "split_graph_counts": (
-            topology_counts.get("split_graph_counts")
-            == expected.get("split_graph_counts")
+            topology_counts.get("split_graph_counts") == expected.get("split_graph_counts")
         ),
         "split_row_counts": (
-            topology_counts.get("split_row_counts")
-            == expected.get("split_row_counts")
+            topology_counts.get("split_row_counts") == expected.get("split_row_counts")
         ),
         "topology_content_hashes": topology_hashes == expected_topology_hashes,
         "feature_shape": observed_shape == expected_shape,
