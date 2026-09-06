@@ -63,6 +63,7 @@ desktop.ini
 # ----------------------------------------------------------------------
 /reproduction/.pixi/
 /reproduction/.snakemake/
+/reproduction/data/
 /reproduction/build/
 /reproduction/results/
 /reproduction/.coverage

@@ -89,11 +89,15 @@ before the environment is considered frozen.
 
 ## Inputs and cache
 
-External inputs are stored in the project-level ignored directory:
+External inputs are stored in a flat, package-local ignored directory:
 
 ```text
-ai/data/
+reproduction/data/
 ```
+
+The default workflow does not read or write the sibling `ai/data/` directory.
+That directory may contain private investigator scratch data from analyses outside
+this reproduction package.
 
 `spec/sources.tsv` records, for every source:
 
@@ -193,8 +197,8 @@ independent validation step.
 pixi run clean
 ```
 
-Only `build/` and `results/` are removed. Downloaded data under `ai/data/` are
-preserved.
+Only `build/` and `results/` are removed. Downloaded data under
+`reproduction/data/` are preserved.
 
 ## Specification files
 

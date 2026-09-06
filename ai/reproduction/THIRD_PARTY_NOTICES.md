@@ -3,8 +3,8 @@
 This repository contains software for acquiring and transforming third-party
 data. Except for small evidence-backed specifications and test fixtures, the
 upstream datasets and released reference archives are not committed here. They
-are downloaded into the ignored `ai/data/` cache and remain governed by their
-own terms.
+are downloaded into the ignored package-local `reproduction/data/` cache and
+remain governed by their own terms.
 
 ## Molecular Signatures Database (MSigDB) v6.1
 

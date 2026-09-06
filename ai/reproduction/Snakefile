@@ -13,7 +13,9 @@ configfile: "spec/specification.yaml"
 
 REPRO_ROOT = Path(workflow.basedir).resolve()
 PROJECT_ROOT = REPRO_ROOT.parent
-DATA_DIR = PROJECT_ROOT / "data"
+# Keep the workflow cache package-local. Never read or write the sibling
+# ``ai/data`` directory, which may be private investigator scratch space.
+DATA_DIR = REPRO_ROOT / "data"
 
 SOURCES = REPRO_ROOT / "spec" / "sources.tsv"
 GRAPH_SPEC = REPRO_ROOT / "spec" / "selected_graphs.tsv"
