@@ -487,9 +487,10 @@ def check_reconstruction_milestone(
     specification_path: Path,
     topology_summary_path: Path,
     feature_summary_path: Path,
+    label_summary_path: Path,
     output_path: Path,
 ) -> dict[str, object]:
-    """Check target-independent topology and feature invariants.
+    """Check target-independent topology, feature, and label invariants.
 
     This check reads only committed expectations and summaries generated from
     upstream sources.  It does not open the released GraphSAGE reference ZIP,
@@ -502,6 +503,7 @@ def check_reconstruction_milestone(
     expected = _require_mapping(validation.get("expected"), "validation.expected")
     topology = _read_json_object(topology_summary_path)
     features = _read_json_object(feature_summary_path)
+    labels = _read_json_object(label_summary_path)
 
     topology_counts = _require_mapping(topology.get("counts"), "topology counts")
     topology_hashes = _require_mapping(
@@ -509,6 +511,9 @@ def check_reconstruction_milestone(
     )
     feature_counts = _require_mapping(features.get("counts"), "feature counts")
     feature_hashes = _require_mapping(features.get("hashes"), "feature hashes")
+    label_counts = _require_mapping(labels.get("counts"), "label counts")
+    label_hashes = _require_mapping(labels.get("hashes"), "label hashes")
+    term_selection = _require_mapping(labels.get("term_selection"), "label term selection")
 
     expected_topology_hashes = _require_mapping(
         expected.get("topology_content_hashes"),
@@ -516,6 +521,8 @@ def check_reconstruction_milestone(
     )
     expected_shape = expected.get("feature_shape")
     observed_shape = [feature_counts.get("rows"), feature_counts.get("columns")]
+    expected_label_shape = expected.get("label_shape")
+    observed_label_shape = [label_counts.get("rows"), label_counts.get("columns")]
 
     checks: dict[str, bool] = {
         "graph_count": topology_counts.get("graphs") == expected.get("graphs"),
@@ -555,11 +562,37 @@ def check_reconstruction_milestone(
             feature_hashes.get("npy_file_sha256")
             == expected.get("graphsage_feature_npy_sha256")
         ),
+        "label_shape": observed_label_shape == expected_label_shape,
+        "label_positive_cells": (
+            label_counts.get("positive_cells") == expected.get("label_positive_cells")
+        ),
+        "label_namespace_counts": (
+            label_counts.get("selected_by_namespace")
+            == expected.get("label_namespace_counts")
+        ),
+        "label_distinct_membership_vectors": (
+            label_counts.get("distinct_column_membership_vectors")
+            == expected.get("label_distinct_membership_vectors")
+        ),
+        "label_repeated_gene_consistency": (
+            label_counts.get("repeated_gene_vector_conflicts") == 0
+        ),
+        "label_unmapped_graph_gene_ids": (
+            label_counts.get("unmapped_graph_gene_ids")
+            == expected.get("label_unmapped_graph_gene_ids")
+        ),
+        "label_term_set_recovered": (
+            term_selection.get("derived_set_matches_column_specification") is True
+        ),
+        "label_uint8_data_hash": (
+            label_hashes.get("uint8_c_order_data_sha256")
+            == expected.get("label_uint8_c_order_data_sha256")
+        ),
     }
 
     result: dict[str, object] = {
         "schema_version": 1,
-        "scope": "target-independent topology and feature invariants",
+        "scope": "target-independent topology, feature, and label invariants",
         "generated_at_utc": utc_now(),
         "inputs": {
             "specification": str(specification_path.resolve()),
@@ -568,6 +601,8 @@ def check_reconstruction_milestone(
             "topology_summary_sha256": sha256_file(topology_summary_path),
             "feature_summary": str(feature_summary_path.resolve()),
             "feature_summary_sha256": sha256_file(feature_summary_path),
+            "label_summary": str(label_summary_path.resolve()),
+            "label_summary_sha256": sha256_file(label_summary_path),
         },
         "checks": checks,
         "all_checks_pass": all(checks.values()),

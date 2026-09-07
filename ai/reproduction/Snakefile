@@ -1,8 +1,8 @@
 """Readable workflow for the central GraphSAGE PPI reconstruction.
 
-The current milestone reconstructs the complete biological row order, logical
-PPI topology, and 50 input features.  Pixi acquires or verifies immutable files
-under ``data/`` before Snakemake starts.  Snakemake treats those files only as
+This milestone reconstructs the complete biological row order, PPI topology,
+50 input features, and 121 GO labels. Pixi acquires or verifies immutable files
+under ``data/`` before Snakemake starts. Snakemake treats those files only as
 inputs; generated outputs are confined to ``build/`` and ``results/``.
 Released GraphSAGE data enter only through ``validate``.
 """
@@ -14,32 +14,54 @@ configfile: "spec/specification.yaml"
 
 REPRO_ROOT = Path(workflow.basedir).resolve()
 PROJECT_ROOT = REPRO_ROOT.parent
-# Package-local immutable input cache. Files under this directory must never
-# appear in a Snakemake output declaration.
+SPEC_DIR = REPRO_ROOT / "spec"
 DATA_DIR = REPRO_ROOT / "data"
+BUILD_DIR = REPRO_ROOT / "build"
+RESULTS_DIR = REPRO_ROOT / "results"
 
-SOURCES = REPRO_ROOT / "spec" / "sources.tsv"
-GRAPH_SPEC = REPRO_ROOT / "spec" / "selected_graphs.tsv"
-FEATURE_SPEC = REPRO_ROOT / "spec" / "feature_columns.tsv"
-SPECIFICATION = REPRO_ROOT / "spec" / "specification.yaml"
+SOURCES = SPEC_DIR / "sources.tsv"
+GRAPH_SPEC = SPEC_DIR / "selected_graphs.tsv"
+FEATURE_SPEC = SPEC_DIR / "feature_columns.tsv"
+LABEL_COLUMNS = SPEC_DIR / "label_columns.tsv"
+IDENTIFIER_DECISIONS = SPEC_DIR / "identifier_decisions.tsv"
+SPECIFICATION = SPEC_DIR / "specification.yaml"
 
 OHMNET = DATA_DIR / "bio-tissue-networks.tar.gz"
 MSIGDB_C1 = DATA_DIR / "c1.all.v6.1.entrez.gmt"
 MSIGDB_C3 = DATA_DIR / "c3.all.v6.1.entrez.gmt"
+GOA_GAF = DATA_DIR / "goa_human.gaf.159.gz"
+GOA_GPI = DATA_DIR / "goa_human.gpi.159.gz"
+GP2PROTEIN = DATA_DIR / "2016-06-01-gp2protein.geneid.gz"
+GO_ONTOLOGY = DATA_DIR / "2016-06-01-go.obo"
 GRAPHSAGE_REFERENCE = DATA_DIR / "graphsage_ppi.zip"
 
-SOURCE_REPORT = REPRO_ROOT / "build" / "sources" / "upstream_milestone1.json"
-REFERENCE_REPORT = REPRO_ROOT / "build" / "sources" / "graphsage_reference.json"
-NODE_MAPPING = REPRO_ROOT / "build" / "topology" / "node_to_entrez.tsv.gz"
-EDGE_TABLE = REPRO_ROOT / "build" / "topology" / "edges.tsv.gz"
-TOPOLOGY_SUMMARY = REPRO_ROOT / "build" / "topology" / "summary.json"
-FEATURE_MATRIX = REPRO_ROOT / "build" / "features" / "ppi-feats.npy"
-SELECTED_FEATURES = REPRO_ROOT / "build" / "features" / "selected_features.tsv"
-FEATURE_SUMMARY = REPRO_ROOT / "build" / "features" / "summary.json"
-RECONSTRUCTION_CHECKS = REPRO_ROOT / "build" / "reconstruction_checks.json"
-RUN_MANIFEST = REPRO_ROOT / "results" / "reconstruction_manifest.json"
-VALIDATION_JSON = REPRO_ROOT / "results" / "validation.json"
-VALIDATION_MD = REPRO_ROOT / "results" / "validation.md"
+SOURCE_REPORT = BUILD_DIR / "sources" / "upstream_sources.json"
+REFERENCE_REPORT = BUILD_DIR / "sources" / "graphsage_reference.json"
+NODE_MAPPING = BUILD_DIR / "topology" / "node_to_entrez.tsv.gz"
+EDGE_TABLE = BUILD_DIR / "topology" / "edges.tsv.gz"
+TOPOLOGY_SUMMARY = BUILD_DIR / "topology" / "summary.json"
+FEATURE_MATRIX = BUILD_DIR / "features" / "ppi-feats.npy"
+SELECTED_FEATURES = BUILD_DIR / "features" / "selected_features.tsv"
+FEATURE_SUMMARY = BUILD_DIR / "features" / "summary.json"
+LABEL_MATRIX = BUILD_DIR / "labels" / "ppi-labels.npy"
+CLASS_MAP = BUILD_DIR / "labels" / "ppi-class_map.json"
+SELECTED_LABELS = BUILD_DIR / "labels" / "selected_labels.tsv"
+LABEL_SUMMARY = BUILD_DIR / "labels" / "summary.json"
+RECONSTRUCTION_CHECKS = BUILD_DIR / "reconstruction_checks.json"
+RUN_MANIFEST = RESULTS_DIR / "reconstruction_manifest.json"
+VALIDATION_JSON = RESULTS_DIR / "validation.json"
+VALIDATION_MD = RESULTS_DIR / "validation.md"
+LABEL_VALIDATION_JSON = RESULTS_DIR / "label_validation.json"
+LABEL_VALIDATION_MD = RESULTS_DIR / "label_validation.md"
+
+LABEL_CONFIG = config["reconstruction"]["labels"]
+EVIDENCE_FLAGS = " ".join(
+    f"--evidence-code {code}" for code in LABEL_CONFIG["evidence_codes"]
+)
+RELATION_FLAGS = " ".join(
+    f"--allowed-relation {relation}"
+    for relation in LABEL_CONFIG["allowed_relations"].values()
+)
 
 
 rule all:
@@ -56,6 +78,8 @@ rule validate:
     input:
         str(VALIDATION_JSON),
         str(VALIDATION_MD),
+        str(LABEL_VALIDATION_JSON),
+        str(LABEL_VALIDATION_MD),
 
 
 rule verify_upstream_sources:
@@ -64,6 +88,10 @@ rule verify_upstream_sources:
         ohmnet=str(OHMNET),
         c1=str(MSIGDB_C1),
         c3=str(MSIGDB_C3),
+        gaf=str(GOA_GAF),
+        gpi=str(GOA_GPI),
+        gp2protein=str(GP2PROTEIN),
+        ontology=str(GO_ONTOLOGY),
     output:
         report=str(SOURCE_REPORT),
     params:
@@ -76,6 +104,10 @@ rule verify_upstream_sources:
           --source-id ohmnet_networks \
           --source-id msigdb_c1_v61 \
           --source-id msigdb_c3_v61 \
+          --source-id goa_human_gaf_159 \
+          --source-id goa_human_gpi_159 \
+          --source-id gp2protein_geneid_20160601 \
+          --source-id go_ontology_20160601 \
           --report {output.report:q}
         """
 
@@ -132,11 +164,51 @@ rule reconstruct_features:
         """
 
 
+rule reconstruct_labels:
+    input:
+        mapping=rules.reconstruct_topology.output.mapping,
+        gaf=str(GOA_GAF),
+        gpi=str(GOA_GPI),
+        gp2protein=str(GP2PROTEIN),
+        ontology=str(GO_ONTOLOGY),
+        label_columns=str(LABEL_COLUMNS),
+        identifier_decisions=str(IDENTIFIER_DECISIONS),
+        source_report=rules.verify_upstream_sources.output.report,
+    output:
+        matrix=str(LABEL_MATRIX),
+        class_map=str(CLASS_MAP),
+        selected=str(SELECTED_LABELS),
+        summary=str(LABEL_SUMMARY),
+    params:
+        evidence_flags=EVIDENCE_FLAGS,
+        relation_flags=RELATION_FLAGS,
+        selected_term_count=LABEL_CONFIG["selected_term_count"],
+    shell:
+        """
+        python -m graphsage_ppi_repro.cli reconstruct-labels \
+          --mapping {input.mapping:q} \
+          --gaf {input.gaf:q} \
+          --gpi {input.gpi:q} \
+          --gp2protein {input.gp2protein:q} \
+          --ontology {input.ontology:q} \
+          --label-columns {input.label_columns:q} \
+          --identifier-decisions {input.identifier_decisions:q} \
+          --matrix-output {output.matrix:q} \
+          --class-map-output {output.class_map:q} \
+          --selected-labels-output {output.selected:q} \
+          --summary-output {output.summary:q} \
+          {params.evidence_flags} \
+          {params.relation_flags} \
+          --selected-term-count {params.selected_term_count}
+        """
+
+
 rule check_reconstruction:
     input:
         specification=str(SPECIFICATION),
         topology=rules.reconstruct_topology.output.summary,
         features=rules.reconstruct_features.output.summary,
+        labels=rules.reconstruct_labels.output.summary,
     output:
         checks=str(RECONSTRUCTION_CHECKS),
     shell:
@@ -145,6 +217,7 @@ rule check_reconstruction:
           --specification {input.specification:q} \
           --topology-summary {input.topology:q} \
           --feature-summary {input.features:q} \
+          --label-summary {input.labels:q} \
           --output {output.checks:q}
         """
 
@@ -155,14 +228,20 @@ rule write_reconstruction_manifest:
         mapping=rules.reconstruct_topology.output.mapping,
         edges=rules.reconstruct_topology.output.edges,
         topology_summary=rules.reconstruct_topology.output.summary,
-        matrix=rules.reconstruct_features.output.matrix,
-        selected=rules.reconstruct_features.output.selected,
+        feature_matrix=rules.reconstruct_features.output.matrix,
+        selected_features=rules.reconstruct_features.output.selected,
         feature_summary=rules.reconstruct_features.output.summary,
+        label_matrix=rules.reconstruct_labels.output.matrix,
+        class_map=rules.reconstruct_labels.output.class_map,
+        selected_labels=rules.reconstruct_labels.output.selected,
+        label_summary=rules.reconstruct_labels.output.summary,
         checks=rules.check_reconstruction.output.checks,
         sources=str(SOURCES),
         specification=str(SPECIFICATION),
         graph_spec=str(GRAPH_SPEC),
         feature_spec=str(FEATURE_SPEC),
+        label_columns=str(LABEL_COLUMNS),
+        identifier_decisions=str(IDENTIFIER_DECISIONS),
     output:
         manifest=str(RUN_MANIFEST),
     params:
@@ -175,18 +254,24 @@ rule write_reconstruction_manifest:
           --project-root {params.project_root:q} \
           --reproduction-root {params.reproduction_root:q} \
           --source-report {input.source_report:q} \
-          --stage topology_and_features \
+          --stage topology_features_and_labels \
           --artifact {input.mapping:q} \
           --artifact {input.edges:q} \
           --artifact {input.topology_summary:q} \
-          --artifact {input.matrix:q} \
-          --artifact {input.selected:q} \
+          --artifact {input.feature_matrix:q} \
+          --artifact {input.selected_features:q} \
           --artifact {input.feature_summary:q} \
+          --artifact {input.label_matrix:q} \
+          --artifact {input.class_map:q} \
+          --artifact {input.selected_labels:q} \
+          --artifact {input.label_summary:q} \
           --artifact {input.checks:q} \
           --specification {input.sources:q} \
           --specification {input.specification:q} \
           --specification {input.graph_spec:q} \
-          --specification {input.feature_spec:q}
+          --specification {input.feature_spec:q} \
+          --specification {input.label_columns:q} \
+          --specification {input.identifier_decisions:q}
         """
 
 
@@ -227,6 +312,27 @@ rule validate_topology_and_features:
           --mapping {input.mapping:q} \
           --edges {input.edges:q} \
           --features {input.features:q} \
+          --json-output {output.json:q} \
+          --markdown-output {output.markdown:q}
+        """
+
+
+rule validate_labels:
+    input:
+        reconstruction=rules.write_reconstruction_manifest.output.manifest,
+        reference=str(GRAPHSAGE_REFERENCE),
+        reference_report=rules.verify_graphsage_reference.output.report,
+        matrix=rules.reconstruct_labels.output.matrix,
+        class_map=rules.reconstruct_labels.output.class_map,
+    output:
+        json=str(LABEL_VALIDATION_JSON),
+        markdown=str(LABEL_VALIDATION_MD),
+    shell:
+        """
+        python -m graphsage_ppi_repro.cli validate-labels \
+          --reference {input.reference:q} \
+          --matrix {input.matrix:q} \
+          --class-map {input.class_map:q} \
           --json-output {output.json:q} \
           --markdown-output {output.markdown:q}
         """

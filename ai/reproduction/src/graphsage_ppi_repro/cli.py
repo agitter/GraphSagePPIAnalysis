@@ -14,6 +14,8 @@ from collections.abc import Sequence
 from pathlib import Path
 
 from .features import FeatureError, reconstruct_features
+from .identifiers import IdentifierError
+from .labels import LabelError, reconstruct_labels
 from .provenance import (
     SourceError,
     check_reconstruction_milestone,
@@ -21,7 +23,11 @@ from .provenance import (
     write_run_manifest,
 )
 from .topology import TopologyError, reconstruct_topology
-from .validate import ValidationError, validate_topology_and_features
+from .validate import (
+    ValidationError,
+    validate_labels_against_graphsage,
+    validate_topology_and_features,
+)
 
 
 def _path(value: str) -> Path:
@@ -91,6 +97,40 @@ def _build_parser() -> argparse.ArgumentParser:
     features.add_argument("--minimum-source-members", type=int, default=200)
     features.add_argument("--maximum-columns", type=int, default=50)
 
+    labels = subparsers.add_parser(
+        "reconstruct-labels",
+        help="Reconstruct the 121 GO-label columns from dated upstream sources.",
+    )
+    for name, text in (
+        ("--mapping", "Reconstructed node-to-Entrez mapping."),
+        ("--gaf", "GOA human release-159 GAF file."),
+        ("--gpi", "GOA human release-159 GPI file."),
+        ("--gp2protein", "Historical GeneID-to-UniProt mapping."),
+        ("--ontology", "June 2016 GO OBO ontology."),
+        ("--label-columns", "Accepted label_columns.tsv specification."),
+        ("--identifier-decisions", "Accepted identifier decisions."),
+        ("--matrix-output", "Output NumPy label matrix."),
+        ("--class-map-output", "Output GraphSAGE-style class map."),
+        ("--selected-labels-output", "Output selected-label metadata TSV."),
+        ("--summary-output", "Output JSON reconstruction summary."),
+    ):
+        labels.add_argument(name, type=_path, required=True, help=text)
+    labels.add_argument(
+        "--evidence-code",
+        action="append",
+        dest="evidence_codes",
+        required=True,
+        help="Accepted GAF evidence code; repeat for each code.",
+    )
+    labels.add_argument(
+        "--allowed-relation",
+        action="append",
+        dest="allowed_relations",
+        required=True,
+        help="Accepted normalized relation; repeat for each relation.",
+    )
+    labels.add_argument("--selected-term-count", type=int, default=121)
+
     manifest = subparsers.add_parser(
         "write-manifest", help="Write a reconstruction-stage provenance manifest."
     )
@@ -125,6 +165,7 @@ def _build_parser() -> argparse.ArgumentParser:
         ("--specification", "Frozen specification.yaml file."),
         ("--topology-summary", "Generated topology summary JSON."),
         ("--feature-summary", "Generated feature summary JSON."),
+        ("--label-summary", "Generated GO-label summary JSON."),
         ("--output", "Output target-independent check report."),
     ):
         checks.add_argument(name, type=_path, required=True, help=text)
@@ -142,6 +183,19 @@ def _build_parser() -> argparse.ArgumentParser:
         ("--markdown-output", "Human-readable validation report."),
     ):
         validation.add_argument(name, type=_path, required=True, help=text)
+
+    label_validation = subparsers.add_parser(
+        "validate-labels",
+        help="Compare reconstructed labels with the released GraphSAGE target.",
+    )
+    for name, text in (
+        ("--reference", "Released GraphSAGE PPI ZIP."),
+        ("--matrix", "Reconstructed ppi-labels.npy."),
+        ("--class-map", "Reconstructed ppi-class_map.json."),
+        ("--json-output", "Machine-readable validation report."),
+        ("--markdown-output", "Human-readable validation report."),
+    ):
+        label_validation.add_argument(name, type=_path, required=True, help=text)
 
     clean = subparsers.add_parser(
         "clean", help="Remove generated build and result directories only."
@@ -208,11 +262,31 @@ def _run(arguments: argparse.Namespace) -> None:
         )
         return
 
+    if arguments.command == "reconstruct-labels":
+        reconstruct_labels(
+            mapping_path=arguments.mapping,
+            gaf_path=arguments.gaf,
+            gpi_path=arguments.gpi,
+            gp2protein_path=arguments.gp2protein,
+            ontology_path=arguments.ontology,
+            label_columns_path=arguments.label_columns,
+            identifier_decisions_path=arguments.identifier_decisions,
+            matrix_output=arguments.matrix_output,
+            class_map_output=arguments.class_map_output,
+            selected_labels_output=arguments.selected_labels_output,
+            summary_output=arguments.summary_output,
+            evidence_codes=arguments.evidence_codes,
+            allowed_relations=arguments.allowed_relations,
+            selected_term_count=arguments.selected_term_count,
+        )
+        return
+
     if arguments.command == "check-milestone":
         check_reconstruction_milestone(
             specification_path=arguments.specification,
             topology_summary_path=arguments.topology_summary,
             feature_summary_path=arguments.feature_summary,
+            label_summary_path=arguments.label_summary,
             output_path=arguments.output,
         )
         return
@@ -240,6 +314,16 @@ def _run(arguments: argparse.Namespace) -> None:
         )
         return
 
+    if arguments.command == "validate-labels":
+        validate_labels_against_graphsage(
+            reference_archive=arguments.reference,
+            reconstructed_matrix=arguments.matrix,
+            reconstructed_class_map=arguments.class_map,
+            json_output=arguments.json_output,
+            markdown_output=arguments.markdown_output,
+        )
+        return
+
     if arguments.command == "clean":
         for directory in arguments.directory:
             _remove_generated_directory(directory)
@@ -255,7 +339,15 @@ def main(argv: Sequence[str] | None = None) -> int:
     arguments = parser.parse_args(argv)
     try:
         _run(arguments)
-    except (FeatureError, SourceError, TopologyError, ValidationError, OSError) as exc:
+    except (
+        FeatureError,
+        IdentifierError,
+        LabelError,
+        SourceError,
+        TopologyError,
+        ValidationError,
+        OSError,
+    ) as exc:
         print(f"ERROR: {exc}", file=sys.stderr)
         return 2
     return 0

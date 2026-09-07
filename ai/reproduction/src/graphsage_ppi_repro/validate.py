@@ -210,3 +210,146 @@ def validate_topology_and_features(
         failed = [name for name, passed in checks.items() if not passed]
         raise ValidationError("Validation failed: " + ", ".join(failed))
     return result
+
+
+def _write_label_markdown(path: Path, result: dict[str, object]) -> None:
+    checks = result["checks"]
+    if not isinstance(checks, dict):
+        raise TypeError("Label-validation checks must be a dictionary")
+    lines = [
+        "# GraphSAGE PPI reconstruction validation - GO labels",
+        "",
+        f"Overall result: **{'PASS' if result['all_checks_pass'] else 'FAIL'}**",
+        "",
+        "The reconstructed 56,944 x 121 label matrix and numeric-node-ordered",
+        "class-map semantics were compared with the released `ppi-class_map.json`.",
+        "The reference archive is not read during reconstruction.",
+        "",
+        "| Check | Result |",
+        "|---|---:|",
+    ]
+    for name, passed in checks.items():
+        lines.append(f"| `{name}` | {'PASS' if passed else 'FAIL'} |")
+    lines.extend(
+        [
+            "",
+            f"- Cells compared: {result['cells_compared']:,}",
+            f"- Differing cells: {result['differing_cells']}",
+            f"- Differing rows: {result['differing_rows']}",
+            "",
+        ]
+    )
+    write_text_atomic(path, "\n".join(lines))
+
+
+def validate_labels_against_graphsage(
+    *,
+    reference_archive: Path,
+    reconstructed_matrix: Path,
+    reconstructed_class_map: Path,
+    json_output: Path,
+    markdown_output: Path,
+    expected_rows: int = 56_944,
+    expected_columns: int = 121,
+) -> dict[str, object]:
+    """Compare reconstructed labels with the released GraphSAGE class map."""
+
+    reconstructed = np.load(reconstructed_matrix, allow_pickle=False)
+    class_map = json.loads(reconstructed_class_map.read_text(encoding="utf-8"))
+    if not isinstance(class_map, dict):
+        raise ValidationError("Reconstructed class map must be a JSON object")
+
+    with zipfile.ZipFile(reference_archive) as archive:
+        member = next(
+            (name for name in archive.namelist() if name.endswith("ppi-class_map.json")),
+            None,
+        )
+        if member is None:
+            raise ValidationError(
+                f"No ppi-class_map.json member found in {reference_archive}"
+            )
+        target_bytes = archive.read(member)
+    target = json.loads(target_bytes)
+    if not isinstance(target, dict):
+        raise ValidationError("Released class map must be a JSON object")
+
+    expected_keys = [str(index) for index in range(len(target))]
+    target_keys_exact = set(target) == set(expected_keys)
+    reconstructed_keys_exact = list(class_map) == expected_keys
+    if target_keys_exact:
+        target_matrix = np.asarray([target[key] for key in expected_keys], dtype=np.uint8)
+    else:
+        target_matrix = np.empty((0, 0), dtype=np.uint8)
+    if reconstructed_keys_exact:
+        class_map_matrix = np.asarray(
+            [class_map[key] for key in expected_keys], dtype=np.uint8
+        )
+    else:
+        class_map_matrix = np.empty((0, 0), dtype=np.uint8)
+
+    shape_exact = reconstructed.shape == target_matrix.shape
+    class_map_shape_exact = class_map_matrix.shape == target_matrix.shape
+    if shape_exact:
+        difference = reconstructed != target_matrix
+        differing_cells = int(np.count_nonzero(difference))
+        differing_rows = int(np.count_nonzero(np.any(difference, axis=1)))
+        mismatch_positions = np.argwhere(difference)
+        first_mismatch = (
+            [int(value) for value in mismatch_positions[0]]
+            if mismatch_positions.size
+            else None
+        )
+    else:
+        differing_cells = None
+        differing_rows = None
+        first_mismatch = None
+
+    checks = {
+        "reference_keys_complete": target_keys_exact,
+        "reconstructed_keys_numeric_order": reconstructed_keys_exact,
+        "matrix_dtype_uint8": reconstructed.dtype == np.dtype(np.uint8),
+        "matrix_shape_exact": shape_exact,
+        "matrix_values_exact": shape_exact and differing_cells == 0,
+        "class_map_shape_exact": class_map_shape_exact,
+        "class_map_values_exact": class_map_shape_exact
+        and np.array_equal(class_map_matrix, target_matrix),
+        "label_column_count_exact": (
+            shape_exact and reconstructed.shape[1] == expected_columns
+        ),
+        "label_row_count_exact": shape_exact and reconstructed.shape[0] == expected_rows,
+    }
+    result: dict[str, object] = {
+        "schema_version": 1,
+        "scope": (
+            f"complete {expected_rows:,}-row by {expected_columns}-column GO label matrix"
+        ),
+        "reference": {
+            "archive": str(reference_archive.resolve()),
+            "archive_sha256": sha256_file(reference_archive),
+            "member": member,
+            "member_sha256": _member_sha256(target_bytes),
+        },
+        "reconstructed": {
+            "matrix": str(reconstructed_matrix.resolve()),
+            "matrix_sha256": sha256_file(reconstructed_matrix),
+            "class_map": str(reconstructed_class_map.resolve()),
+            "class_map_sha256": sha256_file(reconstructed_class_map),
+        },
+        "reconstructed_shape": [int(value) for value in reconstructed.shape],
+        "reference_shape": [int(value) for value in target_matrix.shape],
+        "reconstructed_dtype": str(reconstructed.dtype),
+        "positive_cells_reconstructed": int(reconstructed.sum()),
+        "positive_cells_reference": int(target_matrix.sum()),
+        "cells_compared": int(target_matrix.size) if shape_exact else 0,
+        "differing_cells": differing_cells,
+        "differing_rows": differing_rows,
+        "first_mismatch_row_column": first_mismatch,
+        "checks": checks,
+        "all_checks_pass": all(checks.values()),
+    }
+    write_json_atomic(json_output, result)
+    _write_label_markdown(markdown_output, result)
+    if not result["all_checks_pass"]:
+        failed = [name for name, passed in checks.items() if not passed]
+        raise ValidationError("Label validation failed: " + ", ".join(failed))
+    return result

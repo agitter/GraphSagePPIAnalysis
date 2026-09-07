@@ -40,6 +40,7 @@ reconstruction:
     propagation_relations:
     - is_a
     term_selection: top_121_by_full_human_prevalence
+    selected_term_count: 121
   graphsage:
     include_unsupervised_walks: false
   dgl:
@@ -79,8 +80,15 @@ validation:
     label_shape:
     - 56944
     - 121
+    label_positive_cells: 2102769
+    label_namespace_counts:
+      biological_process: 85
+      cellular_component: 26
+      molecular_function: 10
     label_uint8_c_order_data_sha256: 677cc50459190ba22afc0762356e573ca56e422c80fd36204669a81694afa78d
     label_distinct_membership_vectors: 118
+    label_unmapped_graph_gene_ids:
+    - 10159
   comparison_levels:
     graphsage_topology: structurally_exact
     graphsage_features: array_exact_and_byte_exact_npy

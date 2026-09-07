@@ -255,6 +255,24 @@ def test_reconstruct_without_target_then_validate_independently(tmp_path: Path) 
         maximum_columns=2,
     )
 
+    label_summary_path = tmp_path / "labels.json"
+    label_summary = {
+        "counts": {
+            "rows": 3,
+            "columns": 2,
+            "positive_cells": 4,
+            "selected_by_namespace": {"biological_process": 2},
+            "distinct_column_membership_vectors": 1,
+            "repeated_gene_vector_conflicts": 0,
+            "unmapped_graph_gene_ids": [],
+        },
+        "hashes": {"uint8_c_order_data_sha256": "synthetic-label-hash"},
+        "term_selection": {
+            "derived_set_matches_column_specification": True,
+        },
+    }
+    label_summary_path.write_text(json.dumps(label_summary), encoding="utf-8", newline="\n")
+
     specification = tmp_path / "specification.yaml"
     specification.write_text(
         yaml.safe_dump(
@@ -280,6 +298,12 @@ def test_reconstruct_without_target_then_validate_independently(tmp_path: Path) 
                         "graphsage_feature_npy_sha256": feature_summary["hashes"][
                             "npy_file_sha256"
                         ],
+                        "label_shape": [3, 2],
+                        "label_positive_cells": 4,
+                        "label_namespace_counts": {"biological_process": 2},
+                        "label_distinct_membership_vectors": 1,
+                        "label_unmapped_graph_gene_ids": [],
+                        "label_uint8_c_order_data_sha256": "synthetic-label-hash",
                     }
                 }
             },
@@ -291,6 +315,7 @@ def test_reconstruct_without_target_then_validate_independently(tmp_path: Path) 
         specification_path=specification,
         topology_summary_path=topology_summary_path,
         feature_summary_path=feature_summary_path,
+        label_summary_path=label_summary_path,
         output_path=tmp_path / "checks.json",
     )
     assert checks["all_checks_pass"]
@@ -342,6 +367,10 @@ def test_workflow_treats_cached_sources_as_inputs_only() -> None:
         assert "OHMNET" not in block
         assert "MSIGDB_C1" not in block
         assert "MSIGDB_C3" not in block
+        assert "GOA_GAF" not in block
+        assert "GOA_GPI" not in block
+        assert "GP2PROTEIN" not in block
+        assert "GO_ONTOLOGY" not in block
         assert "GRAPHSAGE_REFERENCE" not in block
 
     with (reproduction_root / "pixi.toml").open("rb") as handle:
@@ -351,3 +380,16 @@ def test_workflow_treats_cached_sources_as_inputs_only() -> None:
         "acquire-upstream",
         "acquire-graphsage-reference",
     ]
+    upstream_command = tasks["acquire-upstream"]
+    for source_id in (
+        "ohmnet_networks",
+        "msigdb_c1_v61",
+        "msigdb_c3_v61",
+        "goa_human_gaf_159",
+        "goa_human_gpi_159",
+        "gp2protein_geneid_20160601",
+        "go_ontology_20160601",
+    ):
+        assert f"--source-id {source_id}" in upstream_command
+    assert "rule reconstruct_labels:" in snakefile_text
+    assert "rule validate_labels:" in snakefile_text

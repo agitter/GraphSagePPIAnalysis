@@ -4,263 +4,258 @@
 
 The released GraphSAGE PPI dataset contains 24 tissue-specific graph components,
 56,944 tissue-instance rows, 818,716 graph-link records, 50 binary input
-features, and 121 binary GO labels. The same biological gene can occur in more
-than one tissue graph; a row is therefore a tissue-specific occurrence rather
-than a globally unique protein.
+features, and 121 binary GO labels. A row represents one occurrence of a gene in
+one tissue graph; the same biological gene can occur in several graphs.
 
-This package rebuilds deterministic data products used by supervised GraphSAGE
-and the DGL PPI derivative. It does not preserve the exploratory search process
-that led to the accepted rules. Those investigations, alternative hypotheses,
-and literature discrepancies remain elsewhere in the repository.
+This package reconstructs deterministic inputs used by supervised GraphSAGE and
+will derive the DGL PPI representation. Exploratory source screens, alternative
+hypotheses, split analyses, leakage experiments, literature discrepancies, and
+stochastic walks remain elsewhere in the repository.
 
-The principal design constraint is non-circularity: reconstruction code may use
-only upstream biological sources and committed, evidence-backed specifications.
-Only `graphsage_ppi_repro.validate` may open the released GraphSAGE and DGL
-archives.
+The principal design constraint is non-circularity. Reconstruction may use only
+upstream biological sources and committed evidence-backed specifications. Only
+`graphsage_ppi_repro.validate` may open released GraphSAGE or DGL targets.
 
 ## 2. Evidence-backed specifications
 
-Some facts are observable from the deposited data but cannot be rediscovered
-from public prose alone. They are recorded in small tables under `spec/` so they
-remain visible and reviewable rather than hidden in Python constants.
+Some facts are recoverable from the deposited dataset but not uniquely from
+public prose. They are committed as small tables under `spec/` so that they are
+visible and reviewable instead of hidden in Python constants.
 
 ### 2.1 Selected graph blocks
 
 `selected_graphs.tsv` records the exact OhmNet tissue file corresponding to each
-of the 24 GraphSAGE graph components, its deposited component order, and its
-training, validation, or test role.
+GraphSAGE component, its component order, and its train, validation, or test
+role. These identities and assignments are data-level exact. The historical
+rule that selected the 24 layers remains open, so the workflow reproduces the
+released selection instead of claiming that manuscript thresholds rediscover it.
 
-The identities and assignments are data-level exact. The historical rule that
-selected these 24 layers from the larger OhmNet release is open. The central
-workflow therefore reproduces the released selection instead of pretending
-that the manuscript's reported edge thresholds uniquely regenerate it.
+### 2.2 Feature and label columns
 
-### 2.2 Expected feature columns
+`feature_columns.tsv` records the expected feature order, source row, membership
+hash, source membership count, and projected row count. The implementation still
+parses the complete GMT sources and derives the columns before comparison.
 
-`feature_columns.tsv` records the derived feature order, source row, membership
-hash, source member count, and projected row count. It is an expected-result
-table. The implementation still parses the complete C1 and C3 GMT files and
-applies the global rule before comparing its derived columns with the table.
+`label_columns.tsv` records the 121 GO terms in released column order. Membership
+uniquely identifies 115 columns. Six columns form three indistinguishable pairs;
+their within-pair orientation is marked strongly supported and provisional.
 
-### 2.3 Label columns and identifier decisions
+### 2.3 Identifier decisions
 
-`label_columns.tsv` and `identifier_decisions.tsv` support the later GO-label
-milestone. They expose recovered column identities, duplicate-vector ambiguity,
-and historically complex identifier components that would otherwise become
-unexplained special cases in code.
+`identifier_decisions.tsv` records 15 explicit include or exclude amendments to
+direct historical UniProt-GeneID edges. These rows represent 13 protein
+accessions in graph-relevant ambiguous or missing-edge cases. Each row includes
+its rationale, evidence status, and repository evidence reference. No such
+amendment exists only as a Python conditional.
 
 ## 3. Source acquisition and provenance
 
-`spec/sources.tsv` is a flat, checksum-locked inventory. Each record is either:
+`spec/sources.tsv` is a flat checksum-locked inventory. An `upstream` source may
+influence reconstruction; a `reference` source may be read only by validation.
 
-- `upstream`, meaning it may influence reconstruction; or
-- `reference`, meaning validation alone may read it.
+Acquisition follows this sequence:
 
-Acquisition uses the following sequence:
-
-1. Reuse the local file when size, SHA-256, and structure are valid, without
-   modifying the file or its timestamp.
+1. Verify and reuse an existing valid cache file without changing it.
 2. Reject an existing invalid file without replacing it.
 3. Download a missing public source to an adjacent temporary path.
 4. Reject HTML error or login pages masquerading as data.
-5. Verify exact size and SHA-256.
-6. Perform a lightweight ZIP, TAR, gzip, GMT, or OBO check as appropriate.
-7. Install the verified temporary file atomically at the final cache path.
+5. Verify exact size, SHA-256, and a lightweight format check.
+6. Atomically install the verified file at its final path.
 
-Acquisition and reconstruction have separate ownership of files. A Pixi
-preflight task ensures that the required immutable files exist under `data/`.
-Snakemake lists those files only as inputs. It may generate source-verification
-reports under `build/`, but no rule declares a cached source or reference archive
-as an output. Consequently, cleaning or rerunning generated workflow products
-cannot cause Snakemake to remove or update source files.
+Pixi performs acquisition before Snakemake starts. Snakemake lists cached source
+files only as inputs and confines generated outputs to `build/` and `results/`.
+A future mirror may be added to `mirror_url`, but it must serve bytes with the
+same expected SHA-256 rather than a different source version.
 
-A future independent mirror can be added to the existing `mirror_url` column.
-The mirror must serve the same checksum-identified bytes; it is not permitted to
-be an alternate source version.
-
-Each reconstruction run writes a manifest containing source verification,
-specification hashes, generated artifact hashes, software and platform details,
-and Git state.
+The reconstruction manifest records source verification, specification and
+artifact hashes, software and platform details, and Git state.
 
 ## 4. Topology and biological row order
 
 ### 4.1 Immediate graph source
 
-The selected graph components are reconstructed from OhmNet tissue-specific
-edgelists. OhmNet represents nodes as Entrez GeneIDs, and the same ID in two
-layers denotes the same gene.
-
-For every selected archive member the implementation verifies the SHA-256 of
-the decompressed edgelist before parsing it. It retains self-loops and source
-line order and rejects duplicated undirected records.
+The selected components are reconstructed from OhmNet tissue-specific edgelists,
+whose nodes are Entrez GeneIDs. For each selected member the workflow verifies
+the decompressed SHA-256, retains source line order and self-loops, and rejects
+duplicate undirected records.
 
 ### 4.2 Recovered legacy ordering mechanism
 
-The anonymous GraphSAGE row order is reproduced by this global mechanism:
+The anonymous GraphSAGE row order is reconstructed by one global mechanism:
 
-1. Read each selected OhmNet edgelist in source line order.
+1. Read each selected edgelist in source line order.
 2. Retain Entrez identifiers as ASCII strings.
-3. Insert both endpoints while edges are encountered.
-4. Model an insertion-only, 64-bit, unrandomized CPython 2.7 dictionary.
+3. Insert both endpoints as edges are encountered.
+4. Model a 64-bit, unrandomized CPython 2.7 dictionary.
 5. Iterate occupied hash-table slots in table order.
-6. Concatenate the 24 local row sequences in the frozen component order.
+6. Concatenate the 24 local sequences in frozen component order.
 
-`legacy_order.py` implements only the required historical behavior: the Python
-2 string hash, perturb probing, resizing, reinsertion during resize, lookup, and
-occupied-slot iteration. It is not a general Python 2 emulator.
+`legacy_order.py` implements only the required string hash, probing, resize,
+reinsertion, lookup, and table-iteration behavior. A separate positive control
+reproduces the irregular serialized key order of the released class map.
 
-The resulting 56,944-row mapping agrees with all independently anchored rows and
-exactly supports the released graph, feature, and label data. A separate
-positive control inserts string keys `"0"` through `"56943"` and reproduces the
-irregular serialized key order of the released class-map dictionary. These
-facts make the mapping data-level exact under the mechanism, while the claim
-that the original authors literally used this preprocessing path remains
+The complete 56,944-row mapping is data-level exact under this mechanism. The
+claim that the original authors literally followed this preprocessing path is
 strongly inferred because the original preprocessing source was not located.
 
-### 4.3 Topology outputs
+### 4.3 Outputs
 
-The milestone writes:
-
-- a row-wise node-to-Entrez table;
-- an edge table retaining source line and tissue provenance;
-- graph boundaries, counts, source-member hashes, and stable content hashes.
-
-Compressed TSV outputs use a fixed gzip timestamp and no embedded filename, so
-identical logical rows produce identical gzip bytes.
+The topology stage writes a row-wise node-to-Entrez table, a source-provenance
+edge table, and a summary containing graph boundaries, counts, archive-member
+hashes, and stable content hashes. Compressed TSV outputs use deterministic gzip
+metadata.
 
 ## 5. Feature reconstruction
 
-### 5.1 Canonical public source
+### 5.1 Canonical source
 
-The package uses MSigDB v6.1 Entrez GMT files for collections C1 and C3. A
-separate acceptance analysis established that v6.1 produces the same ordered 50
-membership vectors as tested releases 5.0 through 6.0 and reproduces every
-released feature cell. Version 6.1 corrects the selected C3 name
-`AAAYWAACM_HFH4_01` to `AACTTT_UNKNOWN` without changing that set's membership.
+The package uses public MSigDB v6.1 Entrez GMT files for C1 and C3. A separate
+acceptance analysis established that v6.1 yields the same ordered 50 membership
+vectors as tested versions 5.0 through 6.0 and exactly reproduces the released
+matrix. Version 6.1 corrects the selected C3 name `AAAYWAACM_HFH4_01` to
+`AACTTT_UNKNOWN` without changing membership.
 
-This makes v6.1 a corrected canonical reproduction source. It does not identify
-which MSigDB version the GraphSAGE authors historically used.
+This makes v6.1 a corrected canonical reproduction source; it does not identify
+the historical version used by GraphSAGE.
 
-### 5.2 Selection rule
+### 5.2 Selection and projection
 
-The accepted global rule is:
+The accepted rule reads C1 and then C3 in deposited row order, retains sets with
+at least 200 distinct source Entrez IDs, stops at a global maximum of 50 columns,
+and only then projects memberships onto the reconstructed rows. It yields 30 C1
+and 20 C3 columns.
 
-1. Read C1 in deposited GMT order.
-2. Keep sets with at least 200 distinct source Entrez IDs.
-3. Continue with C3 in deposited GMT order.
-4. Append qualifying sets until the global list reaches 50 columns.
-5. Project the selected source memberships onto the reconstructed GraphSAGE row
-   sequence.
-
-This produces 30 C1 and 20 C3 columns. The code uses `>= 200`. The historical
-choice between `>= 200` and `> 200` is not identifiable from the output because
-both select the same first 50 columns in the tested releases.
-
-Selection occurs before projection. The eleventh column in zero-based position
-10, `chryq11`, has more than 200 source members but no members in the GraphSAGE
-gene universe; it is consequently retained as an all-zero output column. This
-is strong evidence for source-level filtering before projection and against a
-later empty-column removal step.
+The code uses `>= 200`; `> 200` is observationally equivalent for the selected
+prefix. Selection before projection explains why `chryq11` is retained despite
+becoming an all-zero GraphSAGE column.
 
 ### 5.3 Matrix representation
 
-The reconstructed feature matrix is float64 with shape 56,944 by 50. It is
-written using the NumPy v1.0 header form and 16-byte alignment found in the
-released file. Modern NumPy normally uses a different header-padding convention;
-the data array is unchanged, but reproducing the earlier header permits exact
-byte comparison of `ppi-feats.npy` itself.
+The 56,944 by 50 feature matrix is float64. It is written with the NumPy v1.0
+header alignment found in the released member, permitting both array equality
+and byte equality for `ppi-feats.npy`.
 
-The package records independent hashes of the float64 data bytes, a uint8
-binary representation, and the complete NPY file.
+## 6. Identifier mapping and GO labels
 
-## 6. Target-independent checks
+### 6.1 Dated inputs
+
+Label reconstruction uses:
+
+- GOA human release-159 GAF;
+- GOA human release-159 GPI;
+- `2016-06-01-gp2protein.geneid.gz`;
+- the 2016-06-01 GO OBO ontology.
+
+The GPI file defines the relevant UniProt accessions. The workflow reads all
+direct GeneID edges for those accessions from the historical mapping. It does
+not collapse a many-to-many mapping by taking a first or arbitrary match.
+
+### 6.2 Evidence-backed mapping amendments
+
+Most accessions use their direct historical GeneID edges unchanged. The 15
+rows in `identifier_decisions.tsv` add missing uniquely supported assignments or
+remove cross-assignments in previously audited ambiguous components. This table
+includes the O95073 case: O95073-to-25788 was a real historical cross-reference,
+but FSBP annotations are not projected onto the GraphSAGE RAD54B node represented
+by GeneID 25788.
+
+The central package consumes the accepted decision table; it does not rerun the
+broader forensic component and symbol searches that produced it, and it never
+fits decisions against the released label matrix during reconstruction.
+
+### 6.3 Annotation filtering and ontology propagation
+
+One global policy is applied to every GAF row:
+
+- retain evidence codes `EXP`, `IDA`, `IEP`, `IGI`, `IMP`, and `ISS`;
+- exclude annotations qualified by `NOT`;
+- use ordinary aspect relations `involved_in`, `part_of`, and `enables`;
+- do not treat `colocalizes_with` or `contributes_to` as ordinary membership;
+- replace alternate GO IDs with their primary IDs;
+- propagate to the annotated term and transitive `is_a` ancestors only;
+- do not propagate ontology `part_of` edges.
+
+Term prevalence is counted once per mapped historical human GeneID. The top 121
+terms must equal the set in `label_columns.tsv`; the table then supplies released
+column order. The resulting namespaces are 85 Biological Process, 26 Cellular
+Component, and 10 Molecular Function columns.
+
+There are 121 columns but 118 distinct membership vectors. The three duplicate
+pairs remain explicit in the specification rather than being silently assigned
+names by output matching.
+
+### 6.4 Label outputs
+
+The label stage writes:
+
+- a 56,944 by 121 uint8 NumPy matrix;
+- a numeric-node-ordered logical GraphSAGE class map;
+- a selected-term table with names, prevalence ranks, and counts;
+- a summary with source hashes, filter counts, mapping decisions, and output
+  hashes.
+
+GeneID 10159 is absent from the accepted GPI-based mapping and receives an all-
+zero vector, matching the released data. Repeated occurrences of every mapped
+gene are checked for identical vectors.
+
+## 7. Target-independent checks
 
 `check-milestone` compares generated summaries with compact expectations in
-`specification.yaml`. It checks graph, row, gene, edge, and split counts; stable
-topology content hashes; feature dimensions and collection counts; the all-zero
-column position; and feature-data hashes.
+`specification.yaml`. It verifies topology counts and hashes, feature dimensions
+and hashes, label dimensions and positive-cell count, namespace counts, the 118
+distinct label vectors, the one unmapped graph GeneID, exact term-set recovery,
+and the complete label-matrix data hash.
 
-These checks do not read the released GraphSAGE archive. They are useful for
-catching regressions during reconstruction while preserving the non-circularity
-boundary.
+These checks use committed expectations but never open a released reference
+archive. They catch regressions while preserving the reconstruction boundary.
 
-## 7. Independent target validation
+## 8. Independent GraphSAGE validation
 
-The GraphSAGE reference ZIP is acquired as a `reference` source during the
-Pixi validation preflight and appears only as an input to the validation branch
-of the Snakemake graph. Snakemake writes a verification report under `build/`
-but does not own the cached archive. For the current milestone, validation
-independently parses the reconstructed and released representations and checks:
+The GraphSAGE ZIP is acquired as a `reference` source only for
+`pixi run validate`. Validation independently parses reconstructed and released
+representations and checks:
 
-- node IDs and the identity ID map;
-- per-row train/validation/test flags;
+- node IDs, identity ID-map semantics, and split flags;
 - graph-wise undirected edge multiplicities;
-- feature shape, dtype, and exact values;
-- byte equality of the deposited NPY member.
+- feature shape, dtype, exact values, and NPY bytes;
+- class-map key completeness and logical values;
+- all 6,890,224 GO-label cells.
 
-The topology comparison is structural because JSON object formatting and edge
-record direction are not scientifically meaningful when the graph-wise
-undirected multisets are exact. The feature NPY is checked both as data and as
-bytes because its individual serialization is stable and reproducible.
+Topology comparison is structural because JSON formatting and undirected edge
+orientation are not scientific outputs. The reconstructed class map is compared
+semantically rather than requiring historical Python-dictionary serialization.
 
-The final GraphSAGE and DGL stages will extend this contract. For DGL, the
-accepted success criterion is logical and data equivalence rather than identical
-archive or framework-container bytes.
+## 9. Remaining implementation stages
 
-## 8. Later milestones
+The package will next write the complete deterministic GraphSAGE graph JSON,
+identity map, class map, and feature array needed by supervised GraphSAGE. The
+optional stochastic walk file remains excluded.
 
-### 8.1 GO labels
+DGL outputs will then be derived solely from reconstructed GraphSAGE data. The
+transformation will include graph grouping, training-only feature
+standardization, directed edge expansion, one self-loop per node, labels, and
+split packaging. DGL validation will require logical and data equivalence rather
+than identical framework-container bytes.
 
-The accepted label reconstruction will use GOA human release 159 GAF and GPI,
-the historical 2016-06-01 GeneID-UniProt mapping, and the June 2016 GO ontology.
-The global policy retains evidence codes EXP, IDA, IEP, IGI, IMP, and ISS;
-excludes `NOT`; handles ordinary aspect relations separately from
-`colocalizes_with` and `contributes_to`; canonicalizes alternate GO IDs; and
-propagates only through transitive `is_a` ancestry.
-
-Identifier mapping will preserve many-to-many components and apply the few
-explicit decisions recorded in `identifier_decisions.tsv` before annotation
-projection. The final matrix must reproduce all 56,944 by 121 binary cells.
-
-### 8.2 GraphSAGE assembly
-
-The package will write the deterministic graph JSON, identity map, class map,
-and feature array needed by supervised GraphSAGE. The optional stochastic walk
-file will remain excluded.
-
-### 8.3 DGL derivation
-
-DGL outputs will be derived from reconstructed GraphSAGE logical data, never
-from the downloaded DGL target. The transformation will include graph grouping,
-training-only feature standardization, directed edge expansion, one self-loop
-per node, labels, and split packaging. Validation will compare graph membership,
-row order, integer arrays, labels, directed edges, loops, dtypes, and feature
-values under a fixed numerical tolerance.
-
-## 9. Quality-control policy
+## 10. Quality control, attribution, and uncertainty
 
 - Scientific rules are centralized in `specification.yaml` and explained here.
 - Recovered identities and exceptional decisions are visible in TSV files.
 - Source hashes are never learned or updated automatically.
-- Reconstruction and target validation are separate functions and workflow
-  branches.
-- Difficult historical behavior has focused unit tests and positive controls.
-- Synthetic tests run quickly and do not require public downloads.
-- Full-data validation reports the exact failed check and mismatching graph set.
-- No “accept current output” command rewrites expected results.
+- Reconstruction and target validation are separate modules and workflow paths.
+- Difficult historical behavior has focused synthetic tests and positive
+  controls.
+- No command rewrites expected results to accept current output.
 
-## 10. Attribution and uncertainty
+The reconstruction builds on the human investigators, earlier Claude/Opus
+analysis, and subsequent GPT-5.6 Sol analysis. The investigators framed the
+problem, supplied and audited sources, required cautious biological mapping, and
+corrected overclaims. Earlier Opus work established major parts of tissue
+matching, structural node alignment, feature-family discovery, and the initial
+DGL transformation. GPT-5.6 Sol independently extended and validated the work,
+including the complete row-order mechanism, feature selection rule,
+qualifier-aware GO policy, and full-row reconstruction.
 
-The reconstruction builds on contributions from the human investigators,
-earlier Claude/Opus analysis, and subsequent GPT-5.6 Sol analysis. The human
-investigators framed the provenance problem, supplied and audited sources,
-required careful biological identifier handling, and repeatedly corrected
-claims that exceeded the evidence. The earlier Opus work established major
-parts of tissue matching, structural node alignment, feature-family discovery,
-and the initial DGL transformation. GPT-5.6 Sol independently extended and
-validated the work, including the complete legacy row-order mechanism, feature
-selection rule, qualifier-aware GO policy, and full-row reconstruction.
-
-The executable package records accepted results and evidence levels; the full
-intellectual and chronological history remains in the surrounding project
+The executable package records accepted results and evidence levels. Detailed
+intellectual history and literature discrepancies remain in repository-level
 reports rather than being duplicated here.

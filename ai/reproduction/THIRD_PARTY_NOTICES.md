@@ -49,17 +49,25 @@ the same gene. The redistribution terms for the complete raw archive should be
 confirmed before creating the planned independent input mirror. Until then, the
 workflow downloads the archive from its official source and does not commit it.
 
-## Gene Ontology and GOA
+## Gene Ontology and UniProt-GOA
 
-Later label reconstruction will use historical Gene Ontology and GO Annotation
-files. Their exact source URLs, release identifiers, sizes, and hashes are
-already recorded in `spec/sources.tsv`. License and attribution language will be
-completed before those inputs are activated in a public release or mirrored.
+The label reconstruction uses dated Gene Ontology and UniProt-GOA files whose
+exact source URLs, release identifiers, sizes, and hashes are recorded in
+`spec/sources.tsv`:
+
+- GOA human release-159 GAF and GPI files;
+- the 2016-06-01 GO ontology;
+- the associated historical GeneID-to-UniProt mapping.
 
 Relevant project sites:
 
 - https://geneontology.org/
 - https://www.ebi.ac.uk/GOA/
+
+Publications and redistributed source bundles should retain applicable upstream
+notices and cite the Gene Ontology Consortium and UniProt-GOA project. The
+workflow keeps these inputs unmodified in the ignored cache. Their redistribution
+terms must be reviewed before they are added to the planned independent mirror.
 
 ## GraphSAGE reference data
 
