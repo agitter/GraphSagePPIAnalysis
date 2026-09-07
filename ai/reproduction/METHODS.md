@@ -58,12 +58,21 @@ unexplained special cases in code.
 
 Acquisition uses the following sequence:
 
-1. Reuse the local file when size, SHA-256, and structure are valid.
-2. Otherwise download a public source to an adjacent temporary path.
-3. Reject HTML error or login pages masquerading as data.
-4. Verify exact size and SHA-256.
-5. Perform a lightweight ZIP, TAR, gzip, GMT, or OBO check as appropriate.
-6. Atomically replace the final cache path only after validation.
+1. Reuse the local file when size, SHA-256, and structure are valid, without
+   modifying the file or its timestamp.
+2. Reject an existing invalid file without replacing it.
+3. Download a missing public source to an adjacent temporary path.
+4. Reject HTML error or login pages masquerading as data.
+5. Verify exact size and SHA-256.
+6. Perform a lightweight ZIP, TAR, gzip, GMT, or OBO check as appropriate.
+7. Install the verified temporary file atomically at the final cache path.
+
+Acquisition and reconstruction have separate ownership of files. A Pixi
+preflight task ensures that the required immutable files exist under `data/`.
+Snakemake lists those files only as inputs. It may generate source-verification
+reports under `build/`, but no rule declares a cached source or reference archive
+as an output. Consequently, cleaning or rerunning generated workflow products
+cannot cause Snakemake to remove or update source files.
 
 A future independent mirror can be added to the existing `mirror_url` column.
 The mirror must serve the same checksum-identified bytes; it is not permitted to
@@ -177,10 +186,11 @@ boundary.
 
 ## 7. Independent target validation
 
-The GraphSAGE reference ZIP is acquired as a `reference` source and appears only
-in the validation branch of the Snakemake graph. For the current milestone,
-validation independently parses the reconstructed and released representations
-and checks:
+The GraphSAGE reference ZIP is acquired as a `reference` source during the
+Pixi validation preflight and appears only as an input to the validation branch
+of the Snakemake graph. Snakemake writes a verification report under `build/`
+but does not own the cached archive. For the current milestone, validation
+independently parses the reconstructed and released representations and checks:
 
 - node IDs and the identity ID map;
 - per-row train/validation/test flags;

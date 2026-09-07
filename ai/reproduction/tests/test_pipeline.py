@@ -7,13 +7,17 @@ import gzip
 import hashlib
 import io
 import json
+import re
 import tarfile
+import tomllib
 import zipfile
 from pathlib import Path
 
 import pytest
 import yaml
 
+from graphsage_ppi_repro import provenance
+from graphsage_ppi_repro.cli import main as cli_main
 from graphsage_ppi_repro.features import reconstruct_features
 from graphsage_ppi_repro.legacy_order import ordered_string_keys
 from graphsage_ppi_repro.provenance import (
@@ -29,7 +33,7 @@ def _sha256(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
-def test_existing_source_is_verified_without_downloading(tmp_path: Path) -> None:
+def test_existing_source_is_verified_without_modification(tmp_path: Path) -> None:
     data_dir = tmp_path / "data"
     data_dir.mkdir()
     source = data_dir / "example.txt"
@@ -43,6 +47,9 @@ def test_existing_source_is_verified_without_downloading(tmp_path: Path) -> None
         encoding="utf-8",
         newline="\n",
     )
+    original_bytes = source.read_bytes()
+    original_mtime_ns = source.stat().st_mtime_ns
+
     report = tmp_path / "report.json"
     verified = ensure_sources(
         manifest,
@@ -50,11 +57,16 @@ def test_existing_source_is_verified_without_downloading(tmp_path: Path) -> None
         source_ids=["example"],
         report_path=report,
     )
+
     assert verified[0].acquisition_status == "verified_existing"
     assert json.loads(report.read_text())["records"][0]["sha256"] == _sha256(source)
+    assert source.read_bytes() == original_bytes
+    assert source.stat().st_mtime_ns == original_mtime_ns
 
 
-def test_source_hash_mismatch_is_rejected(tmp_path: Path) -> None:
+def test_source_hash_mismatch_is_rejected_without_replacement(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
     data_dir = tmp_path / "data"
     data_dir.mkdir()
     source = data_dir / "example.txt"
@@ -63,12 +75,68 @@ def test_source_hash_mismatch_is_rejected(tmp_path: Path) -> None:
     manifest.write_text(
         "source_id\trole\tacquisition\tfilename\tprimary_url\tmirror_url\tsha256\t"
         "size_bytes\tlicense\tdescription\n"
-        f"example\tupstream\tmanual\texample.txt\t\t\t{'0' * 64}\t"
-        f"{source.stat().st_size}\ttest\tSynthetic source\n",
+        f"example\tupstream\tdownload\texample.txt\thttps://example.test/file\t\t"
+        f"{'0' * 64}\t{source.stat().st_size}\ttest\tSynthetic source\n",
         encoding="utf-8",
     )
+    original_bytes = source.read_bytes()
+    original_mtime_ns = source.stat().st_mtime_ns
+
+    def unexpected_download(url: str, temporary: Path, timeout_seconds: int) -> str:
+        raise AssertionError(
+            f"download attempted for existing invalid source: {url}, "
+            f"{temporary}, {timeout_seconds}"
+        )
+
+    monkeypatch.setattr(provenance, "_download_to", unexpected_download)
     with pytest.raises(SourceError, match="SHA-256 mismatch"):
         ensure_sources(manifest, data_dir, source_ids=["example"])
+
+    assert source.read_bytes() == original_bytes
+    assert source.stat().st_mtime_ns == original_mtime_ns
+
+
+def test_missing_source_is_downloaded_through_a_temporary_file(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    data_dir = tmp_path / "data"
+    payload = b"downloaded\n"
+    expected_hash = hashlib.sha256(payload).hexdigest()
+    manifest = tmp_path / "sources.tsv"
+    manifest.write_text(
+        "source_id\trole\tacquisition\tfilename\tprimary_url\tmirror_url\tsha256\t"
+        "size_bytes\tlicense\tdescription\n"
+        "example\tupstream\tdownload\texample.txt\thttps://example.test/file\t\t"
+        f"{expected_hash}\t{len(payload)}\ttest\tSynthetic source\n",
+        encoding="utf-8",
+        newline="\n",
+    )
+
+    def fake_download(url: str, temporary: Path, timeout_seconds: int) -> str:
+        assert url == "https://example.test/file"
+        assert timeout_seconds == 120
+        assert temporary.name.endswith(".part")
+        assert not (data_dir / "example.txt").exists()
+        temporary.parent.mkdir(parents=True, exist_ok=True)
+        temporary.write_bytes(payload)
+        return url
+
+    monkeypatch.setattr(provenance, "_download_to", fake_download)
+    verified = ensure_sources(manifest, data_dir, source_ids=["example"])
+
+    assert verified[0].acquisition_status == "downloaded_and_verified"
+    assert (data_dir / "example.txt").read_bytes() == payload
+    assert not list(data_dir.glob("*.part"))
+
+
+def test_clean_refuses_to_remove_the_source_cache(tmp_path: Path) -> None:
+    data_dir = tmp_path / "data"
+    data_dir.mkdir()
+    marker = data_dir / "source.txt"
+    marker.write_text("keep\n", encoding="utf-8")
+
+    assert cli_main(["clean", "--directory", str(data_dir)]) == 2
+    assert marker.read_text(encoding="utf-8") == "keep\n"
 
 
 def _write_graph_inputs(tmp_path: Path) -> tuple[Path, Path, bytes]:
@@ -258,3 +326,28 @@ def test_reconstruct_without_target_then_validate_independently(tmp_path: Path) 
     assert [row["entrez_gene_id"] for row in mapping_rows] == ordered_string_keys(
         ["1", "2", "2", "3", "3", "3"]
     )
+
+
+def test_workflow_treats_cached_sources_as_inputs_only() -> None:
+    reproduction_root = Path(__file__).resolve().parents[1]
+    snakefile_text = (reproduction_root / "Snakefile").read_text(encoding="utf-8")
+    output_blocks = re.findall(r"(?m)^    output:\n((?:        .*\n)+)", snakefile_text)
+
+    assert "rule acquire_upstream_sources:" not in snakefile_text
+    assert "rule acquire_graphsage_reference:" not in snakefile_text
+    assert "rule verify_upstream_sources:" in snakefile_text
+    assert "rule verify_graphsage_reference:" in snakefile_text
+    assert output_blocks
+    for block in output_blocks:
+        assert "OHMNET" not in block
+        assert "MSIGDB_C1" not in block
+        assert "MSIGDB_C3" not in block
+        assert "GRAPHSAGE_REFERENCE" not in block
+
+    with (reproduction_root / "pixi.toml").open("rb") as handle:
+        tasks = tomllib.load(handle)["tasks"]
+    assert tasks["reproduce"]["depends-on"] == ["acquire-upstream"]
+    assert tasks["validate"]["depends-on"] == [
+        "acquire-upstream",
+        "acquire-graphsage-reference",
+    ]

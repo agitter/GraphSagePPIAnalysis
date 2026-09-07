@@ -1,9 +1,10 @@
 """Readable workflow for the central GraphSAGE PPI reconstruction.
 
 The current milestone reconstructs the complete biological row order, logical
-PPI topology, and 50 input features.  Released GraphSAGE data are deliberately
-absent from the ``reproduce`` dependency graph and enter only through
-``validate``.
+PPI topology, and 50 input features.  Pixi acquires or verifies immutable files
+under ``data/`` before Snakemake starts.  Snakemake treats those files only as
+inputs; generated outputs are confined to ``build/`` and ``results/``.
+Released GraphSAGE data enter only through ``validate``.
 """
 
 from pathlib import Path
@@ -13,8 +14,8 @@ configfile: "spec/specification.yaml"
 
 REPRO_ROOT = Path(workflow.basedir).resolve()
 PROJECT_ROOT = REPRO_ROOT.parent
-# Keep the workflow cache package-local. Never read or write the sibling
-# ``ai/data`` directory, which may be private investigator scratch space.
+# Package-local immutable input cache. Files under this directory must never
+# appear in a Snakemake output declaration.
 DATA_DIR = REPRO_ROOT / "data"
 
 SOURCES = REPRO_ROOT / "spec" / "sources.tsv"
@@ -57,14 +58,14 @@ rule validate:
         str(VALIDATION_MD),
 
 
-rule acquire_upstream_sources:
+rule verify_upstream_sources:
     input:
         manifest=str(SOURCES),
-    output:
-        report=str(SOURCE_REPORT),
         ohmnet=str(OHMNET),
         c1=str(MSIGDB_C1),
         c3=str(MSIGDB_C3),
+    output:
+        report=str(SOURCE_REPORT),
     params:
         data_dir=str(DATA_DIR),
     shell:
@@ -81,7 +82,8 @@ rule acquire_upstream_sources:
 
 rule reconstruct_topology:
     input:
-        archive=rules.acquire_upstream_sources.output.ohmnet,
+        archive=str(OHMNET),
+        source_report=rules.verify_upstream_sources.output.report,
         graph_spec=str(GRAPH_SPEC),
     output:
         mapping=str(NODE_MAPPING),
@@ -104,8 +106,9 @@ rule reconstruct_topology:
 rule reconstruct_features:
     input:
         mapping=rules.reconstruct_topology.output.mapping,
-        c1=rules.acquire_upstream_sources.output.c1,
-        c3=rules.acquire_upstream_sources.output.c3,
+        c1=str(MSIGDB_C1),
+        c3=str(MSIGDB_C3),
+        source_report=rules.verify_upstream_sources.output.report,
         feature_spec=str(FEATURE_SPEC),
     output:
         matrix=str(FEATURE_MATRIX),
@@ -148,7 +151,7 @@ rule check_reconstruction:
 
 rule write_reconstruction_manifest:
     input:
-        source_report=rules.acquire_upstream_sources.output.report,
+        source_report=rules.verify_upstream_sources.output.report,
         mapping=rules.reconstruct_topology.output.mapping,
         edges=rules.reconstruct_topology.output.edges,
         topology_summary=rules.reconstruct_topology.output.summary,
@@ -187,12 +190,12 @@ rule write_reconstruction_manifest:
         """
 
 
-rule acquire_graphsage_reference:
+rule verify_graphsage_reference:
     input:
         manifest=str(SOURCES),
+        archive=str(GRAPHSAGE_REFERENCE),
     output:
         report=str(REFERENCE_REPORT),
-        archive=str(GRAPHSAGE_REFERENCE),
     params:
         data_dir=str(DATA_DIR),
     shell:
@@ -209,7 +212,8 @@ rule acquire_graphsage_reference:
 rule validate_topology_and_features:
     input:
         reconstruction=rules.write_reconstruction_manifest.output.manifest,
-        reference=rules.acquire_graphsage_reference.output.archive,
+        reference=str(GRAPHSAGE_REFERENCE),
+        reference_report=rules.verify_graphsage_reference.output.report,
         mapping=rules.reconstruct_topology.output.mapping,
         edges=rules.reconstruct_topology.output.edges,
         features=rules.reconstruct_features.output.matrix,

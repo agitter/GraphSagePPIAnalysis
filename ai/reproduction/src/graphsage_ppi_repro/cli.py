@@ -1,4 +1,4 @@
-"""Thin command-line adapters used by the Snakemake workflow.
+"""Thin command-line adapters used by Pixi and the Snakemake workflow.
 
 The CLI contains no scientific transformations.  Each subcommand validates
 arguments and delegates to an importable, unit-tested function in the module

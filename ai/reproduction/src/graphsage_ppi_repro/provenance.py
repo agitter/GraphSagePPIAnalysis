@@ -359,7 +359,12 @@ def acquire_source(
     *,
     timeout_seconds: int = 120,
 ) -> FileVerification:
-    """Reuse a verified cache entry or download and atomically install it."""
+    """Verify an existing cache entry or atomically install a missing one.
+
+    Existing paths are never replaced: a valid file is returned unchanged and
+    an invalid file raises :class:`SourceError`. Only an absent destination can
+    be populated by a verified download.
+    """
 
     data_dir.mkdir(parents=True, exist_ok=True)
     destination = data_dir / record.filename

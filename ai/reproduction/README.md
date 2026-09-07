@@ -59,6 +59,7 @@ reproduction/
 ├── spec/                     # accepted human-readable reconstruction specification
 ├── src/graphsage_ppi_repro/  # scientific implementation
 ├── tests/                    # focused synthetic and integration tests
+├── data/                     # immutable cached inputs; ignored by Git
 ├── build/                    # generated intermediates; ignored by Git
 └── results/                  # generated manifests and validation; ignored by Git
 ```
@@ -83,6 +84,9 @@ pixi run reproduce
 pixi run validate
 ```
 
+The Pixi tasks are the supported user interface. Direct Snakemake invocation is
+useful for debugging but assumes that all required cache files already exist.
+
 The canonical environment lock is `pixi.lock`. The initial implementation
 patch includes `pixi.toml`; the lock must be generated with Pixi and committed
 before the environment is considered frozen.
@@ -106,10 +110,17 @@ this reproduction package.
 - a primary URL and an optional future mirror;
 - a short license and provenance note.
 
-A valid cached file is reused. A missing public file is downloaded to a
-temporary `.part` path, checked, and moved into place only after its size,
-SHA-256, and basic archive or text structure pass. Expected hashes are never
-updated automatically from downloaded content.
+A valid cached file is reused without changing its contents or modification
+time. An invalid existing file causes a hard failure and is never replaced. A
+missing public file is downloaded to a temporary `.part` path, checked, and
+moved into place only after its size, SHA-256, and basic archive or text
+structure pass. Expected hashes are never updated automatically from downloaded
+content.
+
+Pixi performs acquisition as a preflight step. Snakemake then treats every file
+under `data/` as an immutable input; cached sources are never declared as rule
+outputs. This distinction ensures that rerunning a rule or removing `build/`
+and `results/` cannot make Snakemake delete, replace, or touch a cached source.
 
 The current topology-and-feature milestone uses:
 
@@ -129,10 +140,13 @@ in `spec/sources.tsv`.
 pixi run reproduce
 ```
 
-The current workflow performs these stages:
+The `reproduce` task first acquires or verifies the required upstream files,
+then starts Snakemake. The current workflow performs these stages:
 
 ```text
-verify upstream files
+Pixi preflight: acquire or verify immutable upstream files
+        |
+Snakemake: verify upstream files and write a source report
         |
 reconstruct selected OhmNet graph blocks and biological row order
         |
@@ -162,7 +176,9 @@ results/reconstruction_manifest.json
 pixi run validate
 ```
 
-For the current milestone this checks:
+The `validate` task first verifies the upstream inputs and the independently
+acquired GraphSAGE reference, then starts the validation DAG. For the current
+milestone this checks:
 
 - consecutive node IDs and the identity ID map;
 - exact training, validation, and test flags for every row;
@@ -198,7 +214,8 @@ pixi run clean
 ```
 
 Only `build/` and `results/` are removed. Downloaded data under
-`reproduction/data/` are preserved.
+`reproduction/data/` are preserved. Source files are outside Snakemake's output
+set, so a subsequent reconstruction verifies and reuses them in place.
 
 ## Specification files
 
