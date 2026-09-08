@@ -1,10 +1,11 @@
 """Readable workflow for the central GraphSAGE PPI reconstruction.
 
-This milestone reconstructs the complete biological row order, PPI topology,
-50 input features, and 121 GO labels. Pixi acquires or verifies immutable files
-under ``data/`` before Snakemake starts. Snakemake treats those files only as
-inputs; generated outputs are confined to ``build/`` and ``results/``.
-Released GraphSAGE data enter only through ``validate``.
+This workflow reconstructs the complete biological row order, PPI topology,
+50 input features, 121 GO labels, and the four deterministic files consumed by
+supervised GraphSAGE. Pixi acquires or verifies immutable files under ``data/``
+before Snakemake starts. Snakemake treats those files only as inputs; generated
+outputs are confined to ``build/`` and ``results/``. Released GraphSAGE data
+enter only through ``validate``.
 """
 
 from pathlib import Path
@@ -47,14 +48,21 @@ LABEL_MATRIX = BUILD_DIR / "labels" / "ppi-labels.npy"
 CLASS_MAP = BUILD_DIR / "labels" / "ppi-class_map.json"
 SELECTED_LABELS = BUILD_DIR / "labels" / "selected_labels.tsv"
 LABEL_SUMMARY = BUILD_DIR / "labels" / "summary.json"
+GRAPHSAGE_SUMMARY = BUILD_DIR / "graphsage" / "summary.json"
+GRAPHSAGE_ROOT = RESULTS_DIR / "graphsage"
+GRAPHSAGE_DIR = GRAPHSAGE_ROOT / "ppi"
+GRAPHSAGE_GRAPH = GRAPHSAGE_DIR / "ppi-G.json"
+GRAPHSAGE_ID_MAP = GRAPHSAGE_DIR / "ppi-id_map.json"
+GRAPHSAGE_CLASS_MAP = GRAPHSAGE_DIR / "ppi-class_map.json"
+GRAPHSAGE_FEATURES = GRAPHSAGE_DIR / "ppi-feats.npy"
+GRAPHSAGE_CHECKSUMS = GRAPHSAGE_ROOT / "SHA256SUMS"
 RECONSTRUCTION_CHECKS = BUILD_DIR / "reconstruction_checks.json"
 RUN_MANIFEST = RESULTS_DIR / "reconstruction_manifest.json"
-VALIDATION_JSON = RESULTS_DIR / "validation.json"
-VALIDATION_MD = RESULTS_DIR / "validation.md"
-LABEL_VALIDATION_JSON = RESULTS_DIR / "label_validation.json"
-LABEL_VALIDATION_MD = RESULTS_DIR / "label_validation.md"
+GRAPHSAGE_VALIDATION_JSON = RESULTS_DIR / "graphsage_validation.json"
+GRAPHSAGE_VALIDATION_MD = RESULTS_DIR / "graphsage_validation.md"
 
 LABEL_CONFIG = config["reconstruction"]["labels"]
+GRAPHSAGE_CONFIG = config["reconstruction"]["graphsage"]
 EVIDENCE_FLAGS = " ".join(
     f"--evidence-code {code}" for code in LABEL_CONFIG["evidence_codes"]
 )
@@ -76,10 +84,8 @@ rule reproduce:
 
 rule validate:
     input:
-        str(VALIDATION_JSON),
-        str(VALIDATION_MD),
-        str(LABEL_VALIDATION_JSON),
-        str(LABEL_VALIDATION_MD),
+        str(GRAPHSAGE_VALIDATION_JSON),
+        str(GRAPHSAGE_VALIDATION_MD),
 
 
 rule verify_upstream_sources:
@@ -203,12 +209,42 @@ rule reconstruct_labels:
         """
 
 
+rule assemble_graphsage:
+    input:
+        mapping=rules.reconstruct_topology.output.mapping,
+        edges=rules.reconstruct_topology.output.edges,
+        features=rules.reconstruct_features.output.matrix,
+        labels=rules.reconstruct_labels.output.matrix,
+    output:
+        graph=str(GRAPHSAGE_GRAPH),
+        id_map=str(GRAPHSAGE_ID_MAP),
+        class_map=str(GRAPHSAGE_CLASS_MAP),
+        features=str(GRAPHSAGE_FEATURES),
+        checksums=str(GRAPHSAGE_CHECKSUMS),
+        summary=str(GRAPHSAGE_SUMMARY),
+    params:
+        output_directory=str(GRAPHSAGE_DIR),
+        word_size_bits=GRAPHSAGE_CONFIG["class_map_word_size_bits"],
+    shell:
+        """
+        python -m graphsage_ppi_repro.cli assemble-graphsage \
+          --mapping {input.mapping:q} \
+          --edges {input.edges:q} \
+          --features {input.features:q} \
+          --labels {input.labels:q} \
+          --output-directory {params.output_directory:q} \
+          --summary-output {output.summary:q} \
+          --word-size-bits {params.word_size_bits}
+        """
+
+
 rule check_reconstruction:
     input:
         specification=str(SPECIFICATION),
         topology=rules.reconstruct_topology.output.summary,
         features=rules.reconstruct_features.output.summary,
         labels=rules.reconstruct_labels.output.summary,
+        graphsage=rules.assemble_graphsage.output.summary,
     output:
         checks=str(RECONSTRUCTION_CHECKS),
     shell:
@@ -218,6 +254,7 @@ rule check_reconstruction:
           --topology-summary {input.topology:q} \
           --feature-summary {input.features:q} \
           --label-summary {input.labels:q} \
+          --graphsage-summary {input.graphsage:q} \
           --output {output.checks:q}
         """
 
@@ -235,6 +272,12 @@ rule write_reconstruction_manifest:
         class_map=rules.reconstruct_labels.output.class_map,
         selected_labels=rules.reconstruct_labels.output.selected,
         label_summary=rules.reconstruct_labels.output.summary,
+        graphsage_graph=rules.assemble_graphsage.output.graph,
+        graphsage_id_map=rules.assemble_graphsage.output.id_map,
+        graphsage_class_map=rules.assemble_graphsage.output.class_map,
+        graphsage_features=rules.assemble_graphsage.output.features,
+        graphsage_checksums=rules.assemble_graphsage.output.checksums,
+        graphsage_summary=rules.assemble_graphsage.output.summary,
         checks=rules.check_reconstruction.output.checks,
         sources=str(SOURCES),
         specification=str(SPECIFICATION),
@@ -254,7 +297,7 @@ rule write_reconstruction_manifest:
           --project-root {params.project_root:q} \
           --reproduction-root {params.reproduction_root:q} \
           --source-report {input.source_report:q} \
-          --stage topology_features_and_labels \
+          --stage complete_graphsage \
           --artifact {input.mapping:q} \
           --artifact {input.edges:q} \
           --artifact {input.topology_summary:q} \
@@ -265,6 +308,12 @@ rule write_reconstruction_manifest:
           --artifact {input.class_map:q} \
           --artifact {input.selected_labels:q} \
           --artifact {input.label_summary:q} \
+          --artifact {input.graphsage_graph:q} \
+          --artifact {input.graphsage_id_map:q} \
+          --artifact {input.graphsage_class_map:q} \
+          --artifact {input.graphsage_features:q} \
+          --artifact {input.graphsage_checksums:q} \
+          --artifact {input.graphsage_summary:q} \
           --artifact {input.checks:q} \
           --specification {input.sources:q} \
           --specification {input.specification:q} \
@@ -294,45 +343,26 @@ rule verify_graphsage_reference:
         """
 
 
-rule validate_topology_and_features:
+rule validate_graphsage:
     input:
         reconstruction=rules.write_reconstruction_manifest.output.manifest,
         reference=str(GRAPHSAGE_REFERENCE),
         reference_report=rules.verify_graphsage_reference.output.report,
-        mapping=rules.reconstruct_topology.output.mapping,
-        edges=rules.reconstruct_topology.output.edges,
-        features=rules.reconstruct_features.output.matrix,
+        graph=rules.assemble_graphsage.output.graph,
+        id_map=rules.assemble_graphsage.output.id_map,
+        class_map=rules.assemble_graphsage.output.class_map,
+        features=rules.assemble_graphsage.output.features,
     output:
-        json=str(VALIDATION_JSON),
-        markdown=str(VALIDATION_MD),
+        json=str(GRAPHSAGE_VALIDATION_JSON),
+        markdown=str(GRAPHSAGE_VALIDATION_MD),
     shell:
         """
-        python -m graphsage_ppi_repro.cli validate-topology-features \
+        python -m graphsage_ppi_repro.cli validate-graphsage \
           --reference {input.reference:q} \
-          --mapping {input.mapping:q} \
-          --edges {input.edges:q} \
-          --features {input.features:q} \
-          --json-output {output.json:q} \
-          --markdown-output {output.markdown:q}
-        """
-
-
-rule validate_labels:
-    input:
-        reconstruction=rules.write_reconstruction_manifest.output.manifest,
-        reference=str(GRAPHSAGE_REFERENCE),
-        reference_report=rules.verify_graphsage_reference.output.report,
-        matrix=rules.reconstruct_labels.output.matrix,
-        class_map=rules.reconstruct_labels.output.class_map,
-    output:
-        json=str(LABEL_VALIDATION_JSON),
-        markdown=str(LABEL_VALIDATION_MD),
-    shell:
-        """
-        python -m graphsage_ppi_repro.cli validate-labels \
-          --reference {input.reference:q} \
-          --matrix {input.matrix:q} \
+          --graph {input.graph:q} \
+          --id-map {input.id_map:q} \
           --class-map {input.class_map:q} \
+          --features {input.features:q} \
           --json-output {output.json:q} \
           --markdown-output {output.markdown:q}
         """

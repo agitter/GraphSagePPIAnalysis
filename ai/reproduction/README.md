@@ -2,7 +2,8 @@
 
 This directory contains a small, auditable workflow that reconstructs the
 published GraphSAGE protein-protein interaction (PPI) data from historical
-upstream sources and will derive the corresponding DGL representation.
+upstream sources. The corresponding DGL representation remains the final major
+implementation stage.
 
 The workflow is intentionally narrower than the surrounding forensic research.
 It rebuilds deterministic data needed by **supervised GraphSAGE** and DGL. It
@@ -18,11 +19,12 @@ The workflow currently reconstructs and validates:
 - all 818,716 logical GraphSAGE edge records;
 - all 50 MSigDB input features from public v6.1 C1/C3 files;
 - all 121 GO labels from dated GOA, GeneID-UniProt, and GO sources;
-- target-independent counts and content hashes;
-- independent equality checks against released GraphSAGE topology, split flags,
-  features, and labels.
+- the four deterministic files consumed by supervised GraphSAGE;
+- target-independent counts, content hashes, and file hashes;
+- independent comparison with every corresponding released GraphSAGE file.
 
-Final GraphSAGE packaging and DGL conversion remain later stages.
+The GraphSAGE reconstruction is complete. DGL conversion remains the next and
+final major implementation stage.
 
 ## The non-circularity rule
 
@@ -98,6 +100,8 @@ reconstruct 50 features   reconstruct 121 GO labels
         |                        |
         +------------+-----------+
                      |
+assemble the four supervised GraphSAGE files
+                     |
 check target-independent invariants
                      |
 write reconstruction manifest
@@ -116,7 +120,13 @@ build/labels/ppi-labels.npy
 build/labels/ppi-class_map.json
 build/labels/selected_labels.tsv
 build/labels/summary.json
+build/graphsage/summary.json
 build/reconstruction_checks.json
+results/graphsage/ppi/ppi-G.json
+results/graphsage/ppi/ppi-id_map.json
+results/graphsage/ppi/ppi-class_map.json
+results/graphsage/ppi/ppi-feats.npy
+results/graphsage/SHA256SUMS
 results/reconstruction_manifest.json
 ```
 
@@ -126,21 +136,23 @@ results/reconstruction_manifest.json
 pixi run validate
 ```
 
-This independently verifies:
+This independently compares the assembled dataset with the four deterministic
+members of `graphsage_ppi.zip`:
 
-- consecutive node IDs, identity ID-map semantics, and split flags;
-- exact graph-wise undirected edge multisets;
-- exact feature shape, dtype, and all 2,847,200 feature cells;
-- byte equality of the individual `ppi-feats.npy` member;
-- exact class-map semantics and all 6,890,224 GO-label cells.
+- `ppi-G.json`: exact nodes, split flags, graph metadata, and undirected edge
+  multiset;
+- `ppi-id_map.json`: exact semantics and exact bytes;
+- `ppi-class_map.json`: all 6,890,224 label cells and exact bytes;
+- `ppi-feats.npy`: shape, dtype, all 2,847,200 feature cells, and exact bytes.
 
-Validation writes:
+The reconstructed graph JSON deliberately writes undirected links in canonical
+numeric order. Its logical graph is exact, but its link-list byte order differs
+from the historical NetworkX/Python serialization. This distinction is reported
+rather than hidden. Validation writes:
 
 ```text
-results/validation.json
-results/validation.md
-results/label_validation.json
-results/label_validation.md
+results/graphsage_validation.json
+results/graphsage_validation.md
 ```
 
 ZIP timestamps and compression bytes are not scientific outputs. The optional
@@ -155,8 +167,8 @@ pixi run test
 The tests use small committed fixtures. They cover source-cache safety, legacy
 CPython 2.7 ordering, graph reconstruction, MSigDB selection, historical NumPy
 serialization, many-to-many identifier resolution, GAF filtering, alternate GO
-IDs, `is_a` propagation, label projection, and target-independent versus
-reference-based validation.
+IDs, `is_a` propagation, label projection, deterministic GraphSAGE assembly,
+and target-independent versus reference-based validation.
 
 ### Remove generated files
 
@@ -208,6 +220,8 @@ Validation additionally uses the released GraphSAGE PPI ZIP.
   marks three membership-indistinguishable term pairs as provisional.
 - `identifier_decisions.tsv` records the small set of evidence-backed amendments
   needed beyond direct historical GeneID-UniProt edges.
+- `specification.yaml` also records the canonical GraphSAGE serialization policy
+  and exact expected hashes for the four deterministic output files.
 
 These tables are reviewable reconstruction specifications, not hidden copies of
 output matrices.

@@ -13,12 +13,14 @@ import tomllib
 import zipfile
 from pathlib import Path
 
+import numpy as np
 import pytest
 import yaml
 
 from graphsage_ppi_repro import provenance
 from graphsage_ppi_repro.cli import main as cli_main
 from graphsage_ppi_repro.features import reconstruct_features
+from graphsage_ppi_repro.graphsage import assemble_graphsage
 from graphsage_ppi_repro.legacy_order import ordered_string_keys
 from graphsage_ppi_repro.provenance import (
     SourceError,
@@ -26,7 +28,7 @@ from graphsage_ppi_repro.provenance import (
     ensure_sources,
 )
 from graphsage_ppi_repro.topology import reconstruct_topology
-from graphsage_ppi_repro.validate import validate_topology_and_features
+from graphsage_ppi_repro.validate import validate_graphsage_dataset
 
 
 def _sha256(path: Path) -> str:
@@ -228,7 +230,7 @@ def test_reconstruct_without_target_then_validate_independently(tmp_path: Path) 
     edges = tmp_path / "edges.tsv.gz"
     topology_summary_path = tmp_path / "topology.json"
 
-    # At this point no released target exists. Reconstruction nevertheless completes.
+    # No released target exists while the complete synthetic dataset is built.
     missing_reference = tmp_path / "reference.zip"
     assert not missing_reference.exists()
     topology_summary = reconstruct_topology(
@@ -255,6 +257,9 @@ def test_reconstruct_without_target_then_validate_independently(tmp_path: Path) 
         maximum_columns=2,
     )
 
+    labels = tmp_path / "labels.npy"
+    label_array = np.asarray([[1, 0], [0, 1], [1, 1]], dtype=np.uint8)
+    np.save(labels, label_array, allow_pickle=False)
     label_summary_path = tmp_path / "labels.json"
     label_summary = {
         "counts": {
@@ -262,17 +267,37 @@ def test_reconstruct_without_target_then_validate_independently(tmp_path: Path) 
             "columns": 2,
             "positive_cells": 4,
             "selected_by_namespace": {"biological_process": 2},
-            "distinct_column_membership_vectors": 1,
+            "distinct_column_membership_vectors": 2,
             "repeated_gene_vector_conflicts": 0,
             "unmapped_graph_gene_ids": [],
         },
-        "hashes": {"uint8_c_order_data_sha256": "synthetic-label-hash"},
+        "hashes": {
+            "uint8_c_order_data_sha256": hashlib.sha256(
+                label_array.tobytes(order="C")
+            ).hexdigest()
+        },
         "term_selection": {
             "derived_set_matches_column_specification": True,
         },
     }
     label_summary_path.write_text(json.dumps(label_summary), encoding="utf-8", newline="\n")
 
+    graphsage_root = tmp_path / "graphsage"
+    graphsage_summary_path = tmp_path / "graphsage-summary.json"
+    graphsage_summary = assemble_graphsage(
+        mapping_path=mapping,
+        edge_path=edges,
+        feature_matrix_path=features,
+        label_matrix_path=labels,
+        output_directory=graphsage_root / "ppi",
+        summary_output=graphsage_summary_path,
+    )
+    assert not missing_reference.exists()
+
+    artifact_hashes = {
+        name: metadata["sha256"]
+        for name, metadata in graphsage_summary["outputs"]["files"].items()
+    }
     specification = tmp_path / "specification.yaml"
     specification.write_text(
         yaml.safe_dump(
@@ -301,9 +326,16 @@ def test_reconstruct_without_target_then_validate_independently(tmp_path: Path) 
                         "label_shape": [3, 2],
                         "label_positive_cells": 4,
                         "label_namespace_counts": {"biological_process": 2},
-                        "label_distinct_membership_vectors": 1,
+                        "label_distinct_membership_vectors": 2,
                         "label_unmapped_graph_gene_ids": [],
-                        "label_uint8_c_order_data_sha256": "synthetic-label-hash",
+                        "label_uint8_c_order_data_sha256": label_summary["hashes"][
+                            "uint8_c_order_data_sha256"
+                        ],
+                        "graphsage_content_hashes": graphsage_summary["content_hashes"],
+                        "graphsage_artifact_hashes": artifact_hashes,
+                        "graphsage_checksums_sha256": graphsage_summary["outputs"][
+                            "checksums_sha256"
+                        ],
                     }
                 }
             },
@@ -316,40 +348,36 @@ def test_reconstruct_without_target_then_validate_independently(tmp_path: Path) 
         topology_summary_path=topology_summary_path,
         feature_summary_path=feature_summary_path,
         label_summary_path=label_summary_path,
+        graphsage_summary_path=graphsage_summary_path,
         output_path=tmp_path / "checks.json",
     )
     assert checks["all_checks_pass"]
 
-    mapping_rows = _read_mapping(mapping)
-    edge_rows = _read_edges(edges)
-    graph_nodes = [
-        {"id": int(row["graphsage_node_id"]), "val": False, "test": False}
-        for row in mapping_rows
-    ]
-    graph_links = [
-        {"source": int(row["source_node_id"]), "target": int(row["target_node_id"])}
-        for row in edge_rows
-    ]
-    id_map = {str(index): index for index in range(len(mapping_rows))}
+    graph_path = graphsage_root / "ppi" / "ppi-G.json"
+    id_map_path = graphsage_root / "ppi" / "ppi-id_map.json"
+    class_map_path = graphsage_root / "ppi" / "ppi-class_map.json"
+    feature_path = graphsage_root / "ppi" / "ppi-feats.npy"
+    reference_graph = json.loads(graph_path.read_text())
+    reference_graph["links"] = list(reversed(reference_graph["links"]))
     with zipfile.ZipFile(missing_reference, "w") as archive_file:
-        archive_file.writestr(
-            "ppi/ppi-G.json",
-            json.dumps({"nodes": graph_nodes, "links": graph_links}),
-        )
-        archive_file.writestr("ppi/ppi-id_map.json", json.dumps(id_map))
-        archive_file.writestr("ppi/ppi-feats.npy", features.read_bytes())
+        archive_file.writestr("ppi/ppi-G.json", json.dumps(reference_graph))
+        archive_file.writestr("ppi/ppi-id_map.json", id_map_path.read_bytes())
+        archive_file.writestr("ppi/ppi-class_map.json", class_map_path.read_bytes())
+        archive_file.writestr("ppi/ppi-feats.npy", feature_path.read_bytes())
 
-    validation = validate_topology_and_features(
-        graphsage_reference_zip=missing_reference,
-        mapping_path=mapping,
-        edge_path=edges,
-        feature_matrix_path=features,
-        output_json=tmp_path / "validation.json",
-        output_markdown=tmp_path / "validation.md",
+    validation = validate_graphsage_dataset(
+        reference_archive=missing_reference,
+        graph_path=graph_path,
+        id_map_path=id_map_path,
+        class_map_path=class_map_path,
+        feature_path=feature_path,
+        json_output=tmp_path / "validation.json",
+        markdown_output=tmp_path / "validation.md",
     )
     assert validation["all_checks_pass"]
-    assert [row["entrez_gene_id"] for row in mapping_rows] == ordered_string_keys(
-        ["1", "2", "2", "3", "3", "3"]
+    assert not validation["byte_equality"]["ppi-G.json"]
+    assert [row["entrez_gene_id"] for row in _read_mapping(mapping)] == (
+        ordered_string_keys(["1", "2", "2", "3", "3", "3"])
     )
 
 
@@ -392,4 +420,7 @@ def test_workflow_treats_cached_sources_as_inputs_only() -> None:
     ):
         assert f"--source-id {source_id}" in upstream_command
     assert "rule reconstruct_labels:" in snakefile_text
-    assert "rule validate_labels:" in snakefile_text
+    assert "rule assemble_graphsage:" in snakefile_text
+    assert "rule validate_graphsage:" in snakefile_text
+    assert "rule validate_topology_and_features:" not in snakefile_text
+    assert "rule validate_labels:" not in snakefile_text

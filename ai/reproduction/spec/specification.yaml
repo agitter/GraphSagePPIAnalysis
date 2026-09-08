@@ -42,6 +42,11 @@ reconstruction:
     term_selection: top_121_by_full_human_prevalence
     selected_term_count: 121
   graphsage:
+    graph_node_order: ascending_node_id
+    graph_link_order: canonical_undirected_node_id_sort
+    id_map_order: ascending_numeric_node_id
+    class_map_order: cpython27_string_dict
+    class_map_word_size_bits: 64
     include_unsupervised_walks: false
   dgl:
     fit_standard_scaler_on: training_rows_only
@@ -89,10 +94,22 @@ validation:
     label_distinct_membership_vectors: 118
     label_unmapped_graph_gene_ids:
     - 10159
+    graphsage_content_hashes:
+      canonical_edges_sha256: 9ced47a8f7af8a3549e63b71c1c0f7b3b0c7c665df734d82b9880e0d7880bc5a
+      class_map_key_order_sha256: bdbb25c34f37ff939ef6a3e8ca9f8911479b8bdcbdd7c6395c655091ad42f52f
+      split_flags_sha256: 5030e56168cfd7670ce95bb26237cef022be72f0b55fe3a4ad1b176b12fe9b9d
+    graphsage_artifact_hashes:
+      ppi-G.json: 44400e92cc0b282921a5d2be1198c798d0d2e96bf6fff318d3be76179138706a
+      ppi-class_map.json: 388d404c24704a29b74940ca64df52ef7dc9affb3cfc96345210bf6aa1e31932
+      ppi-feats.npy: 953149689098eed72c0154fb40a8fff4e634d34c5ad139c7ae9d601db1cad3d3
+      ppi-id_map.json: 5b9f264c242f3078a347f037839105e069739f404fe603c82ca19e2b8e45c04e
+    graphsage_checksums_sha256: 6e28ab1c18af3cc7e7cfb71c5bb52446aef366c1ab3d66fac1c8f628623ff56f
   comparison_levels:
-    graphsage_topology: structurally_exact
+    graphsage_graph_json: structurally_exact_canonical_link_order
+    graphsage_id_map: byte_exact
+    graphsage_class_map: byte_exact
     graphsage_features: array_exact_and_byte_exact_npy
-    graphsage_labels: array_exact
+    graphsage_labels: array_exact_and_byte_exact_class_map
     dgl: logical_and_data_equivalent
   dgl_feature_atol: 1.0e-12
   dgl_feature_rtol: 0.0

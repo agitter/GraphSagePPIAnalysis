@@ -14,6 +14,7 @@ from collections.abc import Sequence
 from pathlib import Path
 
 from .features import FeatureError, reconstruct_features
+from .graphsage import GraphSAGEError, assemble_graphsage
 from .identifiers import IdentifierError
 from .labels import LabelError, reconstruct_labels
 from .provenance import (
@@ -25,6 +26,7 @@ from .provenance import (
 from .topology import TopologyError, reconstruct_topology
 from .validate import (
     ValidationError,
+    validate_graphsage_dataset,
     validate_labels_against_graphsage,
     validate_topology_and_features,
 )
@@ -131,6 +133,21 @@ def _build_parser() -> argparse.ArgumentParser:
     )
     labels.add_argument("--selected-term-count", type=int, default=121)
 
+    graphsage = subparsers.add_parser(
+        "assemble-graphsage",
+        help="Assemble the four deterministic files used by supervised GraphSAGE.",
+    )
+    for name, text in (
+        ("--mapping", "Reconstructed node-to-Entrez mapping."),
+        ("--edges", "Reconstructed undirected edge table."),
+        ("--features", "Reconstructed GraphSAGE feature matrix."),
+        ("--labels", "Reconstructed GraphSAGE label matrix."),
+        ("--output-directory", "Directory for the four ppi-* files."),
+        ("--summary-output", "Output JSON assembly summary."),
+    ):
+        graphsage.add_argument(name, type=_path, required=True, help=text)
+    graphsage.add_argument("--word-size-bits", type=int, choices=(32, 64), default=64)
+
     manifest = subparsers.add_parser(
         "write-manifest", help="Write a reconstruction-stage provenance manifest."
     )
@@ -166,6 +183,7 @@ def _build_parser() -> argparse.ArgumentParser:
         ("--topology-summary", "Generated topology summary JSON."),
         ("--feature-summary", "Generated feature summary JSON."),
         ("--label-summary", "Generated GO-label summary JSON."),
+        ("--graphsage-summary", "Generated GraphSAGE assembly summary JSON."),
         ("--output", "Output target-independent check report."),
     ):
         checks.add_argument(name, type=_path, required=True, help=text)
@@ -183,6 +201,21 @@ def _build_parser() -> argparse.ArgumentParser:
         ("--markdown-output", "Human-readable validation report."),
     ):
         validation.add_argument(name, type=_path, required=True, help=text)
+
+    graphsage_validation = subparsers.add_parser(
+        "validate-graphsage",
+        help="Validate the complete supervised GraphSAGE artifact set.",
+    )
+    for name, text in (
+        ("--reference", "Released GraphSAGE PPI ZIP."),
+        ("--graph", "Reconstructed ppi-G.json."),
+        ("--id-map", "Reconstructed ppi-id_map.json."),
+        ("--class-map", "Reconstructed ppi-class_map.json."),
+        ("--features", "Reconstructed ppi-feats.npy."),
+        ("--json-output", "Machine-readable validation report."),
+        ("--markdown-output", "Human-readable validation report."),
+    ):
+        graphsage_validation.add_argument(name, type=_path, required=True, help=text)
 
     label_validation = subparsers.add_parser(
         "validate-labels",
@@ -281,12 +314,25 @@ def _run(arguments: argparse.Namespace) -> None:
         )
         return
 
+    if arguments.command == "assemble-graphsage":
+        assemble_graphsage(
+            mapping_path=arguments.mapping,
+            edge_path=arguments.edges,
+            feature_matrix_path=arguments.features,
+            label_matrix_path=arguments.labels,
+            output_directory=arguments.output_directory,
+            summary_output=arguments.summary_output,
+            word_size_bits=arguments.word_size_bits,
+        )
+        return
+
     if arguments.command == "check-milestone":
         check_reconstruction_milestone(
             specification_path=arguments.specification,
             topology_summary_path=arguments.topology_summary,
             feature_summary_path=arguments.feature_summary,
             label_summary_path=arguments.label_summary,
+            graphsage_summary_path=arguments.graphsage_summary,
             output_path=arguments.output,
         )
         return
@@ -311,6 +357,18 @@ def _run(arguments: argparse.Namespace) -> None:
             feature_matrix_path=arguments.features,
             output_json=arguments.json_output,
             output_markdown=arguments.markdown_output,
+        )
+        return
+
+    if arguments.command == "validate-graphsage":
+        validate_graphsage_dataset(
+            reference_archive=arguments.reference,
+            graph_path=arguments.graph,
+            id_map_path=arguments.id_map,
+            class_map_path=arguments.class_map,
+            feature_path=arguments.features,
+            json_output=arguments.json_output,
+            markdown_output=arguments.markdown_output,
         )
         return
 
@@ -341,6 +399,7 @@ def main(argv: Sequence[str] | None = None) -> int:
         _run(arguments)
     except (
         FeatureError,
+        GraphSAGEError,
         IdentifierError,
         LabelError,
         SourceError,

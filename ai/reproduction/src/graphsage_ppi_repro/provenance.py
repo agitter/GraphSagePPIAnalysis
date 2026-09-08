@@ -488,9 +488,10 @@ def check_reconstruction_milestone(
     topology_summary_path: Path,
     feature_summary_path: Path,
     label_summary_path: Path,
+    graphsage_summary_path: Path,
     output_path: Path,
 ) -> dict[str, object]:
-    """Check target-independent topology, feature, and label invariants.
+    """Check target-independent topology, feature, label, and output invariants.
 
     This check reads only committed expectations and summaries generated from
     upstream sources.  It does not open the released GraphSAGE reference ZIP,
@@ -504,6 +505,7 @@ def check_reconstruction_milestone(
     topology = _read_json_object(topology_summary_path)
     features = _read_json_object(feature_summary_path)
     labels = _read_json_object(label_summary_path)
+    graphsage = _read_json_object(graphsage_summary_path)
 
     topology_counts = _require_mapping(topology.get("counts"), "topology counts")
     topology_hashes = _require_mapping(
@@ -514,6 +516,14 @@ def check_reconstruction_milestone(
     label_counts = _require_mapping(labels.get("counts"), "label counts")
     label_hashes = _require_mapping(labels.get("hashes"), "label hashes")
     term_selection = _require_mapping(labels.get("term_selection"), "label term selection")
+    graphsage_counts = _require_mapping(graphsage.get("counts"), "GraphSAGE counts")
+    graphsage_hashes = _require_mapping(
+        graphsage.get("content_hashes"), "GraphSAGE content hashes"
+    )
+    graphsage_outputs = _require_mapping(graphsage.get("outputs"), "GraphSAGE outputs")
+    graphsage_files = _require_mapping(
+        graphsage_outputs.get("files"), "GraphSAGE output files"
+    )
 
     expected_topology_hashes = _require_mapping(
         expected.get("topology_content_hashes"),
@@ -523,6 +533,18 @@ def check_reconstruction_milestone(
     observed_shape = [feature_counts.get("rows"), feature_counts.get("columns")]
     expected_label_shape = expected.get("label_shape")
     observed_label_shape = [label_counts.get("rows"), label_counts.get("columns")]
+    expected_graphsage_hashes = _require_mapping(
+        expected.get("graphsage_artifact_hashes"),
+        "validation.expected.graphsage_artifact_hashes",
+    )
+    expected_graphsage_content = _require_mapping(
+        expected.get("graphsage_content_hashes"),
+        "validation.expected.graphsage_content_hashes",
+    )
+    observed_graphsage_hashes = {
+        name: _require_mapping(metadata, f"GraphSAGE metadata for {name}").get("sha256")
+        for name, metadata in graphsage_files.items()
+    }
 
     checks: dict[str, bool] = {
         "graph_count": topology_counts.get("graphs") == expected.get("graphs"),
@@ -588,11 +610,31 @@ def check_reconstruction_milestone(
             label_hashes.get("uint8_c_order_data_sha256")
             == expected.get("label_uint8_c_order_data_sha256")
         ),
+        "graphsage_counts": graphsage_counts
+        == {
+            "graphs": expected.get("graphs"),
+            "rows": expected.get("rows"),
+            "edge_records": expected.get("graphsage_edge_records"),
+            "feature_columns": expected_shape[1],
+            "label_columns": expected_label_shape[1],
+            "split_rows": expected.get("split_row_counts"),
+        },
+        "graphsage_content_hashes": graphsage_hashes == expected_graphsage_content,
+        "graphsage_artifact_hashes": observed_graphsage_hashes == expected_graphsage_hashes,
+        "graphsage_checksum_file": (
+            graphsage_outputs.get("checksums_sha256")
+            == expected.get("graphsage_checksums_sha256")
+        ),
+        "graphsage_walks_excluded": (
+            graphsage.get("algorithm", {}).get("unsupervised_walks_included") is False
+        ),
     }
 
     result: dict[str, object] = {
         "schema_version": 1,
-        "scope": "target-independent topology, feature, and label invariants",
+        "scope": (
+            "target-independent topology, feature, label, and GraphSAGE artifact invariants"
+        ),
         "generated_at_utc": utc_now(),
         "inputs": {
             "specification": str(specification_path.resolve()),
@@ -603,6 +645,8 @@ def check_reconstruction_milestone(
             "feature_summary_sha256": sha256_file(feature_summary_path),
             "label_summary": str(label_summary_path.resolve()),
             "label_summary_sha256": sha256_file(label_summary_path),
+            "graphsage_summary": str(graphsage_summary_path.resolve()),
+            "graphsage_summary_sha256": sha256_file(graphsage_summary_path),
         },
         "checks": checks,
         "all_checks_pass": all(checks.values()),

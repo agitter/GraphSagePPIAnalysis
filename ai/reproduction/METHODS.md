@@ -7,10 +7,11 @@ The released GraphSAGE PPI dataset contains 24 tissue-specific graph components,
 features, and 121 binary GO labels. A row represents one occurrence of a gene in
 one tissue graph; the same biological gene can occur in several graphs.
 
-This package reconstructs deterministic inputs used by supervised GraphSAGE and
-will derive the DGL PPI representation. Exploratory source screens, alternative
-hypotheses, split analyses, leakage experiments, literature discrepancies, and
-stochastic walks remain elsewhere in the repository.
+This package reconstructs the deterministic dataset used by supervised
+GraphSAGE and will derive the DGL PPI representation. Exploratory source
+screens, alternative hypotheses, split analyses, leakage experiments,
+literature discrepancies, and stochastic walks remain elsewhere in the
+repository.
 
 The principal design constraint is non-circularity. Reconstruction may use only
 upstream biological sources and committed evidence-backed specifications. Only
@@ -198,46 +199,76 @@ GeneID 10159 is absent from the accepted GPI-based mapping and receives an all-
 zero vector, matching the released data. Repeated occurrences of every mapped
 gene are checked for identical vectors.
 
-## 7. Target-independent checks
+## 7. GraphSAGE artifact assembly
+
+The transparent intermediate tables and matrices are assembled into the four
+files read by the supervised GraphSAGE loader:
+
+```text
+results/graphsage/ppi/ppi-G.json
+results/graphsage/ppi/ppi-id_map.json
+results/graphsage/ppi/ppi-class_map.json
+results/graphsage/ppi/ppi-feats.npy
+```
+
+The graph contains nodes in ascending GraphSAGE ID order with the reconstructed
+validation and test flags. Each undirected edge is written once as `(min, max)`,
+and those pairs are sorted lexicographically. This is a simple canonical order
+that is independent of dictionary iteration. It reproduces the released graph
+structure exactly but does not claim to reproduce the historical ordering of
+the JSON `links` list.
+
+The identity map is written in ascending numeric node order. The class map uses
+the independently recovered 64-bit CPython 2.7 string-dictionary key order;
+this reproduces the released class-map bytes exactly. The feature NPY is copied
+without reserialization because the upstream feature stage already reproduces
+that file byte-for-byte. The final directory contains no `ppi-walks.txt`.
+
+A checksum file at `results/graphsage/SHA256SUMS` records paths relative to its
+own directory and can be checked with ordinary `sha256sum -c`.
+
+## 8. Target-independent checks
 
 `check-milestone` compares generated summaries with compact expectations in
 `specification.yaml`. It verifies topology counts and hashes, feature dimensions
 and hashes, label dimensions and positive-cell count, namespace counts, the 118
 distinct label vectors, the one unmapped graph GeneID, exact term-set recovery,
-and the complete label-matrix data hash.
+the complete label-matrix data hash, and the canonical GraphSAGE artifact
+hashes.
 
 These checks use committed expectations but never open a released reference
 archive. They catch regressions while preserving the reconstruction boundary.
 
-## 8. Independent GraphSAGE validation
+## 9. Independent GraphSAGE validation
 
 The GraphSAGE ZIP is acquired as a `reference` source only for
-`pixi run validate`. Validation independently parses reconstructed and released
-representations and checks:
+`pixi run validate`. Validation independently parses the four reconstructed
+files and the corresponding released members and checks:
 
-- node IDs, identity ID-map semantics, and split flags;
-- graph-wise undirected edge multiplicities;
-- feature shape, dtype, exact values, and NPY bytes;
-- class-map key completeness and logical values;
-- all 6,890,224 GO-label cells.
+- exact graph metadata, nodes, split flags, and undirected edge multiset;
+- a unique, sorted canonical edge list in the reconstructed graph;
+- exact ID-map semantics and bytes;
+- exact class-map values, all 6,890,224 label cells, and bytes;
+- exact feature shape, dtype, all 2,847,200 cells, and NPY bytes;
+- agreement of row counts across all four files;
+- absence of the optional unsupervised walk file.
 
-Topology comparison is structural because JSON formatting and undirected edge
-orientation are not scientific outputs. The reconstructed class map is compared
-semantically rather than requiring historical Python-dictionary serialization.
+The released `ppi-G.json` stores the same undirected edges in a historical
+NetworkX/Python-dependent order. Link-array order does not change the logical
+node-link graph, so graph validation is structural. The validation report still
+records graph byte equality explicitly; it is expected to be false under the
+canonical ordering. The ID map, class map, and feature file are expected to be
+byte-identical.
 
-## 9. Remaining implementation stages
+## 10. Remaining implementation stage
 
-The package will next write the complete deterministic GraphSAGE graph JSON,
-identity map, class map, and feature array needed by supervised GraphSAGE. The
-optional stochastic walk file remains excluded.
-
-DGL outputs will then be derived solely from reconstructed GraphSAGE data. The
+DGL outputs will next be derived solely from reconstructed GraphSAGE data. The
 transformation will include graph grouping, training-only feature
 standardization, directed edge expansion, one self-loop per node, labels, and
 split packaging. DGL validation will require logical and data equivalence rather
 than identical framework-container bytes.
 
-## 10. Quality control, attribution, and uncertainty
+## 11. Quality control, attribution, and uncertainty
 
 - Scientific rules are centralized in `specification.yaml` and explained here.
 - Recovered identities and exceptional decisions are visible in TSV files.
