@@ -46,6 +46,7 @@ permitted to read either released target.
 reproduction/
 ├── README.md                 # operational entry point
 ├── METHODS.md                # scientific transformations and evidence levels
+├── RELEASE_CHECKLIST.md      # clean-clone, CI, and release gates
 ├── THIRD_PARTY_NOTICES.md    # data licenses and attribution
 ├── Snakefile                 # one readable dependency graph
 ├── pixi.toml                 # environment and task definitions
@@ -193,6 +194,17 @@ pixi run clean
 ```
 
 Only `build/` and `results/` are removed. Files under `data/` are preserved.
+
+### Continuous integration and release checks
+
+GitHub Actions runs the fast lint, formatting, and pytest gate for every relevant
+push and pull request. A second job performs the complete reference-free
+reconstruction, deterministic rerun, and independent validation for pushes to
+the `ai` branch, monthly scheduled runs, and manual dispatches.
+
+See [RELEASE_CHECKLIST.md](RELEASE_CHECKLIST.md) for the clean-clone procedure,
+release evidence, expected non-byte-identical outputs, and independent source
+mirror policy.
 
 ## Inputs and cache
 
