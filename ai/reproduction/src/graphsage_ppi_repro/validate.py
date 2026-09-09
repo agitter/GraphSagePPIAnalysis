@@ -624,3 +624,387 @@ def validate_graphsage_dataset(
         failed = [name for name, passed in checks.items() if not passed]
         raise ValidationError("Complete GraphSAGE validation failed: " + ", ".join(failed))
     return result
+
+
+def _inspect_directed_dgl_graph(
+    data: bytes,
+    *,
+    description: str,
+) -> dict[str, object]:
+    """Parse one DGL node-link graph into compact validation structures."""
+
+    try:
+        graph = json.loads(data)
+    except (json.JSONDecodeError, UnicodeDecodeError) as exc:
+        raise ValidationError(f"Invalid {description} JSON: {exc}") from exc
+    if not isinstance(graph, dict):
+        raise ValidationError(f"{description} must be a JSON object")
+    nodes = graph.get("nodes")
+    links = graph.get("links")
+    if not isinstance(nodes, list) or not isinstance(links, list):
+        raise ValidationError(f"{description} must contain node and link lists")
+
+    node_ids: list[int] = []
+    for index, node in enumerate(nodes):
+        if not isinstance(node, dict):
+            raise ValidationError(f"{description} node {index} is not an object")
+        try:
+            node_ids.append(int(node["id"]))
+        except (KeyError, TypeError, ValueError) as exc:
+            raise ValidationError(f"{description} node {index} has an invalid ID") from exc
+
+    edge_set: set[tuple[int, int]] = set()
+    edges_unique = True
+    edges_canonical_and_sorted = True
+    previous_edge: tuple[int, int] | None = None
+    self_loop_count = 0
+    for index, link in enumerate(links):
+        if not isinstance(link, dict):
+            raise ValidationError(f"{description} link {index} is not an object")
+        try:
+            source = int(link["source"])
+            target = int(link["target"])
+        except (KeyError, TypeError, ValueError) as exc:
+            raise ValidationError(
+                f"{description} link {index} has invalid endpoints"
+            ) from exc
+        if not 0 <= source < len(nodes) or not 0 <= target < len(nodes):
+            raise ValidationError(
+                f"{description} link {index} has an out-of-range endpoint"
+            )
+        edge = (source, target)
+        if edge in edge_set:
+            edges_unique = False
+        edge_set.add(edge)
+        if previous_edge is not None and edge < previous_edge:
+            edges_canonical_and_sorted = False
+        previous_edge = edge
+        if source == target:
+            self_loop_count += 1
+
+    return {
+        "schema": set(graph),
+        "directed": graph.get("directed"),
+        "multigraph": graph.get("multigraph"),
+        "graph_metadata": graph.get("graph"),
+        "node_ids": node_ids,
+        "node_count": len(nodes),
+        "edge_set": edge_set,
+        "edges_unique": edges_unique,
+        "edges_canonical_and_sorted": edges_canonical_and_sorted,
+        "self_loop_count": self_loop_count,
+    }
+
+
+def _load_npy_bytes(data: bytes, description: str) -> np.ndarray:
+    try:
+        return np.load(io.BytesIO(data), allow_pickle=False)
+    except (OSError, ValueError) as exc:
+        raise ValidationError(f"Could not read {description}: {exc}") from exc
+
+
+def _write_dgl_markdown(path: Path, result: dict[str, object]) -> None:
+    splits = result["splits"]
+    if not isinstance(splits, dict):
+        raise TypeError("DGL validation splits must be a dictionary")
+    lines = [
+        "# DGL PPI derivative validation",
+        "",
+        f"Overall result: **{'PASS' if result['all_checks_pass'] else 'FAIL'}**",
+        "",
+        "The reconstructed DGL-format JSON and NumPy files were compared with",
+        "the independently acquired DGL PPI archive. Graph IDs and labels require",
+        "exact equality. Features require float64 equality within the predeclared",
+        "absolute tolerance. Directed graph links require exact set equality; their",
+        "serialization order is canonicalized by the reproduction.",
+        "",
+        "| Split | Rows | Graphs | Directed edges | Max feature difference | Result |",
+        "|---|---:|---:|---:|---:|---:|",
+    ]
+    for split_name in OUTPUT_SPLITS_FOR_VALIDATION:
+        split = splits[split_name]
+        if not isinstance(split, dict):
+            raise TypeError(f"DGL split {split_name} must be a dictionary")
+        difference = split["feature_max_abs_difference"]
+        difference_text = "n/a" if difference is None else f"{difference:.3g}"
+        lines.append(
+            f"| `{split_name}` | {split['counts']['rows']:,} | "
+            f"{split['counts']['graphs']:,} | {split['counts']['directed_edges']:,} | "
+            f"{difference_text} | "
+            f"{'PASS' if split['all_checks_pass'] else 'FAIL'} |"
+        )
+
+    lines.extend(["", "## Required comparisons", ""])
+    for split_name in OUTPUT_SPLITS_FOR_VALIDATION:
+        split = splits[split_name]
+        lines.extend(
+            [
+                f"### {split_name}",
+                "",
+                "| Check | Result |",
+                "|---|---:|",
+            ]
+        )
+        for name, passed in split["checks"].items():
+            lines.append(f"| `{name}` | {'PASS' if passed else 'FAIL'} |")
+        lines.extend(
+            [
+                "",
+                f"- Feature tolerance: atol={result['feature_tolerance']['atol']}, "
+                f"rtol={result['feature_tolerance']['rtol']}",
+                f"- Feature arrays byte-identical: "
+                f"{'YES' if split['byte_equality']['feats'] else 'NO'}",
+                f"- Graph JSON byte-identical: "
+                f"{'YES' if split['byte_equality']['graph'] else 'NO'}",
+                "",
+            ]
+        )
+    write_text_atomic(path, "\n".join(lines))
+
+
+OUTPUT_SPLITS_FOR_VALIDATION = ("train", "valid", "test")
+
+
+def validate_dgl_dataset(
+    *,
+    reference_archive: Path,
+    reconstructed_directory: Path,
+    json_output: Path,
+    markdown_output: Path,
+    feature_atol: float = 1.0e-12,
+    feature_rtol: float = 0.0,
+) -> dict[str, object]:
+    """Validate the reconstructed DGL interchange files at meaningful levels."""
+
+    if feature_atol < 0.0 or feature_rtol < 0.0:
+        raise ValidationError("DGL feature tolerances must be non-negative")
+    try:
+        archive = zipfile.ZipFile(reference_archive)
+    except zipfile.BadZipFile as exc:
+        raise ValidationError(
+            f"Invalid DGL reference archive: {reference_archive}"
+        ) from exc
+
+    split_results: dict[str, object] = {}
+    reconstructed_file_metadata: dict[str, object] = {}
+    reference_member_metadata: dict[str, object] = {}
+    try:
+        available = set(archive.namelist())
+        for split_name in OUTPUT_SPLITS_FOR_VALIDATION:
+            filenames = {
+                "graph": f"{split_name}_graph.json",
+                "feats": f"{split_name}_feats.npy",
+                "labels": f"{split_name}_labels.npy",
+                "graph_id": f"{split_name}_graph_id.npy",
+            }
+            missing_reference = sorted(set(filenames.values()) - available)
+            if missing_reference:
+                raise ValidationError(
+                    "DGL reference archive is missing: " + ", ".join(missing_reference)
+                )
+
+            reconstructed_bytes: dict[str, bytes] = {}
+            reference_bytes: dict[str, bytes] = {}
+            for kind, filename in filenames.items():
+                path = reconstructed_directory / filename
+                if not path.is_file():
+                    raise ValidationError(f"Missing reconstructed DGL file: {path}")
+                reconstructed_bytes[kind] = path.read_bytes()
+                reference_bytes[kind] = archive.read(filename)
+                reconstructed_file_metadata[filename] = {
+                    "path": str(path.resolve()),
+                    "size_bytes": path.stat().st_size,
+                    "sha256": sha256_file(path),
+                }
+                reference_member_metadata[filename] = {
+                    "size_bytes": len(reference_bytes[kind]),
+                    "sha256": _member_sha256(reference_bytes[kind]),
+                }
+
+            reference_graph = _inspect_directed_dgl_graph(
+                reference_bytes["graph"],
+                description=f"reference {split_name} graph",
+            )
+            reconstructed_graph = _inspect_directed_dgl_graph(
+                reconstructed_bytes["graph"],
+                description=f"reconstructed {split_name} graph",
+            )
+            reference_features = _load_npy_bytes(
+                reference_bytes["feats"], f"reference {split_name} features"
+            )
+            reconstructed_features = _load_npy_bytes(
+                reconstructed_bytes["feats"],
+                f"reconstructed {split_name} features",
+            )
+            reference_labels = _load_npy_bytes(
+                reference_bytes["labels"], f"reference {split_name} labels"
+            )
+            reconstructed_labels = _load_npy_bytes(
+                reconstructed_bytes["labels"],
+                f"reconstructed {split_name} labels",
+            )
+            reference_graph_ids = _load_npy_bytes(
+                reference_bytes["graph_id"],
+                f"reference {split_name} graph IDs",
+            )
+            reconstructed_graph_ids = _load_npy_bytes(
+                reconstructed_bytes["graph_id"],
+                f"reconstructed {split_name} graph IDs",
+            )
+
+            feature_shape_exact = reconstructed_features.shape == reference_features.shape
+            if feature_shape_exact and reconstructed_features.size:
+                feature_max_difference = float(
+                    np.max(np.abs(reconstructed_features - reference_features))
+                )
+                features_within_tolerance = bool(
+                    np.allclose(
+                        reconstructed_features,
+                        reference_features,
+                        atol=feature_atol,
+                        rtol=feature_rtol,
+                    )
+                )
+            else:
+                feature_max_difference = None
+                features_within_tolerance = False
+
+            row_count = int(reconstructed_graph["node_count"])
+            expected_node_ids = list(range(row_count))
+            reconstructed_edge_set = reconstructed_graph["edge_set"]
+            reference_edge_set = reference_graph["edge_set"]
+            cross_graph_edges = 0
+            if reconstructed_graph_ids.shape == (row_count,):
+                for source, target in reconstructed_edge_set:
+                    if reconstructed_graph_ids[source] != reconstructed_graph_ids[target]:
+                        cross_graph_edges += 1
+
+            checks = {
+                "graph_schema_exact": reconstructed_graph["schema"]
+                == {"directed", "multigraph", "graph", "nodes", "links"},
+                "graph_is_directed_non_multigraph": (
+                    reconstructed_graph["directed"] is True
+                    and reconstructed_graph["multigraph"] is False
+                ),
+                "graph_metadata_empty": reconstructed_graph["graph_metadata"] == {},
+                "graph_node_ids_consecutive": (
+                    reconstructed_graph["node_ids"] == expected_node_ids
+                ),
+                "graph_nodes_match_reference": (
+                    reconstructed_graph["node_ids"] == reference_graph["node_ids"]
+                ),
+                "graph_edge_set_exact": reconstructed_edge_set == reference_edge_set,
+                "graph_edges_unique": bool(reconstructed_graph["edges_unique"]),
+                "graph_edges_canonical_and_sorted": bool(
+                    reconstructed_graph["edges_canonical_and_sorted"]
+                ),
+                "one_self_loop_per_node": (
+                    reconstructed_graph["self_loop_count"] == row_count
+                    and all(
+                        (node, node) in reconstructed_edge_set for node in range(row_count)
+                    )
+                ),
+                "no_cross_graph_id_edges": cross_graph_edges == 0,
+                "graph_id_shape_exact": (
+                    reconstructed_graph_ids.shape
+                    == reference_graph_ids.shape
+                    == (row_count,)
+                ),
+                "graph_id_dtype_exact": (
+                    reconstructed_graph_ids.dtype
+                    == reference_graph_ids.dtype
+                    == np.dtype(np.int64)
+                ),
+                "graph_id_values_exact": np.array_equal(
+                    reconstructed_graph_ids, reference_graph_ids
+                ),
+                "graph_id_npy_bytes_exact": (
+                    reconstructed_bytes["graph_id"] == reference_bytes["graph_id"]
+                ),
+                "label_shape_exact": (
+                    reconstructed_labels.shape == reference_labels.shape
+                    and reconstructed_labels.shape[0] == row_count
+                ),
+                "label_dtype_exact": (
+                    reconstructed_labels.dtype
+                    == reference_labels.dtype
+                    == np.dtype(np.int64)
+                ),
+                "label_values_exact": np.array_equal(
+                    reconstructed_labels, reference_labels
+                ),
+                "label_npy_bytes_exact": (
+                    reconstructed_bytes["labels"] == reference_bytes["labels"]
+                ),
+                "feature_shape_exact": feature_shape_exact
+                and reconstructed_features.shape[0] == row_count,
+                "feature_dtype_exact": (
+                    reconstructed_features.dtype
+                    == reference_features.dtype
+                    == np.dtype(np.float64)
+                ),
+                "feature_values_within_tolerance": features_within_tolerance,
+                "cross_file_row_counts_agree": (
+                    reconstructed_features.shape[0]
+                    == reconstructed_labels.shape[0]
+                    == reconstructed_graph_ids.shape[0]
+                    == row_count
+                ),
+            }
+            values = np.unique(reconstructed_graph_ids)
+            split_results[split_name] = {
+                "counts": {
+                    "rows": row_count,
+                    "graphs": int(len(values)),
+                    "directed_edges": len(reconstructed_edge_set),
+                    "self_loops": int(reconstructed_graph["self_loop_count"]),
+                    "cross_graph_id_edges": cross_graph_edges,
+                },
+                "graph_ids": [int(value) for value in values],
+                "feature_max_abs_difference": feature_max_difference,
+                "byte_equality": {
+                    kind: reconstructed_bytes[kind] == reference_bytes[kind]
+                    for kind in filenames
+                },
+                "checks": checks,
+                "all_checks_pass": all(checks.values()),
+            }
+    finally:
+        archive.close()
+
+    result: dict[str, object] = {
+        "schema_version": 1,
+        "scope": "DGL PPI derivative of the reconstructed GraphSAGE data",
+        "reference": {
+            "archive": str(reference_archive.resolve()),
+            "archive_sha256": sha256_file(reference_archive),
+            "members": reference_member_metadata,
+        },
+        "reconstructed": {
+            "directory": str(reconstructed_directory.resolve()),
+            "files": reconstructed_file_metadata,
+        },
+        "comparison_policy": {
+            "graph_json": "directed edge-set and node-level structural equality",
+            "graph_id": "array and byte equality",
+            "labels": "array and byte equality",
+            "features": "float64 numeric equality within fixed tolerance",
+            "archive_container": "not compared",
+        },
+        "feature_tolerance": {"atol": feature_atol, "rtol": feature_rtol},
+        "splits": split_results,
+        "all_checks_pass": all(
+            bool(split["all_checks_pass"]) for split in split_results.values()
+        ),
+    }
+    write_json_atomic(json_output, result)
+    _write_dgl_markdown(markdown_output, result)
+    if not result["all_checks_pass"]:
+        failed = [
+            f"{split_name}:{name}"
+            for split_name, split in split_results.items()
+            for name, passed in split["checks"].items()
+            if not passed
+        ]
+        raise ValidationError("DGL validation failed: " + ", ".join(failed))
+    return result

@@ -21,8 +21,9 @@ graphsage-ppi-repro = { path = ".", editable = true }
 [tasks]
 acquire-upstream = "python -m graphsage_ppi_repro.cli ensure-sources --manifest spec/sources.tsv --data-dir data --source-id ohmnet_networks --source-id msigdb_c1_v61 --source-id msigdb_c3_v61 --source-id goa_human_gaf_159 --source-id goa_human_gpi_159 --source-id gp2protein_geneid_20160601 --source-id go_ontology_20160601"
 acquire-graphsage-reference = "python -m graphsage_ppi_repro.cli ensure-sources --manifest spec/sources.tsv --data-dir data --source-id graphsage_ppi_reference --role reference"
+acquire-dgl-reference = "python -m graphsage_ppi_repro.cli ensure-sources --manifest spec/sources.tsv --data-dir data --source-id dgl_ppi_reference --role reference"
 reproduce = { cmd = "snakemake --cores 1 reproduce", depends-on = ["acquire-upstream"] }
-validate = { cmd = "snakemake --cores 1 validate", depends-on = ["acquire-upstream", "acquire-graphsage-reference"] }
+validate = { cmd = "snakemake --cores 1 validate", depends-on = ["acquire-upstream", "acquire-graphsage-reference", "acquire-dgl-reference"] }
 test = "ruff check . && ruff format --check . && pytest -q"
 format = "ruff check --fix . && ruff format ."
 clean = "python -m graphsage_ppi_repro.cli clean --directory build --directory results"

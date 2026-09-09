@@ -407,6 +407,7 @@ def test_workflow_treats_cached_sources_as_inputs_only() -> None:
     assert tasks["validate"]["depends-on"] == [
         "acquire-upstream",
         "acquire-graphsage-reference",
+        "acquire-dgl-reference",
     ]
     upstream_command = tasks["acquire-upstream"]
     for source_id in (

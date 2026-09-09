@@ -86,14 +86,15 @@ Suggested citation:
 
 ## DGL reference data
 
-The DGL PPI archive will be used only to validate the downstream logical and
-data transformation:
+The DGL PPI archive is used only to validate the downstream logical and data
+transformation:
 
 - https://data.dgl.ai/dataset/ppi.zip
 - https://www.dgl.ai/
 
-DGL outputs will be reconstructed from the rebuilt GraphSAGE data rather than
-copied from this reference archive.
+DGL outputs are reconstructed from the rebuilt GraphSAGE data rather than copied
+from this reference archive. The reproduction does not redistribute the target
+ZIP and does not require the DGL Python package to write its JSON/NumPy format.
 
 ## Software license versus data licenses
 

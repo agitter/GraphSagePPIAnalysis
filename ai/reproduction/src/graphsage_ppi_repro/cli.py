@@ -13,6 +13,7 @@ import sys
 from collections.abc import Sequence
 from pathlib import Path
 
+from .dgl import DGLReconstructionError, assemble_dgl
 from .features import FeatureError, reconstruct_features
 from .graphsage import GraphSAGEError, assemble_graphsage
 from .identifiers import IdentifierError
@@ -26,6 +27,7 @@ from .provenance import (
 from .topology import TopologyError, reconstruct_topology
 from .validate import (
     ValidationError,
+    validate_dgl_dataset,
     validate_graphsage_dataset,
     validate_labels_against_graphsage,
     validate_topology_and_features,
@@ -148,6 +150,21 @@ def _build_parser() -> argparse.ArgumentParser:
         graphsage.add_argument(name, type=_path, required=True, help=text)
     graphsage.add_argument("--word-size-bits", type=int, choices=(32, 64), default=64)
 
+    dgl = subparsers.add_parser(
+        "assemble-dgl",
+        help="Derive the DGL PPI interchange files from reconstructed GraphSAGE data.",
+    )
+    for name, text in (
+        ("--graph", "Reconstructed GraphSAGE ppi-G.json."),
+        ("--id-map", "Reconstructed GraphSAGE ppi-id_map.json."),
+        ("--class-map", "Reconstructed GraphSAGE ppi-class_map.json."),
+        ("--features", "Reconstructed GraphSAGE ppi-feats.npy."),
+        ("--graph-spec", "Accepted selected_graphs.tsv specification."),
+        ("--output-directory", "Directory for the 12 DGL interchange files."),
+        ("--summary-output", "Output JSON transformation summary."),
+    ):
+        dgl.add_argument(name, type=_path, required=True, help=text)
+
     manifest = subparsers.add_parser(
         "write-manifest", help="Write a reconstruction-stage provenance manifest."
     )
@@ -216,6 +233,20 @@ def _build_parser() -> argparse.ArgumentParser:
         ("--markdown-output", "Human-readable validation report."),
     ):
         graphsage_validation.add_argument(name, type=_path, required=True, help=text)
+
+    dgl_validation = subparsers.add_parser(
+        "validate-dgl",
+        help="Validate the DGL derivative against the independent release.",
+    )
+    for name, text in (
+        ("--reference", "Released DGL PPI ZIP."),
+        ("--directory", "Directory containing reconstructed DGL files."),
+        ("--json-output", "Machine-readable validation report."),
+        ("--markdown-output", "Human-readable validation report."),
+    ):
+        dgl_validation.add_argument(name, type=_path, required=True, help=text)
+    dgl_validation.add_argument("--feature-atol", type=float, default=1.0e-12)
+    dgl_validation.add_argument("--feature-rtol", type=float, default=0.0)
 
     label_validation = subparsers.add_parser(
         "validate-labels",
@@ -326,6 +357,18 @@ def _run(arguments: argparse.Namespace) -> None:
         )
         return
 
+    if arguments.command == "assemble-dgl":
+        assemble_dgl(
+            graph_path=arguments.graph,
+            id_map_path=arguments.id_map,
+            class_map_path=arguments.class_map,
+            feature_path=arguments.features,
+            graph_spec_path=arguments.graph_spec,
+            output_directory=arguments.output_directory,
+            summary_output=arguments.summary_output,
+        )
+        return
+
     if arguments.command == "check-milestone":
         check_reconstruction_milestone(
             specification_path=arguments.specification,
@@ -372,6 +415,17 @@ def _run(arguments: argparse.Namespace) -> None:
         )
         return
 
+    if arguments.command == "validate-dgl":
+        validate_dgl_dataset(
+            reference_archive=arguments.reference,
+            reconstructed_directory=arguments.directory,
+            json_output=arguments.json_output,
+            markdown_output=arguments.markdown_output,
+            feature_atol=arguments.feature_atol,
+            feature_rtol=arguments.feature_rtol,
+        )
+        return
+
     if arguments.command == "validate-labels":
         validate_labels_against_graphsage(
             reference_archive=arguments.reference,
@@ -398,6 +452,7 @@ def main(argv: Sequence[str] | None = None) -> int:
     try:
         _run(arguments)
     except (
+        DGLReconstructionError,
         FeatureError,
         GraphSAGEError,
         IdentifierError,

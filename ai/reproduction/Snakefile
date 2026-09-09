@@ -1,11 +1,12 @@
 """Readable workflow for the central GraphSAGE PPI reconstruction.
 
 This workflow reconstructs the complete biological row order, PPI topology,
-50 input features, 121 GO labels, and the four deterministic files consumed by
-supervised GraphSAGE. Pixi acquires or verifies immutable files under ``data/``
-before Snakemake starts. Snakemake treats those files only as inputs; generated
-outputs are confined to ``build/`` and ``results/``. Released GraphSAGE data
-enter only through ``validate``.
+50 input features, 121 GO labels, the four deterministic files consumed by
+supervised GraphSAGE, and the downstream DGL representation. Pixi acquires or
+verifies immutable files under ``data/`` before Snakemake starts. Snakemake
+treats those files only as inputs; generated outputs are confined to ``build/``
+and ``results/``. Released GraphSAGE and DGL targets enter only through
+``validate``.
 """
 
 from pathlib import Path
@@ -35,9 +36,11 @@ GOA_GPI = DATA_DIR / "goa_human.gpi.159.gz"
 GP2PROTEIN = DATA_DIR / "2016-06-01-gp2protein.geneid.gz"
 GO_ONTOLOGY = DATA_DIR / "2016-06-01-go.obo"
 GRAPHSAGE_REFERENCE = DATA_DIR / "graphsage_ppi.zip"
+DGL_REFERENCE = DATA_DIR / "dgl_ppi.zip"
 
 SOURCE_REPORT = BUILD_DIR / "sources" / "upstream_sources.json"
 REFERENCE_REPORT = BUILD_DIR / "sources" / "graphsage_reference.json"
+DGL_REFERENCE_REPORT = BUILD_DIR / "sources" / "dgl_reference.json"
 NODE_MAPPING = BUILD_DIR / "topology" / "node_to_entrez.tsv.gz"
 EDGE_TABLE = BUILD_DIR / "topology" / "edges.tsv.gz"
 TOPOLOGY_SUMMARY = BUILD_DIR / "topology" / "summary.json"
@@ -56,10 +59,21 @@ GRAPHSAGE_ID_MAP = GRAPHSAGE_DIR / "ppi-id_map.json"
 GRAPHSAGE_CLASS_MAP = GRAPHSAGE_DIR / "ppi-class_map.json"
 GRAPHSAGE_FEATURES = GRAPHSAGE_DIR / "ppi-feats.npy"
 GRAPHSAGE_CHECKSUMS = GRAPHSAGE_ROOT / "SHA256SUMS"
+DGL_SUMMARY = BUILD_DIR / "dgl" / "summary.json"
+DGL_ROOT = RESULTS_DIR / "dgl"
+DGL_DIR = DGL_ROOT / "ppi"
+DGL_DATA_FILES = [
+    str(DGL_DIR / f"{split}_{suffix}")
+    for split in ("train", "valid", "test")
+    for suffix in ("graph.json", "feats.npy", "labels.npy", "graph_id.npy")
+]
+DGL_CHECKSUMS = DGL_ROOT / "SHA256SUMS"
 RECONSTRUCTION_CHECKS = BUILD_DIR / "reconstruction_checks.json"
 RUN_MANIFEST = RESULTS_DIR / "reconstruction_manifest.json"
 GRAPHSAGE_VALIDATION_JSON = RESULTS_DIR / "graphsage_validation.json"
 GRAPHSAGE_VALIDATION_MD = RESULTS_DIR / "graphsage_validation.md"
+DGL_VALIDATION_JSON = RESULTS_DIR / "dgl_validation.json"
+DGL_VALIDATION_MD = RESULTS_DIR / "dgl_validation.md"
 
 LABEL_CONFIG = config["reconstruction"]["labels"]
 GRAPHSAGE_CONFIG = config["reconstruction"]["graphsage"]
@@ -86,6 +100,8 @@ rule validate:
     input:
         str(GRAPHSAGE_VALIDATION_JSON),
         str(GRAPHSAGE_VALIDATION_MD),
+        str(DGL_VALIDATION_JSON),
+        str(DGL_VALIDATION_MD),
 
 
 rule verify_upstream_sources:
@@ -238,6 +254,32 @@ rule assemble_graphsage:
         """
 
 
+rule assemble_dgl:
+    input:
+        graph=rules.assemble_graphsage.output.graph,
+        id_map=rules.assemble_graphsage.output.id_map,
+        class_map=rules.assemble_graphsage.output.class_map,
+        features=rules.assemble_graphsage.output.features,
+        graph_spec=str(GRAPH_SPEC),
+    output:
+        data=DGL_DATA_FILES,
+        checksums=str(DGL_CHECKSUMS),
+        summary=str(DGL_SUMMARY),
+    params:
+        output_directory=str(DGL_DIR),
+    shell:
+        """
+        python -m graphsage_ppi_repro.cli assemble-dgl \
+          --graph {input.graph:q} \
+          --id-map {input.id_map:q} \
+          --class-map {input.class_map:q} \
+          --features {input.features:q} \
+          --graph-spec {input.graph_spec:q} \
+          --output-directory {params.output_directory:q} \
+          --summary-output {output.summary:q}
+        """
+
+
 rule check_reconstruction:
     input:
         specification=str(SPECIFICATION),
@@ -278,6 +320,9 @@ rule write_reconstruction_manifest:
         graphsage_features=rules.assemble_graphsage.output.features,
         graphsage_checksums=rules.assemble_graphsage.output.checksums,
         graphsage_summary=rules.assemble_graphsage.output.summary,
+        dgl_files=rules.assemble_dgl.output.data,
+        dgl_checksums=rules.assemble_dgl.output.checksums,
+        dgl_summary=rules.assemble_dgl.output.summary,
         checks=rules.check_reconstruction.output.checks,
         sources=str(SOURCES),
         specification=str(SPECIFICATION),
@@ -297,7 +342,7 @@ rule write_reconstruction_manifest:
           --project-root {params.project_root:q} \
           --reproduction-root {params.reproduction_root:q} \
           --source-report {input.source_report:q} \
-          --stage complete_graphsage \
+          --stage complete_graphsage_and_dgl \
           --artifact {input.mapping:q} \
           --artifact {input.edges:q} \
           --artifact {input.topology_summary:q} \
@@ -314,6 +359,8 @@ rule write_reconstruction_manifest:
           --artifact {input.graphsage_features:q} \
           --artifact {input.graphsage_checksums:q} \
           --artifact {input.graphsage_summary:q} \
+          --artifact {input.dgl_checksums:q} \
+          --artifact {input.dgl_summary:q} \
           --artifact {input.checks:q} \
           --specification {input.sources:q} \
           --specification {input.specification:q} \
@@ -365,4 +412,50 @@ rule validate_graphsage:
           --features {input.features:q} \
           --json-output {output.json:q} \
           --markdown-output {output.markdown:q}
+        """
+
+
+rule verify_dgl_reference:
+    input:
+        manifest=str(SOURCES),
+        archive=str(DGL_REFERENCE),
+    output:
+        report=str(DGL_REFERENCE_REPORT),
+    params:
+        data_dir=str(DATA_DIR),
+    shell:
+        """
+        python -m graphsage_ppi_repro.cli ensure-sources \
+          --manifest {input.manifest:q} \
+          --data-dir {params.data_dir:q} \
+          --source-id dgl_ppi_reference \
+          --role reference \
+          --report {output.report:q}
+        """
+
+
+rule validate_dgl:
+    input:
+        reconstruction=rules.write_reconstruction_manifest.output.manifest,
+        reference=str(DGL_REFERENCE),
+        reference_report=rules.verify_dgl_reference.output.report,
+        data=rules.assemble_dgl.output.data,
+        checksums=rules.assemble_dgl.output.checksums,
+        summary=rules.assemble_dgl.output.summary,
+    output:
+        json=str(DGL_VALIDATION_JSON),
+        markdown=str(DGL_VALIDATION_MD),
+    params:
+        directory=str(DGL_DIR),
+        atol=config["validation"]["dgl_feature_atol"],
+        rtol=config["validation"]["dgl_feature_rtol"],
+    shell:
+        """
+        python -m graphsage_ppi_repro.cli validate-dgl \
+          --reference {input.reference:q} \
+          --directory {params.directory:q} \
+          --json-output {output.json:q} \
+          --markdown-output {output.markdown:q} \
+          --feature-atol {params.atol} \
+          --feature-rtol {params.rtol}
         """

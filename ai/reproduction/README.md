@@ -2,8 +2,7 @@
 
 This directory contains a small, auditable workflow that reconstructs the
 published GraphSAGE protein-protein interaction (PPI) data from historical
-upstream sources. The corresponding DGL representation remains the final major
-implementation stage.
+upstream sources and derives the corresponding DGL PPI representation.
 
 The workflow is intentionally narrower than the surrounding forensic research.
 It rebuilds deterministic data needed by **supervised GraphSAGE** and DGL. It
@@ -21,10 +20,11 @@ The workflow currently reconstructs and validates:
 - all 121 GO labels from dated GOA, GeneID-UniProt, and GO sources;
 - the four deterministic files consumed by supervised GraphSAGE;
 - target-independent counts, content hashes, and file hashes;
-- independent comparison with every corresponding released GraphSAGE file.
+- independent comparison with every corresponding released GraphSAGE file;
+- the 12 DGL PPI graph, feature, label, and graph-ID files;
+- independent logical and data-level comparison with the released DGL archive.
 
-The GraphSAGE reconstruction is complete. DGL conversion remains the next and
-final major implementation stage.
+The deterministic GraphSAGE-to-DGL reproduction path is complete.
 
 ## The non-circularity rule
 
@@ -38,8 +38,7 @@ released targets --------------------+-> validation only
 
 `pixi run reproduce` does not read `graphsage_ppi.zip` or `dgl_ppi.zip` and must
 finish when those reference archives are absent. Only `pixi run validate` is
-permitted to read the GraphSAGE reference. The DGL reference will be activated
-when DGL reconstruction is implemented.
+permitted to read either released target.
 
 ## Directory layout
 
@@ -102,6 +101,8 @@ reconstruct 50 features   reconstruct 121 GO labels
                      |
 assemble the four supervised GraphSAGE files
                      |
+derive the split-specific DGL interchange files
+                     |
 check target-independent invariants
                      |
 write reconstruction manifest
@@ -121,16 +122,22 @@ build/labels/ppi-class_map.json
 build/labels/selected_labels.tsv
 build/labels/summary.json
 build/graphsage/summary.json
+build/dgl/summary.json
 build/reconstruction_checks.json
 results/graphsage/ppi/ppi-G.json
 results/graphsage/ppi/ppi-id_map.json
 results/graphsage/ppi/ppi-class_map.json
 results/graphsage/ppi/ppi-feats.npy
 results/graphsage/SHA256SUMS
+results/dgl/ppi/{train,valid,test}_graph.json
+results/dgl/ppi/{train,valid,test}_feats.npy
+results/dgl/ppi/{train,valid,test}_labels.npy
+results/dgl/ppi/{train,valid,test}_graph_id.npy
+results/dgl/SHA256SUMS
 results/reconstruction_manifest.json
 ```
 
-### Validate against released GraphSAGE data
+### Validate against released GraphSAGE and DGL data
 
 ```bash
 pixi run validate
@@ -148,11 +155,19 @@ members of `graphsage_ppi.zip`:
 The reconstructed graph JSON deliberately writes undirected links in canonical
 numeric order. Its logical graph is exact, but its link-list byte order differs
 from the historical NetworkX/Python serialization. This distinction is reported
-rather than hidden. Validation writes:
+rather than hidden.
+
+The same command independently validates the DGL derivative. It requires exact
+graph-ID and label arrays, exact directed edge sets with one self-loop per node,
+and float64 feature values within the fixed tolerance in
+`spec/specification.yaml`. DGL graph-link order is canonicalized, and container
+bytes are not required to match. Validation writes:
 
 ```text
 results/graphsage_validation.json
 results/graphsage_validation.md
+results/dgl_validation.json
+results/dgl_validation.md
 ```
 
 ZIP timestamps and compression bytes are not scientific outputs. The optional
@@ -168,6 +183,7 @@ The tests use small committed fixtures. They cover source-cache safety, legacy
 CPython 2.7 ordering, graph reconstruction, MSigDB selection, historical NumPy
 serialization, many-to-many identifier resolution, GAF filtering, alternate GO
 IDs, `is_a` propagation, label projection, deterministic GraphSAGE assembly,
+DGL component grouping, feature standardization, directed edges, self-loops,
 and target-independent versus reference-based validation.
 
 ### Remove generated files
@@ -205,7 +221,7 @@ Current upstream reconstruction inputs are:
 - the 2016-06-01 GeneID-UniProt mapping;
 - the 2016-06-01 GO ontology.
 
-Validation additionally uses the released GraphSAGE PPI ZIP.
+Validation additionally uses the released GraphSAGE and DGL PPI ZIP files.
 
 ## Specification files
 
@@ -220,8 +236,8 @@ Validation additionally uses the released GraphSAGE PPI ZIP.
   marks three membership-indistinguishable term pairs as provisional.
 - `identifier_decisions.tsv` records the small set of evidence-backed amendments
   needed beyond direct historical GeneID-UniProt edges.
-- `specification.yaml` also records the canonical GraphSAGE serialization policy
-  and exact expected hashes for the four deterministic output files.
+- `specification.yaml` also records the canonical GraphSAGE serialization policy,
+  the DGL transformation and tolerance policy, and compact expected invariants.
 
 These tables are reviewable reconstruction specifications, not hidden copies of
 output matrices.

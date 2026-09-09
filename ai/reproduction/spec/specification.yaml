@@ -49,10 +49,16 @@ reconstruction:
     class_map_word_size_bits: 64
     include_unsupervised_walks: false
   dgl:
-    fit_standard_scaler_on: training_rows_only
+    graph_id_assignment: largest_connected_component_per_tissue
+    non_largest_components: first_graph_id_of_each_split
+    row_order: ascending_graph_id_then_original_graphsage_row
+    fit_standard_scaler_on: original_graphsage_training_rows_only
     feature_computation_dtype: float64
+    variance_ddof: 0
+    zero_variance_scale: 1.0
     directed_edge_expansion: true
     one_self_loop_per_node: true
+    graph_link_order: canonical_directed_node_id_sort
 validation:
   expected:
     graphs: 24
@@ -110,6 +116,9 @@ validation:
     graphsage_class_map: byte_exact
     graphsage_features: array_exact_and_byte_exact_npy
     graphsage_labels: array_exact_and_byte_exact_class_map
-    dgl: logical_and_data_equivalent
+    dgl_graph_json: structurally_exact_canonical_link_order
+    dgl_graph_id: array_exact_and_byte_exact_npy
+    dgl_labels: array_exact_and_byte_exact_npy
+    dgl_features: float64_numeric_tolerance
   dgl_feature_atol: 1.0e-12
   dgl_feature_rtol: 0.0

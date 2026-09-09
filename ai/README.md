@@ -25,5 +25,6 @@ It uses checksum-locked upstream sources to rebuild the deterministic data neede
 - Prepare a report describing the data workflow, evidence supporting each conclusion (including what remains speculative or unidentifiable with a claims.csv)
 - Catalog usage of the PPI dataset to show impact
 - Create machine learning controls to demonstrate the severity of the data leakage and predictive ability on randomized labels
+- Interpret varying performance of graph neural network architectures on the original form of the data
 - Respond to GraphSAGE GitHub repo issues with these insights
 - Archive external data files to protect against future unavailability, if licenses permit

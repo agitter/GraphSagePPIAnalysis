@@ -8,7 +8,7 @@ features, and 121 binary GO labels. A row represents one occurrence of a gene in
 one tissue graph; the same biological gene can occur in several graphs.
 
 This package reconstructs the deterministic dataset used by supervised
-GraphSAGE and will derive the DGL PPI representation. Exploratory source
+GraphSAGE and derives the DGL PPI representation. Exploratory source
 screens, alternative hypotheses, split analyses, leakage experiments,
 literature discrepancies, and stochastic walks remain elsewhere in the
 repository.
@@ -260,13 +260,62 @@ records graph byte equality explicitly; it is expected to be false under the
 canonical ordering. The ID map, class map, and feature file are expected to be
 byte-identical.
 
-## 10. Remaining implementation stage
+## 10. DGL derivation and validation
 
-DGL outputs will next be derived solely from reconstructed GraphSAGE data. The
-transformation will include graph grouping, training-only feature
-standardization, directed edge expansion, one self-loop per node, labels, and
-split packaging. DGL validation will require logical and data equivalence rather
-than identical framework-container bytes.
+### 10.1 Why DGL row order differs from GraphSAGE
+
+The DGL archive contains three split-specific graphs rather than one 56,944-row
+container. Its graph IDs are not simply copied from an explicit GraphSAGE field:
+the released GraphSAGE graph has no such field, and many tissue blocks contain
+small disconnected components in addition to one dominant component.
+
+For each split, the transformation initially assigns every row to the first
+graph ID in that split: 1 for training, 21 for validation, and 23 for test. It
+then finds the largest connected component within each of the 24 contiguous
+tissue blocks and assigns that component to the tissue's one-based graph index.
+Every smaller component keeps the split's first graph ID. Components are found
+by scanning rows in ascending GraphSAGE order; if equally large components ever
+occurred, the first encountered component would win.
+
+Rows are then concatenated by ascending graph ID while preserving their original
+GraphSAGE order within each ID. This explains why DGL graph 1 contains the main
+component of the first training tissue plus the smaller components from all 20
+training tissues. The same pooling occurs in graph 21 for validation and graph
+23 for test.
+
+### 10.2 Features, labels, and graph structure
+
+The 50 raw GraphSAGE feature columns are converted to float64 and standardized
+using the population mean and variance computed over all original GraphSAGE
+training rows. A zero-variance column receives scale 1, matching
+`StandardScaler` behavior. The fitted statistics are then applied to training,
+validation, and test rows before the DGL row permutation.
+
+Label vectors are reordered identically and written as int64. Graph IDs are also
+int64. Each non-loop undirected GraphSAGE edge becomes two directed arcs. An
+existing self-loop remains one loop, and every node without a loop receives one,
+so every output node has exactly one self-loop. Directed links are written in
+lexicographic `(source, target)` order.
+
+The 12 DGL interchange files are written under `results/dgl/ppi/`, with a
+checksum inventory in `results/dgl/SHA256SUMS`. This step uses only reconstructed
+GraphSAGE files and `selected_graphs.tsv`; it does not read `dgl_ppi.zip` or
+import the DGL framework.
+
+### 10.3 Independent validation levels
+
+The DGL target is opened only by `validate.py`. For each split, validation
+requires exact graph IDs, exact labels, exact directed edge sets, unique links,
+one self-loop per node, and no edges crossing graph IDs. The graph-ID and label
+NPY files are also expected to be byte-identical. Standardized features must be
+float64 and agree with the release at the predeclared absolute tolerance
+`1e-12` with zero relative tolerance.
+
+Graph JSON link order and feature-array bytes are reported but are not acceptance
+requirements. Small floating-point differences arise from implementation and
+platform details of the historical standardization, and link order is not part
+of the directed graph's logical content. ZIP compression and timestamps are not
+compared.
 
 ## 11. Quality control, attribution, and uncertainty
 
