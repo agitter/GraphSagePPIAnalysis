@@ -1,0 +1,129 @@
+name: GraphSAGE PPI reproduction
+
+on:
+  push:
+    paths:
+      - "ai/reproduction/**"
+      - ".github/workflows/reproduction.yml"
+  pull_request:
+    paths:
+      - "ai/reproduction/**"
+      - ".github/workflows/reproduction.yml"
+  workflow_dispatch:
+  schedule:
+    - cron: "17 9 1 * *"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: reproduction-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  quality:
+    name: Fast tests and formatting
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    defaults:
+      run:
+        working-directory: ai/reproduction
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6.0.2
+        with:
+          persist-credentials: false
+
+      - name: Install locked Pixi environment
+        uses: prefix-dev/setup-pixi@v0.10.0
+        with:
+          working-directory: ai/reproduction
+          pixi-version: v0.75.0
+          frozen: true
+          cache: true
+
+      - name: Run fast tests
+        run: pixi run test
+
+  full-reproduction:
+    name: Clean-clone reconstruction and validation
+    needs: quality
+    if: >-
+      github.event_name == 'schedule' ||
+      github.event_name == 'workflow_dispatch' ||
+      (github.event_name == 'push' && github.ref_name == 'ai')
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    defaults:
+      run:
+        working-directory: ai/reproduction
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6.0.2
+        with:
+          persist-credentials: false
+
+      - name: Install locked Pixi environment
+        uses: prefix-dev/setup-pixi@v0.10.0
+        with:
+          working-directory: ai/reproduction
+          pixi-version: v0.75.0
+          frozen: true
+          cache: true
+
+      - name: Reconstruct without released targets
+        run: |
+          test ! -e data/graphsage_ppi.zip
+          test ! -e data/dgl_ppi.zip
+          pixi run reproduce
+          test ! -e data/graphsage_ppi.zip
+          test ! -e data/dgl_ppi.zip
+
+      - name: Record first reconstruction hashes
+        run: |
+          find results/graphsage/ppi results/dgl/ppi -type f -print0 \
+            | sort -z \
+            | xargs -0 sha256sum \
+            > /tmp/reproduction-run-1.sha256
+
+      - name: Repeat reconstruction and compare hashes
+        run: |
+          pixi run clean
+          pixi run reproduce
+          find results/graphsage/ppi results/dgl/ppi -type f -print0 \
+            | sort -z \
+            | xargs -0 sha256sum \
+            > /tmp/reproduction-run-2.sha256
+          diff -u \
+            /tmp/reproduction-run-1.sha256 \
+            /tmp/reproduction-run-2.sha256
+          cp /tmp/reproduction-run-1.sha256 results/
+          cp /tmp/reproduction-run-2.sha256 results/
+
+      - name: Validate against independent releases
+        run: pixi run validate
+
+      - name: Verify generated checksum inventories
+        run: |
+          (cd results/graphsage && sha256sum -c SHA256SUMS)
+          (cd results/dgl && sha256sum -c SHA256SUMS)
+
+      - name: Confirm tracked files remain unchanged
+        run: test -z "$(git status --short)"
+
+      - name: Upload compact verification evidence
+        if: always()
+        uses: actions/upload-artifact@v7.0.1
+        with:
+          name: reproduction-verification-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            ai/reproduction/results/*.json
+            ai/reproduction/results/*.md
+            ai/reproduction/results/*.sha256
+            ai/reproduction/results/graphsage/SHA256SUMS
+            ai/reproduction/results/dgl/SHA256SUMS
+            ai/reproduction/build/reconstruction_checks.json
+            ai/reproduction/build/*/summary.json
+            ai/reproduction/build/sources/*.json
+          if-no-files-found: warn
+          retention-days: 30
