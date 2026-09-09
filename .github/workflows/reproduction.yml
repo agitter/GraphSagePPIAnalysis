@@ -21,10 +21,10 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  quality:
-    name: Fast tests and formatting
+  reproduction:
+    name: Test, reconstruct, and validate
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 60
     defaults:
       run:
         working-directory: ai/reproduction
@@ -32,7 +32,8 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v6.0.2
         with:
-          persist-credentials: false
+          persist-credentials: true
+          submodules: false
 
       - name: Install locked Pixi environment
         uses: prefix-dev/setup-pixi@v0.10.0
@@ -42,34 +43,8 @@ jobs:
           frozen: true
           cache: true
 
-      - name: Run fast tests
+      - name: Run lint, formatting, and unit tests
         run: pixi run test
-
-  full-reproduction:
-    name: Clean-clone reconstruction and validation
-    needs: quality
-    if: >-
-      github.event_name == 'schedule' ||
-      github.event_name == 'workflow_dispatch' ||
-      (github.event_name == 'push' && github.ref_name == 'ai')
-    runs-on: ubuntu-latest
-    timeout-minutes: 45
-    defaults:
-      run:
-        working-directory: ai/reproduction
-    steps:
-      - name: Check out repository
-        uses: actions/checkout@v6.0.2
-        with:
-          persist-credentials: false
-
-      - name: Install locked Pixi environment
-        uses: prefix-dev/setup-pixi@v0.10.0
-        with:
-          working-directory: ai/reproduction
-          pixi-version: v0.75.0
-          frozen: true
-          cache: true
 
       - name: Reconstruct without released targets
         run: |
@@ -112,7 +87,6 @@ jobs:
         run: test -z "$(git status --short)"
 
       - name: Upload compact verification evidence
-        if: always()
         uses: actions/upload-artifact@v7.0.1
         with:
           name: reproduction-verification-${{ github.run_id }}-${{ github.run_attempt }}
@@ -125,5 +99,5 @@ jobs:
             ai/reproduction/build/reconstruction_checks.json
             ai/reproduction/build/*/summary.json
             ai/reproduction/build/sources/*.json
-          if-no-files-found: warn
+          if-no-files-found: error
           retention-days: 30

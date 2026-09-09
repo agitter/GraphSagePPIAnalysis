@@ -197,10 +197,11 @@ Only `build/` and `results/` are removed. Files under `data/` are preserved.
 
 ### Continuous integration and release checks
 
-GitHub Actions runs the fast lint, formatting, and pytest gate for every relevant
-push and pull request. A second job performs the complete reference-free
-reconstruction, deterministic rerun, and independent validation for pushes to
-the `ai` branch, monthly scheduled runs, and manual dispatches.
+GitHub Actions runs one clean Linux job for every relevant push and pull request
+on any branch, as well as monthly scheduled runs and manual dispatches. The job
+runs linting, formatting checks, and focused tests first, then performs the
+complete reference-free reconstruction, deterministic rerun, and independent
+validation.
 
 See [RELEASE_CHECKLIST.md](RELEASE_CHECKLIST.md) for the clean-clone procedure,
 release evidence, expected non-byte-identical outputs, and independent source

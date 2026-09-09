@@ -9,29 +9,26 @@ readable, target-independent, deterministic, and fully validated.
 
 The repository workflow is `.github/workflows/reproduction.yml`.
 
-For every push or pull request that changes `ai/reproduction/`, the fast job:
+For every relevant push or pull request on any branch, and for manual and
+monthly scheduled runs, one clean-clone job:
 
 1. checks out a clean copy of the repository;
 2. installs the environment strictly from the committed `pixi.lock`;
 3. runs Ruff linting and formatting checks;
-4. runs the focused pytest suite.
+4. runs the focused pytest suite;
+5. reconstructs GraphSAGE and DGL while both released reference archives are absent;
+6. repeats the reconstruction and compares all 16 scientific output hashes;
+7. downloads the independent GraphSAGE and DGL targets and validates the outputs;
+8. verifies generated checksum inventories and confirms that tracked files are unchanged.
 
-A full clean-clone job also runs:
+The fast checks run first because they exercise synthetic edge cases and error paths
+that the one full dataset does not cover. They also stop the job before historical
+source downloads and full reconstruction when a style or unit-test failure is already
+known. Keeping the checks in the same job avoids duplicate checkout and environment
+setup.
 
-- for pushes to the `ai` branch;
-- when started manually with `workflow_dispatch`;
-- on the first day of each month.
-
-Pull requests receive the fast gate only. The full job downloads historical
-source data and therefore runs only for trusted branch, manual, or scheduled
-events.
-
-The full job starts without a `data/` cache. It first reconstructs GraphSAGE and
-DGL while the released GraphSAGE and DGL ZIP files are absent. It then repeats
-the reconstruction and compares hashes of all 16 scientific output files. Only
-after those checks does it download the two released targets and run independent
-validation. Small manifests, summaries, validation reports, and checksum files
-are retained as a GitHub Actions artifact for 30 days. Raw source data and the
+Small manifests, summaries, validation reports, and checksum files are retained as
+a GitHub Actions artifact for 30 days after a successful run. Raw source data and the
 large reconstructed datasets are not uploaded by the workflow.
 
 The scheduled run is also a source-availability monitor. A failure to download a
