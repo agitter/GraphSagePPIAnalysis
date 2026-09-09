@@ -29,6 +29,7 @@ IDENTIFIER_DECISIONS = SPEC_DIR / "identifier_decisions.tsv"
 SPECIFICATION = SPEC_DIR / "specification.yaml"
 
 OHMNET = DATA_DIR / "bio-tissue-networks.tar.gz"
+OHMNET_README = DATA_DIR / "bio-tissue-readme.txt"
 MSIGDB_C1 = DATA_DIR / "c1.all.v6.1.entrez.gmt"
 MSIGDB_C3 = DATA_DIR / "c3.all.v6.1.entrez.gmt"
 GOA_GAF = DATA_DIR / "goa_human.gaf.159.gz"
@@ -108,6 +109,7 @@ rule verify_upstream_sources:
     input:
         manifest=str(SOURCES),
         ohmnet=str(OHMNET),
+        ohmnet_readme=str(OHMNET_README),
         c1=str(MSIGDB_C1),
         c3=str(MSIGDB_C3),
         gaf=str(GOA_GAF),
@@ -124,6 +126,7 @@ rule verify_upstream_sources:
           --manifest {input.manifest:q} \
           --data-dir {params.data_dir:q} \
           --source-id ohmnet_networks \
+          --source-id ohmnet_readme \
           --source-id msigdb_c1_v61 \
           --source-id msigdb_c3_v61 \
           --source-id goa_human_gaf_159 \
@@ -291,7 +294,7 @@ rule check_reconstruction:
         checks=str(RECONSTRUCTION_CHECKS),
     shell:
         """
-        python -m graphsage_ppi_repro.cli check-milestone \
+        python -m graphsage_ppi_repro.cli check-reconstruction \
           --specification {input.specification:q} \
           --topology-summary {input.topology:q} \
           --feature-summary {input.features:q} \

@@ -15,13 +15,12 @@ The primary overviews are a [summary of results and evidence](gpt56sol/CURRENT_F
 Once the conversation reached the maximum length, GPT prepared a [summary](gpt56sol/conversation_handoff/) to reinitialize a fresh chat.
 
 ## Reproduction workflow
-The clean, independently runnable reconstruction is being implemented in [`reproduction/`](reproduction/).
+The clean, independently runnable reconstruction is implemented in [`reproduction/`](reproduction/).
 It uses checksum-locked upstream sources to rebuild the deterministic data needed by supervised GraphSAGE and the DGL PPI derivative, while keeping released targets isolated to validation.
 
 ## TODOs
 - Create a summary of claims in the manuscripts that are incorrect and the evidence (partially complete)
 - Create a workflow diagram of where all data came from originally and how it was processed to create the GraphSAGE and DGL files
-- Create a GitHub Actions workflow that starts with external data, transforms it into the GraphSAGE and DGL versions, and runs tests verifying the match ([plan](gpt56sol/REPRODUCTION_REPOSITORY_OUTLINE_CORE_20260901T164642Z.md))
 - Prepare a report describing the data workflow, evidence supporting each conclusion (including what remains speculative or unidentifiable with a claims.csv)
 - Catalog usage of the PPI dataset to show impact
 - Create machine learning controls to demonstrate the severity of the data leakage and predictive ability on randomized labels

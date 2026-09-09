@@ -482,7 +482,7 @@ def _require_mapping(value: object, description: str) -> dict[str, Any]:
     return value
 
 
-def check_reconstruction_milestone(
+def check_reconstruction(
     *,
     specification_path: Path,
     topology_summary_path: Path,

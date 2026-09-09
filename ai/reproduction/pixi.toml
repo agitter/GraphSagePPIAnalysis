@@ -4,7 +4,7 @@ description = "Deterministic reconstruction and validation of the GraphSAGE PPI 
 channels = ["conda-forge", "bioconda"]
 platforms = ["linux-64", "win-64"]
 channel-priority = "strict"
-repository = "https://github.com/ntalluri/GraphSagePPIAnalysis"
+repository = "https://github.com/agitter/GraphSagePPIAnalysis"
 
 [dependencies]
 python = "3.11.*"
@@ -19,7 +19,7 @@ snakemake-minimal = ">=9.13,<10"
 graphsage-ppi-repro = { path = ".", editable = true }
 
 [tasks]
-acquire-upstream = "python -m graphsage_ppi_repro.cli ensure-sources --manifest spec/sources.tsv --data-dir data --source-id ohmnet_networks --source-id msigdb_c1_v61 --source-id msigdb_c3_v61 --source-id goa_human_gaf_159 --source-id goa_human_gpi_159 --source-id gp2protein_geneid_20160601 --source-id go_ontology_20160601"
+acquire-upstream = "python -m graphsage_ppi_repro.cli ensure-sources --manifest spec/sources.tsv --data-dir data --source-id ohmnet_networks --source-id ohmnet_readme --source-id msigdb_c1_v61 --source-id msigdb_c3_v61 --source-id goa_human_gaf_159 --source-id goa_human_gpi_159 --source-id gp2protein_geneid_20160601 --source-id go_ontology_20160601"
 acquire-graphsage-reference = "python -m graphsage_ppi_repro.cli ensure-sources --manifest spec/sources.tsv --data-dir data --source-id graphsage_ppi_reference --role reference"
 acquire-dgl-reference = "python -m graphsage_ppi_repro.cli ensure-sources --manifest spec/sources.tsv --data-dir data --source-id dgl_ppi_reference --role reference"
 reproduce = { cmd = "snakemake --cores 1 reproduce", depends-on = ["acquire-upstream"] }

@@ -9,9 +9,9 @@ It rebuilds deterministic data needed by **supervised GraphSAGE** and DGL. It
 does not rerun the historical source screens, tissue-split experiments, leakage
 analyses, literature review, or stochastic `ppi-walks.txt` generation.
 
-## Current implementation status
+## What the workflow reconstructs
 
-The workflow currently reconstructs and validates:
+The workflow reconstructs and validates:
 
 - all 24 selected OhmNet tissue graph blocks;
 - the complete 56,944-row GraphSAGE node order and Entrez identities;
@@ -86,7 +86,7 @@ but assumes all required cached files already exist.
 pixi run reproduce
 ```
 
-Pixi first acquires or verifies seven checksum-locked upstream files. Snakemake
+Pixi first acquires or verifies eight checksum-locked upstream files. Snakemake
 then runs:
 
 ```text
@@ -228,7 +228,7 @@ only as inputs; all rule outputs are confined to `build/` and `results/`.
 
 Current upstream reconstruction inputs are:
 
-- the OhmNet tissue-network archive;
+- the OhmNet tissue-network archive and its official README;
 - MSigDB v6.1 C1 and C3 Entrez GMT files;
 - GOA human release-159 GAF and GPI files;
 - the 2016-06-01 GeneID-UniProt mapping;
@@ -239,8 +239,8 @@ Validation additionally uses the released GraphSAGE and DGL PPI ZIP files.
 ## Specification files
 
 - `sources.tsv` records external file identities and acquisition roles.
-- `specification.yaml` records the accepted global transformation policy and
-  compact expected invariants.
+- `specification.yaml` records the accepted global transformation,
+  serialization, validation-tolerance, and expected-invariant policies.
 - `selected_graphs.tsv` records the 24 released tissue identities, graph order,
   and deposited 20/2/2 split. The historical selection algorithm remains open.
 - `feature_columns.tsv` records the expected 30 C1 and 20 C3 results. The code
@@ -249,24 +249,9 @@ Validation additionally uses the released GraphSAGE and DGL PPI ZIP files.
   marks three membership-indistinguishable term pairs as provisional.
 - `identifier_decisions.tsv` records the small set of evidence-backed amendments
   needed beyond direct historical GeneID-UniProt edges.
-- `specification.yaml` also records the canonical GraphSAGE serialization policy,
-  the DGL transformation and tolerance policy, and compact expected invariants.
 
 These tables are reviewable reconstruction specifications, not hidden copies of
 output matrices.
-
-## Applying patches
-
-Patches are generated relative to the Git repository root and contain paths
-beginning with `ai/`. When a patch file is placed in the repository root:
-
-```bash
-ROOT=$(git rev-parse --show-toplevel)
-PATCH="$ROOT/<patch-filename>.patch"
-
-git -C "$ROOT" apply --check "$PATCH" &&
-git -C "$ROOT" apply "$PATCH"
-```
 
 ## Evidence language
 

@@ -2,7 +2,7 @@
 
 The CLI contains no scientific transformations.  Each subcommand validates
 arguments and delegates to an importable, unit-tested function in the module
-named for that stage.
+responsible for that operation.
 """
 
 from __future__ import annotations
@@ -20,26 +20,16 @@ from .identifiers import IdentifierError
 from .labels import LabelError, reconstruct_labels
 from .provenance import (
     SourceError,
-    check_reconstruction_milestone,
+    check_reconstruction,
     ensure_sources,
     write_run_manifest,
 )
 from .topology import TopologyError, reconstruct_topology
-from .validate import (
-    ValidationError,
-    validate_dgl_dataset,
-    validate_graphsage_dataset,
-    validate_labels_against_graphsage,
-    validate_topology_and_features,
-)
+from .validate import ValidationError, validate_dgl_dataset, validate_graphsage_dataset
 
 
 def _path(value: str) -> Path:
     return Path(value).expanduser()
-
-
-def _add_path_argument(parser: argparse.ArgumentParser, name: str, help_text: str) -> None:
-    parser.add_argument(name, type=_path, help=help_text)
 
 
 def _build_parser() -> argparse.ArgumentParser:
@@ -166,7 +156,7 @@ def _build_parser() -> argparse.ArgumentParser:
         dgl.add_argument(name, type=_path, required=True, help=text)
 
     manifest = subparsers.add_parser(
-        "write-manifest", help="Write a reconstruction-stage provenance manifest."
+        "write-manifest", help="Write a reconstruction provenance manifest."
     )
     for name, text in (
         ("--output", "Output JSON manifest."),
@@ -192,8 +182,8 @@ def _build_parser() -> argparse.ArgumentParser:
     )
 
     checks = subparsers.add_parser(
-        "check-milestone",
-        help="Check target-independent topology and feature invariants.",
+        "check-reconstruction",
+        help="Check target-independent reconstruction invariants.",
     )
     for name, text in (
         ("--specification", "Frozen specification.yaml file."),
@@ -204,20 +194,6 @@ def _build_parser() -> argparse.ArgumentParser:
         ("--output", "Output target-independent check report."),
     ):
         checks.add_argument(name, type=_path, required=True, help=text)
-
-    validation = subparsers.add_parser(
-        "validate-topology-features",
-        help="Compare topology and features with the released GraphSAGE target.",
-    )
-    for name, text in (
-        ("--reference", "Released GraphSAGE PPI ZIP."),
-        ("--mapping", "Reconstructed node-to-Entrez mapping."),
-        ("--edges", "Reconstructed logical edge table."),
-        ("--features", "Reconstructed ppi-feats.npy."),
-        ("--json-output", "Machine-readable validation report."),
-        ("--markdown-output", "Human-readable validation report."),
-    ):
-        validation.add_argument(name, type=_path, required=True, help=text)
 
     graphsage_validation = subparsers.add_parser(
         "validate-graphsage",
@@ -247,19 +223,6 @@ def _build_parser() -> argparse.ArgumentParser:
         dgl_validation.add_argument(name, type=_path, required=True, help=text)
     dgl_validation.add_argument("--feature-atol", type=float, default=1.0e-12)
     dgl_validation.add_argument("--feature-rtol", type=float, default=0.0)
-
-    label_validation = subparsers.add_parser(
-        "validate-labels",
-        help="Compare reconstructed labels with the released GraphSAGE target.",
-    )
-    for name, text in (
-        ("--reference", "Released GraphSAGE PPI ZIP."),
-        ("--matrix", "Reconstructed ppi-labels.npy."),
-        ("--class-map", "Reconstructed ppi-class_map.json."),
-        ("--json-output", "Machine-readable validation report."),
-        ("--markdown-output", "Human-readable validation report."),
-    ):
-        label_validation.add_argument(name, type=_path, required=True, help=text)
 
     clean = subparsers.add_parser(
         "clean", help="Remove generated build and result directories only."
@@ -369,8 +332,8 @@ def _run(arguments: argparse.Namespace) -> None:
         )
         return
 
-    if arguments.command == "check-milestone":
-        check_reconstruction_milestone(
+    if arguments.command == "check-reconstruction":
+        check_reconstruction(
             specification_path=arguments.specification,
             topology_summary_path=arguments.topology_summary,
             feature_summary_path=arguments.feature_summary,
@@ -389,17 +352,6 @@ def _run(arguments: argparse.Namespace) -> None:
             artifact_paths=arguments.artifact,
             specification_paths=arguments.specification,
             stage=arguments.stage,
-        )
-        return
-
-    if arguments.command == "validate-topology-features":
-        validate_topology_and_features(
-            graphsage_reference_zip=arguments.reference,
-            mapping_path=arguments.mapping,
-            edge_path=arguments.edges,
-            feature_matrix_path=arguments.features,
-            output_json=arguments.json_output,
-            output_markdown=arguments.markdown_output,
         )
         return
 
@@ -423,16 +375,6 @@ def _run(arguments: argparse.Namespace) -> None:
             markdown_output=arguments.markdown_output,
             feature_atol=arguments.feature_atol,
             feature_rtol=arguments.feature_rtol,
-        )
-        return
-
-    if arguments.command == "validate-labels":
-        validate_labels_against_graphsage(
-            reference_archive=arguments.reference,
-            reconstructed_matrix=arguments.matrix,
-            reconstructed_class_map=arguments.class_map,
-            json_output=arguments.json_output,
-            markdown_output=arguments.markdown_output,
         )
         return
 

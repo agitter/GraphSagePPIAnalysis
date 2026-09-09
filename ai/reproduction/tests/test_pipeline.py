@@ -24,7 +24,7 @@ from graphsage_ppi_repro.graphsage import assemble_graphsage
 from graphsage_ppi_repro.legacy_order import ordered_string_keys
 from graphsage_ppi_repro.provenance import (
     SourceError,
-    check_reconstruction_milestone,
+    check_reconstruction,
     ensure_sources,
 )
 from graphsage_ppi_repro.topology import reconstruct_topology
@@ -343,7 +343,7 @@ def test_reconstruct_without_target_then_validate_independently(tmp_path: Path) 
         ),
         encoding="utf-8",
     )
-    checks = check_reconstruction_milestone(
+    checks = check_reconstruction(
         specification_path=specification,
         topology_summary_path=topology_summary_path,
         feature_summary_path=feature_summary_path,
@@ -388,11 +388,14 @@ def test_workflow_treats_cached_sources_as_inputs_only() -> None:
 
     assert "rule acquire_upstream_sources:" not in snakefile_text
     assert "rule acquire_graphsage_reference:" not in snakefile_text
+    assert "rule acquire_dgl_reference:" not in snakefile_text
     assert "rule verify_upstream_sources:" in snakefile_text
     assert "rule verify_graphsage_reference:" in snakefile_text
+    assert "rule verify_dgl_reference:" in snakefile_text
     assert output_blocks
     for block in output_blocks:
         assert "OHMNET" not in block
+        assert "OHMNET_README" not in block
         assert "MSIGDB_C1" not in block
         assert "MSIGDB_C3" not in block
         assert "GOA_GAF" not in block
@@ -400,6 +403,7 @@ def test_workflow_treats_cached_sources_as_inputs_only() -> None:
         assert "GP2PROTEIN" not in block
         assert "GO_ONTOLOGY" not in block
         assert "GRAPHSAGE_REFERENCE" not in block
+        assert re.search(r"\bDGL_REFERENCE\b", block) is None
 
     with (reproduction_root / "pixi.toml").open("rb") as handle:
         tasks = tomllib.load(handle)["tasks"]
@@ -412,6 +416,7 @@ def test_workflow_treats_cached_sources_as_inputs_only() -> None:
     upstream_command = tasks["acquire-upstream"]
     for source_id in (
         "ohmnet_networks",
+        "ohmnet_readme",
         "msigdb_c1_v61",
         "msigdb_c3_v61",
         "goa_human_gaf_159",
@@ -423,5 +428,3 @@ def test_workflow_treats_cached_sources_as_inputs_only() -> None:
     assert "rule reconstruct_labels:" in snakefile_text
     assert "rule assemble_graphsage:" in snakefile_text
     assert "rule validate_graphsage:" in snakefile_text
-    assert "rule validate_topology_and_features:" not in snakefile_text
-    assert "rule validate_labels:" not in snakefile_text

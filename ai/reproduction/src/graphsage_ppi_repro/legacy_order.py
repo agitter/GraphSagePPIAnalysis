@@ -59,19 +59,6 @@ def python2_string_hash(value: str | bytes, word_size_bits: int = 64) -> int:
     return -2 if value_hash == -1 else value_hash
 
 
-def python2_int_hash(value: int, word_size_bits: int = 64) -> int:
-    """Return the relevant CPython 2 ``int`` hash behavior.
-
-    This is included for controls and for later reconstruction of integer-keyed
-    adjacency dictionaries.  The node-identity reconstruction itself uses
-    :func:`python2_string_hash`.
-    """
-
-    _word_mask(word_size_bits)
-    integer = int(value)
-    return -2 if integer == -1 else integer
-
-
 class Python2InsertionDict(Generic[Key]):
     """Insertion-only simulation of a CPython 2.7 dictionary table."""
 

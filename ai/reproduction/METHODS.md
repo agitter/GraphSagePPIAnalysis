@@ -76,7 +76,9 @@ artifact hashes, software and platform details, and Git state.
 ### 4.1 Immediate graph source
 
 The selected components are reconstructed from OhmNet tissue-specific edgelists,
-whose nodes are Entrez GeneIDs. For each selected member the workflow verifies
+whose nodes are Entrez GeneIDs. The official OhmNet README is acquired and
+checksum-verified as a provenance record but is not parsed by the transformation.
+For each selected network member the workflow verifies
 the decompressed SHA-256, retains source line order and self-loops, and rejects
 duplicate undirected records.
 
@@ -229,7 +231,7 @@ own directory and can be checked with ordinary `sha256sum -c`.
 
 ## 8. Target-independent checks
 
-`check-milestone` compares generated summaries with compact expectations in
+`check-reconstruction` compares generated summaries with compact expectations in
 `specification.yaml`. It verifies topology counts and hashes, feature dimensions
 and hashes, label dimensions and positive-cell count, namespace counts, the 118
 distinct label vectors, the one unmapped graph GeneID, exact term-set recovery,

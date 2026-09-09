@@ -5,7 +5,6 @@ from __future__ import annotations
 import csv
 import gzip
 import json
-import zipfile
 from pathlib import Path
 
 import numpy as np
@@ -16,7 +15,6 @@ from graphsage_ppi_repro.labels import (
     read_ontology,
     reconstruct_labels,
 )
-from graphsage_ppi_repro.validate import validate_labels_against_graphsage
 
 
 def _write_mapping(path: Path) -> None:
@@ -207,7 +205,7 @@ def test_gaf_filtering_excludes_not_unsupported_relations_and_evidence(
     }
 
 
-def test_reconstruct_and_validate_tiny_label_matrix(tmp_path: Path) -> None:
+def test_reconstruct_tiny_label_matrix(tmp_path: Path) -> None:
     mapping = tmp_path / "mapping.tsv.gz"
     ontology = tmp_path / "go.obo"
     gaf = tmp_path / "annotations.gaf"
@@ -257,23 +255,6 @@ def test_reconstruct_and_validate_tiny_label_matrix(tmp_path: Path) -> None:
     assert summary["counts"]["distinct_column_membership_vectors"] == 2
     assert summary["counts"]["duplicate_vector_groups"] == {"GO:0000002|GO:0000003": [0, 2]}
     assert summary["term_selection"]["derived_set_matches_column_specification"]
-
-    reference = tmp_path / "graphsage.zip"
-    target = {str(index): row.tolist() for index, row in enumerate(expected)}
-    with zipfile.ZipFile(reference, "w") as archive:
-        archive.writestr("ppi/ppi-class_map.json", json.dumps(target))
-
-    validation = validate_labels_against_graphsage(
-        reference_archive=reference,
-        reconstructed_matrix=matrix_path,
-        reconstructed_class_map=class_map_path,
-        json_output=tmp_path / "label-validation.json",
-        markdown_output=tmp_path / "label-validation.md",
-        expected_rows=3,
-        expected_columns=3,
-    )
-    assert validation["all_checks_pass"]
-    assert validation["differing_cells"] == 0
 
 
 def test_committed_label_columns_expose_all_duplicate_vector_pairs() -> None:

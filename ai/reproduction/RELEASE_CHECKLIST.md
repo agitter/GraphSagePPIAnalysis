@@ -67,7 +67,7 @@ test ! -e data/dgl_ppi.zip
 ```
 
 This is the principal non-circularity check. Reconstruction is allowed to use
-only the seven upstream sources and the committed specifications. The released
+only the eight upstream sources and the committed specifications. The released
 GraphSAGE and DGL archives may be opened only by validation.
 
 Record the scientific artifact hashes, rebuild, and compare:
